@@ -1,0 +1,18 @@
+{
+  "vendor": "glauser",
+  "name": "storerlx",
+  "version": "0.0.1",
+  "title": "rlx_store",
+  "description": "rlx",
+  "builders": {
+    "react": "3.x",
+    "messages": "1.x",
+    "store": "0.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.store": "2.x",
+    "vtex.store-header": "2.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
