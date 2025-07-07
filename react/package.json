@@ -42,9 +42,9 @@
     "@vtex/intl-equalizer": "^2.5.0",
     "@vtex/prettier-config": "^0.3.5",
     "@vtex/tsconfig": "^0.6.0",
-    "eslint": "^7.14.0",
-    "eslint-config-vtex": "^12.8.11",
-    "eslint-config-vtex-react": "^6.8.3",
+    "eslint": "^8.57.1",
+    "eslint-config-vtex": "^15.1.0",
+    "eslint-config-vtex-react": "^9.1.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.1",
     "prettier": "^2.2.0",
@@ -54,11 +54,14 @@
     "vtex.store-header": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-header@2.29.0/public/@types/vtex.store-header"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/parser": "^8.35.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
     "jquery": "^3.7.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^7.6.2",
+    "react-helmet-async": "^1.0.1",
     "swiper": "^11.2.8"
   }
 }

@@ -1,74 +1,11 @@
 {
+    "routes": {
+        "rolex": {
+            "path": "/rolex",
+            "component": "Home"
+        }
+    },
     "home": {
         "component": "Home"
-    },
-    "asistencia": {
-        "component": "Asistencia"
-    },
-    "mantenimiento": {
-        "component": "Mantenimiento"
-    },
-    "coleccion-rlx": {
-        "component": "ColeccionRlx"
-    },
-    "contactenos": {
-        "component": "Contactenos"
-    },
-    "mundo-rolex": {
-        "component": "MundoRlx"
-    },
-    "articulo-24-horas-mans": {
-        "component": "HorasMans"
-    },
-    "articulo-amundi-evian": {
-        "component": "AmundiE"
-    },
-    "articulo-filarmonica-viena": {
-        "component": "FilaViena"
-    },
-    "articulo-grand-slam": {
-        "component": "Grandslam"
-    },
-    "articulo-resistencia": {
-        "component": "Resistencia"
-    },
-    "articulo-rolex-campeonatos": {
-        "component": "RlxCampeonatos"
-    },
-    "articulo-sailgp": {
-        "component": "Sail"
-    },
-    "articulo-the-open": {
-        "component": "TheOpen"
-    },
-    "articulo-us-open": {
-        "component": "UsOpen"
-    },
-    "articulo-viaje-corazon": {
-        "component": "ViajeCorazon"
-    },
-    "nuevos-modelos": {
-        "component": "NewsModels"
-    },
-    "modelo-1908": {
-        "component": "Mod1980"
-    },
-    "modelo-datejust25": {
-        "component": "ModDatejust2025"
-    },
-    "modelo-esferas-ineditas25": {
-        "component": "ModEsferasIneditas2025"
-    },
-    "modelo-gmt-master-ii25": {
-        "component": "ModGmtMasterII2025"
-    },
-    "modelo-land-dweller25": {
-        "component": "ModLandDweller2025"
-    },
-    "modelo-oyster-perpetual25": {
-        "component": "ModOysterPerpetual2025"
-    },
-    "watchmaking": {
-        "component": "WatchMaking"
     }
 }

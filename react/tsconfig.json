@@ -8,10 +8,12 @@
     "skipLibCheck": true,
     "strict": true,
     "typeRoots": [
-      "./node_modules/@types",
-      "./react/typings"
+      "./node_modules/@types", "./src/types",
+      "./react/typings",
+      "./typings"
     ],
-    "module": "esnext"
+    "module": "esnext",
+    "lib": ["es2017", "dom", "dom.iterable"]
   },
   "include": [
     "./**/*"

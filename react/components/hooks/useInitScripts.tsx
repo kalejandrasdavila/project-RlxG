@@ -3,12 +3,15 @@ import $ from "jquery";
 import { useEffect } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
+
 Swiper.use([Navigation, Pagination]);
 
 const useInitScripts = () => {
     useEffect(() => {
-        // === Adobe Satellite ===
-        if (typeof window !== 'undefined' && !window._satelliteLoaded) {
+        if (typeof window === "undefined") return;
+
+        // === Adobe Launch ===
+        if (!window._satelliteLoaded) {
             window._satelliteLoaded = true;
 
             const script = document.createElement("script");
@@ -16,43 +19,38 @@ const useInitScripts = () => {
             script.async = true;
             script.onload = () => {
                 if (window._satellite) {
-                    window._satellite.pageBottom();
-                    window._satellite.track("PageView");
+                    window._satellite.pageBottom?.();
+                    window._satellite.track?.("PageView");
                 }
             };
             script.onerror = () => console.error("Error al cargar Adobe Satellite.");
             document.head.appendChild(script);
-        } else if (typeof window !== 'undefined' && window._satellite) {
-            window._satellite.pageBottom();
-            window._satellite.track("PageView");
+        } else if (window._satellite) {
+            window._satellite.pageBottom?.();
+            window._satellite.track?.("PageView");
         }
 
-        if (typeof window !== 'undefined') {
-            window._satelliteBackup = window._satellite;
-            const satelliteInterval = setInterval(() => {
-                if (!window._satellite) {
-                    window._satellite = window._satelliteBackup;
-                }
-            }, 2000);
+        const satelliteInterval = setInterval(() => {
+            if (!window._satellite) {
+                window._satellite = window._satelliteBackup;
+            }
+        }, 2000);
 
-            // Cleanup function for the interval
-            return () => clearInterval(satelliteInterval);
+        // === Toggle Nav ===
+        if ($) {
+            $(document)
+                .off("click", "a.rlx-sm.btn-toggle")
+                .on("click", "a.rlx-sm.btn-toggle", function () {
+                    $("nav.rlx-header-menu-top").toggleClass("showme");
+                });
         }
 
-
-        // === Botón toggle nav ===
-        $(document)
-            .off("click", "a.rlx-sm.btn-toggle")
-            .on("click", "a.rlx-sm.btn-toggle", function () {
-                $("nav.rlx-header-menu-top").toggleClass("showme");
-            });
-
-        // === Scroll arriba ===
+        // === Volver Arriba ===
         const btnVolverArriba = document.getElementById("btnVolverArriba");
         const scrollToTop = () => {
-            let duration = 300;
-            let start = window.scrollY;
-            let startTime = performance.now();
+            const duration = 300;
+            const start = window.scrollY;
+            const startTime = performance.now();
 
             function easeInOutCubic(t: number, b: number, c: number, d: number) {
                 t /= d / 2;
@@ -62,8 +60,8 @@ const useInitScripts = () => {
             }
 
             function scrollStep() {
-                let now = performance.now();
-                let elapsed = now - startTime;
+                const now = performance.now();
+                const elapsed = now - startTime;
                 window.scrollTo(0, easeInOutCubic(elapsed, start, -start, duration));
                 if (elapsed < duration) requestAnimationFrame(scrollStep);
             }
@@ -71,22 +69,14 @@ const useInitScripts = () => {
             requestAnimationFrame(scrollStep);
         };
 
-        btnVolverArriba?.addEventListener("click", scrollToTop);
+        if (btnVolverArriba) {
+            btnVolverArriba.addEventListener("click", scrollToTop);
+        }
 
-        // === Swiper: Slider Principal & Footer ===
+        // === Swiper Principal y Footer ===
         const initializeSwiper = () => {
             const sliderPrincipal = document.querySelector(".slider-home-principal") as HTMLElement;
             const sliderFooter = document.querySelector(".exploremas") as HTMLElement;
-
-            if (!sliderFooter) {
-                console.warn('Swiper container ".exploremas" no encontrada.');
-                return;
-            }
-
-            // Type assertion to access swiper property
-            if ((sliderFooter as any).swiper) {
-                (sliderFooter as any).swiper.destroy(true, true);
-            }
 
             const updateNavigationButtons = (swiperInstance: Swiper) => {
                 const currentIndex = swiperInstance.activeIndex;
@@ -115,19 +105,13 @@ const useInitScripts = () => {
                     },
                     loop: false,
                     on: {
-                        init(swiper) {
-                            updateNavigationButtons(swiper);
-                        },
-                        slideChange(swiper) {
-                            updateNavigationButtons(swiper);
-                        },
+                        init: (swiper: Swiper) => updateNavigationButtons(swiper),
+                        slideChange: (swiper: Swiper) => updateNavigationButtons(swiper),
                     },
                 });
             }
 
             if (sliderFooter) {
-                console.log("Slides detectados:", sliderFooter.innerHTML);
-
                 new Swiper(sliderFooter, {
                     modules: [Pagination],
                     slidesPerView: 4,
@@ -151,29 +135,22 @@ const useInitScripts = () => {
             }
         };
 
-        // Asegura que los slides estén presentes antes de inicializar Swiper
-        function waitForSlides() {
+        const waitForSlides = () => {
             const wrapper = document.querySelector('.exploremas .swiper-wrapper');
             if (wrapper && wrapper.children.length >= 4) {
                 initializeSwiper();
             } else {
                 requestAnimationFrame(waitForSlides);
             }
-        }
+        };
 
-        // Ejecuta el código solo en el navegador
-        if (typeof window !== 'undefined') {
-            waitForSlides();
-        }
-
-        // === Swiper solo para móvil ===
+        // === Swiper Mobile ===
         let swiperMobile: Swiper | null = null;
         const initMobileSwiper = () => {
             const container = document.querySelector(".swiper-container-mobile") as HTMLElement;
-            if (typeof window !== 'undefined' && window.innerWidth <= 767 && container && !swiperMobile) {
+            if (window.innerWidth <= 767 && container && !swiperMobile) {
                 swiperMobile = new Swiper(container, {
                     slidesPerView: 1,
-                    spaceBetween: 0,
                     loop: false,
                     pagination: {
                         el: ".swiper-pagination-model",
@@ -184,33 +161,35 @@ const useInitScripts = () => {
                         prevEl: ".swiper-button-model-prev",
                     },
                     on: {
-                        init: function (swiperInstance) {
-                            swiperInstance.update();
+                        init(swiper: Swiper) {
+                            swiper.update();
                         },
                     },
                 });
-            } else if (swiperMobile && typeof window !== 'undefined' && window.innerWidth > 767) {
+            } else if (swiperMobile && window.innerWidth > 767) {
                 swiperMobile.destroy();
                 swiperMobile = null;
             }
         };
 
-
-        // === Acordeón ===
-        $(document).off("click", ".accordion-header").on("click", ".accordion-header", function () {
-            const $header = $(this);
-            $(".accordion-content").not($header.next()).removeClass("active");
-            $(".accordion-header span:last-child").text("+");
-            const content = $header.next();
-            const icon = $header.find("span:last-child");
-            const isActive = content.hasClass("active");
-
-            content.toggleClass("active");
-            icon.text(isActive ? "+" : "–");
-        });
+        // === Accordion ===
+        if ($) {
+            $(document)
+                .off("click", ".accordion-header")
+                .on("click", ".accordion-header", function () {
+                    const $header = $(this);
+                    $(".accordion-content").not($header.next()).removeClass("active");
+                    $(".accordion-header span:last-child").text("+");
+                    const content = $header.next();
+                    const icon = $header.find("span:last-child");
+                    const isActive = content.hasClass("active");
+                    content.toggleClass("active");
+                    icon.text(isActive ? "+" : "–");
+                });
+        }
 
         // === Lightbox ===
-        const galleryImages = document.querySelectorAll<HTMLImageElement>(".galeria-models img");
+        const galleryImages = Array.from(document.querySelectorAll<HTMLImageElement>(".galeria-models img"));
         const lightbox = document.getElementById("lightbox");
         const lightboxImage = document.getElementById("lightbox-image") as HTMLImageElement;
         const closeButton = document.querySelector(".close-button");
@@ -219,38 +198,32 @@ const useInitScripts = () => {
         const paginationDotsContainer = document.querySelector(".pagination-dots");
 
         let currentIndex = 0;
-        const images = Array.from(galleryImages as NodeListOf<HTMLImageElement>).map(img => img.src);
+        const images = galleryImages.map(img => img.src);
         let dots: HTMLElement[] = [];
 
         const openLightbox = (src: string, index: number) => {
             if (!lightbox || !lightboxImage || !paginationDotsContainer) return;
-
             lightboxImage.src = src;
             currentIndex = index;
-            lightbox.classList.add("active");
+            lightbox?.classList.add("active");
             createPaginationDots();
             updatePagination();
         };
 
         const closeLightbox = () => {
             if (!lightbox || !paginationDotsContainer) return;
-
-            lightbox.classList.remove("active");
+            lightbox?.classList.remove("active");
             paginationDotsContainer.innerHTML = "";
             dots = [];
         };
 
         const showPrevious = () => {
-            if (!lightboxImage) return;
-
             currentIndex = (currentIndex - 1 + images.length) % images.length;
             lightboxImage.src = images[currentIndex];
             updatePagination();
         };
 
         const showNext = () => {
-            if (!lightboxImage) return;
-
             currentIndex = (currentIndex + 1) % images.length;
             lightboxImage.src = images[currentIndex];
             updatePagination();
@@ -258,18 +231,19 @@ const useInitScripts = () => {
 
         const createPaginationDots = () => {
             if (!paginationDotsContainer) return;
-
             paginationDotsContainer.innerHTML = "";
             dots = images.map((_, i) => {
                 const dot = document.createElement("div");
-                dot.classList.add("dot");
-                dot.dataset.index = String(i); // Ensure dataset is string
+                if (dot?.classList) {
+                    dot.classList.add("dot");
+                } else {
+                    console.warn("dot.classList no está disponible.");
+                }
+                dot.dataset.index = String(i);
                 dot.addEventListener("click", () => {
                     currentIndex = i;
-                    if (lightboxImage) {
-                        lightboxImage.src = images[currentIndex];
-                        updatePagination();
-                    }
+                    lightboxImage.src = images[currentIndex];
+                    updatePagination();
                 });
                 paginationDotsContainer.appendChild(dot);
                 return dot;
@@ -278,7 +252,7 @@ const useInitScripts = () => {
 
         const updatePagination = () => {
             dots.forEach((dot, i) => {
-                dot.classList.toggle("active", i === currentIndex);
+                dot?.classList.toggle("active", i === currentIndex);
             });
         };
 
@@ -302,28 +276,25 @@ const useInitScripts = () => {
         };
         document.addEventListener("keydown", handleKeyDown);
 
-
-        // === Mostrar precios ===
-
-        window.showhideprice = () => {
+        // === Show/Hide Precio ===
+        const handleShowHidePrice = () => {
             const x = document.getElementById("priceshow");
             if (x) x.style.display = x.style.display === "none" ? "block" : "none";
         };
+        window.showhideprice = handleShowHidePrice;
 
-        const priceIcons = document.querySelectorAll(".icon-price-rlx");
+        const priceIcons = document.querySelectorAll<HTMLElement>(".icon-price-rlx");
         priceIcons.forEach(icon => {
-            icon.addEventListener("click", window.showhideprice);
+            icon.addEventListener("click", handleShowHidePrice);
         });
 
-        // === Ejecutar Swipers ===
-        if (typeof window !== "undefined") {
-            initializeSwiper();
-            initMobileSwiper();
-            window.addEventListener("resize", initMobileSwiper);
-        }
+        // === Wait y resize ===
+        waitForSlides();
+        initMobileSwiper();
+        window.addEventListener("resize", initMobileSwiper);
 
-        // === Seguimiento boton Brochure ===
-        const downloadLink = document.querySelector(
+        // === Satellite download tracking ===
+        const downloadLink = document.querySelector<HTMLAnchorElement>(
             '.row-grid-fullw.watch-caracteristicas .cuerpotextobeigebg .p-absolutes a'
         );
         const handleClickDownload = () => {
@@ -333,24 +304,21 @@ const useInitScripts = () => {
                 console.warn('No se encontró _satellite.track');
             }
         };
-
-        if (downloadLink) {
-            downloadLink.addEventListener('click', handleClickDownload);
-        } else {
-            console.warn('No se encontró el enlace de descarga con el selector especificado.');
-        }
+        downloadLink?.addEventListener('click', handleClickDownload);
 
         // === Limpieza ===
         return () => {
+            clearInterval(satelliteInterval);
             btnVolverArriba?.removeEventListener("click", scrollToTop);
-            priceIcons.forEach(icon => icon.removeEventListener("click", window.showhideprice));
+            priceIcons.forEach(icon => {
+                icon.removeEventListener("click", handleShowHidePrice);
+            });
             window.removeEventListener("resize", initMobileSwiper);
             document.removeEventListener("keydown", handleKeyDown);
-            if (downloadLink) {
-                downloadLink.removeEventListener('click', handleClickDownload);
-            }
+            downloadLink?.removeEventListener('click', handleClickDownload);
+            if (swiperMobile) swiperMobile.destroy();
         };
-    }, []); // Empty dependency array means this effect runs once after the initial render
+    }, []);
 
     return null;
 };

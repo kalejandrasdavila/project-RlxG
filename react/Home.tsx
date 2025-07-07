@@ -1,9 +1,9 @@
 import React from 'react'
 import { Helmet } from "react-helmet-async";
-import useInitScripts from './hooks/useInitScripts';
-import Nav from './parts/Nav';
-import RlxExploreMas from './parts/RlxExploreMas';
-import Footer from './parts/Footer';
+import useInitScripts from './components/hooks/useInitScripts';
+import Nav from './components/parts/Nav';
+import RlxExploreMas from './components/parts/RlxExploreMas';
+import Footer from './components/parts/Footer';
 
 const Home: React.FC = () => {
 

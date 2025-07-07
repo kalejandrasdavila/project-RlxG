@@ -6,14 +6,6 @@ import NavM from '../../parts/NavModels';
 import Footer from '../../parts/Footer';
 
 
-declare global {
-    interface Window {
-        _satellite?: {
-            track: (eventName: string, data?: any) => void;
-        };
-        digitalDataLayer?: { [key: string]: any };
-    }
-}
 
 const M1908: React.FC = () => {
     useInitScripts();
