@@ -1,11 +1,32 @@
 {
-    "routes": {
-        "rolex": {
-            "path": "/rolex",
-            "component": "Home"
-        }
-    },
-    "home": {
+    "store.home-rlx": {
         "component": "Home"
+    },
+    "store.coleccionRlx": {
+        "component": "ColeccionRlx"
+    },
+    "Home": {
+        "component": "Home"
+    },
+    "store.watch-collection": {
+        "component": "WatchCollection"
+    },
+    "store.watch-model": {
+        "component": "WatchModel"
+    },
+    "store.nuevos-modelos": {
+        "component": "NewsModels"
+    },
+    "store.watchmaking": {
+        "component": "Watchmaking"
+    },
+    "store.asistencia": {
+        "component": "Asistencia"
+    },
+    "store.mundo-rolex": {
+        "component": "MundoRlx"
+    },
+    "store.contactenos": {
+        "component": "Contactenos"
     }
 }

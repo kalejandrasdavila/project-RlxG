@@ -1,5 +1,5 @@
 
-declare global { 
+declare global {
   interface Window {
     __RENDER_8_SESSION__?: any;
     __RUNTIME__?: any;
@@ -16,7 +16,7 @@ declare global {
 
     showhideprice: () => void;
   }
-} 
+}
 
 declare module '*.css';
 declare module '*.svg';
@@ -25,4 +25,4 @@ declare module '*.jpg';
 declare module '*.jpeg';
 declare module '*.gif';
 
-export {}; // Mantiene el archivo como un módulo para evitar polución global si no se desea.
+export { }; // Mantiene el archivo como un módulo para evitar polución global si no se desea.

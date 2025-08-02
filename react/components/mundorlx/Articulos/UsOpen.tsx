@@ -1,14 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../hooks/useInitScripts';
-import RlxExploreMas from "../../parts/RlxExploreMas";
+import RlxExploreMasNModels from "../../parts/RlxExploreMas";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
 
 const UsOpen: React.FC = () => {
     useInitScripts();
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.glauser.com.co/rolex/mundo-rolex/us-open/';
-    const baseUrl = 'https://www.glauser.com.co'; // La URL base de tu sitio en producción
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/us-open/';
+    const baseUrl = 'https://devjhernandez--glauser.myvtex.com'; // La URL base de tu sitio en producción
 
     return (
         <>
@@ -25,7 +25,7 @@ const UsOpen: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://www.glauser.com.co/files/style.min.css"
+                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -514,7 +514,7 @@ const UsOpen: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMas />
+                <RlxExploreMasNModels />
                 <Footer />
             </main>
         </>

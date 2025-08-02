@@ -1,4 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useRuntime } from 'vtex.render-runtime';
+import { useCssHandles } from 'vtex.css-handles';
+import '../../main-style.css';
+
+const CSS_HANDLES = [
+    //HEADER "rlx-sm btn-toggle"//
+    'rlx_header_menu_top', 'rlx_lg', 'menu_list_rolex', 'rlx_sm', 'btn_toggle', 'nav_link', 'active'
+] as const
 
 interface MenuItem {
     text: string;
@@ -6,15 +14,9 @@ interface MenuItem {
 }
 
 const Nav: React.FC = () => {
-    const [activeLink, setActiveLink] = useState<string>('');
-
-    useEffect(() => {
-        // Asegúrate de que `window` esté disponible antes de usarlo.
-        // En VTEX IO, `window` suele estar disponible en el cliente.
-        if (typeof window !== 'undefined') {
-            setActiveLink(window.location.pathname); // Establecer activo según la URL actual
-        }
-    }, []);
+    const handles = useCssHandles(CSS_HANDLES)
+    const runtime = useRuntime();
+    const currentPath = runtime.route.path;
 
     const menuItems: MenuItem[] = [
         { text: 'Descubra Rolex', href: '/rolex/' },
@@ -28,15 +30,14 @@ const Nav: React.FC = () => {
 
     return (
         <>
-            <nav className="rlx-header-menu-top rlx-lg" role="navigation">
-                <ul id="rlx-menu-toggle" className="menu-list-rolex">
+            <nav className={`${handles.rlx_header_menu_top} ${handles.rlx_lg}`} role="navigation">
+                <ul id="rlx-menu-toggle" className={`${handles.menu_list_rolex}`}>
                     {menuItems.map((item: MenuItem, index: number) => (
                         <li key={index}>
                             <a
-                                className={`nav-link button-label ${activeLink === item.href ? 'active' : ''
+                                className={`${handles.nav_link} button-label ${currentPath === item.href ? `${handles.active}` : ''
                                     }`}
                                 href={item.href}
-                                onClick={() => setActiveLink(item.href)}
                             >
                                 {item.text}
                             </a>
@@ -45,8 +46,7 @@ const Nav: React.FC = () => {
                 </ul>
             </nav>
 
-            {/* Este elemento probablemente necesite lógica adicional de JS para funcionar como un toggle de menú. */}
-            <a id="rlx-menu-top" className="rlx-sm btn-toggle">
+            <a id="rlx-menu-top" className={`${handles.rlx_sm} ${handles.btn_toggle}`}>
                 Menú
                 <i>
                     <svg

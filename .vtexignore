@@ -1,17 +1,28 @@
 # general
+
 **/node_modules/
 /.git/
-/package.json
-/README.md
+README.md
 /crowdin.yml
 
 # tools
+
 **/.eslintrc
 **/.prettierrc
 **/.gitignore
 
 # tests
-**/__tests__
-**/__mocks__
-**/*.test.*
+
+**/**tests**
+**/**mocks**
+**/_.test._
 react/testUtils/**
+
+# scripts and temporary files
+*.ps1
+yarn-error.log
+*.orig
+.FullName
+
+# large CSS files (use CDN versions)
+react/vtex.glauser-storerlx.css

@@ -1,14 +1,35 @@
-import React from 'react';
+import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useState, useEffect } from 'react';
 import useInitScripts from '../hooks/useInitScripts';
 import Nav from '../parts/Nav';
-import RlxExploreMas from '../parts/RlxExploreMas';
+import RlxExploreMasNModels from '../parts/RlxExploreMas';
 import Footer from '../parts/Footer';
+import { useCssHandles } from 'vtex.css-handles';
+import '../../main-style.css';
 
+
+const CSS_HANDLES = [
+    //HEADER//
+    'headercomponent', 'rlx_html', 'home_rlx', 'rlx_menu', 'rlx_container', 'row_grid', 'rlx_logo', 'placa_rolex_logo',
+    'breadcrum_page', 'breadcrum_column', 'breadcrum_menu_list', 'description', 'fixed_14', 'active',
+    //single-imagen-componet//
+    'row_grid_fullw', 'grid_column_full', 'rlx_pbanner_top', 'p_relative',
+    //c-lightbeige-bg//
+    'rlx_container_content', 'py_90_60', 'text_introduccion',
+    'pb_90_60', 'col_lg_8_5', 'col_lg_2_5', 'headline50', 'c_brown_text', 'pb_20', 'body_20_light', 'component_video', 'col_6_12',
+    'headline36', 'component_2_col', 'fixed_16', 'btn_label_icon_rlx', 'component_3_col', 'col_span_2_1', 'col_6_2', 'body_24_bold',
+    'legend_16_light', 'col_span_2_2', 'col_6_6', 'col_6_10', 'col_lg_2_6', 'component_3_col_2', 'pb_30', 'cuerpotexto', 'col_text_center',
+    //c-beige-bg//
+    'image_center', 'pb_45_40', 'btn_primary_rlx'
+
+
+] as const
 
 const Asistencia: React.FC = () => {
 
     useInitScripts();
+    const handles = useCssHandles(CSS_HANDLES)
 
     return (
         <>
@@ -28,7 +49,7 @@ const Asistencia: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://www.glauser.com.co/files/style.min.css"
+                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
                 />
                 <link
                     rel="stylesheet preload"
@@ -38,9 +59,9 @@ const Asistencia: React.FC = () => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                <link rel="canonical" href="https://www.glauser.com.co/rolex/asistencia-rolex/" />
+                <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/asistencia-rolex/" />
 
-                <meta property="og:url" content="https://www.glauser.com.co/rolex/asistencia-rolex/" />
+                <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/asistencia-rolex/" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -52,117 +73,28 @@ const Asistencia: React.FC = () => {
                 />
                 <meta
                     property="og:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-hub-cover-m126333-0010-portrait.webp"
+                    content="https://glauser.vteximg.com.br/arquivos/asistencia-rolex-1200x630.jpg"
                 />
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://www.glauser.com.co/rolex/asistencia-rolex/" />
-                <meta
-                    name="twitter:title"
-                    content="Mantenimiento y reparación de los relojes Rolex en GLAUSER"
-                />
-                <meta
-                    name="twitter:description"
-                    content="GLAUSER se enorgullece de formar parte de la red de Distribuidores Oficiales Rolex de relojeros formados. Puede confiarnos cualquier tipo de operación de mantenimiento."
-                />
-                <meta
-                    name="twitter:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-hub-cover-m126333-0010-portrait.webp"
-                />
-                <script type="text/javascript">
-                    {`
-            var digitalDataLayer = {
-              environment: {
-                environmentVersion: "V7",
-                coBrandedVersion: "Bespoke",
-              },
-              page: {
-                pageType: "servicing your rolex page"
-              },
-            };
-          `}
-                </script>
-
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@graph": [
-                            {
-                                "@type": "Organization",
-                                "@id": "https://www.glauser.com.co/#organization",
-                                "name": "Joyería Glauser",
-                                "url": "https://www.glauser.com.co/",
-                                "sameAs": [
-                                    "https://www.facebook.com/JoyeriaGlauser/",
-                                    "https://www.instagram.com/joyeriaglauser/?hl=es-la"
-                                ],
-                                "logo": {
-                                    "@type": "ImageObject",
-                                    "@id": "https://www.glauser.com.co/#logo",
-                                    "inLanguage": "es-CO",
-                                    "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "width": 300,
-                                    "height": 102,
-                                    "caption": "Joyería Glauser"
-                                },
-                                "image": { "@id": "https://www.glauser.com.co/#logo" }
-                            },
-                            {
-                                "@type": "WebPage",
-                                "@id": "https://www.glauser.com.co/rolex/asistencia-rolex/#webpage",
-                                "url": "https://www.glauser.com.co/rolex/asistencia-rolex/",
-                                "name": "Mantenimiento y reparación de los relojes Rolex en GLAUSER",
-                                "isPartOf": { "@id": "https://www.glauser.com.co/#website" },
-                                "datePublished": "2025-04-01T05:23:53+00:00",
-                                "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "GLAUSER se enorgullece de formar parte de la red de Distribuidores Oficiales Rolex de relojeros formados. Puede confiarnos cualquier tipo de operación de mantenimiento.",
-                                "breadcrumb": { "@id": "https://www.glauser.com.co/rolex/asistencia-rolex/#breadcrumb" },
-                                "inLanguage": "es-Es",
-                                "potentialAction": {
-                                    "@type": "ReadAction",
-                                    "target": "https://www.glauser.com.co/rolex/asistencia-rolex/"
-                                }
-                            }
-                        ]
-                    })}
-                </script>
-
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [
-                            {
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Rolex GLAUSER",
-                                "item": "https://www.glauser.com.co/rolex/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Mantenimiento"
-                            }
-                        ]
-                    })}
-                </script>
+                <meta name="twitter:site" content="@glauser_col" />
+                <meta name="twitter:title" content="Mantenimiento y reparación de los relojes Rolex en GLAUSER" />
+                <meta name="twitter:description" content="GLAUSER se enorgullece de formar parte de la red de Distribuidores Oficiales Rolex de relojeros formados. Puede confiarnos cualquier tipo de operación de mantenimiento." />
+                <meta name="twitter:image" content="https://glauser.vteximg.com.br/arquivos/asistencia-rolex-1200x630.jpg" />
             </Helmet>
 
-            <div className="header-component">
-
+            <div className={`${handles.headercomponent}`}>
                 <header className="main-header" id="main-header">
-
                 </header>
             </div>
 
-            <main id="rlx-html">
-                <header id="rlx-menu" className="rlx-menu">
-                    <div className="rlx-container">
-                        <div className="row-grid">
-                            <div className="rlx-logo">
+            <main id="rlx-html" className={`${handles.rlx_html} ${handles.home_rlx}`}>
+                <header id="rlx-menu" className={`${handles.rlx_menu}`}>
+                    <div className={`${handles.rlx_container}`}>
+                        <div className={`${handles.row_grid}`}>
+                            <div className={`${handles.rlx_logo}`}>
                                 <a href="/rolex/" aria-label="Inicio" title="Inicio">
-                                    <picture className="placa-rolex-logo">
+                                    <picture className={`${handles.placa_rolex_logo}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg"
@@ -178,16 +110,16 @@ const Asistencia: React.FC = () => {
                             <Nav />
                         </div>
 
-                        <div className="row-grid breadcrum-page" style={{ height: "40px" }}>
-                            <div className="breadcrum-column">
-                                <ul className="breadcrum-menu-list description">
-                                    <li className="fixed-14">
+                        <div className={`${handles.row_grid} ${handles.breadcrum_page}`} style={{ height: "40px" }}>
+                            <div className={`${handles.breadcrum_column}`}>
+                                <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
+                                    <li className={`${handles.fixed_14}`}>
                                         <a href="/rolex/coleccion-rolex/">
                                             Relojes Rolex
                                         </a>
                                     </li>
-                                    <li className="fixed-14 active">
-                                        <a className="active" href="https://www.glauser.com.co/rolex/asistencia-rolex/">Mantenimiento</a>
+                                    <li className={`${handles.fixed_14} ${handles.active}`}>
+                                        <a className={`${handles.active}`} href="https://devjhernandez--glauser.myvtex.com/rolex/asistencia-rolex/">Mantenimiento</a>
                                     </li>
                                 </ul>
                             </div>
@@ -197,9 +129,9 @@ const Asistencia: React.FC = () => {
 
                 <section className="single-imagen-componet">
                     <div className="rlx-container-content">
-                        <div className="row-grid-fullw">
-                            <div className="grid-column-full">
-                                <picture className="rlx-pbanner-top p-relative">
+                        <div className={`${handles.row_grid_fullw}`}>
+                            <div className={`${handles.grid_column_full}`}>
+                                <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                     <source
                                         media="(max-width: 767px)"
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mantenimiento/rolex-servicing-cover-portrait.webp"
@@ -216,26 +148,26 @@ const Asistencia: React.FC = () => {
                 </section>
 
                 <section className="c-lightbeige-bg">
-                    <div className="rlx-container-content py-90-60">
-                        <div className="row-grid-fullw text-introduccion pb-90-60">
-                            <div className="col-lg-2-5">
-                                <h1 className="headline50 c-brown-text pb-20">
+                    <div className={`${handles.rlx_container} ${handles.py_90_60}`}>
+                        <div className={`${handles.row_grid_fullw} ${handles.text_introduccion} ${handles.pb_90_60}`}>
+                            <div className={`${handles.col_lg_2_5}`}>
+                                <h1 className={`${handles.headline50} ${handles.c_brown_text}  ${handles.pb_20}`}>
                                     Mantenimiento y reparación de los relojes Rolex en GLAUSER
                                 </h1>
                             </div>
-                            <div className="col-lg-8-5">
-                                <p className="body-20-light pb-30">
+                            <div className={`${handles.col_lg_8_5}`}>
+                                <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                     <strong>Los relojes Rolex están diseñados y creados para perdurar.</strong>
                                 </p>
-                                <p className="body-20-light">
+                                <p className={`${handles.body_20_light}`}>
                                     Desde el diseño de un reloj Rolex hasta el momento en el que sale del taller, cada paso de su desarrollo y de su fabricación sigue un solo requisito crítico: la calidad. Es por ello que cada uno de los relojes estampados con la corona está preparado para cumplir plenamente con sus funciones sin límite de tiempo.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="row-grid-fullw component-video pb-90-60">
-                            <div className="col-6-12">
-                                <picture className="rlx-pbanner-top p-relative">
+                        <div className={`${handles.row_grid_fullw} ${handles.component_video} ${handles.pb_90_60}`}>
+                            <div className={`${handles.col_6_12}`}>
+                                <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                     <source
                                         media="(max-width: 767px)"
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mantenimiento/rolex-servicing-7214-portrait.webp"
@@ -248,10 +180,10 @@ const Asistencia: React.FC = () => {
                                 </picture>
                             </div>
                         </div>
-                        <div className="row-grid-fullw cuerpotexto">
-                            <div className="col-text-center">
-                                <h2 className="headline50 c-brown-text pb-20">Déjese aconsejar por un experto</h2>
-                                <p className="body-20-light">
+                        <div className={`${handles.row_grid_fullw} ${handles.cuerpotexto} `}>
+                            <div className={`${handles.col_text_center}`}>
+                                <h2 className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20}`}>Déjese aconsejar por un experto</h2>
+                                <p className={`${handles.body_20_light}`}>
                                     Al pasar muchos años entre un servicio y otro, su reloj merece la mayor de las atenciones. Como centro de servicio autorizado Rolex, GLAUSER se compromete plenamente a ofrecerles a sus clientes un servicio posventa de primer nivel. Gracias a la exigencia y al savoir‑faire de nuestros relojeros, su reloj Rolex puede mantenerse en el tiempo conservando una excelente fiabilidad y, al mismo tiempo, un brillo irreprochable.
                                 </p>
                             </div>
@@ -260,18 +192,18 @@ const Asistencia: React.FC = () => {
                 </section>
 
                 <section className="c-beige-bg">
-                    <div className="rlx-container-content py-90-60">
-                        <div className="row-grid-fullw cuerpotexto pb-90-60">
-                            <div className="col-text-center">
-                                <h2 className="headline50 c-brown-text pb-20">Mantenimiento Rolex en GLAUSER</h2>
-                                <p className="body-20-light">
+                    <div className={`${handles.rlx_container_content} ${handles.py_90_60}`}>
+                        <div className={`${handles.row_grid_fullw} ${handles.cuerpotexto} ${handles.pb_90_60}`}>
+                            <div className={`${handles.col_text_center}`}>
+                                <h2 className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20}`}>Mantenimiento Rolex en GLAUSER</h2>
+                                <p className={`${handles.body_20_light}`}>
                                     GLAUSER se enorgullece de formar parte de la red mundial de relojeros formados por Rolex, rigurosamente seleccionados por su profesionalidad y experiencia incomparables. El procedimiento del servicio Rolex está diseñado para garantizar que todas y cada una de las piezas que abandonan un taller Rolex cumplan con sus especificaciones estéticas y funcionales originales.
                                 </p>
                             </div>
                         </div>
-                        <div className="row-grid-fullw image-center">
-                            <div className="col-6-10">
-                                <picture className="rlx-pbanner-top p-relative">
+                        <div className={`${handles.row_grid_fullw} ${handles.image_center}`}>
+                            <div className={`${handles.col_6_10}`}>
+                                <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                     <source
                                         media="(max-width: 767px)"
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mantenimiento/rolex-servicing-2234-portrait.webp"
@@ -288,10 +220,10 @@ const Asistencia: React.FC = () => {
                 </section>
 
                 <section className="c-lightbeige-bg">
-                    <div className="row-grid-fullw cuerpotexto py-90-60">
-                        <div className="col-text-center">
-                            <div className="pb-45-40">
-                                <picture className="p-relative">
+                    <div className={`${handles.row_grid_fullw} ${handles.cuerpotexto} ${handles.py_90_60}`}>
+                        <div className={`${handles.col_text_center}`}>
+                            <div className={`${handles.pb_45_40}`}>
+                                <picture className={`${handles.p_relative}`}>
                                     <source
                                         media="(max-width: 767px)"
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mantenimiento/rolex-plaques-300x150-es.webp"
@@ -304,8 +236,8 @@ const Asistencia: React.FC = () => {
                                     />
                                 </picture>
                             </div>
-                            <h2 className="headline50 c-brown-text pb-20">Su centro de servicio autorizado</h2>
-                            <p className="body-20-light">
+                            <h2 className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20}`}>Su centro de servicio autorizado</h2>
+                            <p className={`${handles.body_20_light}`}>
                                 Nuestros centros, a la vanguardia de la tecnología, cuentan con relojeros que han recibido formación basada en unos
                                 estrictos criterios de excelencia que Rolex evalúa con regularidad. Desde el ajuste de la longitud del brazalete a la
                                 reparación completa, todas las operaciones relacionadas con el mantenimiento de un reloj Rolex pueden confiarse a
@@ -313,9 +245,9 @@ const Asistencia: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="row-grid-fullw image-center pb-90-60">
-                        <div className="col-6-10">
-                            <picture className="rlx-pbanner-top p-relative">
+                    <div className={`${handles.row_grid_fullw} ${handles.image_center} ${handles.pb_90_60}`}>
+                        <div className={`${handles.col_6_10}`}>
+                            <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                 <source
                                     media="(max-width: 767px)"
                                     srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mantenimiento/rolex-servicing-sav-barcelona-tousrolexboutique-portrait.webp"
@@ -328,11 +260,11 @@ const Asistencia: React.FC = () => {
                             </picture>
                         </div>
                     </div>
-                    <div className="row-grid-fullw cuerpotexto">
-                        <div className="col-text-center">
-                            <div className="pb-90-60">
-                                <h2 className="headline50 c-brown-text pb-20">Procedimiento del servicio Rolex</h2>
-                                <p className="body-20-light pb-30">
+                    <div className={`${handles.row_grid_fullw} ${handles.cuerpotexto}`}>
+                        <div className={`${handles.col_text_center}`}>
+                            <div className={`${handles.pb_90_60}`}>
+                                <h2 className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20}`}>Procedimiento del servicio Rolex</h2>
+                                <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                     El procedimiento del servicio Rolex está diseñado para asegurar que todo reloj que salga de un taller de Rolex cumpla
                                     las especificaciones estéticas y funcionales originales. Cada movimiento queda completamente ajustado, y cada caja y
                                     brazalete son meticulosamente restaurados para recuperar su lustre. La precisión y la hermeticidad son sometidas a
@@ -340,7 +272,7 @@ const Asistencia: React.FC = () => {
                                 </p>
                                 <a
                                     href="/rolex/asistencia-rolex/mantenimiento-rolex/"
-                                    className="btn-primary-rlx"
+                                    className={`${handles.btn_primary_rlx}`}
                                 >
                                     Descubra más
                                 </a>
@@ -351,9 +283,9 @@ const Asistencia: React.FC = () => {
 
                 <section className="single-imagen-componet">
                     <div className="rlx-container-content">
-                        <div className="row-grid-fullw">
+                        <div className={`${handles.row_grid_fullw}`}>
                             <div className="grid-column-full">
-                                <picture className="rlx-pbanner-top p-relative">
+                                <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                     <source
                                         media="(max-width: 767px)"
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mantenimiento/rolex-servicing-2301-portrait.webp"
@@ -370,10 +302,10 @@ const Asistencia: React.FC = () => {
                 </section>
 
                 <section className="c-lightbeige-bg">
-                    <div className="row-grid-fullw cuerpotexto py-90-60">
-                        <div className="col-text-center">
-                            <h2 className="headline50 c-brown-text pb-20">La garantía de servicio de dos años</h2>
-                            <p className="body-20-light">
+                    <div className={`${handles.row_grid_fullw} ${handles.cuerpotexto} ${handles.py_90_60}`}>
+                        <div className={`${handles.col_text_center}`}>
+                            <h2 className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20}`}>La garantía de servicio de dos años</h2>
+                            <p className={`${handles.body_20_light}`}>
                                 Después de un servicio completo, su reloj Rolex queda cubierto por una garantía de servicio de dos años. Esta garantía
                                 excluye cualquier daño o deterioro que resulte de un accidente o de una utilización inapropiada del reloj. Toda
                                 intervención realizada por terceras personas no autorizadas por Rolex o toda adición de piezas o accesorios no fabricados
@@ -381,9 +313,9 @@ const Asistencia: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="row-grid-fullw image-center pb-90-60">
-                        <div className="col-6-10">
-                            <picture className="rlx-pbanner-top p-relative">
+                    <div className={`${handles.row_grid_fullw} ${handles.image_center} ${handles.pb_90_60}`}>
+                        <div className={`${handles.col_6_10}`}>
+                            <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                 <source
                                     media="(max-width: 767px)"
                                     srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mantenimiento/rolex-servicing-rolex-service_card-portrait.webp"
@@ -400,9 +332,9 @@ const Asistencia: React.FC = () => {
 
                 <section className="single-imagen-componet">
                     <div className="rlx-container-content">
-                        <div className="row-grid-fullw">
+                        <div className={`${handles.row_grid_fullw}`}>
                             <div className="grid-column-full">
-                                <picture className="rlx-pbanner-top p-relative">
+                                <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                     <source
                                         media="(max-width: 767px)"
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mantenimiento/rolex-servicing-sav-portrait.webp"
@@ -418,7 +350,7 @@ const Asistencia: React.FC = () => {
                     </div>
                 </section>
 
-                <RlxExploreMas />
+                <RlxExploreMasNModels />
                 <Footer />
             </main>
         </>

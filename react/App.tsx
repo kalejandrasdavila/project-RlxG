@@ -1,6 +1,13 @@
-import React from 'react'
-import Home from './Home'
+import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 
-const App = () => <Home />
+const App = () => (
+    <HelmetProvider>
+        <>
+            <div className="rlx-global-app-container">
+            </div>
+        </>
+    </HelmetProvider>
+);
 
-export default App
+export default App;

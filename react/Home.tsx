@@ -1,13 +1,37 @@
-import React from 'react'
-import { Helmet } from "react-helmet-async";
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import useInitScripts from './components/hooks/useInitScripts';
 import Nav from './components/parts/Nav';
-import RlxExploreMas from './components/parts/RlxExploreMas';
+import RlxExploreMasNModels from './components/parts/RlxExploreMas';
 import Footer from './components/parts/Footer';
+import { useCssHandles } from 'vtex.css-handles';
+import './main-style.css';
+import { getBaseUrl, buildUrl, getStylesUrl } from './utils/urlUtils';
+
+const CSS_HANDLES = [
+  //HEADER//
+  'headercomponent', 'rlx_html', 'home_rlx', 'rlx_menu', 'rlx_container', 'row_grid', 'rlx_logo', 'placa_rolex_logo',
+  'swiper_wrapper',
+  ///rlx-exploremas//
+  'rlx_exploremas', 'rlx_banner_slider', 'swiper_container', 'slider_home_principal', 'swiper_slide', 'row_grid_fullw',
+  'banner_text_absolute2', 'slide_content', 'headline26', 'c_white_text', 'headline70', 'pb_20', 'btn_primary_rlx', 'slider_image_6_12',
+  'c_dark_text', 'swiper_pagination_home', 'swiper_pagination_clickable', 'swiper_pagination_bullets', 'swiper_pagination_bullet_active',
+  'swiper_pagination', 'swiper_button_prev', 'principal_prev', 'swiper_button_next', 'principal_next',
+  //c-lightbeige-bg//
+  'c_lightbeige_bg', 'rlx_container_content', 'py_90_60', 'text_introduccion', 'col_lg_2_5', 'headline50', 'c_brown_text', 'col_lg_8_5', 'body_20_light',
+  'component_video', 'col_6_12', 'headline36', 'rlx_pbanner_top', 'p_relative', 'component_2_col', 'pb_90_60', 'col_lg_2_6', 'pb_50_0', 'pt_10', 'fixed_16',
+  'btn_label_icon_rlx',
+  //c-beige-bg//
+  'c_beige_bg', 'component_3_col', 'col_6_2', 'legend_16_light', 'body_24_bold', 'legend_16_bold', '_rotate_90', 'col_6_6', 'col_6_10'
+
+] as const
+
 
 const Home: React.FC = () => {
-
   useInitScripts();
+  const handles = useCssHandles(CSS_HANDLES);
+  const baseUrl = getBaseUrl();
+
 
   return (
     <>
@@ -17,40 +41,27 @@ const Home: React.FC = () => {
           name="description"
           content="GLAUSER en Colombia se enorgullece de formar parte de la red mundial de Distribuidores Oficiales Rolex, autorizados para vender y realizar el mantenimiento de los relojes Rolex"
         />
-        {/* Estos comentarios de Vtex se mantienen tal cual, ya que son directivas de VTEX. */}
-        {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
-                <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
-                <div dangerouslySetInnerHTML={{ __html: '<vtex:template id="GL-Favicon" />'}}/>*/}
-
-        {/* Directiva de VTEX para metatags, se mantiene comentada como en el original. */}
-        {/* <vtex.cmc:GLMetaTags /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <link
           rel="stylesheet"
           type="text/css"
-          href="https://www.glauser.com.co/files/style.min.css"
+          href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
         />
-        <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <link
           rel="stylesheet"
           type="text/css"
           href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css"
         />
-        <link
-          rel="stylesheet preload"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
-        {/* Scripts externos que se cargan globalmente. */}
+        <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <script src="https://assets.adobedtm.com/7e3b3fa0902e/7ba12da1470f/launch-73c56043319a-staging.min.js"></script>
+        <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/" />
 
-        <link rel="canonical" href="http://localhost:3000/rolex/" />
-
-        {/* Meta Tags para Facebook */}
-        <meta property="og:url" content="https://www.glauser.com.co/rolex/" />
+        <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -62,95 +73,29 @@ const Home: React.FC = () => {
         />
         <meta
           property="og:image"
-          content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-watches-landscape.webp"
+          content="https://glauser.vteximg.com.br/arquivos/rolex-home-glauser-1200x630.jpg"
         />
 
-        {/* Meta Tags para Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.glauser.com.co/rolex/" />
-        <meta
-          name="twitter:title"
-          content="Distribuidor Oficial Rolex en Colombia - GLAUSER"
-        />
-        <meta
-          name="twitter:description"
-          content="GLAUSER en Colombia se enorgullece de formar parte de la red mundial de Distribuidores Oficiales Rolex, autorizados para vender y realizar el mantenimiento de los relojes Rolex"
-        />
-        <meta
-          name="twitter:image"
-          content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-watches-landscape.webp"
-        />
-        {/* Script de capa de datos digital (digitalDataLayer) */}
-        <script type="text/javascript" dangerouslySetInnerHTML={{
-          __html: `
-                       var digitalDataLayer = {
-                    environment: {
-                        environmentVersion: "V7",
-                        coBrandedVersion: "Bespoke",
-                    },
-                    page: {
-                        pageType: "home page"
-                    },
-                };
-                    `}}
-        />
-        {/* Script JSON-LD para datos estructurados de Schema.org */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: `
-                    {
-                    "@context": "https://schema.org",
-                    "@graph": [
-                        {
-                            "@type": "Organization",
-                            "@id": "https://www.glauser.com.co/#organization",
-                            "name": "Joyería Glauser",
-                            "url": "https://www.glauser.com.co/",
-                            "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
-                            "logo": {
-                                "@type": "ImageObject",
-                                "@id": "https://www.glauser.com.co/#logo",
-                                "inLanguage": "es-CO",
-                                "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                "width": 300,
-                                "height": 102,
-                                "caption": "Joyería Glauser"
-                            },
-                            "image": { "@id": "https://www.glauser.com.co/#logo" }
-                        },
-                        {
-                            "@type": "WebPage",
-                            "@id": "https://www.glauser.com.co/rolex/#webpage",
-                            "url": "https://www.glauser.com.co/rolex/",
-                            "name": "Distribuidor Oficial Rolex en Colombia - GLAUSER",
-                            "isPartOf": { "@id": "https://www.glauser.com.co/#website" },
-                            "datePublished": "2024-04-10T05:23:53+00:00",
-                            "dateModified": "2024-04-10T05:23:53+00:00",
-                            "description": "GLAUSER en Colombia se enorgullece de formar parte de la red mundial de Distribuidores Oficiales Rolex, autorizados para vender y realizar el mantenimiento de los relojes Rolex",
-                            "breadcrumb": { "@id": "https://www.glauser.com.co/rolex/#breadcrumb" },
-                            "inLanguage": "es-Es",
-                            "potentialAction": { "@type": "ReadAction", "target": "https://www.glauser.com.co/rolex/" }
-                        }
-                    ]
-                    }
-                `}}
-        />
+        <meta name="twitter:site" content="@glauser_col" />
+        <meta name="twitter:title" content="Distribuidor Oficial Rolex en Colombia - GLAUSER" />
+        <meta name="twitter:description" content="GLAUSER en Colombia se enorgullece de formar parte de la red mundial de Distribuidores Oficiales Rolex, autorizados para vender y realizar el mantenimiento de los relojes Rolex" />
+        <meta name="twitter:image" content="https://glauser.vteximg.com.br/arquivos/rolex-home-glauser-1200x630.jpg" />
       </Helmet>
-      <div className="header-component">
-        {/* Componentes comentados en el original, se mantienen así. */}
-        {/*<HeaderPromotion />*/}
-        {/* <GLHeader />*/}
+      { }
+
+      <div className={`${handles.headercomponent}`}>
         <header className="main-header" id="main-header">
-          {/*<MainNav />*/}
         </header>
       </div>
-      <main id="rlx-html" className="home-rlx">
-        <header id="rlx-menu" className="rlx-menu">
-          <div className="rlx-container">
-            <div className="row-grid">
-              <div className="rlx-logo">
+
+      <main id="rlx-html" className={`${handles.rlx_html} ${handles.home_rlx}`}>
+        <header id="rlx-menu" className={`${handles.rlx_menu}`}>
+          <div className={`${handles.rlx_container}`}>
+            <div className={`${handles.row_grid}`}>
+              <div className={`${handles.rlx_logo}`}>
                 <a href="/rolex/" aria-label="Inicio" title="Inicio">
-                  <picture className="placa-rolex-logo">
+                  <picture className={`${handles.placa_rolex_logo}`}>
                     <source media="(max-width: 767px)"
                       srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" />
                     <img
@@ -163,25 +108,27 @@ const Home: React.FC = () => {
             </div>
           </div>
         </header>
-        <section className="rlx-exploremas rlx-banner-slider">
+
+
+        <section className={`${handles.rlx_exploremas} ${handles.rlx_banner_slider}`}>
           <div
-            className="swiper-container slider-home-principal"
+            className={`${handles.swiper_container} ${handles.slider_home_principal}`}
             style={{
               height: "auto",
               width: "100%",
             }}>
-            <div className="swiper-wrapper">
-              <div className="swiper-slide row-grid-fullw">
-                <div className="slide-content banner-text-absolute2">
-                  <span className="headline26 c-white-text">Rolex</span>
-                  <p className="headline70 c-white-text pb-20">Sea-Dweller</p>
+            <div className={`${handles.swiper_wrapper}`}>
+              <div className={`${handles.swiper_slide} ${handles.row_grid_fullw}`}>
+                <div className={`${handles.slide_content} ${handles.banner_text_absolute2}`}>
+                  <span className={`${handles.headline26} ${handles.c_white_text}`}>Rolex</span>
+                  <p className={`${handles.headline70} ${handles.c_white_text} ${handles.pb_20}`} >Sea-Dweller</p>
                   <a
-                    className="btn-primary-rlx"
-                    href="https://www.glauser.com.co/rolex/watches/sea-dweller/">
+                    className={`${handles.btn_primary_rlx}`}
+                    href="https://devjhernandez--glauser.myvtex.com/rolex/watches/sea-dweller/">
                     Descubra más
                   </a>
                 </div>
-                <div className="slider-image-6-12">
+                <div className={`${handles.slider_image_6_12}`}>
                   <a href="http://localhost:3000/rolex/watches/sea-dweller/">
                     <picture className="banner-10">
                       <source
@@ -197,19 +144,19 @@ const Home: React.FC = () => {
                   </a>
                 </div>
               </div>
-              <div className="swiper-slide row-grid-fullw">
-                <div className="slide-content banner-text-absolute2">
-                  <span className="headline26 c-dark-text">Rolex y la hípica</span>
-                  <p className="headline70 pb-20 c-dark-text">
+              <div className={`${handles.swiper_slide} ${handles.row_grid_fullw}`}>
+                <div className={`${handles.slide_content} ${handles.banner_text_absolute2}`}>
+                  <span className={`${handles.headline26} ${handles.c_dark_text}`}>Rolex y la hípica</span>
+                  <p className={`${handles.headline70} ${handles.pb_20} ${handles.c_dark_text} `}>
                     Rolex Grand Slam of Show Jumping
                   </p>
                   <a
-                    className="btn-primary-rlx"
-                    href="https://www.glauser.com.co/rolex/mundo-rolex/grand-slam-of-show-jumping/">
+                    className={`${handles.btn_primary_rlx}`}
+                    href="https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/grand-slam-of-show-jumping/">
                     Descubra más
                   </a>
                 </div>
-                <div className="slider-image-6-12">
+                <div className={`${handles.slider_image_6_12}`}>
                   <a href="http://localhost:3000/rolex/mundo-rolex/grand-slam-of-show-jumping/">
                     <picture className="banner-10">
                       <source
@@ -225,17 +172,17 @@ const Home: React.FC = () => {
                   </a>
                 </div>
               </div>
-              <div className="swiper-slide row-grid-fullw">
-                <div className="slide-content banner-text-absolute2">
-                  <p className="headline26">Rolex y el «savoir‑faire» relojero</p>
-                  <p className="headline70 pb-20">Excelencia en desarrollo</p>
+              <div className={`${handles.swiper_slide} ${handles.row_grid_fullw}`}>
+                <div className={`${handles.slide_content} ${handles.banner_text_absolute2}`}>
+                  <p className={`${handles.headline26}`}>Rolex y el «savoir‑faire» relojero</p>
+                  <p className={`${handles.headline70} ${handles.pb_20}`}>Excelencia en desarrollo</p>
                   <a
-                    className="btn-primary-rlx"
-                    href="https://www.glauser.com.co/rolex/watchmaking/">
+                    className={`${handles.btn_primary_rlx}`}
+                    href="https://devjhernandez--glauser.myvtex.com/rolex/watchmaking/">
                     Descubra más
                   </a>
                 </div>
-                <div className="slider-image-6-12">
+                <div className={`${handles.slider_image_6_12}`}>
                   <a href="http://localhost:3000/rolex/watchmaking/">
                     <picture className="banner-10">
                       <source
@@ -252,58 +199,56 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="swiper-pagination-home swiper-pagination-clickable swiper-pagination-bullets">
-              {/* tabIndex debe ser un número */}
+            <div className={`${handles.swiper_pagination_home} ${handles.swiper_pagination_clickable} ${handles.swiper_pagination_bullets}`}>
               <span
                 aria-label="Ir a la diapositiva 1"
-                className="swiper-pagination-bullet swiper-pagination-bullet-active"
+                className={`${handles.swiper_pagination_bullets} ${handles.swiper_pagination_bullet_active}`}
                 role="button"
                 tabIndex={0}
               />
               <span
                 aria-label="Ir a la diapositiva 2"
-                className="swiper-pagination-bullet"
+                className={`${handles.swiper_pagination_bullets}`}
                 role="button"
                 tabIndex={0}
               />
               <span
                 aria-label="Ir a la diapositiva 3"
-                className="swiper-pagination-bullet"
+                className={`${handles.swiper_pagination_bullets}`}
                 role="button"
                 tabIndex={0}
               />
             </div>
-            {/*<!-- Si necesitamos paginación -->*/}
-            <div className="swiper-pagination"></div>
-            {/*<!-- Si necesitamos botones de navegación -->*/}
-            <div className="swiper-button-prev principal-prev"></div>
-            <div className="swiper-button-next principal-next"></div>
+            <div className={`${handles.swiper_pagination}`}></div>
+            <div className={`${handles.swiper_button_prev} ${handles.principal_prev}`}></div>
+            <div className={`${handles.swiper_button_next} ${handles.principal_next}`}></div>
           </div>
         </section>
-        <section className="c-lightbeige-bg">
-          <div className="rlx-container-content py-90-60">
-            <div className="row-grid-fullw text-introduccion pb-90-60">
-              <div className="col-lg-2-5">
-                <h1 className="headline50 c-brown-text pb-20">
+
+        <section className={`${handles.c_lightbeige_bg}`}>
+          <div className={`${handles.rlx_container_content} ${handles.py_90_60}`}>
+            <div className={`${handles.row_grid_fullw} ${handles.text_introduccion} ${handles.py_90_60}`}>
+              <div className={`${handles.col_lg_2_5}`}>
+                <h1 className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20}`}>
                   Bienvenido a GLAUSER Distribuidor Oficial Rolex en Colombia
                 </h1>
               </div>
-              <div className="col-lg-8-5">
-                <p className="body-20-light">
+              <div className={`${handles.col_lg_8_5}`}>
+                <p className={`${handles.body_20_light}`}>
                   <strong>
                     GLAUSER se enorgullece de formar parte de la red mundial de
                     Distribuidores Oficiales Rolex,
-                  </strong>{" "}
+                  </strong>
                   los únicos autorizados para vender y realizar el mantenimiento de
                   los relojes Rolex.
                 </p>
               </div>
             </div>
-            <div className="row-grid-fullw component-video">
-              <div className="col-6-12">
-                <h2 className="headline36 c-brown-text pb-20">Relojes Rolex</h2>
+            <div className={`${handles.row_grid_fullw} ${handles.component_video}`}>
+              <div className={`${handles.col_6_12}`}>
+                <h2 className={`${handles.headline36} ${handles.c_brown_text} ${handles.pb_20}`}>Relojes Rolex</h2>
                 <a href="/rolex/coleccion-rolex/">
-                  <picture className="rlx-pbanner-top p-relative">
+                  <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
                       srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-watches-portrait.webp"
@@ -317,19 +262,18 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-            <div className="row-grid-fullw component-2-col pb-90-60">
-              <div className="col-lg-2-6 pb-50-0">
-                <div className="pt-10">
-                  <p className="fixed-16 c-brown-text">Encuentre su Rolex</p>
-                  <h3 className="headline36 c-brown-text">
+            <div className={`${handles.row_grid_fullw} ${handles.component_2_col} ${handles.pb_90_60}`}>
+              <div className={`${handles.col_lg_2_6} ${handles.pb_50_0}`}>
+                <div className={`${handles.pt_10}`}>
+                  <p className={`${handles.fixed_16} ${handles.c_brown_text}`}>Encuentre su Rolex</p>
+                  <h3 className={`${handles.headline36} ${handles.c_brown_text}`}>
                     Descubra las colecciones Rolex
                   </h3>
                   <a
-                    className="btn-label-icon-rlx"
+                    className={`${handles.btn_label_icon_rlx}`}
                     href="/rolex/coleccion-rolex/">
                     Más información
                     <svg
-
                       aria-hidden="true"
                       fill="white"
                       height="12"
@@ -343,17 +287,17 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="row-grid-fullw component-2-col">
-              <div className="col-lg-2-6">
-                <h2 className="headline36 c-brown-text pb-20">
+            <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
+              <div className={`${handles.col_lg_2_6}`}>
+                <h2 className={`${handles.headline36} ${handles.c_brown_text} ${handles.pb_20}`}>
                   Póngase en contacto con nosotros
                 </h2>
               </div>
             </div>
-            <div className="row-grid-fullw component-video">
-              <div className="col-6-12">
+            <div className={`${handles.row_grid_fullw} ${handles.component_video}`}>
+              <div className={`${handles.col_6_12}`}>
                 <a href="/rolex/contactenos/enviar-mensaje/">
-                  <picture className="rlx-pbanner-top p-relative">
+                  <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
                       srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/contacto/rolex-contact-message-portrait.webp"
@@ -367,17 +311,16 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-            <div className="row-grid-fullw component-2-col">
-              <div className="col-lg-2-6 pb-50-0">
-                <div className="pt-10">
-                  <h3 className="headline36 c-brown-text">Enviar un mensaje</h3>
+            <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
+              <div className={`${handles.col_lg_2_6} ${handles.pb_50_0}`}>
+                <div className={`${handles.pt_10}`}>
+                  <h3 className={`${handles.headline36} ${handles.c_brown_text}`}>Enviar un mensaje</h3>
                   <a
-                    className="btn-label-icon-rlx"
+                    className={`${handles.btn_label_icon_rlx}`}
                     href="/rolex/contactenos/enviar-mensaje/"
                   >
                     Contáctenos
                     <svg
-
                       aria-hidden="true"
                       fill="white"
                       height="12"
@@ -394,17 +337,18 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="c-beige-bg">
-          <div className="rlx-container-content py-90-60">
-            <div className="row-grid-fullw component-2-col">
-              <div className="col-lg-2-6">
-                <h2 className="headline36 c-brown-text pb-20">Descubra Rolex</h2>
+
+        <section className={`${handles.c_beige_bg}`}>
+          <div className={`${handles.rlx_container_content} ${handles.py_90_60}`}>
+            <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
+              <div className={`${handles.col_lg_2_6}`}>
+                <h2 className={`${handles.headline36} ${handles.c_brown_text} ${handles.pb_20}`}>Descubra Rolex</h2>
               </div>
             </div>
-            <div className="row-grid-fullw component-3-col">
-              <div className="col-6-2  pb-50-0">
+            <div className={`${handles.row_grid_fullw} ${handles.component_3_col}`}>
+              <div className={`${handles.col_6_2} ${handles.pb_50_0}`}>
                 <a href="/rolex/mundo-rolex/">
-                  <picture className="rlx-pbanner-top p-relative">
+                  <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
                       srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-world-of-rolex-WIM23ac-portrait.webp"
@@ -416,34 +360,31 @@ const Home: React.FC = () => {
                     />
                   </picture>
                 </a>
-                <div className="pt-10">
-                  <p className="legend-16-light c-brown-text">
+                <div className={`${handles.pt_10}`}>
+                  <p className={`${handles.legend_16_light} ${handles.c_brown_text}`}>
                     Un compromiso con la excelencia
                   </p>
-                  <h3 className="body-24-bold c-brown-text">El mundo de Rolex</h3>
-                  <a id="btnVolverArriba" className="legend-16-bold" onClick={(e) => {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}>
+                  <h3 className={`${handles.body_24_bold} ${handles.c_brown_text}`}>El mundo de Rolex</h3>
+                  <a
+                    className={`${handles.btn_label_icon_rlx}`}
+                    href="/rolex/mundo-rolex/">
+                    Más información
                     <svg
-                      className="-rotate-90"
-                      height="15"
-                      width="15"
-                      viewBox="0 0 15 15"
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      aria-hidden="true" // Mantén esto como true si el texto al lado ya describe su propósito
+                      aria-hidden="true"
                       fill="white"
-                    >
-                      <path d="M15,3.5l-7.5,8.1L0,3.5"></path>
+                      height="12"
+                      role="img"
+                      viewBox="0 0 15 15"
+                      width="12"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.7,7.5l-1.4,1.4l-5.7,5.7l-1.4-1.4l5.7-5.7L3.3,1.9l1.4-1.4l5.7,5.7l0,0L11.7,7.5z"></path>
                     </svg>
-                    Volver arriba
                   </a>
                 </div>
               </div>
-              <div className="col-6-6  pb-50-0">
+              <div className={`${handles.col_6_6} ${handles.pb_50_0}`}>
                 <a href="/rolex/watchmaking/">
-                  <picture className="rlx-pbanner-top p-relative">
+                  <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
                       srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-watchmaking-portrait.webp"
@@ -455,15 +396,15 @@ const Home: React.FC = () => {
                     />
                   </picture>
                 </a>
-                <div className="pt-10">
-                  <p className="legend-16-light c-brown-text">
+                <div className={`${handles.pt_10}`}>
+                  <p className={`${handles.legend_16_light} ${handles.c_brown_text}`}>
                     Excelencia en desarrollo
                   </p>
-                  <h3 className="body-24-bold c-brown-text">
+                  <h3 className={`${handles.body_24_bold} ${handles.c_brown_text}`}>
                     «Savoir-faire» relojero
                   </h3>
                   <a
-                    className="btn-label-icon-rlx"
+                    className={`${handles.btn_label_icon_rlx}`}
                     href="/rolex/watchmaking/">
                     Más información
                     <svg
@@ -479,9 +420,9 @@ const Home: React.FC = () => {
                   </a>
                 </div>
               </div>
-              <div className="col-6-10">
+              <div className={`${handles.col_6_10}`}>
                 <a href="/rolex/asistencia-rolex/">
-                  <picture className="rlx-pbanner-top p-relative">
+                  <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
                       srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-servicing-portrait.webp"
@@ -493,17 +434,16 @@ const Home: React.FC = () => {
                     />
                   </picture>
                 </a>
-                <div className="pt-10">
-                  <p className="legend-16-light c-brown-text">
+                <div className={`${handles.pt_10}`}>
+                  <p className={`${handles.legend_16_light} ${handles.c_brown_text}`}>
                     Nuestra filosofía del mantenimiento
                   </p>
-                  <h3 className="body-24-bold c-brown-text">Mantenimiento</h3>
+                  <h3 className={`${handles.body_24_bold} ${handles.c_brown_text}`}>Mantenimiento</h3>
                   <a
-                    className="btn-label-icon-rlx"
+                    className={`${handles.btn_label_icon_rlx}`}
                     href="/rolex/asistencia-rolex/">
                     Más información
                     <svg
-
                       aria-hidden="true"
                       fill="white"
                       height="12"
@@ -519,11 +459,11 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
-        <RlxExploreMas />
+        <RlxExploreMasNModels />
         <Footer />
       </main>
     </>
   );
 }
 
-export default Home
+export default Home;

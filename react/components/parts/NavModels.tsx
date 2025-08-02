@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from "react";
+import { useCssHandles } from 'vtex.css-handles';
+import '../../main-style.css';
 
 interface MenuItem {
     text: string;
     href: string;
 }
 
+const CSS_HANDLES = [
+    //HEADER "rlx-sm btn-toggle"//
+    'rlx_header_menu_top', 'rlx_lg', 'menu_list_rolex', 'rlx_sm', 'btn_toggle', 'nav_link', 'active'
+] as const
+
 const NavbarM: React.FC = () => {
+    const handles = useCssHandles(CSS_HANDLES)
     const [activeLink, setActiveLink] = useState<string>("");
 
     useEffect(() => {
@@ -26,12 +34,12 @@ const NavbarM: React.FC = () => {
 
     return (
         <>
-            <nav className="rlx-header-menu-top rlx-lg" role="navigation">
-                <ul id="rlx-menu-toggle" className="menu-list-rolex">
+            <nav className={`${handles.rlx_header_menu_top} ${handles.rlx_lg}`} role="navigation">
+                <ul id="rlx-menu-toggle" className={`${handles.menu_list_rolex}`}>
                     {menuItems.map((item: MenuItem, index: number) => (
                         <li key={index}>
                             <a
-                                className={`nav-link button-label ${activeLink === item.href ? "active" : ""}`}
+                                className={`${handles.nav_link} button-label ${activeLink === item.href ? `${handles.active}` : ""}`}
                                 href={item.href}
                                 onClick={() => setActiveLink(item.href)}
                             >

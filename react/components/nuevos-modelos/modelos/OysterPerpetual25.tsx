@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async"; // Importación correcta para react-helmet-async
 import useInitScripts from '../../hooks/useInitScripts'; // Asumiendo que es un hook .ts o .tsx
-import RlxExploreMasNewModels2025 from "../../parts/RlxExploreMasNModels";
+import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import NavM from "../../parts/NavModels"; // Asumiendo que es .tsx
 import Footer from '../../parts/Footer'; // Asumiendo que es .tsx
 
@@ -9,8 +9,8 @@ const ModOysterPerpetual2025: React.FC = () => { // Tipado del componente funcio
     useInitScripts();
 
     // Obtener la URL actual dinámicamente para canonical y OG tags
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.glauser.com.co/rolex/nuevos-modelos-2025/oyster-perpetual/';
-    const baseUrl = 'https://www.glauser.com.co'; // La URL base de tu sitio en producción
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/nuevos-modelos-2025/oyster-perpetual/';
+    const baseUrl = 'https://devjhernandez--glauser.myvtex.com'; // La URL base de tu sitio en producción
 
     return (
         // Si este componente (ModOysterPerpetual2025) es el punto de entrada principal para una ruta o página
@@ -31,7 +31,7 @@ const ModOysterPerpetual2025: React.FC = () => { // Tipado del componente funcio
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://www.glauser.com.co/files/style.min.css"
+                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -364,7 +364,7 @@ const ModOysterPerpetual2025: React.FC = () => { // Tipado del componente funcio
                     </div>
                 </section>
 
-                <RlxExploreMasNewModels2025 />
+                <RlxExploreMasNModels />
                 <Footer />
             </main>
         </>

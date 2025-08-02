@@ -1,0 +1,12 @@
+{
+    "store.custom#rolex": {
+        "blocks": [
+            "Home"
+        ]
+    },
+    "store.custom#coleccion-rolex": {
+        "blocks": [
+            "store.coleccionRlx"
+        ]
+    }
+}

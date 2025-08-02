@@ -1,14 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../hooks/useInitScripts';
-import RlxExploreMas from "../../parts/RlxExploreMas";
+import RlxExploreMasNModels from "../../parts/RlxExploreMas";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
 
 const TheOpen: React.FC = () => {
     useInitScripts();
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.glauser.com.co/rolex/mundo-rolex/the-open/';
-    const baseUrl = 'https://www.glauser.com.co';
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/the-open/';
+    const baseUrl = 'https://devjhernandez--glauser.myvtex.com';
 
     return (
         <>
@@ -22,7 +22,7 @@ const TheOpen: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://www.glauser.com.co/files/style.min.css"
+                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
                 />
                 <link
                     rel="stylesheet"
@@ -481,7 +481,7 @@ const TheOpen: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMas />
+                <RlxExploreMasNModels />
                 <Footer />
             </main>
         </>

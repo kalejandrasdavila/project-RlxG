@@ -1,10 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async'; // Correct import for react-helmet-async
+import { Helmet } from "react-helmet-async";
 import useInitScripts from '../hooks/useInitScripts'; // Assuming this is a custom hook
 import Nav from '../parts/Nav';
-import RlxExploreMas from '../parts/RlxExploreMas';
+import RlxExploreMasNModels from '../parts/RlxExploreMas';
 import useHorario from '../hooks/ContactoRlx';
 import Footer from '../parts/Footer';
+import { useCssHandles } from 'vtex.css-handles';
+import '../../main-style.css';
+
+
+const CSS_HANDLES = [
+    //HEADER//
+    'headercomponent', 'rlx_html', 'home_rlx', 'rlx_menu', 'rlx_container', 'row_grid', 'rlx_logo', 'placa_rolex_logo',
+    'breadcrum_page', 'breadcrum_column', 'breadcrum_menu_list', 'description', 'fixed_14', 'active',
+    ///c-lightbeige-bg//
+    'row_grid_fullw', 'grid_column_full', 'rlx_pbanner_top', 'p_relative', 'rlx_container_content', 'py_90_60', 'text_introduccion',
+    'pb_90_60', 'col_lg_8_5', 'col_lg_2_5', 'headline50', 'c_brown_text', 'pb_20', 'body_20_light', 'component_video', 'col_6_12',
+    'headline36', 'component_2_col', 'fixed_16', 'btn_label_icon_rlx', 'component_3_col', 'col_span_2_1', 'col_6_2', 'body_24_bold',
+    'legend_16_light', 'col_span_2_2', 'col_6_6', 'col_6_10', 'col_lg_2_6', 'component_3_col_2', 'pb_30', 'mapa_and_detail',
+    'col_span_6_8_1', 'col_span_6_4_2', 'c_white_bg', 'info_detail', 'parrafos_rolex', 'address_store', 'mb_20_30',
+    'rolex_retailer_openinghours', 'is_open2', 'rolex_retailer_openinghours_summary', 'c_rolex_green_text', 'social_links_rolex',
+    'fas', 'text_mapita',
+    // Missing handles
+    'headline30'
+] as const
 
 interface Horario {
     horario: string;
@@ -15,8 +34,8 @@ interface Horario {
 const Contactenos: React.FC = () => {
     useInitScripts();
 
-    // Assuming useHorario is a custom hook that returns horario, isOpen, and a toggle function.
     const { horario, isOpen, toggleHorario }: Horario = useHorario();
+    const handles = useCssHandles(CSS_HANDLES)
 
     return (
         <>
@@ -26,25 +45,20 @@ const Contactenos: React.FC = () => {
                     name="description"
                     content="Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex. Programe una cita o envíenos un mensaje para responder a todas sus dudas sobre Rolex y los servicios ofrecidos."
                 />
-                {/* VTEX IO: Avoid dangerouslySetInnerHTML for VTEX-specific meta tags. Use VTEX IO blocks or render-runtime components instead. */}
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                {/* VTEX IO: Consider managing CSS via manifest.json or CSS Modules instead of direct <link> tags. */}
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://www.glauser.com.co/files/style.min.css"
+                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
                 />
-                {/* It's better to choose one Swiper CSS link */}
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-                {/* VTEX IO: Loading Swiper and jQuery via <script> tags is generally NOT recommended. Use import or VTEX IO's dependency management. */}
-                {/* <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> */}
-                {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> */}
-                {/* <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> */}
+                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                <link rel="canonical" href="https://www.glauser.com.co/rolex/contactenos/" />
+                <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/contactenos/" />
 
-                {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://www.glauser.com.co/rolex/contactenos/" />
+                <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/contactenos/" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -56,118 +70,27 @@ const Contactenos: React.FC = () => {
                 />
                 <meta
                     property="og:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-hub-cover-m126333-0010-portrait.webp"
+                    content="https://glauser.vteximg.com.br/arquivos/contacto-glauser-rolex-1200x630.jpg"
                 />
 
-                {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://www.glauser.com.co/rolex/" />
-                <meta
-                    name="twitter:title"
-                    content="Contacto GLAUSER en Colombia - Distribuidor Oficial Rolex"
-                />
-                <meta
-                    name="twitter:description"
-                    content="Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex. Programe una cita o envíenos un mensaje para responder a todas sus dudas sobre Rolex y los servicios ofrecidos."
-                />
-                <meta
-                    name="twitter:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-hub-cover-m126333-0010-portrait.webp"
-                />
-
-                <script type="text/javascript">
-                    {`
-            var digitalDataLayer = {
-              environment: {
-                environmentVersion: "V7",
-                coBrandedVersion: "Bespoke",
-              },
-              page: {
-                pageType: "store contact page"
-              },
-            };
-          `}
-                </script>
-
-                <script type="application/ld+json" dangerouslySetInnerHTML={{
-                    __html: `{
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "Organization",
-                  "@id": "https://www.glauser.com.co/#organization",
-                  "name": "Joyería Glauser",
-                  "url": "https://www.glauser.com.co/",
-                  "sameAs": [
-                    "https://www.facebook.com/JoyeriaGlauser/",
-                    "https://www.instagram.com/joyeriaglauser/?hl=es-la"
-                  ],
-                  "logo": {
-                    "@type": "ImageObject",
-                    "@id": "https://www.glauser.com.co/#logo",
-                    "inLanguage": "es-CO",
-                    "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                    "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                    "width": 300,
-                    "height": 102,
-                    "caption": "Joyería Glauser"
-                  },
-                  "image": { "@id": "https://www.glauser.com.co/#logo" }
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "https://www.glauser.com.co/rolex/contactenos/#webpage",
-                  "url": "https://www.glauser.com.co/rolex/contactenos/",
-                  "name": "Contacto GLAUSER en Colombia - Distribuidor Oficial Rolex",
-                  "isPartOf": { "@id": "https://goldcenter.com.co/#website" },
-                  "datePublished": "2025-04-01T05:23:53+00:00",
-                  "dateModified": "2025-04-01T05:23:53+00:00",
-                  "description": "Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex. Programe una cita o envíenos un mensaje para responder a todas sus dudas sobre Rolex y los servicios ofrecidos.",
-                  "breadcrumb": { "@id": "https://www.glauser.com.co/rolex/contactenos/#breadcrumb" },
-                  "inLanguage": "es-Es",
-                  "potentialAction": [
-                    { "@type": "ReadAction", "target": ["https://www.glauser.com.co/rolex/contactenos/"] }
-                  ]
-                }
-              ]
-            }`
-                }}
-                />
-
-                <script type="application/ld+json" dangerouslySetInnerHTML={{
-                    __html: `{
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Rolex GLAUSER",
-                  "item": "https://www.glauser.com.co/rolex/"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Póngase en contacto con nosotros"
-                }
-              ]
-            }`
-                }}
-                />
+                <meta name="twitter:site" content="@glauser_col" />
+                <meta name="twitter:title" content="Contacto GLAUSER en Colombia - Distribuidor Oficial Rolex" />
+                <meta name="twitter:description" content="Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex. Programe una cita o envíenos un mensaje para responder a todas sus dudas sobre Rolex y los servicios ofrecidos." />
+                <meta name="twitter:image" content="https://glauser.vteximg.com.br/arquivos/contacto-glauser-rolex-1200x630.jpg" />
             </Helmet>
-            <div className="header-component">
-                {/* VTEX IO: Use VTEX blocks for header elements, not <VTEXTemplate> directly in JSX. */}
+            <div className={`${handles.headercomponent}`}>
                 <header className="main-header" id="main-header">
-                    {/* Header content */}
                 </header>
             </div>
-            <main id="rlx-html">
-                <header id="rlx-menu" className="rlx-menu">
-                    <div className="rlx-container">
-                        <div className="row-grid">
-                            <div className="rlx-logo">
-                                <a href="http://localhost:3000/rolex/" aria-label="Inicio" title="Inicio">
-                                    <picture className="placa-rolex-logo">
+
+            <main id="rlx-html" className={`${handles.rlx_html} ${handles.home_rlx}`}>
+                <header id="rlx-menu" className={`${handles.rlx_menu}`}>
+                    <div className={`${handles.rlx_container}`}>
+                        <div className={`${handles.row_grid}`}>
+                            <div className={`${handles.rlx_logo}`}>
+                                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                                    <picture className={`${handles.placa_rolex_logo}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg"
@@ -183,16 +106,16 @@ const Contactenos: React.FC = () => {
                             <Nav />
                         </div>
 
-                        <div className="row-grid breadcrum-page" style={{ height: "40px" }}>
-                            <div className="breadcrum-column">
-                                <ul className="breadcrum-menu-list description">
-                                    <li className="fixed-14">
-                                        <a href="http://localhost:3000/rolex/coleccion-rolex/">
+                        <div className={`${handles.row_grid} ${handles.breadcrum_page}`} style={{ height: "40px" }}>
+                            <div className={`${handles.breadcrum_column}`}>
+                                <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
+                                    <li className={`${handles.fixed_14}`}>
+                                        <a href="/rolex/coleccion-rolex/">
                                             Relojes Rolex
                                         </a>
                                     </li>
-                                    <li className="fixed-14 active">
-                                        <a className="active" href="https://www.glauser.com.co/rolex/contactenos/">Póngase en contacto con nosotros</a>
+                                    <li className={`${handles.fixed_14} ${handles.active}`}>
+                                        <a className={`${handles.active}`} href="https://devjhernandez--glauser.myvtex.com/rolex/contactenos/">Póngase en contacto con nosotros</a>
                                     </li>
                                 </ul>
                             </div>
@@ -202,9 +125,9 @@ const Contactenos: React.FC = () => {
 
                 <section className="single-imagen-componet">
                     <div className="rlx-container-content">
-                        <div className="row-grid-fullw">
-                            <div className="grid-column-full">
-                                <picture className="rlx-pbanner-top p-relative">
+                        <div className={`${handles.row_grid_fullw}`}>
+                            <div className={`${handles.grid_column_full}`}>
+                                <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                     <source
                                         media="(max-width: 767px)"
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/contacto/rolex-contact-cover-portrait.webp"
@@ -221,15 +144,15 @@ const Contactenos: React.FC = () => {
                 </section>
 
                 <section className="c-lightbeige-bg">
-                    <div className="rlx-container-content py-90-60">
-                        <div className="row-grid-fullw text-introduccion pb-90-60">
-                            <div className="col-lg-2-5">
-                                <h1 className="headline50 c-brown-text pb-20">
+                    <div className={`${handles.rlx_container_content} ${handles.py_90_60}`}>
+                        <div className={`${handles.row_grid_fullw} ${handles.text_introduccion} ${handles.pb_90_60}`}>
+                            <div className={`${handles.col_lg_2_5}`}>
+                                <h1 className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20}`}>
                                     Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex
                                 </h1>
                             </div>
-                            <div className="col-lg-8-5">
-                                <p className="body-20-light pb-30">
+                            <div className={`${handles.col_lg_8_5}`}>
+                                <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                     <strong>
                                         Gracias al conocimiento, la destreza y el equipo necesarios para
                                         darle el mejor servicio, podemos garantizar la autenticidad de todas
@@ -240,8 +163,8 @@ const Contactenos: React.FC = () => {
                                     su forma de contacto deseada, le responderemos lo más pronto posible.
                                 </p>
                                 <a
-                                    className="btn-label-icon-rlx"
-                                    href="https://www.glauser.com.co/rolex/contactenos/enviar-mensaje/">
+                                    className={`${handles.btn_label_icon_rlx}`}
+                                    href="https://devjhernandez--glauser.myvtex.com/rolex/contactenos/enviar-mensaje/">
                                     Envíenos un mensaje
                                     <svg
                                         aria-hidden="true"
@@ -256,8 +179,8 @@ const Contactenos: React.FC = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="row-grid-fullw-container mapa-and-detail component-video">
-                            <div className="col-span-6-8-1">
+                        <div className={`${handles.row_grid_fullw} ${handles.mapa_and_detail} ${handles.component_video}`}>
+                            <div className={`${handles.col_span_6_8_1}`}>
                                 <div id="mapssssss">
                                     <div>
                                         <iframe
@@ -273,33 +196,33 @@ const Contactenos: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-span-6-4-2 c-white-bg">
-                                <div className="info-detail">
+                            <div className={`${handles.col_span_6_4_2} ${handles.c_white_bg}`}>
+                                <div className={`${handles.info_detail}`}>
                                     <div className="mx-auto-rolex">
-                                        <p className="legend-16-light c-brown-text">
+                                        <p className={`${handles.legend_16_light} ${handles.c_brown_text} `}>
                                             Distribuidor Oficial Rolex
                                         </p>
-                                        <h2 className="headline30 c-brown-text">
+                                        <h2 className={`${handles.headline30} ${handles.c_brown_text} `}>
                                             GLAUSER JOYERÍA Y RELOJERÍA
                                         </h2>
-                                        <address className="parrafos-rolex address-store mb-20-30">
-                                            <span className="fixed-16">
+                                        <address className={`${handles.parrafos_rolex} ${handles.address_store} ${handles.mb_20_30} `}>
+                                            <span className={`${handles.fixed_16}`}>
                                                 Cl. 98 #52-115, Centro Comercial Buenavista I Local 126-127
                                             </span>
-                                            <span className="fixed-16">Barranquilla</span>
-                                            <span className="fixed-16">110111</span>
-                                            <span className="fixed-16">Atlántico, Colombia</span>
+                                            <span className={`${handles.fixed_16}`}>Barranquilla</span>
+                                            <span className={`${handles.fixed_16}`}>110111</span>
+                                            <span className={`${handles.fixed_16}`}>Atlántico, Colombia</span>
                                         </address>
-                                        <div className={`rolex-retailer-openinghours ${isOpen ? "is-open2" : ""}`}>
+                                        <div className={`${handles.rolex_retailer_openinghours} ${isOpen ? `${handles.is_open2}` : ""}`}>
                                             <div
-                                                className="rolex-retailer-openinghours-summary"
+                                                className={`${handles.rolex_retailer_openinghours_summary}`}
                                                 onClick={toggleHorario}
                                                 style={{ cursor: "pointer" }}
                                             >
-                                                <strong className="fixed-16" id="mensaje">
+                                                <strong className={`${handles.fixed_16}`} id="mensaje">
                                                     Abierto
                                                 </strong>
-                                                <span className="legend-16-light c-rolex-green-text" id="horarolex">
+                                                <span className={`${handles.legend_16_light} ${handles.c_rolex_green_text}`} id="horarolex">
                                                     {horario}
                                                 </span>
                                             </div>
@@ -338,14 +261,14 @@ const Contactenos: React.FC = () => {
                                                 </table>
                                             )}
                                         </div>
-                                        <div className="social-links-rolex">
+                                        <div className={`${handles.social_links_rolex}`}>
                                             <a
                                                 className="social-link button-label"
                                                 href="tel:+57 313 2841334"
-                                                onClick={() => window._satellite?.track('contactCall')}
+                                                onClick={() => window._satellite?.track?.('contactCall')}
                                                 rel="noopener"
                                                 target="_blank">
-                                                <i className="fas">
+                                                <i className={`${handles.fas}`}>
                                                     <svg
                                                         height="36px"
                                                         version="1.1"
@@ -369,15 +292,15 @@ const Contactenos: React.FC = () => {
                                                         </g>
                                                     </svg>
                                                 </i>
-                                                <span className="text-mapita">+57 313 2841334</span>
+                                                <span className={`${handles.text_mapita}`}>+57 313 2841334</span>
                                             </a>
                                             <a
                                                 className="social-link button-label"
                                                 href="https://wa.me/573132841334?text=Hola%20GLAUSER%20Joyerías%20quisiera%20mas%20informaci%C3%B3n"
-                                                onClick={() => window._satellite?.track('whatsappContact')}
+                                                onClick={() => window._satellite?.track?.('whatsappContact')}
                                                 rel="noopener"
                                                 target="_blank">
-                                                <i className="fas">
+                                                <i className={`${handles.fas}`}>
                                                     <svg
                                                         height="36px"
                                                         version="1.1"
@@ -405,15 +328,15 @@ const Contactenos: React.FC = () => {
                                                         </g>
                                                     </svg>
                                                 </i>
-                                                <span className="text-mapita">WhatsApp</span>
+                                                <span className={`${handles.text_mapita}`}>WhatsApp</span>
                                             </a>
                                             <a
                                                 className="social-link button-label"
                                                 href="https://www.google.com/maps/dir//Joyerias+Glauser+-+Rolex+Official+Retailer,+Cl.+98+%2352-115+Centro+Comercial+Buenavista+I+Local+126-127,+Barranquilla,+Atl%C3%A1ntico,+Colombia/@11.008281,-74.821372,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8ef42c4d4b013871:0x9e7d19df67c28c32!2m2!1d-74.8213718!2d11.0082806?hl=es" // This is already a valid URL
-                                                onClick={() => window._satellite?.track('getDirections')}
+                                                onClick={() => window._satellite?.track?.('getDirections')}
                                                 rel="noopener"
                                                 target="_blank">
-                                                <i className="fas">
+                                                <i className={`${handles.fas}`}>
                                                     <svg
                                                         height="36px"
                                                         version="1.1"
@@ -443,7 +366,7 @@ const Contactenos: React.FC = () => {
                                                         </g>
                                                     </svg>
                                                 </i>
-                                                <span className="text-mapita">Cómo llegar</span>
+                                                <span className={`${handles.text_mapita}`}>Cómo llegar</span>
                                             </a>
                                         </div>
                                     </div>
@@ -453,11 +376,10 @@ const Contactenos: React.FC = () => {
                     </div>
                 </section>
 
-                <RlxExploreMas />
+                <RlxExploreMasNModels />
                 <Footer />
             </main>
         </>
-        // </HelmetProvider> {/* Close HelmetProvider if opened above */}
     );
 };
 

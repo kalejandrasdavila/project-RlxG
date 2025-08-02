@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import useInitScripts from '../../hooks/useInitScripts';
-import RlxExploreMasModels from '../../parts/RlxExploreMasNModels';
+import RlxExploreMasNModels from '../../parts/RlxExploreMasNModels';
 import NavM from '../../parts/NavModels';
 import Footer from '../../parts/Footer';
 
@@ -11,8 +11,8 @@ const M1908: React.FC = () => {
     useInitScripts();
 
     const [isVisible, setIsVisible] = useState<boolean>(false);
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.glauser.com.co/rolex/watches/1908/';
-    const baseUrl = 'https://www.glauser.com.co';
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/watches/1908/';
+    const baseUrl = 'https://devjhernandez--glauser.myvtex.com';
 
     return (
         <>
@@ -26,7 +26,7 @@ const M1908: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://www.glauser.com.co/files/style.min.css"
+                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
                 <link
@@ -130,13 +130,13 @@ const M1908: React.FC = () => {
                                 "@type": "ListItem",
                                 "position": 1,
                                 "name": "Rolex GLAUSER",
-                                "item": "https://www.glauser.com.co/rolex/"
+                                "item": "https://devjhernandez--glauser.myvtex.com/rolex/"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 2,
                                 "name": "Relojes Rolex",
-                                "item": "https://www.glauser.com.co/rolex/coleccion-rolex/"
+                                "item": "https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/"
                             },
                             {
                                 "@type": "ListItem",
@@ -438,7 +438,7 @@ const M1908: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMasModels />
+                <RlxExploreMasNModels />
                 <Footer />
             </main>
         </>

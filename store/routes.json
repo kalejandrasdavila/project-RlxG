@@ -1,0 +1,35 @@
+{
+    "store.home-rlx": {
+        "path": "/"
+    },
+    "store.custom#rolex": {
+        "path": "/rolex"
+    },
+    "store.coleccionRlx": {
+        "path": "/rolex/coleccion-rolex/"
+    },
+    "store.custom#coleccion-rolex": {
+        "path": "/rolex/coleccion-rolex/"
+    },
+    "store.watch-collection": {
+        "path": "/rolex/watches/:collection"
+    },
+    "store.watch-model": {
+        "path": "/rolex/watches/:collection/:model"
+    },
+    "store.nuevos-modelos": {
+        "path": "/rolex/nuevos-modelos-2025/"
+    },
+    "store.watchmaking": {
+        "path": "/rolex/watchmaking/"
+    },
+    "store.asistencia": {
+        "path": "/rolex/asistencia-rolex/"
+    },
+    "store.mundo-rolex": {
+        "path": "/rolex/mundo-rolex/"
+    },
+    "store.contactenos": {
+        "path": "/rolex/contactenos/"
+    }
+}

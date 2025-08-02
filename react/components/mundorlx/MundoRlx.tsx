@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../hooks/useInitScripts';
 import Nav from '../parts/Nav';
-import RlxExploreMas from '../parts/RlxExploreMas';
+import RlxExploreMasNModels from '../parts/RlxExploreMas';
 import Footer from '../parts/Footer';
+import { useCssHandles } from 'vtex.css-handles';
+import '../../main-style.css';
+
+const CSS_HANDLES = [
+    //HEADER//
+    'headercomponent', 'rlx_html', 'home_rlx', 'rlx_menu', 'rlx_container', 'row_grid', 'rlx_logo', 'placa_rolex_logo',
+    'breadcrum_page', 'breadcrum_column', 'breadcrum_menu_list', 'description', 'fixed_14', 'active',
+    ///c-lightbeige-bg//
+    'row_grid_fullw', 'grid_column_full', 'rlx_pbanner_top', 'p_relative', 'rlx_container_content', 'py_90_60', 'text_introduccion',
+    'pb_90_60', 'col_lg_8_5', 'col_lg_2_5', 'headline50', 'c_brown_text', 'pb_20', 'body_20_light', 'component_video', 'col_6_12',
+    'headline36', 'component_2_col', 'fixed_16', 'btn_label_icon_rlx', 'component_3_col', 'col_span_2_1', 'col_6_2', 'body_24_bold',
+    'legend_16_light', 'col_span_2_2', 'col_6_6', 'col_6_10', 'col_lg_2_6', 'component_3_col_2', 'pt_10', 'pb_30', 'col_lg_8_6',
+    'pb_45_40',
+    // Missing handles
+    'pb_50_0'
+] as const
 
 const MundoRolex: React.FC = () => {
     useInitScripts();
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.glauser.com.co/rolex/mundo-rolex/';
-    const baseUrl = 'https://www.glauser.com.co';
+    const handles = useCssHandles(CSS_HANDLES)
+
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/';
+    const baseUrl = 'https://devjhernandez--glauser.myvtex.com';
 
     return (
 
@@ -19,14 +37,12 @@ const MundoRolex: React.FC = () => {
                     name="description"
                     content="Explora el mundo de Rolex. Descubra ideas y artículos que muestran la esencia de Rolex y manténgase actualizado con las últimas noticias de Rolex | GLAUSER."
                 />
-                {/* VTEX IO: Evita dangerouslySetInnerHTML para meta tags específicos de VTEX. Utiliza bloques VTEX IO o componentes del render-runtime. */}
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-                {/* CSS: Se mantiene uno de los enlaces de Swiper, eliminando la redundancia. Considera gestionar CSS vía manifest.json. */}
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://www.glauser.com.co/files/style.min.css"
+                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
                 />
                 <link
                     rel="stylesheet"
@@ -34,18 +50,14 @@ const MundoRolex: React.FC = () => {
                     href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css"
                 />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-                {/* <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> (redundante) */}
 
-                {/* SCRIPTS: ¡ELIMINADOS de aquí! Deben ser manejados por useInitScripts o la configuración de VTEX IO. */}
-                {/* <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> */}
-                {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> */}
-                {/* <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> */}
+                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                {/* URLs CANÓNICAS Y DE REDES SOCIALES: Usando la URL dinámica o de producción */}
-                <link rel="canonical" href={currentUrl} />
+                <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/" />
 
-                {/* Facebook Meta Tags */}
-                <meta property="og:url" content={currentUrl} />
+                <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -57,26 +69,15 @@ const MundoRolex: React.FC = () => {
                 />
                 <meta
                     property="og:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-cover-portrait.webp"
+                    content="https://glauser.vteximg.com.br/arquivos/mundo-rolex-1200x630.jpg"
                 />
 
-                {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content={currentUrl} />
-                <meta
-                    name="twitter:title"
-                    content="El mundo de Rolex - GLAUSER"
-                />
-                <meta
-                    name="twitter:description"
-                    content="Explora el mundo de Rolex. Descubra ideas y artículos que muestran la esencia de Rolex y manténgase actualizado con las últimas noticias de Rolex | GLAUSER."
-                />
-                <meta
-                    name="twitter:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-cover-portrait.webp"
-                />
+                <meta name="twitter:site" content="@glauser_col" />
+                <meta name="twitter:title" content="El mundo de Rolex - GLAUSER" />
+                <meta name="twitter:description" content="Explora el mundo de Rolex. Descubra ideas y artículos que muestran la esencia de Rolex y manténgase actualizado con las últimas noticias de Rolex | GLAUSER." />
+                <meta name="twitter:image" content="https://glauser.vteximg.com.br/arquivos/mundo-rolex-1200x630.jpg" />
 
-                {/* Scripts JSON-LD y DataLayer: Se mantienen, ya que son datos estructurados */}
                 <script type="text/javascript">
                     {`
                         var digitalDataLayer = {
@@ -157,19 +158,18 @@ const MundoRolex: React.FC = () => {
                 </script>
 
             </Helmet>
-            <div className="header-component">
-                {/* VTEX IO: No uses <VTEXTemplate> en JSX. Configúralos en blocks.jsonc o importa componentes React si los tienes custom. */}
+            <div className={`${handles.headercomponent}`}>
                 <header className="main-header" id="main-header">
-                    {/* Contenido del header */}
                 </header>
             </div>
-            <main id="rlx-html">
-                <header id="rlx-menu" className="rlx-menu">
-                    <div className="rlx-container">
-                        <div className="row-grid">
-                            <div className="rlx-logo">
+
+            <main id="rlx-html" className={`${handles.rlx_html} ${handles.home_rlx}`}>
+                <header id="rlx-menu" className={`${handles.rlx_menu}`}>
+                    <div className={`${handles.rlx_container}`}>
+                        <div className={`${handles.row_grid}`}>
+                            <div className={`${handles.rlx_logo}`}>
                                 <a href="/rolex/" aria-label="Inicio" title="Inicio">
-                                    <picture className="placa-rolex-logo">
+                                    <picture className={`${handles.placa_rolex_logo}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg"
@@ -185,14 +185,14 @@ const MundoRolex: React.FC = () => {
                             <Nav />
                         </div>
 
-                        <div className="row-grid breadcrum-page" style={{ height: "40px" }}>
-                            <div className="breadcrum-column">
-                                <ul className="breadcrum-menu-list description">
-                                    <li className="fixed-14">
+                        <div className={`${handles.row_grid} ${handles.breadcrum_page}`} style={{ height: "40px" }}>
+                            <div className={`${handles.breadcrum_column}`}>
+                                <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
+                                    <li className={`${handles.fixed_14}`}>
                                         <a href="/rolex/">Rolex</a>
                                     </li>
-                                    <li className="fixed-14 active">
-                                        <a className="active" href="/rolex/mundo-rolex/">Mundo Rolex</a>
+                                    <li className={`${handles.fixed_14} ${handles.active}`}>
+                                        <a className={`${handles.active}`} href="/rolex/mundo-rolex/">Mundo Rolex</a>
                                     </li>
                                 </ul>
                             </div>
@@ -202,9 +202,9 @@ const MundoRolex: React.FC = () => {
 
                 <section className="single-imagen-componet">
                     <div className="rlx-container-content">
-                        <div className="row-grid-fullw">
-                            <div className="grid-column-full">
-                                <picture className="rlx-pbanner-top p-relative">
+                        <div className={`${handles.row_grid_fullw}`}>
+                            <div className={`${handles.grid_column_full}`}>
+                                <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                     <source
                                         media="(max-width: 767px)"
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-cover-wim23ac-portrait.webp"
@@ -219,28 +219,29 @@ const MundoRolex: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
                 <section className="c-lightbeige-bg">
-                    <div className="rlx-container-content py-90-60">
-                        <div className="row-grid-fullw text-introduccion pb-90-60">
-                            <div className="col-lg-2-5">
-                                <h1 className="headline50 c-brown-text pb-20">El mundo de Rolex</h1>
+                    <div className={`${handles.rlx_container_content} ${handles.py_90_60}`}>
+                        <div className={`${handles.row_grid_fullw} ${handles.text_introduccion} ${handles.pb_90_60}`}>
+                            <div className={`${handles.col_lg_2_5}`}>
+                                <h1 className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20}`}>El mundo de Rolex</h1>
                             </div>
-                            <div className="col-lg-8-5">
-                                <p className="body-20-light">
+                            <div className={`${handles.col_lg_8_5}`}>
+                                <p className={`${handles.body_20_light}`}>
                                     <strong>
                                         Durante casi un siglo, Rolex ha desarrollado colaboraciones con un
                                         grupo diverso y extraordinario de talentos de una miríada de
                                         disciplinas.
-                                    </strong>{" "}
+                                    </strong>
                                     La marca colabora con la exploración, los deportes de élite y las
                                     artes, así como con diversos eventos y organizaciones.
                                 </p>
                             </div>
                         </div>
-                        <div className="row-grid-fullw component-video">
-                            <div className="col-6-12">
+                        <div className={`${handles.row_grid_fullw} ${handles.component_video}`}>
+                            <div className={`${handles.col_6_12}`}>
                                 <a href="/rolex/mundo-rolex/grand-slam-of-show-jumping/">
-                                    <picture className="rlx-pbanner-top p-relative">
+                                    <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-gsofsj-portrait-.webp"
@@ -254,16 +255,16 @@ const MundoRolex: React.FC = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="row-grid-fullw component-2-col pb-90-60">
-                            <div className="col-lg-2-6 pb-50-0">
-                                <div className="pt-10">
-                                    <p className="fixed-16 c-brown-text">
+                        <div className={`${handles.row_grid_fullw} ${handles.component_2_col} ${handles.pb_90_60}`}>
+                            <div className={`${handles.col_lg_2_6} ${handles.pb_50_0}`}>
+                                <div className={`${handles.pt_10}`}>
+                                    <p className={`${handles.fixed_16} ${handles.c_brown_text}`}>
                                         Publicado el 13 de marzo de 2025
                                     </p>
-                                    <h2 className="headline36 c-brown-text">
+                                    <h2 className={`${handles.headline36} ${handles.c_brown_text}`}>
                                         Rolex Grand Slam of Show Jumping
                                     </h2>
-                                    <p className="body-20-light pb-30">
+                                    <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                         Ampliamente considerado como el mayor desafío de la hípica, el
                                         Rolex Grand Slam of Show Jumping recompensa al jinete que gane el
                                         Grand Prix en tres de los cuatro «Majors» consecutivos de salto de
@@ -288,9 +289,9 @@ const MundoRolex: React.FC = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-8-6 pb-45-40">
+                            <div className={`${handles.col_lg_8_6} ${handles.pb_45_40}`}>
                                 <a href="/rolex/mundo-rolex/filarmonica-viena/">
-                                    <picture className="rlx-pbanner-top p-relative">
+                                    <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-vpo-portrait.webp"
@@ -302,14 +303,14 @@ const MundoRolex: React.FC = () => {
                                         />
                                     </picture>
                                 </a>
-                                <div className="pt-10">
-                                    <p className="fixed-16 c-brown-text">
+                                <div className={`${handles.pt_10}`}>
+                                    <p className={`${handles.fixed_16} ${handles.c_brown_text}`}>
                                         Publicado el 03 de diciembre de 2024
                                     </p>
-                                    <h2 className="headline36 c-brown-text">
+                                    <h2 className={`${handles.headline36} ${handles.c_brown_text}`}>
                                         Rolex y la Filarmónica de Viena
                                     </h2>
-                                    <p className="body-20-light pb-30">
+                                    <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                         Rolex es Patrocinador Exclusivo de la Filarmónica de Viena desde
                                         el año 2008 y, desde enero de 2009, Sponsor Exclusivo del
                                         Concierto de Año Nuevo.
@@ -332,10 +333,10 @@ const MundoRolex: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="row-grid-fullw component-2-col">
-                            <div className="col-lg-2-6 pb-45-40">
+                        <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
+                            <div className={`${handles.col_lg_2_6} ${handles.pb_45_40}`}>
                                 <a href="/rolex/mundo-rolex/sailgp/">
-                                    <picture className="rlx-pbanner-top p-relative">
+                                    <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-sailGP-m126333-0022-portrait-v2.webp"
@@ -347,14 +348,14 @@ const MundoRolex: React.FC = () => {
                                         />
                                     </picture>
                                 </a>
-                                <div className="pt-10">
-                                    <p className="fixed-16 c-brown-text">
+                                <div className={`${handles.pt_10}`}>
+                                    <p className={`${handles.fixed_16} ${handles.c_brown_text}`}>
                                         Publicado el 28 de noviembre de 2024
                                     </p>
-                                    <h2 className="headline36 c-brown-text">
+                                    <h2 className={`${handles.headline36} ${handles.c_brown_text}`}>
                                         Rolex SailGP Championship
                                     </h2>
-                                    <p className="body-20-light pb-30">
+                                    <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                         Rolex es Title Partner y Reloj Oficial exclusivo del Rolex SailGP
                                         Championship, un circuito de regatas en el que compiten algunas de
                                         las embarcaciones de vela más rápidas del mundo. Las regatas
@@ -378,9 +379,9 @@ const MundoRolex: React.FC = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-8-6 pb-45-40">
+                            <div className={`${handles.col_lg_8_6} ${handles.pb_45_40}`}>
                                 <a href="/rolex/mundo-rolex/us-open/">
-                                    <picture className="rlx-pbanner-top p-relative">
+                                    <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-us-open-portrait.webp"
@@ -392,12 +393,12 @@ const MundoRolex: React.FC = () => {
                                         />
                                     </picture>
                                 </a>
-                                <div className="pt-10">
-                                    <p className="fixed-16 c-brown-text">
+                                <div className={`${handles.pt_10}`}>
+                                    <p className={`${handles.fixed_16} ${handles.c_brown_text}`}>
                                         Publicado el 19 de agosto de 2024
                                     </p>
-                                    <h2 className="headline36 c-brown-text">US Open</h2>
-                                    <p className="body-20-light pb-30">
+                                    <h2 className={`${handles.headline36} ${handles.c_brown_text}`}>US Open</h2>
+                                    <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                         El US Open es el último torneo de Grand Slam® de la temporada del
                                         tenis. Como socio privilegiado del deporte a nivel internacional
                                         durante casi 50 años, Rolex es el Reloj Oficial del evento desde
@@ -421,10 +422,10 @@ const MundoRolex: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="row-grid-fullw component-2-col">
-                            <div className="col-lg-2-6 pb-45-40">
+                        <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
+                            <div className={`${handles.col_lg_2_6} ${handles.pb_45_40}`}>
                                 <a href="/rolex/mundo-rolex/the-open/">
-                                    <picture className="rlx-pbanner-top p-relative">
+                                    <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-the-open-portrait.webp"
@@ -436,14 +437,14 @@ const MundoRolex: React.FC = () => {
                                         />
                                     </picture>
                                 </a>
-                                <div className="pt-10">
-                                    <p className="fixed-16 c-brown-text">
+                                <div className={`${handles.pt_10}`}>
+                                    <p className={`${handles.fixed_16} ${handles.c_brown_text}`}>
                                         Publicado el 11 de julio de 2024
                                     </p>
-                                    <h2 className="headline36 c-brown-text">
+                                    <h2 className={`${handles.headline36} ${handles.c_brown_text}`}>
                                         The Open: el «major» más antiguo del golf
                                     </h2>
-                                    <p className="body-20-light pb-30">
+                                    <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                         The Open, tradicionalmente celebrado en el Reino Unido durante la
                                         tercera semana de julio, es el cuarto y último major masculino del
                                         año. Asociado con esta competición desde 1981, Rolex es
@@ -466,9 +467,9 @@ const MundoRolex: React.FC = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-8-6 pb-45-40">
+                            <div className={`${handles.col_lg_8_6} ${handles.pb_45_40}`}>
                                 <a href="/rolex/mundo-rolex/amundi-evian/">
-                                    <picture className="rlx-pbanner-top p-relative">
+                                    <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-evianc23ct-portrait.webp"
@@ -480,14 +481,14 @@ const MundoRolex: React.FC = () => {
                                         />
                                     </picture>
                                 </a>
-                                <div className="pt-10">
-                                    <p className="fixed-16 c-brown-text">
+                                <div className={`${handles.pt_10}`}>
+                                    <p className={`${handles.fixed_16} ${handles.c_brown_text}`}>
                                         Publicado el 4 de julio de 2024
                                     </p>
-                                    <h2 className="headline36 c-brown-text">
+                                    <h2 className={`${handles.headline36} ${handles.c_brown_text}`}>
                                         The Amundi Evian Championship
                                     </h2>
-                                    <p className="body-20-light pb-30">
+                                    <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                         Rolex es Socio y Reloj Oficial del único Major de golf que se
                                         celebra en Europa continental.
                                     </p>
@@ -509,10 +510,10 @@ const MundoRolex: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="row-grid-fullw component-2-col">
-                            <div className="col-lg-2-6 pb-45-40">
+                        <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
+                            <div className={`${handles.col_lg_2_6} ${handles.pb_45_40}`}>
                                 <a href="/rolex/mundo-rolex/24-horas-de-le-mans/">
-                                    <picture className="rlx-pbanner-top p-relative">
+                                    <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-voyage-lemans23-portrait.webp"
@@ -524,12 +525,12 @@ const MundoRolex: React.FC = () => {
                                         />
                                     </picture>
                                 </a>
-                                <div className="pt-10">
-                                    <p className="fixed-16 c-brown-text">
+                                <div className={`${handles.pt_10}`}>
+                                    <p className={`${handles.fixed_16} ${handles.c_brown_text}`}>
                                         Publicado el 4 de junio de 2024
                                     </p>
-                                    <h2 className="headline36 c-brown-text">Las 24 Horas de Le Mans</h2>
-                                    <p className="body-20-light pb-30">
+                                    <h2 className={`${handles.headline36} ${handles.c_brown_text}`}>Las 24 Horas de Le Mans</h2>
+                                    <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                         La 92.
                                         <sup>a</sup> edición de las 24 Horas de Le Mans, carrera que
                                         celebra la resistencia y la excelencia del automovilismo, se
@@ -553,9 +554,9 @@ const MundoRolex: React.FC = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-8-6 pb-45-40">
+                            <div className={`${handles.col_lg_8_6} ${handles.pb_45_40}`}>
                                 <a href="/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/">
-                                    <picture className="rlx-pbanner-top p-relative">
+                                    <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/mundo-rolex/world-of-rolex-voyage-bg-portrait.webp"
@@ -567,14 +568,14 @@ const MundoRolex: React.FC = () => {
                                         />
                                     </picture>
                                 </a>
-                                <div className="pt-10">
-                                    <p className="fixed-16 c-brown-text">
+                                <div className={`${handles.pt_10}`}>
+                                    <p className={`${handles.fixed_16} ${handles.c_brown_text}`}>
                                         Publicado el 10 de abril de 2024
                                     </p>
-                                    <h2 className="headline36 c-brown-text">
+                                    <h2 className={`${handles.headline36} ${handles.c_brown_text}`}>
                                         Viaje al corazón del universo Rolex
                                     </h2>
-                                    <p className="body-20-light pb-30">
+                                    <p className={`${handles.body_20_light} ${handles.pb_30}`}>
                                         Hans Wilsdorf estaba íntimamente convencido de la capacidad del
                                         ser humano para innovar con la excelencia como objetivo. Casi 120
                                         años después de la creación de la marca, el espíritu del fundador
@@ -602,7 +603,7 @@ const MundoRolex: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMas />
+                <RlxExploreMasNModels />
                 <Footer />
             </main>
         </>

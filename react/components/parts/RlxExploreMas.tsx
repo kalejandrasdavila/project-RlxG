@@ -1,4 +1,6 @@
 import React from 'react';
+import { useCssHandles } from 'vtex.css-handles';
+import '../../main-style.css';
 
 interface ExploreItem {
   href: string;
@@ -8,7 +10,19 @@ interface ExploreItem {
   caption: string;
 }
 
+const CSS_HANDLES = [
+  //HEADER//
+  'rlx_exploremas', 'pt_90_60', 'row_grid_fullw', 'component_2_col', 'col_lg_2_6', 'headline36', 'c_brown_text', 'pb_20',
+  'rlx_container', 'p_relative', 'pb_90_60', 'mb_20', 'px_8', 'exploremas', 'swiper_pagination', 'swiper_pagination_clickable',
+  'swiper_pagination_bullets', 'swiper_pagination_bullet_active', 'footer_prev', 'swiper_button_disabled', 'swiper_button_next',
+  'footer_next', 'swiper_wrapper', 'swiper_slider',
+  // Missing handles
+  'swiper_container', 'swiper_button_prev'
+] as const
 const RlxExploreMas: React.FC = () => {
+
+  const handles = useCssHandles(CSS_HANDLES)
+
   const exploreItems: ExploreItem[] = [
     {
       href: 'http://localhost:3000/rolex/',
@@ -61,20 +75,21 @@ const RlxExploreMas: React.FC = () => {
     },
   ];
 
+
   return (
-    <section className="rlx-exploremas pt-90-60">
+    <section className={`${handles.rlx_exploremas} ${handles.pt_90_60}`}>
       <div className="rlx-container-content">
-        <div className="row-grid-fullw component-2-col">
-          <div className="col-lg-2-6">
-            <p className="headline36 c-brown-text pb-20">Explore más</p>
+        <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
+          <div className={`${handles.col_lg_2_6}`}>
+            <p className={`${handles.headline36} ${handles.c_brown_text} ${handles.pb_20}`}>Explore más</p>
           </div>
         </div>
       </div>
-      <div className="rlx-container p-relative pb-90-60 mb-20 px-8">
-        <div className="swiper-container p-relative exploremas">
+      <div className={`${handles.rlx_container} ${handles.p_relative} ${handles.pb_90_60} ${handles.mb_20} ${handles.px_8}`}>
+        <div className={`${handles.swiper_container} ${handles.p_relative} ${handles.exploremas}`}>
           <div
             aria-live="polite"
-            className="swiper-wrapper"
+            className={`${handles.swiper_wrapper}`}
             id="swiper-wrapper-10ac3e6672fe9a10e0"
             style={{
               transform: 'translate3d(0px, 0px, 0px)',
@@ -84,7 +99,7 @@ const RlxExploreMas: React.FC = () => {
               <div
                 key={index}
                 aria-label={`${index + 1} / ${exploreItems.length}`}
-                className={`swiper-slide ${index === 0 ? 'swiper-slide-active' : ''} ${index === 1 ? 'swiper-slide-next' : ''}`}
+                className={`${handles.swiper_slider} ${index === 0 ? 'swiper-slide-active' : ''} ${index === 1 ? 'swiper-slide-next' : ''}`}
                 role="group"
                 style={{
                   marginRight: '8px',
@@ -99,7 +114,7 @@ const RlxExploreMas: React.FC = () => {
                       loading="lazy"
                       src={item.srcDesktop}
                     />
-                    <figcaption className="c-brown-text">{item.caption}</figcaption>
+                    <figcaption className={`${handles.c_brown_text}`}>{item.caption}</figcaption>
                   </picture>
                 </a>
               </div>
@@ -111,9 +126,9 @@ const RlxExploreMas: React.FC = () => {
             className="swiper-notification"
           />
         </div>
-        <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+        <div className={`${handles.swiper_pagination} ${handles.swiper_pagination_clickable} ${handles.swiper_pagination_bullets}`}>
           <span
-            className="swiper-pagination-bullet swiper-pagination-bullet-active"
+            className={`${handles.swiper_pagination_bullets} ${handles.swiper_pagination_bullet_active}`}
             tabIndex={0}
           />
           <span className="swiper-pagination-bullet" tabIndex={0} />
@@ -122,7 +137,7 @@ const RlxExploreMas: React.FC = () => {
           aria-controls="swiper-wrapper-10ac3e6672fe9a10e0"
           aria-disabled="true"
           aria-label="Previous slide"
-          className="swiper-button-prev footer-prev swiper-button-disabled"
+          className={`${handles.swiper_button_prev} ${handles.footer_prev} ${handles.swiper_button_disabled}`}
           role="button"
           tabIndex={-1}
         />
@@ -130,7 +145,7 @@ const RlxExploreMas: React.FC = () => {
           aria-controls="swiper-wrapper-10ac3e6672fe9a10e0"
           aria-disabled="false"
           aria-label="Next slide"
-          className="swiper-button-next footer-next"
+          className={`${handles.swiper_button_next} ${handles.footer_next}`}
           role="button"
           tabIndex={0}
         />

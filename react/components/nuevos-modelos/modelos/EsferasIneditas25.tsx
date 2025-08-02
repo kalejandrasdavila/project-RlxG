@@ -1,15 +1,15 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../hooks/useInitScripts';
-import RlxExploreMasNewModels2025 from "../../parts/RlxExploreMasNModels";
+import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
 
 const ModEsferasIneditas2025: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.glauser.com.co/rolex/nuevos-modelos-2025/esferas-ineditas/';
-    const baseUrl = 'https://www.glauser.com.co';
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/nuevos-modelos-2025/esferas-ineditas/';
+    const baseUrl = 'https://devjhernandez--glauser.myvtex.com';
 
     return (
         // Si este componente (ModEsferasIneditas2025) es el punto de entrada principal para una ruta o página
@@ -30,7 +30,7 @@ const ModEsferasIneditas2025: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://www.glauser.com.co/files/style.min.css"
+                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -904,7 +904,7 @@ const ModEsferasIneditas2025: React.FC = () => {
                     </div>
                 </section>
 
-                <RlxExploreMasNewModels2025 />
+                <RlxExploreMasNModels />
                 <Footer />
             </main>
         </>

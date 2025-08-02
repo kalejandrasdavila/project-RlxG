@@ -1,6 +1,16 @@
 import React, { useEffect } from 'react';
+import { useCssHandles } from 'vtex.css-handles';
+import '../../main-style.css';
+
+const CSS_HANDLES = [
+    //HEADER//
+    'rlx_footer', 'rlx_container', 'legend_16_bold', '_rotate_90', 'btnVolverArriba', 'rlxcrown', 'back2top',
+    'legend_16_bold'
+
+] as const
 
 const Footer: React.FC = () => {
+    const handles = useCssHandles(CSS_HANDLES)
     useEffect(() => {
         const scrollToTop = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -20,11 +30,11 @@ const Footer: React.FC = () => {
 
     return (
         <>
-            <footer className="rlx-footer">
-                <div className="rlx-container">
-                    <div className="rlxcrown">
+            <footer className={`${handles.rlx_footer}`}>
+                <div className={`${handles.rlx_container}`}>
+                    <div className={`${handles.rlxcrown}`}>
                         <a href="#">
-                            <picture className="rlxcrown">
+                            <picture className={`${handles.rlxcrown}`}>
                                 <img
                                     src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/crown-rolex-footer.webp"
                                     loading="lazy"
@@ -35,13 +45,13 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
                 <div>
-                    <div className="back2top">
-                        <a id="btnVolverArriba" className="legend-16-bold" onClick={(e) => {
+                    <div className={`${handles.back2top}`}>
+                        <a id="btnVolverArriba" className={`${handles.rlx_container} ${handles.btnVolverArriba} ${handles.legend_16_bold}`} onClick={(e) => {
                             e.preventDefault();
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}>
                             <svg
-                                className="-rotate-90"
+                                className={`${handles._rotate_90}`}
                                 height="15"
                                 width="15"
                                 viewBox="0 0 15 15"
@@ -58,7 +68,6 @@ const Footer: React.FC = () => {
                 </div>
             </footer>
             <div className="rolex-page">
-                {/*<Template id="GLFooter" />*/}
             </div>
             <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

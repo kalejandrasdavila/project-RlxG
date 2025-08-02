@@ -7,13 +7,19 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "strict": true,
+    "baseUrl": ".",
     "typeRoots": [
-      "./node_modules/@types", "./src/types",
+      "./node_modules/@types",
+      "./src/types",
       "./react/typings",
       "./typings"
     ],
     "module": "esnext",
-    "lib": ["es2017", "dom", "dom.iterable"]
+    "lib": [
+      "es2017",
+      "dom",
+      "dom.iterable"
+    ]
   },
   "include": [
     "./**/*"
