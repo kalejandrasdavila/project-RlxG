@@ -82,7 +82,6 @@ const Home: React.FC = () => {
         <meta name="twitter:description" content="GLAUSER en Colombia se enorgullece de formar parte de la red mundial de Distribuidores Oficiales Rolex, autorizados para vender y realizar el mantenimiento de los relojes Rolex" />
         <meta name="twitter:image" content="https://glauser.vteximg.com.br/arquivos/rolex-home-glauser-1200x630.jpg" />
       </Helmet>
-      { }
 
       <div className={`${handles.headercomponent}`}>
         <header className="main-header" id="main-header">
