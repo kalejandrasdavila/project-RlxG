@@ -1,0 +1,351 @@
+=====================================================
+DOCUMENTACIÓN - STORE THEME GLACO
+=====================================================
+Proyecto: store-theme-glaco (VTEX Store Theme)
+Versión: 1.0.0
+Conexión con: react-rlx-glsr
+
+=====================================================
+ÍNDICE
+=====================================================
+1. RELACIÓN CON REACT-RLX-GLSR
+2. ARQUITECTURA DEL STORE THEME
+3. SISTEMA DE RUTAS
+4. INTEGRACIÓN CON ROLEX
+
+
+=====================================================
+1. RELACIÓN CON REACT-RLX-GLSR
+=====================================================
+
+ARQUITECTURA DUAL:
+-----------------
+
+El ecosistema GLAUSER funciona con dos proyectos complementarios:
+
+1. store-theme-glaco (ESTE PROYECTO):
+   - Store theme base de VTEX
+   - Configuración general del sitio
+   - Header, footer, navegación principal
+   - Landing pages de marcas
+   - Estructura de productos convencional
+
+2. react-rlx-glsr (PROYECTO HERMANO):
+   - App React especializada para Rolex
+   - Componentes custom para experiencia Rolex
+   - Páginas de colecciones y modelos específicos
+   - Hooks y lógica de negocio Rolex
+
+INTEGRACIÓN:
+-----------
+
+La conexión entre ambos proyectos se realiza a través de:
+
+1. DEPENDENCIA CSS:
+   - store-theme-glaco incluye: vtex.glauser-storerlx.css
+   - Este archivo proporciona estilos específicos para componentes Rolex
+   - Ejemplo: .glauser-storerlx-0-x-menurlx con gradient verde Rolex
+
+2. NAVEGACIÓN:
+   - store-theme-glaco incluye enlaces a /rolex en su menú principal
+   - Cuando el usuario navega a /rolex, se activa react-rlx-glsr
+   - El header y footer base se mantienen desde store-theme-glaco
+
+3. ASSETS COMPARTIDOS:
+   - Logo de Rolex: assets/header/rolex-oficial-menu.png
+   - Imágenes de marca en component-generator
+   - Recursos gráficos unificados
+
+4. FLUJO DE USUARIO:
+   Usuario en store-theme-glaco → Clic en "Rolex" → Redirección a react-rlx-glsr
+   → Experiencia Rolex completa → Regreso al store principal
+
+=====================================================
+2. ARQUITECTURA DEL STORE THEME
+=====================================================
+
+ESTRUCTURA DE DIRECTORIOS:
+├── store/                           # Configuración VTEX Store
+│   ├── blocks/                      # Definición de bloques
+│   │   ├── rlxglauser/             # Configuración específica Rolex (vacío)
+│   │   └── static-pages/            # Páginas estáticas y landings
+│   ├── interfaces.json              # Interfaces mínimas
+│   └── routes.json                  # Rutas del store theme
+├── styles/                          # Estilos y configuraciones
+│   ├── css/                         # Archivos CSS personalizados
+│   ├── configs/                     # Configuraciones de theme
+│   └── iconpacks/                   # Paquetes de iconos
+├── assets/                          # Assets estáticos
+│   ├── header/                      # Imágenes del header
+│   ├── footer/                      # Imágenes del footer
+│   ├── home/                        # Imágenes del home
+│   └── fonts/                       # Fuentes personalizadas
+└── docs/                            # Documentación
+
+BUILDERS UTILIZADOS:
+- styles: 2.x (manejo de CSS y themes)
+- store: 0.x (configuración del store)
+- docs: 0.x (documentación)
+- sitemap: 0.x (mapa del sitio)
+- assets: 0.x (gestión de assets)
+
+
+
+=====================================================
+3. SISTEMA DE RUTAS
+=====================================================
+
+
+CONEXIÓN CON ROLEX:
+------------------
+
+Aunque no hay rutas /rolex definidas en este proyecto, la integración se realiza:
+
+1. NAVEGACIÓN:
+   - Header incluye enlace directo a /rolex
+   - Menu desktop y mobile tienen items "Rolex"
+   - Enlaces apuntan a /rolex (manejado por react-rlx-glsr)
+
+2. ASSETS:
+   - Logo oficial de Rolex en header
+   - Imágenes de Rolex en component-generator del home
+   - Assets compartidos entre proyectos
+
+3. ESTILOS:
+   - CSS específico para componentes Rolex
+   - Gradient verde característico de Rolex
+   - Integración visual seamless
+
+=====================================================
+7. ASSETS Y RECURSOS
+=====================================================
+
+ESTRUCTURA DE ASSETS:
+--------------------
+
+assets/
+├── header/
+│   ├── rolex-oficial-menu.png       # Logo oficial Rolex para menú
+│   └── [otros logos de marcas]
+├── footer/
+│   └── [assets del footer]
+├── home/
+│   └── [imágenes del home]
+├── fonts/
+│   └── [fuentes personalizadas]
+└── logo.png                         # Logo principal GLAUSER
+
+ASSETS DE ROLEX:
+---------------
+
+1. rolex-oficial-menu.png:
+   - Logo oficial para navegación
+   - Usado en header desktop y mobile
+   - Dimensiones: 138px width
+   - Enlace: href="/rolex"
+
+2. imageRolex.svg:
+   - Imagen para component-generator
+   - Usado en home para representar marca Rolex
+   - Formato SVG para escalabilidad
+
+GESTIÓN DE ASSETS:
+-----------------
+
+- Builder: assets: 0.x
+- Ubicación centralizada en /assets/
+- Referencias via /arquivos/ en URLs
+- Optimización automática por VTEX
+- Soporte para imágenes responsive
+
+=====================================================
+8. ESTILOS Y CONFIGURACIONES
+=====================================================
+
+CONFIGURACIÓN DE THEME (styles/configs/style.json):
+-------------------------------------------------
+
+Typography Scale:
+- [3, 2.25, 1.5, 1.25, 1, 0.875, 0.75]
+
+Spacing Scale:
+- [0.125, 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 8, 16]
+
+Media Queries:
+- s: 20rem
+- ns: 40rem (min-width)
+- m: 40rem (min-width)
+- l: 64rem (min-width)
+- xl: 80rem (min-width)
+
+ARCHIVOS CSS PERSONALIZADOS:
+---------------------------
+
+1. vtex.glauser-storerlx.css:
+   ```css
+   :global(.glauser-storerlx-0-x-menurlx){
+       background: linear-gradient(90deg, #0b3e27, #197149);
+   }
+   ```
+   - Estilos específicos para integración con react-rlx-glsr
+   - Gradient verde característico de Rolex
+
+2. Otros CSS principales:
+   - glauser.component-generator.css (31KB): Componentes generados
+   - glauser.menu-custom.css (6.1KB): Menú personalizado
+   - vtex.store-header.css (2.9KB): Estilos del header
+   - vtex.store-footer.css (6.9KB): Estilos del footer
+   - glauser.form-advisor.css (3.4KB): Formulario asesor
+   - glauser.size-guide.css (7.1KB): Guía de tallas
+
+FUENTES:
+-------
+
+font-faces.css:
+- Configuración de fuentes personalizadas
+- Integración con tipografía de marca
+
+
+=====================================================
+4. INTEGRACIÓN CON ROLEX
+=====================================================
+
+ELEMENTOS DE ROLEX EN STORE-THEME-GLACO:
+---------------------------------------
+
+1. NAVEGACIÓN:
+   - Item "Rolex" en menú principal (desktop/mobile)
+   - Enlace directo a /rolex
+   - Logo oficial en header
+   - Posición prominente en navegación
+
+2. HOME PAGE:
+   - Card de Rolex en component-generator
+   - Imagen representativa (imageRolex.svg)
+   - Enlaces a sección Rolex (actualmente /pendiente)
+
+3. FOOTER:
+   - Enlaces a términos específicos de Rolex
+   - Políticas de privacidad de Rolex
+   - Uso de cookies Rolex
+
+4. TÉRMINOS Y CONDICIONES:
+   - Sección específica para Rolex
+   - Declaración sobre interacción con www.rolex.com
+   - Aplicación de términos de Rolex cuando corresponde
+
+FLUJO DE INTEGRACIÓN:
+--------------------
+
+1. USUARIO LLEGA A GLAUSER:
+   - Landing en store-theme-glaco
+   - Ve opciones de marcas incluido Rolex
+   - Navegación familiar del e-commerce
+
+2. SELECCIONA ROLEX:
+   - Clic en menú o card de Rolex
+   - Redirección a /rolex
+   - Activación de react-rlx-glsr
+
+3. EXPERIENCIA ROLEX:
+   - Navegación especializada Rolex
+   - Componentes custom de colecciones
+   - Formularios específicos de Rolex
+   - Mantenimiento de header/footer base
+
+4. REGRESO AL STORE:
+   - Links de vuelta al catálogo general
+   - Integración seamless
+   - Experiencia unificada
+
+ESTADO ACTUAL:
+-------------
+
+- Enlaces configurados pero apuntando a /pendiente
+- Preparación para integración completa
+- Assets ya implementados
+- CSS de integración listo
+- Estructura preparada para activación
+
+ACTIVACIÓN DE LA INTEGRACIÓN:
+----------------------------
+
+Para activar completamente la integración:
+
+1. Cambiar URLs /pendiente por /rolex en:
+   - Menu desktop/mobile
+   - Component generator del home
+   - Cards de marca
+
+2. Verificar que react-rlx-glsr esté desplegado
+
+3. Configurar redirección correcta entre proyectos
+
+4. Testing de flujo completo usuario
+
+=====================================================
+DEPENDENCIAS ENTRE PROYECTOS
+=====================================================
+
+STORE-THEME-GLACO → REACT-RLX-GLSR:
+----------------------------------
+
+1. NAVEGACIÓN:
+   store-theme-glaco proporciona el punto de entrada a Rolex
+   react-rlx-glsr maneja toda la experiencia Rolex
+
+2. ESTILOS:
+   store-theme-glaco incluye CSS base para componentes Rolex
+   react-rlx-glsr utiliza estos estilos + sus propios estilos
+
+3. ASSETS:
+   store-theme-glaco contiene logos y assets de Rolex
+   react-rlx-glsr puede referenciar estos assets
+
+4. SEO Y META:
+   store-theme-glaco maneja meta tags generales
+   react-rlx-glsr maneja meta tags específicos de Rolex
+
+REACT-RLX-GLSR → STORE-THEME-GLACO:
+----------------------------------
+
+1. REGRESO AL CATÁLOGO:
+   react-rlx-glsr debe incluir links de regreso al store principal
+   Navegación a otras marcas desde sección Rolex
+
+2. CONSISTENCIA VISUAL:
+   react-rlx-glsr mantiene header/footer base del theme
+   Experiencia visual unificada
+
+3. USUARIOS Y SESIÓN:
+   Compartir estado de login/carrito entre proyectos
+   Mantener sesión de usuario activa
+
+
+
+=====================================================
+PRÓXIMOS PASOS PARA INTEGRACIÓN COMPLETA
+=====================================================
+
+1. ACTUALIZAR URLs:
+   - Cambiar /pendiente por /rolex en navigation
+   - Activar enlaces en home page
+   - Configurar redirects apropiados
+
+2. TESTING:
+   - Verificar flujo completo de navegación
+   - Testing de responsive en ambos proyectos
+   - Validación de SEO y analytics
+
+3. OPTIMIZACIÓN:
+   - Compartir assets entre proyectos
+   - Optimizar carga de CSS
+   - Implementar lazy loading
+
+4. MONITOREO:
+   - Analytics de flujo entre proyectos
+   - Tracking de conversión Rolex
+   - Métricas de performance
+
+=====================================================
+FIN DE LA DOCUMENTACIÓN
