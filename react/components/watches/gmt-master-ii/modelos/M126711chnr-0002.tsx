@@ -3,7 +3,7 @@ import { useCssHandles } from 'vtex.css-handles';
 import '../../../../main-style.css';
 import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import NavM from "../../../parts/NavModels";
 import WatchesForm from "../../../parts/Rlx-watches-formulario";
 import SectionGmtMaster from "../../../parts/SectionGmtMaster";
@@ -40,7 +40,7 @@ const M126711chnr0002 = () => {
         if (elemento) {
             elemento.value = `Me interesa ${formattedTitle}`;
         } else {
-            console.error("No se encontr� el elemento con el ID 'mensajerlx'");
+            console.error("No se encontrí el elemento con el ID 'mensajerlx'");
         }
     }, []);
 
@@ -135,7 +135,7 @@ const M126711chnr0002 = () => {
                             {
                                 "@type": "Organization",
                                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                "name": "Joyer�a Glauser",
+                                "name": "Joyería Glauser",
                                 "url": "https://devjhernandez--glauser.myvtex.com/",
                                 "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
                                 "logo": {
@@ -146,7 +146,7 @@ const M126711chnr0002 = () => {
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "width": 300,
                                     "height": 102,
-                                    "caption": "Joyer�a Glauser"
+                                    "caption": "Joyería Glauser"
                                 },
                                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                             },
@@ -385,7 +385,7 @@ const M126711chnr0002 = () => {
                                             </a>
                                             <a
                                                 className="social-link button-label"
-                                                href="https://wa.me/573132841334?text=Hola%20GLAUSER%20Joyer�as%20quisiera%20mas%20informaci%C3%B3n"
+                                                href="https://wa.me/573132841334?text=Hola%20GLAUSER%20Joyerías%20quisiera%20mas%20informaci%C3%B3n"
                                                 onClick={() => window._satellite?.track?.('whatsappContact')}
                                                 rel="noopener"
                                                 target="_blank">
@@ -498,7 +498,7 @@ const M126711chnr0002 = () => {
                                                         </g>
                                                     </svg>
                                                 </i>
-                                                <span className="text-mapita">Encu�ntranos</span>
+                                                <span className="text-mapita">Encuíntranos</span>
                                             </a>
                                         </div>
                                     </div>
@@ -647,7 +647,7 @@ const M126711chnr0002 = () => {
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-portrait.webp"
                                     />
                                     <img
-                                        alt="garant�a Rolex"
+                                        alt="garantía Rolex"
                                         loading="lazy"
                                         src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-landscape.webp"
                                     />
@@ -658,19 +658,19 @@ const M126711chnr0002 = () => {
                                     <div className="accordion-item">
                                         <div className="accordion-header">
                                             <span className="body-24-bold c-brown-text">
-                                                La garant�a Rolex
+                                                La garantía Rolex
                                             </span>
-                                            <span className="icon-acordion c-brown-text">�</span>
+                                            <span className="icon-acordion c-brown-text">í</span>
                                         </div>
                                         <div className="accordion-content pb-30 active">
                                             <p className="body-20-light">
-                                                Para garantizar la precisi�n y la fiabilidad de sus relojes,
+                                                Para garantizar la precisión y la fiabilidad de sus relojes,
                                                 Rolex somete a cada reloj, tras el ensamblaje, a una serie de
                                                 pruebas estrictas. Todos los nuevos relojes adquiridos en uno de
-                                                los Distribuidores Oficiales de la marca incluyen una garant�a
-                                                internacional de cinco a�os. Cuando compra un Rolex, el
+                                                los Distribuidores Oficiales de la marca incluyen una garantía
+                                                internacional de cinco años. Cuando compra un Rolex, el
                                                 Distribuidor Oficial rellena y deja registrada la fecha en la
-                                                tarjeta de garant�a Rolex, que certifica la autenticidad de su
+                                                tarjeta de garantía Rolex, que certifica la autenticidad de su
                                                 reloj.
                                             </p>
                                         </div>
@@ -682,13 +682,13 @@ const M126711chnr0002 = () => {
                                         </div>
                                         <div className="accordion-content pb-30">
                                             <p className="body-20-light">
-                                                La garant�a de cinco a�os que se aplica a todos los modelos
-                                                Rolex viene acompa�ada de un sello verde, un s�mbolo de su
-                                                estatus de Cron�metro Superlativo. Esta exclusiva certificaci�n
-                                                da fe de que el reloj ha superado con �xito una serie de
-                                                controles finales espec�ficos llevados a cabo por Rolex en sus
-                                                propios laboratorios y seg�n sus propios criterios, como
-                                                complemento de la certificaci�n oficial COSC de su movimiento.
+                                                La garantía de cinco años que se aplica a todos los modelos
+                                                Rolex viene acompañada de un sello verde, un símbolo de su
+                                                estatus de Cronímetro Superlativo. Esta exclusiva certificación
+                                                da fe de que el reloj ha superado con éxito una serie de
+                                                controles finales específicos llevados a cabo por Rolex en sus
+                                                propios laboratorios y segín sus propios criterios, como
+                                                complemento de la certificación oficial COSC de su movimiento.
                                             </p>
                                         </div>
                                     </div>
@@ -700,10 +700,10 @@ const M126711chnr0002 = () => {
                                         <div className="accordion-content pb-30">
                                             <p className="body-20-light">
                                                 Todos los relojes Rolex se entregan en un precioso estuche verde
-                                                que protege y guarda la joya que anida en su interior. Adem�s,
+                                                que protege y guarda la joya que anida en su interior. Además,
                                                 el estuche simboliza igualmente el acto de regalar. Por ello, si
                                                 usted quiere obsequiar a alguien con un Rolex, es importante que
-                                                lo primero que vea el destinatario est� a la altura de su
+                                                lo primero que vea el destinatario está a la altura de su
                                                 contenido.
                                             </p>
                                         </div>
@@ -733,14 +733,14 @@ const M126711chnr0002 = () => {
                                         <li>
                                             <span className="body-20-bold block">Hermetecidad</span>
                                             <span className="body-20-light">
-                                                Herm�tico hasta 100 metros/ 330 pies
+                                                Hermítico hasta 100 metros/ 330 pies
                                             </span>
                                         </li>
                                         <li>
                                             <span className="body-20-bold block">Bisel</span>
                                             <span className="body-20-light">
                                                 Bisel giratorio bidireccional, graduado 24 horas. Disco
-                                                Cerachrom bicolor marr�n y negro de cer�mica, n�meros y
+                                                Cerachrom bicolor marrón y negro de cerámica, nímeros y
                                                 graduaciones moldeados
                                             </span>
                                         </li>
@@ -749,7 +749,7 @@ const M126711chnr0002 = () => {
                                 <div className="col-3-5-3-2">
                                     <ul className="list-especification-model-rlx ">
                                         <li>
-                                            <span className="body-20-bold block">Di�metro</span>
+                                            <span className="body-20-bold block">Diímetro</span>
                                             <span className="body-20-light">40 mm</span>
                                         </li>
                                         <li>
@@ -761,7 +761,7 @@ const M126711chnr0002 = () => {
                                         <li>
                                             <span className="body-20-bold block">Movimiento</span>
                                             <span className="body-20-light">
-                                                Perpetual, mec�nico, de cuerda autom�tica, funci�n GMT
+                                                Perpetual, mecúnico, de cuerda automática, función GMT
                                             </span>
                                         </li>
                                         <li>
@@ -781,9 +781,9 @@ const M126711chnr0002 = () => {
                                             <span className="body-20-light">Aproximadamente 70 horas</span>
                                         </li>
                                         <li>
-                                            <span className="body-20-bold block">Certificaci�n</span>
+                                            <span className="body-20-bold block">Certificaciín</span>
                                             <span className="body-20-light">
-                                                Cron�metro superlativo (COSC + certificaci�n Rolex tras el
+                                                Cronímetro superlativo (COSC + certificación Rolex tras el
                                                 ensamblaje)
                                             </span>
                                         </li>
@@ -845,18 +845,18 @@ const M126711chnr0002 = () => {
                                 </p>
                                 <p className="body-20-light">
                                     Este modelo presenta una esfera negra y un disco de bisel Cerachrom
-                                    bicolor en cer�mica marr�n y negra bicolor. El GMT-Master II dispone
+                                    bicolor en cerámica marrón y negra bicolor. El GMT-Master II dispone
                                     de una aguja adicional que da la vuelta a la esfera en 24 horas y
                                     complementa a las tradicionales agujas de las horas, minutos y
-                                    segundos, as� como de un bisel giratorio bidireccional graduado 24
+                                    segundos, así como de un bisel giratorio bidireccional graduado 24
                                     horas. La aguja adicional de 24 horas, con su color distintivo, indica
                                     la hora de referencia, la del lugar de residencia, en un primer huso
-                                    horario que se lee sobre la graduaci�n del bisel. La hora local del
-                                    viajero puede ajustarse f�cilmente mediante saltos de hora en hora
+                                    horario que se lee sobre la graduaciín del bisel. La hora local del
+                                    viajero puede ajustarse fícilmente mediante saltos de hora en hora
                                     gracias a un astuto mecanismo controlado por la corona: la aguja de
-                                    las horas puede ajustarse hacia delante o hacia atr�s, de forma
+                                    las horas puede ajustarse hacia delante o hacia atrís, de forma
                                     independiente del minutero y el segundero. Esto permite al viajero
-                                    adaptar su nuevo huso horario sin que afecte a la precisi�n.
+                                    adaptar su nuevo huso horario sin que afecte a la precisión.
                                 </p>
                                 <div className="pb-45-40">
                                     <picture className="rlx-pbanner-top p-relative">
@@ -875,9 +875,9 @@ const M126711chnr0002 = () => {
                                 <p className="body-20-light">
                                     Como todos los relojes Profesionales de Rolex, el GMT-Master II ofrece
                                     una gran legibilidad en cualquier circunstancia, especialmente en la
-                                    oscuridad, gracias a su visualizaci�n Chromalight. Sus amplias agujas
-                                    y sus �ndices de formas simples �tri�ngulos, c�rculos, rect�ngulos�
-                                    est�n recubiertos de un material luminiscente de larga duraci�n.
+                                    oscuridad, gracias a su visualización Chromalight. Sus amplias agujas
+                                    y sus índices de formas simples ítriángulos, círculos, rectíngulosí
+                                    están recubiertos de un material luminiscente de larga duración.
                                 </p>
                                 <div className="pb-45-40">
                                     <picture className="rlx-pbanner-top p-relative">
@@ -898,9 +898,9 @@ const M126711chnr0002 = () => {
                                         El oro es codiciado por su lustre y su nobleza. El acero afianza la
                                         fuerza y la fiabilidad. Juntos, combinan armoniosamente lo mejor de
                                         sus propiedades. Verdadera firma de Rolex, el Rolesor ha sido parte
-                                        de los modelos Rolex desde principios de los a�os treinta y fue
+                                        de los modelos Rolex desde principios de los años treinta y fue
                                         patentado como nombre en 1933. Es uno de los prominentes pilares de
-                                        la colecci�n Oyster.
+                                        la colecciín Oyster.
                                     </p>
                                 </div>
                             </div>
@@ -946,22 +946,22 @@ const M126711chnr0002 = () => {
                                             </p>
                                             <p className="body-20-light pb-30">
                                                 Todos los relojes Rolex se ensamblan a mano con sumo cuidado
-                                                para garantizar una Colombiadad excepcional. Unos est�ndares
-                                                tan altos limitan naturalmente la capacidad de producci�n de
+                                                para garantizar una Colombiadad excepcional. Unos estándares
+                                                tan altos limitan naturalmente la capacidad de producciín de
                                                 Rolex y, a veces, la demanda de relojes Rolex supera esta
                                                 capacidad.
                                             </p>
                                             <p className="body-20-light pb-30">
                                                 Por lo tanto, la disponibilidad de ciertos modelos puede ser
                                                 limitada. Los relojes Rolex nuevos se venden exclusivamente a
-                                                trav�s de los Distribuidores Oficiales Rolex, que reciben
+                                                través de los Distribuidores Oficiales Rolex, que reciben
                                                 entregas habituales y gestionan de manera independiente la
-                                                distribuci�n y las ventas a sus clientes.
+                                                distribuciín y las ventas a sus clientes.
                                             </p>
                                             <p className="body-20-light">
                                                 GLAUSER se enorgullece de formar parte de la red mundial de
                                                 Distribuidores Oficiales Rolex, y puede proporcionar
-                                                informaci�n sobre la disponibilidad de los relojes Rolex.
+                                                información sobre la disponibilidad de los relojes Rolex.
                                             </p>
                                         </div>
                                     </div>
@@ -971,7 +971,7 @@ const M126711chnr0002 = () => {
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126711chnr-0002-presentation-box-portrait.webp"
                                         />
                                         <img
-                                            alt="Rolex GMT-Master II m126711chnr-0002 caja presentaci�n"
+                                            alt="Rolex GMT-Master II m126711chnr-0002 caja presentación"
                                             loading="lazy"
                                             src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126711chnr-0002-presentation-box-landscape.webp"
                                         />

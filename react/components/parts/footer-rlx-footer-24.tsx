@@ -179,7 +179,7 @@ const MainEffects: React.FC = () => {
     galleryImages.forEach((img, index) => {
       img.addEventListener('click', () => {
         currentIndex = index;
-        openLightbox(img.src);
+        openLightbox((img as HTMLImageElement).src);
       });
     });
 
@@ -192,7 +192,7 @@ const MainEffects: React.FC = () => {
     });
 
     document.addEventListener('keydown', (e) => {
-      if (lightbox.classList.contains('active')) {
+      if (lightbox?.classList.contains('active')) {
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowLeft') showPrevious();
         if (e.key === 'ArrowRight') showNext();

@@ -25,7 +25,7 @@ const M2282360012: React.FC = () => {
         if (elemento) {
             elemento.value = `Me interesa ${formattedTitle}`;
         } else {
-            console.error("No se encontrÛ el elemento con el ID 'mensajerlx'");
+            console.error("No se encontr√≠ el elemento con el ID 'mensajerlx'");
         }
     }, []);
 
@@ -120,7 +120,7 @@ const M2282360012: React.FC = () => {
                             {
                                 "@type": "Organization",
                                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                "name": "JoyerÌa Glauser",
+                                "name": "Joyer√≠a Glauser",
                                 "url": "https://devjhernandez--glauser.myvtex.com/",
                                 "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
                                 "logo": {
@@ -131,7 +131,7 @@ const M2282360012: React.FC = () => {
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "width": 300,
                                     "height": 102,
-                                    "caption": "JoyerÌa Glauser"
+                                    "caption": "Joyer√≠a Glauser"
                                 },
                                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                             },
@@ -370,7 +370,7 @@ const M2282360012: React.FC = () => {
                                             </a>
                                             <a
                                                 className="social-link button-label"
-                                                href="https://wa.me/573132841334?text=Hola%20GLAUSER%20JoyerÌas%20quisiera%20mas%20informaci%C3%B3n"
+                                                href="https://wa.me/573132841334?text=Hola%20GLAUSER%20Joyer√≠as%20quisiera%20mas%20informaci%C3%B3n"
                                                 onClick={() => window._satellite?.track?.('whatsappContact')}
                                                 rel="noopener"
                                                 target="_blank">
@@ -483,7 +483,7 @@ const M2282360012: React.FC = () => {
                                                         </g>
                                                     </svg>
                                                 </i>
-                                                <span className="text-mapita">EncuÈntranos</span>
+                                                <span className="text-mapita">Encu√≠ntranos</span>
                                             </a>
                                         </div>
                                     </div>
@@ -632,7 +632,7 @@ const M2282360012: React.FC = () => {
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-portrait.webp"
                                     />
                                     <img
-                                        alt="garantÌa Rolex"
+                                        alt="garant√≠a Rolex"
                                         loading="lazy"
                                         src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-landscape.webp"
                                     />
@@ -643,19 +643,19 @@ const M2282360012: React.FC = () => {
                                     <div className="accordion-item">
                                         <div className="accordion-header">
                                             <span className="body-24-bold c-brown-text">
-                                                La garantÌa Rolex
+                                                La garant√≠a Rolex
                                             </span>
-                                            <span className="icon-acordion c-brown-text">ñ</span>
+                                            <span className="icon-acordion c-brown-text">√≠</span>
                                         </div>
                                         <div className="accordion-content pb-30 active">
                                             <p className="body-20-light">
-                                                Para garantizar la precisiÛn y la fiabilidad de sus relojes,
+                                                Para garantizar la precisi√≥n y la fiabilidad de sus relojes,
                                                 Rolex somete a cada reloj, tras el ensamblaje, a una serie de
                                                 pruebas estrictas. Todos los nuevos relojes adquiridos en uno de
-                                                los Distribuidores Oficiales de la marca incluyen una garantÌa
-                                                internacional de cinco aÒos. Cuando compra un Rolex, el
+                                                los Distribuidores Oficiales de la marca incluyen una garant√≠a
+                                                internacional de cinco a√±os. Cuando compra un Rolex, el
                                                 Distribuidor Oficial rellena y deja registrada la fecha en la
-                                                tarjeta de garantÌa Rolex, que certifica la autenticidad de su
+                                                tarjeta de garant√≠a Rolex, que certifica la autenticidad de su
                                                 reloj.
                                             </p>
                                         </div>
@@ -667,13 +667,13 @@ const M2282360012: React.FC = () => {
                                         </div>
                                         <div className="accordion-content pb-30">
                                             <p className="body-20-light">
-                                                La garantÌa de cinco aÒos que se aplica a todos los modelos
-                                                Rolex viene acompaÒada de un sello verde, un sÌmbolo de su
-                                                estatus de CronÛmetro Superlativo. Esta exclusiva certificaciÛn
-                                                da fe de que el reloj ha superado con Èxito una serie de
-                                                controles finales especÌficos llevados a cabo por Rolex en sus
-                                                propios laboratorios y seg˙n sus propios criterios, como
-                                                complemento de la certificaciÛn oficial COSC de su movimiento.
+                                                La garant√≠a de cinco a√±os que se aplica a todos los modelos
+                                                Rolex viene acompa√±ada de un sello verde, un s√≠mbolo de su
+                                                estatus de Cron√≠metro Superlativo. Esta exclusiva certificaci√≥n
+                                                da fe de que el reloj ha superado con √©xito una serie de
+                                                controles finales espec√≠ficos llevados a cabo por Rolex en sus
+                                                propios laboratorios y seg√≠n sus propios criterios, como
+                                                complemento de la certificaci√≥n oficial COSC de su movimiento.
                                             </p>
                                         </div>
                                     </div>
@@ -685,10 +685,10 @@ const M2282360012: React.FC = () => {
                                         <div className="accordion-content pb-30">
                                             <p className="body-20-light">
                                                 Todos los relojes Rolex se entregan en un precioso estuche verde
-                                                que protege y guarda la joya que anida en su interior. Adem·s,
+                                                que protege y guarda la joya que anida en su interior. Adem√°s,
                                                 el estuche simboliza igualmente el acto de regalar. Por ello, si
                                                 usted quiere obsequiar a alguien con un Rolex, es importante que
-                                                lo primero que vea el destinatario estÈ a la altura de su
+                                                lo primero que vea el destinatario est√° a la altura de su
                                                 contenido.
                                             </p>
                                         </div>
@@ -716,7 +716,7 @@ const M2282360012: React.FC = () => {
                                         <li>
                                             <span className="body-20-bold block">Hermetecidad</span>
                                             <span className="body-20-light">
-                                                HermÈtico hasta 100 metros/ 330 pies
+                                                Herm√≠tico hasta 100 metros/ 330 pies
                                             </span>
                                         </li>
                                         <li>
@@ -728,7 +728,7 @@ const M2282360012: React.FC = () => {
                                 <div className="col-3-5-3-2">
                                     <ul className="list-especification-model-rlx ">
                                         <li>
-                                            <span className="body-20-bold block">Di·metro</span>
+                                            <span className="body-20-bold block">Di√≠metro</span>
                                             <span className="body-20-light">40 mm</span>
                                         </li>
                                         <li>
@@ -740,7 +740,7 @@ const M2282360012: React.FC = () => {
                                         <li>
                                             <span className="body-20-bold block">Movimiento</span>
                                             <span className="body-20-light">
-                                                Perpetual, mec·nico, de cuerda autom·tica
+                                                Perpetual, mec√∫nico, de cuerda autom√°tica
                                             </span>
                                         </li>
                                         <li>
@@ -760,9 +760,9 @@ const M2282360012: React.FC = () => {
                                             <span className="body-20-light">Aproximadamente 70 horas</span>
                                         </li>
                                         <li>
-                                            <span className="body-20-bold block">CertificaciÛn</span>
+                                            <span className="body-20-bold block">Certificaci√≠n</span>
                                             <span className="body-20-light">
-                                                CronÛmetro superlativo (COSC + certificaciÛn Rolex tras el
+                                                Cron√≠metro superlativo (COSC + certificaci√≥n Rolex tras el
                                                 ensamblaje)
                                             </span>
                                         </li>
@@ -821,14 +821,14 @@ const M2282360012: React.FC = () => {
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Bisel estriado</p>
                                 <p className="body-20-light">
-                                    El bisel estriado de Rolex es una marca de distinciÛn. En un
-                                    principio, el diseÒo estriado del bisel Oyster tenÌa una funciÛn
-                                    especÌfica: servÌa para atornillar el bisel a la caja garantizando la
-                                    hermeticidad del reloj. Adem·s, era idÈntico al acanalado del fondo de
-                                    la caja, atornillado a Èsta por la misma razÛn, mediante herramientas
-                                    especÌficas de Rolex. Con el tiempo, el estriado se convirtiÛ en un
-                                    elemento puramente estÈtico, una autÈntica caracterÌstica distintiva
-                                    de Rolex. En la actualidad, el estriado es una marca de distinciÛn, en
+                                    El bisel estriado de Rolex es una marca de distinci√≠n. En un
+                                    principio, el dise√±o estriado del bisel Oyster ten√≠a una funci√≥n
+                                    espec√≠fica: serv√≠a para atornillar el bisel a la caja garantizando la
+                                    hermeticidad del reloj. Adem√°s, era id√≠ntico al acanalado del fondo de
+                                    la caja, atornillado a √≠sta por la misma raz√≠n, mediante herramientas
+                                    espec√≠ficas de Rolex. Con el tiempo, el estriado se convirti√≥ en un
+                                    elemento puramente est√°tico, una aut√©ntica caracter√≠stica distintiva
+                                    de Rolex. En la actualidad, el estriado es una marca de distinci√≠n, en
                                     platino en este DayDate 40.
                                 </p>
                                 <div className="pb-45-40">
@@ -847,8 +847,8 @@ const M2282360012: React.FC = () => {
                                 <p className="headline50 c-brown-text pb-20">Esfera azul glaciar</p>
                                 <p className="body-20-light">
                                     La esfera azul glaciar es una firma exclusiva y discreta de un reloj
-                                    Rolex de platino. Rolex utiliza platino, el m·s noble de los metales
-                                    para el m·s prestigioso de los relojes. Este color de esfera exclusivo
+                                    Rolex de platino. Rolex utiliza platino, el m√°s noble de los metales
+                                    para el m√°s prestigioso de los relojes. Este color de esfera exclusivo
                                     solamente se encuentra en el Day-Date, el Cosmograph Daytona y el
                                     Perpetual 1908.
                                 </p>
@@ -869,15 +869,15 @@ const M2282360012: React.FC = () => {
                                     <p className="headline50 c-brown-text pb-20">Platino</p>
                                     <p className="body-20-light">
                                         Escaso y precioso, el platino sorprende por su blancura plateada y
-                                        su vibrante luminosidad. Es uno de los metales m·s densos y m·s
-                                        pesados del mundo, y se distingue por propiedades quÌmicas y fÌsicas
-                                        ˙nicas, como su excepcional resistencia a la corrosiÛn.
-                                        ParadÛjicamente, tambiÈn es el·stico y sumamente maleable, por lo
-                                        que su manufactura y pulido son especialmente difÌciles y exigen una
-                                        gran habilidad. Rolex emplea platino 950, una aleaciÛn compuesta por
-                                        950â (milÈsimas) de platino, meticulosamente preparada en nuestros
-                                        talleres por los excelentes artesanos metal˙rgicos de Rolex. El m·s
-                                        noble de los metales para el m·s prestigioso de los relojes.
+                                        su vibrante luminosidad. Es uno de los metales m√°s densos y m√°s
+                                        pesados del mundo, y se distingue por propiedades qu√≠micas y f√≠sicas
+                                        √∫nicas, como su excepcional resistencia a la corrosi√≠n.
+                                        Parad√≠jicamente, tambi√©n es el√≠stico y sumamente maleable, por lo
+                                        que su manufactura y pulido son especialmente dif√≠ciles y exigen una
+                                        gran habilidad. Rolex emplea platino 950, una aleaci√≠n compuesta por
+                                        950√≠ (mil√≠simas) de platino, meticulosamente preparada en nuestros
+                                        talleres por los excelentes artesanos metal√≠rgicos de Rolex. El m√°s
+                                        noble de los metales para el m√°s prestigioso de los relojes.
                                     </p>
                                 </div>
                             </div>
@@ -922,22 +922,22 @@ const M2282360012: React.FC = () => {
                                             </p>
                                             <p className="body-20-light pb-30">
                                                 Todos los relojes Rolex se ensamblan a mano con sumo cuidado
-                                                para garantizar una Colombiadad excepcional. Unos est·ndares
-                                                tan altos limitan naturalmente la capacidad de producciÛn de
+                                                para garantizar una Colombiadad excepcional. Unos est√°ndares
+                                                tan altos limitan naturalmente la capacidad de producci√≠n de
                                                 Rolex y, a veces, la demanda de relojes Rolex supera esta
                                                 capacidad.
                                             </p>
                                             <p className="body-20-light pb-30">
                                                 Por lo tanto, la disponibilidad de ciertos modelos puede ser
                                                 limitada. Los relojes Rolex nuevos se venden exclusivamente a
-                                                travÈs de los Distribuidores Oficiales Rolex, que reciben
+                                                trav√©s de los Distribuidores Oficiales Rolex, que reciben
                                                 entregas habituales y gestionan de manera independiente la
-                                                distribuciÛn y las ventas a sus clientes.
+                                                distribuci√≠n y las ventas a sus clientes.
                                             </p>
                                             <p className="body-20-light">
                                                 GLAUSER se enorgullece de formar parte de la red mundial de
                                                 Distribuidores Oficiales Rolex, y puede proporcionar
-                                                informaciÛn sobre la disponibilidad de los relojes Rolex.
+                                                informaci√≥n sobre la disponibilidad de los relojes Rolex.
                                             </p>
                                         </div>
                                     </div>
@@ -947,7 +947,7 @@ const M2282360012: React.FC = () => {
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m228236-0012-presentation-box-portrait.webp"
                                         />
                                         <img
-                                            alt="Rolex Day-Date m228236-0012 caja presentaciÛn"
+                                            alt="Rolex Day-Date m228236-0012 caja presentaci√≥n"
                                             loading="lazy"
                                             src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m228236-0012-presentation-box-landscape.webp"
                                         />

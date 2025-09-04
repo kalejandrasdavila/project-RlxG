@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
 import NavM from "../../../parts/NavModels";
 import WatchesForm from "../../../parts/Rlx-watches-formulario";
@@ -25,7 +25,7 @@ const M3369380007: React.FC = () => {
         if (elemento) {
             if (elemento) { elemento.value = `Me interesa ${formattedTitle}`; }
         } else {
-            console.error("No se encontr� el elemento con el ID 'mensajerlx'");
+            console.error("No se encontrí el elemento con el ID 'mensajerlx'");
         }
     }, []);
 
@@ -120,7 +120,7 @@ const M3369380007: React.FC = () => {
                             {
                                 "@type": "Organization",
                                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                "name": "Joyer�a Glauser",
+                                "name": "Joyería Glauser",
                                 "url": "https://devjhernandez--glauser.myvtex.com/",
                                 "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
                                 "logo": {
@@ -131,7 +131,7 @@ const M3369380007: React.FC = () => {
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "width": 300,
                                     "height": 102,
-                                    "caption": "Joyer�a Glauser"
+                                    "caption": "Joyería Glauser"
                                 },
                                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                             },
@@ -370,7 +370,7 @@ const M3369380007: React.FC = () => {
                                             </a>
                                             <a
                                                 className="social-link button-label"
-                                                href="https://wa.me/573132841334?text=Hola%20GLAUSER%20Joyer�as%20quisiera%20mas%20informaci%C3%B3n"
+                                                href="https://wa.me/573132841334?text=Hola%20GLAUSER%20Joyerías%20quisiera%20mas%20informaci%C3%B3n"
                                                 onClick={() => window._satellite?.track?.('whatsappContact')}
                                                 rel="noopener"
                                                 target="_blank">
@@ -483,7 +483,7 @@ const M3369380007: React.FC = () => {
                                                         </g>
                                                     </svg>
                                                 </i>
-                                                <span className="text-mapita">Encu�ntranos</span>
+                                                <span className="text-mapita">Encuíntranos</span>
                                             </a>
                                         </div>
                                     </div>
@@ -633,7 +633,7 @@ const M3369380007: React.FC = () => {
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/watches-models/rolex-guarantee-retail-guarantee-card-portrait.webp"
                                     />
                                     <img
-                                        alt="garant�a Rolex"
+                                        alt="garantía Rolex"
                                         loading="lazy"
                                         src="https://galileo.tsqsa.com/FTPImagenes/watches-models/rolex-guarantee-retail-guarantee-card-landscape.webp"
                                     />
@@ -644,19 +644,19 @@ const M3369380007: React.FC = () => {
                                     <div className="accordion-item">
                                         <div className="accordion-header">
                                             <span className="body-24-bold c-brown-text">
-                                                La garant�a Rolex
+                                                La garantía Rolex
                                             </span>
-                                            <span className="icon-acordion c-brown-text">�</span>
+                                            <span className="icon-acordion c-brown-text">í</span>
                                         </div>
                                         <div className="accordion-content pb-30 active">
                                             <p className="body-20-light">
-                                                Para garantizar la precisi�n y la fiabilidad de sus relojes,
+                                                Para garantizar la precisión y la fiabilidad de sus relojes,
                                                 Rolex somete a cada reloj, tras el ensamblaje, a una serie de
                                                 pruebas estrictas. Todos los nuevos relojes adquiridos en uno de
-                                                los Distribuidores Oficiales de la marca incluyen una garant�a
-                                                internacional de cinco a�os. Cuando compra un Rolex, el
+                                                los Distribuidores Oficiales de la marca incluyen una garantía
+                                                internacional de cinco años. Cuando compra un Rolex, el
                                                 Distribuidor Oficial rellena y deja registrada la fecha en la
-                                                tarjeta de garant�a Rolex, que certifica la autenticidad de su
+                                                tarjeta de garantía Rolex, que certifica la autenticidad de su
                                                 reloj.
                                             </p>
                                         </div>
@@ -668,13 +668,13 @@ const M3369380007: React.FC = () => {
                                         </div>
                                         <div className="accordion-content pb-30">
                                             <p className="body-20-light">
-                                                La garant�a de cinco a�os que se aplica a todos los modelos
-                                                Rolex viene acompa�ada de un sello verde, un s�mbolo de su
-                                                estatus de Cron�metro Superlativo. Esta exclusiva certificaci�n
-                                                da fe de que el reloj ha superado con �xito una serie de
-                                                controles finales espec�ficos llevados a cabo por Rolex en sus
-                                                propios laboratorios y seg�n sus propios criterios, como
-                                                complemento de la certificaci�n oficial COSC de su movimiento.
+                                                La garantía de cinco años que se aplica a todos los modelos
+                                                Rolex viene acompañada de un sello verde, un símbolo de su
+                                                estatus de Cronímetro Superlativo. Esta exclusiva certificación
+                                                da fe de que el reloj ha superado con éxito una serie de
+                                                controles finales específicos llevados a cabo por Rolex en sus
+                                                propios laboratorios y segín sus propios criterios, como
+                                                complemento de la certificación oficial COSC de su movimiento.
                                             </p>
                                         </div>
                                     </div>
@@ -686,10 +686,10 @@ const M3369380007: React.FC = () => {
                                         <div className="accordion-content pb-30">
                                             <p className="body-20-light">
                                                 Todos los relojes Rolex se entregan en un precioso estuche verde
-                                                que protege y guarda la joya que anida en su interior. Adem�s,
+                                                que protege y guarda la joya que anida en su interior. Además,
                                                 el estuche simboliza igualmente el acto de regalar. Por ello, si
                                                 usted quiere obsequiar a alguien con un Rolex, es importante que
-                                                lo primero que vea el destinatario est� a la altura de su
+                                                lo primero que vea el destinatario está a la altura de su
                                                 contenido.
                                             </p>
                                         </div>
@@ -717,7 +717,7 @@ const M3369380007: React.FC = () => {
                                         <li>
                                             <span className="body-20-bold block">Hermetecidad</span>
                                             <span className="body-20-light">
-                                                Herm�tico hasta 100 metros/ 330 pies
+                                                Hermítico hasta 100 metros/ 330 pies
                                             </span>
                                         </li>
                                         <li>
@@ -731,7 +731,7 @@ const M3369380007: React.FC = () => {
                                 <div className="col-3-5-3-2">
                                     <ul className="list-especification-model-rlx ">
                                         <li>
-                                            <span className="body-20-bold block">Di�metro</span>
+                                            <span className="body-20-bold block">Diímetro</span>
                                             <span className="body-20-light">42 mm</span>
                                         </li>
                                         <li>
@@ -743,7 +743,7 @@ const M3369380007: React.FC = () => {
                                         <li>
                                             <span className="body-20-bold block">Movimiento</span>
                                             <span className="body-20-light">
-                                                Perpetual, mec�nico, de cuerda autom�tica, doble huso horario,
+                                                Perpetual, mecúnico, de cuerda automática, doble huso horario,
                                                 calendario anual
                                             </span>
                                         </li>
@@ -764,9 +764,9 @@ const M3369380007: React.FC = () => {
                                             <span className="body-20-light">Aproximadamente 72 horas</span>
                                         </li>
                                         <li>
-                                            <span className="body-20-bold block">Certificaci�n</span>
+                                            <span className="body-20-bold block">Certificaciín</span>
                                             <span className="body-20-light">
-                                                Cron�metro superlativo (COSC + certificaci�n Rolex tras el
+                                                Cronímetro superlativo (COSC + certificación Rolex tras el
                                                 encajado)
                                             </span>
                                         </li>
@@ -824,8 +824,8 @@ const M3369380007: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Esfera verde vivo</p>
-                                <p className="body-20-light pb-30">Un tri�ngulo rojo fijo invertido en la esfera se�ala la hora de referencia �la hora del lugar de origen o del lugar usual del trabajo del propietario� en el disco de 24�horas descentrado. De un solo vistazo, esta visualizaci�n de 24�horas distingue claramente las horas del d�a y las de la noche en el otro huso horario. Sus esferas pasan a estar dotadas de �ndices de las horas rectangulares y de agujas alargadas, as� como de una visualizaci�n Chromalight con luminiscencia de larga duraci�n, con el fin de mejorar m�s a�n su legibilidad.</p>
-                                <p className="body-20-light">Un rect�ngulo de color rojo oscuro en una de las 12�ventanas sobre la esfera indica el mes en curso, una caracter�stica propia del calendario anual Saros. Este ingenioso mecanismo simplifica la vida del usuario del reloj, que no ha de preocuparse de modificar la fecha al final de los meses de 30�d�as. El calendario anual da la fecha correcta a lo largo de todo el a�o. S�lo necesita ajustarse una vez: el 1�de marzo (ya que el mes de febrero cuenta con�28 o 29�d�as). La fecha est� conectada a la hora local y cambia autom�ticamente en funci�n de la hora local del viajero.</p>
+                                <p className="body-20-light pb-30">Un triángulo rojo fijo invertido en la esfera seíala la hora de referencia íla hora del lugar de origen o del lugar usual del trabajo del propietarioí en el disco de 24íhoras descentrado. De un solo vistazo, esta visualización de 24íhoras distingue claramente las horas del día y las de la noche en el otro huso horario. Sus esferas pasan a estar dotadas de índices de las horas rectangulares y de agujas alargadas, así como de una visualización Chromalight con luminiscencia de larga duración, con el fin de mejorar más aín su legibilidad.</p>
+                                <p className="body-20-light">Un rectíngulo de color rojo oscuro en una de las 12íventanas sobre la esfera indica el mes en curso, una característica propia del calendario anual Saros. Este ingenioso mecanismo simplifica la vida del usuario del reloj, que no ha de preocuparse de modificar la fecha al final de los meses de 30ídías. El calendario anual da la fecha correcta a lo largo de todo el año. Sílo necesita ajustarse una vez: el 1íde marzo (ya que el mes de febrero cuenta coní28 o 29ídías). La fecha está conectada a la hora local y cambia automáticamente en función de la hora local del viajero.</p>
                                 <div className="pb-45-40">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m336938-0007-dial-portrait.webp" />
@@ -833,7 +833,7 @@ const M3369380007: React.FC = () => {
                                     </picture>
                                 </div>
                                 <p className="headline50 c-brown-text pb-20">El bisel estriado</p>
-                                <p className="body-20-light">El bisel estriado de Rolex es una marca de distinci�n. En un principio, el dise�o estriado del bisel Oyster ten�a una funci�n espec�fica: serv�a para atornillar el bisel a la caja garantizando la hermeticidad del reloj. Adem�s, era id�ntico al acanalado del fondo de la caja, atornillado a �sta por la misma raz�n, mediante herramientas espec�ficas de Rolex. Con el tiempo, el estriado se convirti� en un elemento puramente est�tico, una aut�ntica caracter�stica distintiva de Rolex. En la actualidad, el estriado es una marca de distinci�n y est� disponible �nicamente en los modelos en oro. El Sky-Dweller dispone de un mecanismo de interacci�n entre el bisel giratorio, la corona y el movimiento: el sistema Ring Command, que permite al usuario del reloj seleccionar las funciones una tras otra y ajustarlas de manera simple, r�pida y segura.</p>
+                                <p className="body-20-light">El bisel estriado de Rolex es una marca de distinciín. En un principio, el diseño estriado del bisel Oyster tenía una función específica: servía para atornillar el bisel a la caja garantizando la hermeticidad del reloj. Además, era idíntico al acanalado del fondo de la caja, atornillado a ísta por la misma razín, mediante herramientas específicas de Rolex. Con el tiempo, el estriado se convirtió en un elemento puramente estático, una auténtica característica distintiva de Rolex. En la actualidad, el estriado es una marca de distinciín y está disponible únicamente en los modelos en oro. El Sky-Dweller dispone de un mecanismo de interacciín entre el bisel giratorio, la corona y el movimiento: el sistema Ring Command, que permite al usuario del reloj seleccionar las funciones una tras otra y ajustarlas de manera simple, rípida y segura.</p>
                                 <div className="pb-45-40">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m336938-0007-bezel-portrait.webp" />
@@ -841,8 +841,8 @@ const M3369380007: React.FC = () => {
                                     </picture>
                                 </div>
                                 <div className="pb-90-60">
-                                    <p className="headline50 c-brown-text pb-20">Oro amarillo de 18�quilates</p>
-                                    <p className="body-20-light">Rolex cuenta con su propia fundici�n, lo que le ha permitido crear aleaciones de oro de 18�quilates de la m�s alta calidad. Seg�n la proporci�n de plata, cobre, platino o paladio, se obtienen diferentes tipos de oro de 18�quilates: amarillo, rosa o blanco. Son elaborados exclusivamente con los metales m�s puros y sometidos a las m�s meticulosas inspecciones en un laboratorio interno con tecnolog�a puntera, antes de formar el oro y con la misma atenci�n que se presta a la calidad. El compromiso de Rolex con la calidad empieza desde el origen.</p>
+                                    <p className="headline50 c-brown-text pb-20">Oro amarillo de 18íquilates</p>
+                                    <p className="body-20-light">Rolex cuenta con su propia fundiciín, lo que le ha permitido crear aleaciones de oro de 18íquilates de la más alta calidad. Segín la proporciín de plata, cobre, platino o paladio, se obtienen diferentes tipos de oro de 18íquilates: amarillo, rosa o blanco. Son elaborados exclusivamente con los metales más puros y sometidos a las más meticulosas inspecciones en un laboratorio interno con tecnología puntera, antes de formar el oro y con la misma atenciín que se presta a la calidad. El compromiso de Rolex con la calidad empieza desde el origen.</p>
                                 </div>
                             </div>
                         </div>
@@ -880,22 +880,22 @@ const M3369380007: React.FC = () => {
                                             </p>
                                             <p className="body-20-light pb-30">
                                                 Todos los relojes Rolex se ensamblan a mano con sumo cuidado
-                                                para garantizar una Colombiadad excepcional. Unos est�ndares
-                                                tan altos limitan naturalmente la capacidad de producci�n de
+                                                para garantizar una Colombiadad excepcional. Unos estándares
+                                                tan altos limitan naturalmente la capacidad de producciín de
                                                 Rolex y, a veces, la demanda de relojes Rolex supera esta
                                                 capacidad.
                                             </p>
                                             <p className="body-20-light pb-30">
                                                 Por lo tanto, la disponibilidad de ciertos modelos puede ser
                                                 limitada. Los relojes Rolex nuevos se venden exclusivamente a
-                                                trav�s de los Distribuidores Oficiales Rolex, que reciben
+                                                través de los Distribuidores Oficiales Rolex, que reciben
                                                 entregas habituales y gestionan de manera independiente la
-                                                distribuci�n y las ventas a sus clientes.
+                                                distribuciín y las ventas a sus clientes.
                                             </p>
                                             <p className="body-20-light">
                                                 GLAUSER se enorgullece de formar parte de la red mundial de
                                                 Distribuidores Oficiales Rolex, y puede proporcionar
-                                                informaci�n sobre la disponibilidad de los relojes Rolex.
+                                                información sobre la disponibilidad de los relojes Rolex.
                                             </p>
                                         </div>
                                     </div>
@@ -905,7 +905,7 @@ const M3369380007: React.FC = () => {
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m336938-0007-presentation-box-portrait.webp"
                                         />
                                         <img
-                                            alt="Rolex Sky-Dweller m336938-0007 caja presentaci�n"
+                                            alt="Rolex Sky-Dweller m336938-0007 caja presentación"
                                             loading="lazy"
                                             src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m336938-0007-presentation-box-landscape.webp"
                                         />

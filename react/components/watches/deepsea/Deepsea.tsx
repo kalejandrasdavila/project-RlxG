@@ -1,5 +1,5 @@
 import React from "react";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../../main-style.css';
 import { Helmet } from "react-helmet-async";
@@ -15,7 +15,7 @@ const Deepsea: React.FC = () => {
                 <title>Relojes Rolex Deepsea - GLAUSER</title>
                 <meta
                     name="description"
-                    content="Descubra los relojes Rolex Deepsea en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Deepsea en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
                                                                 <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
@@ -53,7 +53,7 @@ const Deepsea: React.FC = () => {
                 />
                 <meta
                     property="og:description"
-                    content="Descubra los relojes Rolex Deepsea en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Deepsea en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     property="og:image"
@@ -69,7 +69,7 @@ const Deepsea: React.FC = () => {
                 />
                 <meta
                     name="twitter:description"
-                    content="Descubra los relojes Rolex Deepsea en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Deepsea en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     name="twitter:image"
@@ -97,7 +97,7 @@ const Deepsea: React.FC = () => {
                             {
                                 "@type": "Organization",
                                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                "name": "Joyer�a Glauser",
+                                "name": "Joyería Glauser",
                                 "url": "https://devjhernandez--glauser.myvtex.com/",
                                 "sameAs": [
                                     "https://www.facebook.com/JoyeriaGlauser/",
@@ -111,7 +111,7 @@ const Deepsea: React.FC = () => {
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "width": 300,
                                     "height": 102,
-                                    "caption": "Joyer�a Glauser"
+                                    "caption": "Joyería Glauser"
                                 },
                                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                             },
@@ -123,7 +123,7 @@ const Deepsea: React.FC = () => {
                                 "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
                                 "datePublished": "2025-04-01T05:23:53+00:00",
                                 "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra los relojes Rolex Deepsea en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER.",
+                                "description": "Descubra los relojes Rolex Deepsea en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
                                 "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/deepsea/#breadcrumb" },
                                 "inLanguage": "es-Es",
                                 "potentialAction": { "@type": "ReadAction", "target": "https://devjhernandez--glauser.myvtex.com/rolex/watches/deepsea/" }
@@ -208,7 +208,7 @@ const Deepsea: React.FC = () => {
                                     Relojes de submarinismo extremos</h1>
                             </div>
                             <div className="col-lg-8-5">
-                                <p className="body-20-light"><strong>Los relojes de la gama Deepsea demuestran la pericia de Rolex en materia de hermeticidad y resistencia a la presi�n submarina.</strong> S�mbolos de la larga historia compartida entre la marca y los exploradores de las profundidades, los Oyster Perpetual Rolex Deepsea y Oyster Perpetual Deepsea Challenge son relojes de submarinismo profesionales altamente resistentes. Herm�ticos hasta una profundidad de 3900 metros en el Rolex Deepsea, lanzado en 2008, y 11 000 metros en el Deepsea Challenge, presentado en 2022.</p>
+                                <p className="body-20-light"><strong>Los relojes de la gama Deepsea demuestran la pericia de Rolex en materia de hermeticidad y resistencia a la presión submarina.</strong> Símbolos de la larga historia compartida entre la marca y los exploradores de las profundidades, los Oyster Perpetual Rolex Deepsea y Oyster Perpetual Deepsea Challenge son relojes de submarinismo profesionales altamente resistentes. Hermíticos hasta una profundidad de 3900 metros en el Rolex Deepsea, lanzado en 2008, y 11 000 metros en el Deepsea Challenge, presentado en 2022.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw reloes-componet-2-3">
@@ -267,7 +267,7 @@ const Deepsea: React.FC = () => {
                                     className="btn-primary-rlx"
                                     onClick={() => setIsVisible(!isVisible)}
                                 >
-                                    {isVisible ? "Mostrar menos" : "Descubra m�s"}
+                                    {isVisible ? "Mostrar menos" : "Descubra más"}
                                 </button>
                             </div>
                         </div>
@@ -284,15 +284,15 @@ const Deepsea: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <h2 className="headline50 c-brown-text pb-20">Oyster Perpetual Rolex Deepsea</h2>
-                                <p className="body-20-light pb-30">El Rolex Deepsea responde a las m�s elevadas exigencias de los submarinistas profesionales en materia de resistencia a la presi�n submarina, precisi�n y fiabilidad, al tiempo que hace gala de los c�digos est�ticos y las caracter�sticas fundamentales de los relojes Profesionales de la colecci�n Oyster Perpetual.</p>
-                                <p className="body-20-light">En su lanzamiento, este reloj de buceo profundo inaugur� el sistema Ringlock, una arquitectura de caja in�dita que le permite soportar la presi�n reinante a esa profundidad extrema. Su caja Oyster de 44 mm de di�metro est� equipada con una v�lvula de helio.</p>
+                                <p className="body-20-light pb-30">El Rolex Deepsea responde a las más elevadas exigencias de los submarinistas profesionales en materia de resistencia a la presión submarina, precisión y fiabilidad, al tiempo que hace gala de los cídigos estéticos y las características fundamentales de los relojes Profesionales de la colecciín Oyster Perpetual.</p>
+                                <p className="body-20-light">En su lanzamiento, este reloj de buceo profundo inaugurí el sistema Ringlock, una arquitectura de caja inídita que le permite soportar la presión reinante a esa profundidad extrema. Su caja Oyster de 44 mm de diímetro está equipada con una vílvula de helio.</p>
                                 <div className="py-90-60">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/deepsea/rolex-deepsea-m136668lb-0001-portrait.webp" />
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/deepsea/rolex-deepsea-m136668lb-0001-landscape.webp" loading="lazy" alt="Rolex Deepsea en oro amarillo" />
                                     </picture>
                                 </div>
-                                <p className="body-20-light">Rolex Deepsea en acero Oystersteel con esfera negro intenso o D-blue. Presenta un bisel giratorio unidireccional con disco Cerachrom graduado en cer�mica negra. En 2024, la marca present� una versi�n en oro amarillo de 18 quilates con esfera azul y disco de bisel Cerachrom en cer�mica azul.</p>
+                                <p className="body-20-light">Rolex Deepsea en acero Oystersteel con esfera negro intenso o D-blue. Presenta un bisel giratorio unidireccional con disco Cerachrom graduado en cerámica negra. En 2024, la marca presentó una versión en oro amarillo de 18 quilates con esfera azul y disco de bisel Cerachrom en cerámica azul.</p>
                             </div>
                         </div>
                     </div>
@@ -326,9 +326,9 @@ const Deepsea: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <h2 className="headline50 c-brown-text pb-20">Oyster Perpetual Deepsea Challenge</h2>
-                                <p className="body-20-light pb-30">El Deepsea Challenge reafirma la legitimidad de Rolex como marca pionera en el �mbito de los relojes de buceo profundo y su pericia en materia de hermeticidad y resistencia a la presi�n submarina.</p>
-                                <p className="body-20-light pb-30">Este reloj de 50 mm es una adaptaci�n del Rolex Deepsea Challenge, el reloj experimental que acompa�� al director y explorador James Cameron a la fosa de las Marianas en 2012, colocado en el exterior de su sumergible.</p>
-                                <p className="body-20-light">Fabricado en titanio RLX, el Deepsea Challenge est� disponible con una esfera negro intenso y presenta un bisel giratorio unidireccional con un disco Cerachrom graduado en cer�mica negra.</p>
+                                <p className="body-20-light pb-30">El Deepsea Challenge reafirma la legitimidad de Rolex como marca pionera en el ímbito de los relojes de buceo profundo y su pericia en materia de hermeticidad y resistencia a la presión submarina.</p>
+                                <p className="body-20-light pb-30">Este reloj de 50 mm es una adaptaciín del Rolex Deepsea Challenge, el reloj experimental que acompaíí al director y explorador James Cameron a la fosa de las Marianas en 2012, colocado en el exterior de su sumergible.</p>
+                                <p className="body-20-light">Fabricado en titanio RLX, el Deepsea Challenge está disponible con una esfera negro intenso y presenta un bisel giratorio unidireccional con un disco Cerachrom graduado en cerámica negra.</p>
                             </div>
                         </div>
                     </div>
@@ -345,8 +345,8 @@ const Deepsea: React.FC = () => {
                                     </picture>
                                 </div>
                                 <h2 className="headline50 c-brown-text pb-20">Sistema Ringlock</h2>
-                                <p className="body-20-light pb-30">El sistema Ringlock patentado de Rolex equipa los relojes de submarinismo de la marca pensados para las grandes profundidades, el Rolex Deepsea y el Deepsea Challenge. Este sistema, que viene a ampliar los hallazgos sobre hermeticidad del Oyster, es una arquitectura de caja reforzada que combina un grueso cristal de zafiro ligeramente abombado, una anilla de compresi�n de alto rendimiento y un fondo de titanio RLX.</p>
-                                <p className="body-20-light">La anilla de compresi�n es de acero enriquecido con nitr�geno en el Rolex Deepsea en acero Oystersteel y en el Deepsea Challenge, mientras que en la versi�n de oro amarillo de 18 quilates del Rolex Deepsea est� fabricada en cer�mica azul de alta tecnolog�a, una primicia para este componente.</p>
+                                <p className="body-20-light pb-30">El sistema Ringlock patentado de Rolex equipa los relojes de submarinismo de la marca pensados para las grandes profundidades, el Rolex Deepsea y el Deepsea Challenge. Este sistema, que viene a ampliar los hallazgos sobre hermeticidad del Oyster, es una arquitectura de caja reforzada que combina un grueso cristal de zafiro ligeramente abombado, una anilla de compresión de alto rendimiento y un fondo de titanio RLX.</p>
+                                <p className="body-20-light">La anilla de compresión es de acero enriquecido con nitrígeno en el Rolex Deepsea en acero Oystersteel y en el Deepsea Challenge, mientras que en la versión de oro amarillo de 18 quilates del Rolex Deepsea está fabricada en cerámica azul de alta tecnología, una primicia para este componente.</p>
                             </div>
                         </div>
                     </div>
@@ -359,15 +359,15 @@ const Deepsea: React.FC = () => {
                                 <div className="pb-90-60">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/deepsea/rolex-deepsea-m136660-0006-m136660-0003-portrait.webp" />
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/deepsea/rolex-deepsea-m136660-0006-m136660-0003-landscape.webp" loading="lazy" alt="V�lvula de helio" />
+                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/deepsea/rolex-deepsea-m136660-0006-m136660-0003-landscape.webp" loading="lazy" alt="Vílvula de helio" />
                                     </picture>
                                 </div>
                             </div>
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center pb-90-60">
-                                <p className="headline50 c-brown-text pb-20">V�lvula de helio</p>
-                                <p className="body-20-light">La caja Oyster de ambos modelos est�, adem�s, equipada con una v�lvula de helio, patentada en 1967, que act�a como dispositivo de seguridad en los relojes de submarinismo de la marca dise�ados para las grandes profundidades. Esta v�lvula permite, durante las fases de descompresi�n en c�mara hiperb�rica �un proceso inherente a las inmersiones profundas�, evacuar el exceso de presi�n acumulado en la caja sin que la hermeticidad se vea afectada.</p>
+                                <p className="headline50 c-brown-text pb-20">Vílvula de helio</p>
+                                <p className="body-20-light">La caja Oyster de ambos modelos está, además, equipada con una vílvula de helio, patentada en 1967, que actía como dispositivo de seguridad en los relojes de submarinismo de la marca diseñados para las grandes profundidades. Esta vílvula permite, durante las fases de descompresión en címara hiperbírica íun proceso inherente a las inmersiones profundasí, evacuar el exceso de presión acumulado en la caja sin que la hermeticidad se vea afectada.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw image-center">
@@ -383,9 +383,9 @@ const Deepsea: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Rigurosos controles de hermeticidad</p>
-                                <p className="body-20-light pb-30">En el submarinismo profundo, es esencial una m�xima seguridad y fiablidad. La hermeticidad de cada reloj Rolex Deepsea y Deepsea Challenge se pone a prueba con un margen de seguridad del 25 %, tal como exige la norma vigente para este tipo de reloj.</p>
-                                <p className="body-20-light pb-30">Por este motivo, las pruebas realizadas someten al Rolex Deepsea, que tiene una garant�a de hermeticidad de hasta 3900 metros, a la presi�n reinante a 4875 metros de profundidad, mientras que al Deepsea Challenge, herm�tico hasta 11 000 metros, lo someten a la presi�n reinante a 13 750 metros de profundidad.</p>
-                                <p className="body-20-light">Para estas pruebas, la marca desarroll� una cuba hiperb�rica para el Rolex Deepsea y una cuba de ultraalta presi�n para el Deepsea Challenge junto con COMEX (Compagnie Maritime d�Expertise), una empresa francesa de renombre internacional, especializada en ingenier�a subacu�tica y tecnolog�as hiperb�ricas.</p>
+                                <p className="body-20-light pb-30">En el submarinismo profundo, es esencial una míxima seguridad y fiablidad. La hermeticidad de cada reloj Rolex Deepsea y Deepsea Challenge se pone a prueba con un margen de seguridad del 25 %, tal como exige la norma vigente para este tipo de reloj.</p>
+                                <p className="body-20-light pb-30">Por este motivo, las pruebas realizadas someten al Rolex Deepsea, que tiene una garantía de hermeticidad de hasta 3900 metros, a la presión reinante a 4875 metros de profundidad, mientras que al Deepsea Challenge, hermítico hasta 11 000 metros, lo someten a la presión reinante a 13 750 metros de profundidad.</p>
+                                <p className="body-20-light">Para estas pruebas, la marca desarrollí una cuba hiperbírica para el Rolex Deepsea y una cuba de ultraalta presión para el Deepsea Challenge junto con COMEX (Compagnie Maritime díExpertise), una empresa francesa de renombre internacional, especializada en ingeniería subacuítica y tecnologías hiperbíricas.</p>
                             </div>
                         </div>
                     </div>
@@ -398,11 +398,11 @@ const Deepsea: React.FC = () => {
                                 <div className="pb-90-60">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/deepsea/rolex-deepsea-greenseal-2301-portrait.webp" />
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/deepsea/rolex-deepsea-greenseal-2301-landscape.webp" loading="lazy" alt="Certificaci�n de Cron�metro Superlativo" />
+                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/deepsea/rolex-deepsea-greenseal-2301-landscape.webp" loading="lazy" alt="Certificaciín de Cronímetro Superlativo" />
                                     </picture>
                                 </div>
-                                <p className="headline50 c-brown-text pb-20">Certificaci�n de Cron�metro Superlativo</p>
-                                <p className="body-20-light">Como todos los relojes Rolex, la gama Deepsea cuenta con la certificaci�n de Cron�metro Superlativo. Esta denominaci�n atestigua que cada reloj que sale de los talleres de la marca ha superado con �xito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cron�metro Superlativo se simboliza mediante el sello verde y va acompa�ado de una garant�a internacional de cinco a�os.</p>
+                                <p className="headline50 c-brown-text pb-20">Certificaciín de Cronímetro Superlativo</p>
+                                <p className="body-20-light">Como todos los relojes Rolex, la gama Deepsea cuenta con la certificación de Cronímetro Superlativo. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cronímetro Superlativo se simboliza mediante el sello verde y va acompañado de una garantía internacional de cinco años.</p>
                             </div>
                         </div>
                     </div>

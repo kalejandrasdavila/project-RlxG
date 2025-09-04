@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
@@ -26,7 +26,7 @@ const Cosmograph: React.FC = () => {
                 <title>Relojes Rolex Cosmograph Daytona - GLAUSER</title>
                 <meta
                     name="description"
-                    content="Descubra los relojes Rolex Cosmograph Daytona en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER."
+                    content="Descubra los relojes Rolex Cosmograph Daytona en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER."
                 />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link
@@ -59,7 +59,7 @@ const Cosmograph: React.FC = () => {
                 />
                 <meta
                     property="og:description"
-                    content="Descubra los relojes Rolex Cosmograph Daytona en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER."
+                    content="Descubra los relojes Rolex Cosmograph Daytona en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER."
                 />
                 <meta
                     property="og:image"
@@ -75,7 +75,7 @@ const Cosmograph: React.FC = () => {
                 />
                 <meta
                     name="twitter:description"
-                    content="Descubra los relojes Rolex Cosmograph Daytona en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER."
+                    content="Descubra los relojes Rolex Cosmograph Daytona en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER."
                 />
                 <meta
                     name="twitter:image"
@@ -106,7 +106,7 @@ const Cosmograph: React.FC = () => {
                                 {
                                     "@type": "Organization",
                                     "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                    "name": "JoyerÌa Glauser",
+                                    "name": "Joyer√≠a Glauser",
                                     "url": "https://devjhernandez--glauser.myvtex.com/",
                                     "sameAs": [
                                         "https://devjhernandez--glauser.myvtex.com/",
@@ -121,7 +121,7 @@ const Cosmograph: React.FC = () => {
                                         "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                         "width": 300,
                                         "height": 102,
-                                        "caption": "JoyerÌa Glauser"
+                                        "caption": "Joyer√≠a Glauser"
                                     },
                                     "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                                 },
@@ -133,7 +133,7 @@ const Cosmograph: React.FC = () => {
                                     "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
                                     "datePublished": "2024-04-10T05:23:53+00:00",
                                     "dateModified": "2024-04-10T05:23:53+00:00",
-                                    "description": "Descubra los relojes Rolex Cosmograph Daytona en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER.",
+                                    "description": "Descubra los relojes Rolex Cosmograph Daytona en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER.",
                                     "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/#breadcrumb" },
                                     "inLanguage": "es-Es",
                                     "potentialAction": [{ "@type": "ReadAction", "target": ["https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/"] }]
@@ -202,9 +202,9 @@ const Cosmograph: React.FC = () => {
                                 <div className={`${handles.rolex_family_description} ${handles.pb_15}`}>
                                     <h1>Cosmograph Daytona</h1>
                                     <p className={`${handles.description}`}>
-                                        El Cosmograph Daytona fue diseÒado especÌficamente para satisfacer las exigencias de los pilotos de carreras profesionales.
-                                        Este reloj cronÛgrafo legendario es altamente fiable y est· dotado de una legibilidad Ûptima, permitiendo a los pilotos
-                                        medir con precisiÛn el tiempo transcurrido y determinar las velocidades medias. El Cosmograph Daytona se ha convertido
+                                        El Cosmograph Daytona fue dise√±ado espec√≠ficamente para satisfacer las exigencias de los pilotos de carreras profesionales.
+                                        Este reloj cron√≠grafo legendario es altamente fiable y est√° dotado de una legibilidad √≠ptima, permitiendo a los pilotos
+                                        medir con precisi√≥n el tiempo transcurrido y determinar las velocidades medias. El Cosmograph Daytona se ha convertido
                                         en el reloj de referencia para los entusiastas del automovilismo.
                                     </p>
                                 </div>
@@ -219,9 +219,9 @@ const Cosmograph: React.FC = () => {
                                     <div className={`${handles.daytona_models}`}>
                                         <h2>Modelos Disponibles</h2>
                                         <div className={`${handles.model_grid}`}>
-                                            {/* AquÌ irÌan los modelos din·micamente */}
+                                            {/* Aqu√≠ ir√≠an los modelos din√≠micamente */}
                                             <div className={`${handles.model_card}`}>
-                                                <p>Explore nuestra selecciÛn de modelos Cosmograph Daytona</p>
+                                                <p>Explore nuestra selecci√≥n de modelos Cosmograph Daytona</p>
                                             </div>
                                         </div>
                                     </div>

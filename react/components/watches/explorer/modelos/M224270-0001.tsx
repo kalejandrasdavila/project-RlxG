@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useCssHandles } from 'vtex.css-handles';
 import '../../../main-style.css';
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
 import NavM from "../../../parts/NavModels";
 import WatchesForm from "../../../parts/Rlx-watches-formulario";
@@ -26,7 +26,7 @@ const M2242700001: React.FC = () => {
     if (elemento) {
       elemento.value = `Me interesa ${formattedTitle}`;
     } else {
-      console.error("No se encontr� el elemento con el ID 'mensajerlx'");
+      console.error("No se encontrí el elemento con el ID 'mensajerlx'");
     }
   }, []);
 
@@ -121,7 +121,7 @@ const M2242700001: React.FC = () => {
               {
                 "@type": "Organization",
                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                "name": "Joyer�a Glauser",
+                "name": "Joyería Glauser",
                 "url": "https://devjhernandez--glauser.myvtex.com/",
                 "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
                 "logo": {
@@ -132,7 +132,7 @@ const M2242700001: React.FC = () => {
                   "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                   "width": 300,
                   "height": 102,
-                  "caption": "Joyer�a Glauser"
+                  "caption": "Joyería Glauser"
                 },
                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
               },
@@ -368,7 +368,7 @@ const M2242700001: React.FC = () => {
                       </a>
                       <a
                         className="social-link button-label"
-                        href="https://wa.me/573132841334?text=Hola%20GLAUSER%20Joyer�as%20quisiera%20mas%20informaci%C3%B3n"
+                        href="https://wa.me/573132841334?text=Hola%20GLAUSER%20Joyerías%20quisiera%20mas%20informaci%C3%B3n"
                         onClick={() => window._satellite?.track?.('whatsappContact')}
                         rel="noopener"
                         target="_blank">
@@ -481,7 +481,7 @@ const M2242700001: React.FC = () => {
                             </g>
                           </svg>
                         </i>
-                        <span className="text-mapita">Encu�ntranos</span>
+                        <span className="text-mapita">Encuíntranos</span>
                       </a>
                     </div>
                   </div>
@@ -630,7 +630,7 @@ const M2242700001: React.FC = () => {
                     srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-portrait.webp"
                   />
                   <img
-                    alt="garant�a Rolex"
+                    alt="garantía Rolex"
                     loading="lazy"
                     src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-landscape.webp"
                   />
@@ -641,19 +641,19 @@ const M2242700001: React.FC = () => {
                   <div className="accordion-item">
                     <div className="accordion-header">
                       <span className="body-24-bold c-brown-text">
-                        La garant�a Rolex
+                        La garantía Rolex
                       </span>
-                      <span className="icon-acordion c-brown-text">�</span>
+                      <span className="icon-acordion c-brown-text">í</span>
                     </div>
                     <div className="accordion-content pb-30 active">
                       <p className="body-20-light">
-                        Para garantizar la precisi�n y la fiabilidad de sus relojes,
+                        Para garantizar la precisión y la fiabilidad de sus relojes,
                         Rolex somete a cada reloj, tras el ensamblaje, a una serie de
                         pruebas estrictas. Todos los nuevos relojes adquiridos en uno de
-                        los Distribuidores Oficiales de la marca incluyen una garant�a
-                        internacional de cinco a�os. Cuando compra un Rolex, el
+                        los Distribuidores Oficiales de la marca incluyen una garantía
+                        internacional de cinco años. Cuando compra un Rolex, el
                         Distribuidor Oficial rellena y deja registrada la fecha en la
-                        tarjeta de garant�a Rolex, que certifica la autenticidad de su
+                        tarjeta de garantía Rolex, que certifica la autenticidad de su
                         reloj.
                       </p>
                     </div>
@@ -665,13 +665,13 @@ const M2242700001: React.FC = () => {
                     </div>
                     <div className="accordion-content pb-30">
                       <p className="body-20-light">
-                        La garant�a de cinco a�os que se aplica a todos los modelos
-                        Rolex viene acompa�ada de un sello verde, un s�mbolo de su
-                        estatus de Cron�metro Superlativo. Esta exclusiva certificaci�n
-                        da fe de que el reloj ha superado con �xito una serie de
-                        controles finales espec�ficos llevados a cabo por Rolex en sus
-                        propios laboratorios y seg�n sus propios criterios, como
-                        complemento de la certificaci�n oficial COSC de su movimiento.
+                        La garantía de cinco años que se aplica a todos los modelos
+                        Rolex viene acompañada de un sello verde, un símbolo de su
+                        estatus de Cronímetro Superlativo. Esta exclusiva certificación
+                        da fe de que el reloj ha superado con éxito una serie de
+                        controles finales específicos llevados a cabo por Rolex en sus
+                        propios laboratorios y segín sus propios criterios, como
+                        complemento de la certificación oficial COSC de su movimiento.
                       </p>
                     </div>
                   </div>
@@ -683,10 +683,10 @@ const M2242700001: React.FC = () => {
                     <div className="accordion-content pb-30">
                       <p className="body-20-light">
                         Todos los relojes Rolex se entregan en un precioso estuche verde
-                        que protege y guarda la joya que anida en su interior. Adem�s,
+                        que protege y guarda la joya que anida en su interior. Además,
                         el estuche simboliza igualmente el acto de regalar. Por ello, si
                         usted quiere obsequiar a alguien con un Rolex, es importante que
-                        lo primero que vea el destinatario est� a la altura de su
+                        lo primero que vea el destinatario está a la altura de su
                         contenido.
                       </p>
                     </div>
@@ -716,7 +716,7 @@ const M2242700001: React.FC = () => {
                     <li>
                       <span className="body-20-bold block">Hermetecidad</span>
                       <span className="body-20-light">
-                        Herm�tico hasta 100 metros/ 330 pies
+                        Hermítico hasta 100 metros/ 330 pies
                       </span>
                     </li>
                     <li>
@@ -728,7 +728,7 @@ const M2242700001: React.FC = () => {
                 <div className="col-3-5-3-2">
                   <ul className="list-especification-model-rlx ">
                     <li>
-                      <span className="body-20-bold block">Di�metro</span>
+                      <span className="body-20-bold block">Diímetro</span>
                       <span className="body-20-light">40 mm</span>
                     </li>
                     <li>
@@ -740,7 +740,7 @@ const M2242700001: React.FC = () => {
                     <li>
                       <span className="body-20-bold block">Movimiento</span>
                       <span className="body-20-light">
-                        Perpetual, mec�nico, de cuerda autom�tica
+                        Perpetual, mecúnico, de cuerda automática
                       </span>
                     </li>
                     <li>
@@ -760,9 +760,9 @@ const M2242700001: React.FC = () => {
                       <span className="body-20-light">Aproximadamente 70 horas</span>
                     </li>
                     <li>
-                      <span className="body-20-bold block">Certificaci�n</span>
+                      <span className="body-20-bold block">Certificaciín</span>
                       <span className="body-20-light">
-                        Cron�metro superlativo (COSC + certificaci�n Rolex tras el
+                        Cronímetro superlativo (COSC + certificación Rolex tras el
                         ensamblaje)
                       </span>
                     </li>
@@ -822,12 +822,12 @@ const M2242700001: React.FC = () => {
                 <p className="headline50 c-brown-text pb-20">Esfera negra</p>
                 <p className="body-20-light">
                   La esfera es el rostro distintivo de un reloj Rolex, el mayor
-                  responsable de su identidad y legibilidad. Los n�meros 3, 6 y 9,
-                  caracter�sticos del modelo Explorer, est�n rellenos de un material
-                  luminiscente, que emite un color azul de larga duraci�n, igual que los
-                  �ndices y las agujas. Como todos los relojes Rolex, la esfera del
-                  Explorer 40 est� dise�ada y manufacturada en nuestros talleres,
-                  principalmente a mano, para garantizar su perfecci�n.
+                  responsable de su identidad y legibilidad. Los nímeros 3, 6 y 9,
+                  característicos del modelo Explorer, están rellenos de un material
+                  luminiscente, que emite un color azul de larga duración, igual que los
+                  índices y las agujas. Como todos los relojes Rolex, la esfera del
+                  Explorer 40 está diseíada y manufacturada en nuestros talleres,
+                  principalmente a mano, para garantizar su perfección.
                 </p>
                 <div className="pb-45-40">
                   <picture className="rlx-pbanner-top p-relative">
@@ -844,10 +844,10 @@ const M2242700001: React.FC = () => {
                 </div>
                 <p className="headline50 c-brown-text pb-20">Bisel liso</p>
                 <p className="body-20-light">
-                  El Oyster Perpetual Explorer 40 aporta un nuevo �mpetu a las l�neas
+                  El Oyster Perpetual Explorer 40 aporta un nuevo ímpetu a las líneas
                   sobrias y depuradas que lo han convertido en un icono. El bisel liso
                   en acero Oystersteel es robusto a la par que elegante, en perfecta
-                  armon�a con la herencia emblem�tica del Explorer.
+                  armonía con la herencia emblemítica del Explorer.
                 </p>
                 <div className="pb-45-40">
                   <picture className="rlx-pbanner-top p-relative">
@@ -867,12 +867,12 @@ const M2242700001: React.FC = () => {
                   <p className="body-20-light">
                     Rolex utiliza acero Oystersteel para las cajas de acero de sus
                     relojes. Especialmente desarrollado por Rolex, el acero Oystersteel
-                    pertenece a la familia del acero 904L, las aleaciones m�s utilizadas
-                    en la alta tecnolog�a y en las industrias qu�mica y aeroespacial, en
-                    las que la resistencia a la corrosi�n es esencial. El acero
+                    pertenece a la familia del acero 904L, las aleaciones más utilizadas
+                    en la alta tecnología y en las industrias química y aeroespacial, en
+                    las que la resistencia a la corrosiín es esencial. El acero
                     Oystersteel es extremadamente resistente, ofrece un acabado
                     excepcional al ser pulido y conserva su belleza incluso en las
-                    condiciones m�s extremas.
+                    condiciones más extremas.
                   </p>
                 </div>
               </div>
@@ -917,22 +917,22 @@ const M2242700001: React.FC = () => {
                       </p>
                       <p className="body-20-light pb-30">
                         Todos los relojes Rolex se ensamblan a mano con sumo cuidado
-                        para garantizar una Colombiadad excepcional. Unos est�ndares
-                        tan altos limitan naturalmente la capacidad de producci�n de
+                        para garantizar una Colombiadad excepcional. Unos estándares
+                        tan altos limitan naturalmente la capacidad de producciín de
                         Rolex y, a veces, la demanda de relojes Rolex supera esta
                         capacidad.
                       </p>
                       <p className="body-20-light pb-30">
                         Por lo tanto, la disponibilidad de ciertos modelos puede ser
                         limitada. Los relojes Rolex nuevos se venden exclusivamente a
-                        trav�s de los Distribuidores Oficiales Rolex, que reciben
+                        través de los Distribuidores Oficiales Rolex, que reciben
                         entregas habituales y gestionan de manera independiente la
-                        distribuci�n y las ventas a sus clientes.
+                        distribuciín y las ventas a sus clientes.
                       </p>
                       <p className="body-20-light">
                         GLAUSER se enorgullece de formar parte de la red mundial de
                         Distribuidores Oficiales Rolex, y puede proporcionar
-                        informaci�n sobre la disponibilidad de los relojes Rolex.
+                        información sobre la disponibilidad de los relojes Rolex.
                       </p>
                     </div>
                   </div>
@@ -942,7 +942,7 @@ const M2242700001: React.FC = () => {
                       srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m224270-0001-presentation-box-portrait.webp"
                     />
                     <img
-                      alt="Rolex Explorer m224270-0001 caja presentaci�n"
+                      alt="Rolex Explorer m224270-0001 caja presentación"
                       loading="lazy"
                       src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m224270-0001-presentation-box-landscape.webp"
                     />
@@ -965,7 +965,7 @@ const M2242700001: React.FC = () => {
                       srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-explorer-m226570-0001-portrait.webp"
                     />
                     <img
-                      alt="Colecci�n Rolex Explorer"
+                      alt="Colecciín Rolex Explorer"
                       loading="lazy"
                       src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-explorer-m226570-0001-landscape.webp"
                     />
@@ -981,7 +981,7 @@ const M2242700001: React.FC = () => {
                   <a
                     className="btn-label-icon-rlx"
                     href="https://devjhernandez--glauser.myvtex.com/rolex/watches/explorer/">
-                    M�s informaci�n
+                    Mís información
                     <svg
 
                       aria-hidden="true"

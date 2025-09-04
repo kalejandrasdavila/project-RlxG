@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useCssHandles } from 'vtex.css-handles';
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
 import NavM from "../../../parts/NavModels";
 import WatchesForm from "../../../parts/Rlx-watches-formulario";
 import Footer from '../../../parts/Footer';
-import '../../../main-style.css';
-
 const CSS_HANDLES = ['container', 'wrapper', 'content', 'model_container', 'section', 'hero_section'] as const;
 
 const M525080002: React.FC = () => {

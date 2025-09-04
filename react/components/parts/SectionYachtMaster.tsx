@@ -27,11 +27,11 @@ function SectionYachtMaster() {
                         <div className="col-lg-2-6">
                             <div className="pt-10">
                                 <p className="fixed-16 c-brown-text">Rolex Yacht-Master</p>
-                                <p className="headline36 c-brown-text">Car·cter marino</p>
+                                <p className="headline36 c-brown-text">Car√≠cter marino</p>
                                 <a
                                     className="btn-label-icon-rlx"
                                     href="https://devjhernandez--glauser.myvtex.com/rolex/watches/yacht-master/">
-                                    M·s informaciÛn
+                                    M√≠s informaci√≥n
                                     <svg
                                         aria-hidden="true"
                                         fill="white"

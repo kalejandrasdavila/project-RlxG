@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
 import NavM from "../../../parts/NavModels";
 import WatchesForm from "../../../parts/Rlx-watches-formulario";
@@ -37,7 +37,7 @@ const M126500ln0001: React.FC = () => {
         if (elemento) {
             elemento.value = `Me interesa ${formattedTitle}`;
         } else {
-            console.error("No se encontrÛ el elemento con el ID 'mensajerlx'");
+            console.error("No se encontr√≠ el elemento con el ID 'mensajerlx'");
         }
     }, []);
 
@@ -127,7 +127,7 @@ const M126500ln0001: React.FC = () => {
                                 {
                                     "@type": "Organization",
                                     "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                    "name": "JoyerÌa Glauser",
+                                    "name": "Joyer√≠a Glauser",
                                     "url": "https://devjhernandez--glauser.myvtex.com/",
                                     "sameAs": [
                                         "https://devjhernandez--glauser.myvtex.com/",
@@ -142,7 +142,7 @@ const M126500ln0001: React.FC = () => {
                                         "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                         "width": 300,
                                         "height": 102,
-                                        "caption": "JoyerÌa Glauser"
+                                        "caption": "Joyer√≠a Glauser"
                                     },
                                     "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                                 },
@@ -249,8 +249,8 @@ const M126500ln0001: React.FC = () => {
                                         <h1>Cosmograph Daytona</h1>
                                         <h2>Oyster, 40 mm, acero Oystersteel</h2>
                                         <p className={`${handles.description}`}>
-                                            El Cosmograph Daytona fue diseÒado especÌficamente para satisfacer las exigencias de los pilotos de carreras profesionales.
-                                            Este cronÛgrafo legendario presenta una legibilidad Ûptima y una fiabilidad excepcional.
+                                            El Cosmograph Daytona fue dise√±ado espec√≠ficamente para satisfacer las exigencias de los pilotos de carreras profesionales.
+                                            Este cron√≠grafo legendario presenta una legibilidad √≠ptima y una fiabilidad excepcional.
                                         </p>
 
                                         <div className={`${handles.price_section}`}>
@@ -262,7 +262,7 @@ const M126500ln0001: React.FC = () => {
                                             </button>
                                             {showPrice && (
                                                 <p className={`${handles.price_info}`}>
-                                                    Consulte precio y disponibilidad contact·ndonos
+                                                    Consulte precio y disponibilidad contact√≠ndonos
                                                 </p>
                                             )}
                                         </div>
@@ -272,17 +272,17 @@ const M126500ln0001: React.FC = () => {
                                             <ul>
                                                 <li><strong>Modelo:</strong> m126500ln-0001</li>
                                                 <li><strong>Caja:</strong> Oyster, 40 mm, acero Oystersteel</li>
-                                                <li><strong>Bisel:</strong> Monobloque Cerachrom en cer·mica negra</li>
+                                                <li><strong>Bisel:</strong> Monobloque Cerachrom en cer√°mica negra</li>
                                                 <li><strong>Corona:</strong> Atornillada, sistema Twinlock</li>
                                                 <li><strong>Cristal:</strong> Zafiro resistente a rayaduras</li>
                                                 <li><strong>Esfera:</strong> Blanca</li>
                                                 <li><strong>Pulsera:</strong> Oyster</li>
-                                                <li><strong>Movimiento:</strong> Perpetual, mec·nico autom·tico, cronÛgrafo</li>
+                                                <li><strong>Movimiento:</strong> Perpetual, mec√∫nico autom√°tico, cron√≠grafo</li>
                                                 <li><strong>Calibre:</strong> 4130</li>
                                                 <li><strong>Reserva de marcha:</strong> Aproximadamente 72 horas</li>
-                                                <li><strong>CertificaciÛn:</strong> CronÛmetro Superlative</li>
+                                                <li><strong>Certificaci√≠n:</strong> Cron√≠metro Superlative</li>
                                                 <li><strong>Resistencia al agua:</strong> Impermeable hasta 100 metros</li>
-                                                <li><strong>Funciones:</strong> Horas, minutos, pequeÒos segundos, cronÛgrafo</li>
+                                                <li><strong>Funciones:</strong> Horas, minutos, peque√±os segundos, cron√≠grafo</li>
                                             </ul>
                                         </div>
                                     </div>

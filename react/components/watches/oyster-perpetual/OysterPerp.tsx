@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
@@ -15,7 +15,7 @@ const OysterP: React.FC = () => {
                 <title>Relojes Rolex Oyster Perpetual - GLAUSER</title>
                 <meta
                     name="description"
-                    content="Descubra los relojes Rolex Oyster Perpetual en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Oyster Perpetual en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
                                                                 <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
@@ -53,7 +53,7 @@ const OysterP: React.FC = () => {
                 />
                 <meta
                     property="og:description"
-                    content="Descubra los relojes Rolex Oyster Perpetual en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Oyster Perpetual en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     property="og:image"
@@ -69,7 +69,7 @@ const OysterP: React.FC = () => {
                 />
                 <meta
                     name="twitter:description"
-                    content="Descubra los relojes Rolex Oyster Perpetual en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Oyster Perpetual en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     name="twitter:image"
@@ -100,7 +100,7 @@ const OysterP: React.FC = () => {
                                 {
                                     "@type": "Organization",
                                     "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                    "name": "Joyer�a Glauser",
+                                    "name": "Joyería Glauser",
                                     "url": "https://devjhernandez--glauser.myvtex.com/",
                                     "sameAs": [
                                         "https://www.facebook.com/JoyeriaGlauser/",
@@ -114,7 +114,7 @@ const OysterP: React.FC = () => {
                                         "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                         "width": 300,
                                         "height": 102,
-                                        "caption": "Joyer�a Glauser"
+                                        "caption": "Joyería Glauser"
                                     },
                                     "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                                 },
@@ -127,7 +127,7 @@ const OysterP: React.FC = () => {
                                     "datePublished": "2025-04-01T05:23:53+00:00",
                                     "dateModified": "2025-04-01T05:23:53+00:00",
                                     "description":
-                                        "Descubra los relojes Rolex Oyster Perpetual en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER.",
+                                        "Descubra los relojes Rolex Oyster Perpetual en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
                                     "breadcrumb": {
                                         "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/#breadcrumb"
                                     },
@@ -234,7 +234,7 @@ const OysterP: React.FC = () => {
                                     Un mundo de posibilidades</h1>
                             </div>
                             <div className="col-lg-8-5">
-                                <p className="body-20-light"><strong>Los relojes de la gama Oyster Perpetual son s�mbolos de estilo cl�sico y universal, y ofrecen al que los lleva funciones �tiles del d�a a d�a: visualizaci�n de las horas, minutos y segundos.</strong> Respetando la l�nea de los or�genes pioneros de Rolex, estos modelos encarnan la forma y funci�n atemporales. Son la expresi�n de los relojes en su forma m�s pura.</p>
+                                <p className="body-20-light"><strong>Los relojes de la gama Oyster Perpetual son símbolos de estilo clísico y universal, y ofrecen al que los lleva funciones ítiles del día a día: visualización de las horas, minutos y segundos.</strong> Respetando la línea de los orígenes pioneros de Rolex, estos modelos encarnan la forma y función atemporales. Son la expresión de los relojes en su forma más pura.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw reloes-componet-2-3">
@@ -475,7 +475,7 @@ const OysterP: React.FC = () => {
                                     className="btn-primary-rlx"
                                     onClick={() => setIsVisible(!isVisible)}
                                 >
-                                    {isVisible ? "Mostrar menos" : "Descubra m�s"}
+                                    {isVisible ? "Mostrar menos" : "Descubra más"}
                                 </button>
                             </div>
                         </div>
@@ -491,8 +491,8 @@ const OysterP: React.FC = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="body-20-light pb-30">El Oyster Perpetual es el heredero directo del Oyster original, primer reloj de pulsera herm�tico del mundo, sobre el que Rolex ha construido su reputaci�n desde 1926. Certificado como Cron�metro Superlativo, el Oyster Perpetual posee todos los atributos fundamentales de la colecci�n Oyster Perpetual: la precisi�n cronom�trica, la hermeticidad de la caja Oyster y la cuerda autom�tica del movimiento por rotor Perpetual. Sobrio y est�tico, se distingue por su estilo sencillo y universal.</p>
-                                <p className="headline50 c-brown-text">El Oyster Perpetual es la expresi�n m�s pura del concepto Oyster.</p>
+                                <p className="body-20-light pb-30">El Oyster Perpetual es el heredero directo del Oyster original, primer reloj de pulsera hermítico del mundo, sobre el que Rolex ha construido su reputaciín desde 1926. Certificado como Cronímetro Superlativo, el Oyster Perpetual posee todos los atributos fundamentales de la colecciín Oyster Perpetual: la precisión cronométrica, la hermeticidad de la caja Oyster y la cuerda automática del movimiento por rotor Perpetual. Sobrio y estático, se distingue por su estilo sencillo y universal.</p>
+                                <p className="headline50 c-brown-text">El Oyster Perpetual es la expresión más pura del concepto Oyster.</p>
                             </div>
                         </div>
                     </div>
@@ -512,10 +512,10 @@ const OysterP: React.FC = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="headline50 c-brown-text pb-20">Din�mico y atemporal</p>
-                                <p className="body-20-light pb-30">El Oyster Perpetual proporciona una fiable y precisa visualizaci�n de las horas, los minutos y los segundos. Las diferentes modalidades del reloj destacan por sus esferas en varios colores, sutiles o vibrantes: una gama de diferentes rostros que siempre hacen gala de un toque de modernidad. Desde beis, lavender o pistachio lacadas mate, hasta rosa candy, verde, azul turquesa, negra, lacada med blue o plateada con acabado tipo sol, estas esferas combinan con cualquier estilo. El Oyster Perpetual est� disponible en cinco tama�os de caja: 28 mm, 31 mm, 34 mm, 36 mm o 41 mm. Ofrece la mayor elecci�n de di�metros para una gama de relojes Rolex.</p>
-                                <p className="body-20-light pb-30">Estos modelos est�n provistos de un brazalete Oyster de tres elementos, que garantiza seguridad y confort al usuario. Dicho brazalete est� equipado con un cierre desplegable Oysterclasp y cuenta con el c�modo sistema de extensi�n r�pida Easylink, desarrollado por la marca, que permite ajustar f�cilmente su longitud en unos 5 mm.</p>
-                                <p className="body-20-light">El Oyster Perpetual es exclusivamente de acero Oystersteel. Especialmente desarrollado para Rolex, pertenece a la familia de los aceros 904L, las aleaciones m�s utilizadas en la tecnolog�a punta. El acero Oystersteel es extremadamente resistente a la corrosi�n, ofrece un acabado excepcional tras el pulido y conserva su brillo con el paso del tiempo.</p>
+                                <p className="headline50 c-brown-text pb-20">Dinímico y atemporal</p>
+                                <p className="body-20-light pb-30">El Oyster Perpetual proporciona una fiable y precisa visualización de las horas, los minutos y los segundos. Las diferentes modalidades del reloj destacan por sus esferas en varios colores, sutiles o vibrantes: una gama de diferentes rostros que siempre hacen gala de un toque de modernidad. Desde beis, lavender o pistachio lacadas mate, hasta rosa candy, verde, azul turquesa, negra, lacada med blue o plateada con acabado tipo sol, estas esferas combinan con cualquier estilo. El Oyster Perpetual está disponible en cinco tamaños de caja: 28 mm, 31 mm, 34 mm, 36 mm o 41 mm. Ofrece la mayor elección de diímetros para una gama de relojes Rolex.</p>
+                                <p className="body-20-light pb-30">Estos modelos están provistos de un brazalete Oyster de tres elementos, que garantiza seguridad y confort al usuario. Dicho brazalete está equipado con un cierre desplegable Oysterclasp y cuenta con el címodo sistema de extensiín rípida Easylink, desarrollado por la marca, que permite ajustar fícilmente su longitud en unos 5 mm.</p>
+                                <p className="body-20-light">El Oyster Perpetual es exclusivamente de acero Oystersteel. Especialmente desarrollado para Rolex, pertenece a la familia de los aceros 904L, las aleaciones más utilizadas en la tecnología punta. El acero Oystersteel es extremadamente resistente a la corrosiín, ofrece un acabado excepcional tras el pulido y conserva su brillo con el paso del tiempo.</p>
                             </div>
                         </div>
                     </div>
@@ -535,8 +535,8 @@ const OysterP: React.FC = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="headline50 c-brown-text pb-20">Fiabilidad y precisi�n</p>
-                                <p className="body-20-light">La caja del Oyster Perpetual garantiza una hermeticidad de hasta 100 metros de profundidad. Su carrura se trabaja a partir de un bloque macizo de acero Oystersteel. Su fondo, con un fino sistema de acanalado, est� herm�ticamente enroscado con ayuda de una herramienta especial; tan solo los relojeros autorizados por Rolex pueden acceder de este modo al movimiento. Otro componente principal de la estructura herm�tica es la corona Twinlock, provista de un sistema de doble hermeticidad y se enrosca s�lidamente a la caja.</p>
+                                <p className="headline50 c-brown-text pb-20">Fiabilidad y precisión</p>
+                                <p className="body-20-light">La caja del Oyster Perpetual garantiza una hermeticidad de hasta 100 metros de profundidad. Su carrura se trabaja a partir de un bloque macizo de acero Oystersteel. Su fondo, con un fino sistema de acanalado, está hermíticamente enroscado con ayuda de una herramienta especial; tan solo los relojeros autorizados por Rolex pueden acceder de este modo al movimiento. Otro componente principal de la estructura hermítica es la corona Twinlock, provista de un sistema de doble hermeticidad y se enrosca sílidamente a la caja.</p>
                             </div>
                         </div>
                     </div>
@@ -559,7 +559,7 @@ const OysterP: React.FC = () => {
                     <div className="rlx-container-content py-90-60">
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center pb-90-60">
-                                <p className="body-20-light">En funci�n de su tama�o, el Oyster Perpetual est� equipado con el calibre 2232 (para los modelos de 28 mm, 31 mm y 34 mm) o con el calibre 3230 (para los modelos de 36 mm y 41 mm), movimientos mec�nicos de cuerda autom�tica completamente desarrollados y manufacturados por Rolex. Presentan un elevado rendimiento en t�rminos de precisi�n, autonom�a, comodidad de uso y fiabilidad.</p>
+                                <p className="body-20-light">En función de su tamaño, el Oyster Perpetual está equipado con el calibre 2232 (para los modelos de 28 mm, 31 mm y 34 mm) o con el calibre 3230 (para los modelos de 36 mm y 41 mm), movimientos mecúnicos de cuerda automática completamente desarrollados y manufacturados por Rolex. Presentan un elevado rendimiento en tírminos de precisión, autonomía, comodidad de uso y fiabilidad.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw image-center">
@@ -584,8 +584,8 @@ const OysterP: React.FC = () => {
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/oyster-perpetual/rolex-oyster-perpetual-greenseal-2301-landscape.webp" loading="lazy" />
                                     </picture>
                                 </div>
-                                <p className="headline50 c-brown-text pb-20">Certificaci�n de Cron�metro Superlativo</p>
-                                <p className="body-20-light">Como todos los relojes Rolex, los Oyster Perpetual cuentan con la certificaci�n de Cron�metro Superlativo. Esta denominaci�n atestigua que cada reloj que sale de los talleres de la marca ha superado con �xito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cron�metro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompa�ado de una garant�a internacional de cinco a�os.</p>
+                                <p className="headline50 c-brown-text pb-20">Certificaciín de Cronímetro Superlativo</p>
+                                <p className="body-20-light">Como todos los relojes Rolex, los Oyster Perpetual cuentan con la certificación de Cronímetro Superlativo. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cronímetro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompañado de una garantía internacional de cinco años.</p>
                             </div>
                         </div>
                     </div>

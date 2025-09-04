@@ -1,6 +1,6 @@
 ﻿import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from '../../parts/RlxExploreMasNModels';
 import NavM from '../../parts/NavModels';
 import Footer from '../../parts/Footer';

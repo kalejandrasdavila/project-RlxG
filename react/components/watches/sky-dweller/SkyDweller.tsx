@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
@@ -15,7 +15,7 @@ const SkyDweller = () => {
                 <title>Relojes Rolex Sky-Dweller - GLAUSER</title>
                 <meta
                     name="description"
-                    content="Descubra los relojes Rolex Sky-Dweller en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER."
+                    content="Descubra los relojes Rolex Sky-Dweller en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER."
                 />
                 {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
                                                         <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
@@ -53,7 +53,7 @@ const SkyDweller = () => {
                 />
                 <meta
                     property="og:description"
-                    content="Descubra los relojes Rolex Sky-Dweller en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER."
+                    content="Descubra los relojes Rolex Sky-Dweller en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER."
                 />
                 <meta
                     property="og:image"
@@ -69,7 +69,7 @@ const SkyDweller = () => {
                 />
                 <meta
                     name="twitter:description"
-                    content="Descubra los relojes Rolex Sky-Dweller en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER."
+                    content="Descubra los relojes Rolex Sky-Dweller en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER."
                 />
                 <meta
                     name="twitter:image"
@@ -97,7 +97,7 @@ const SkyDweller = () => {
                             {
                                 "@type": "Organization",
                                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                "name": "JoyerÌa Glauser",
+                                "name": "Joyer√≠a Glauser",
                                 "url": "https://devjhernandez--glauser.myvtex.com/",
                                 "sameAs": [
                                     "https://www.facebook.com/JoyeriaGlauser/",
@@ -111,7 +111,7 @@ const SkyDweller = () => {
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "width": 300,
                                     "height": 102,
-                                    "caption": "JoyerÌa Glauser"
+                                    "caption": "Joyer√≠a Glauser"
                                 },
                                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                             },
@@ -123,7 +123,7 @@ const SkyDweller = () => {
                                 "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
                                 "datePublished": "2025-04-01T05:23:53+00:00",
                                 "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra los relojes Rolex Sky-Dweller en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER.",
+                                "description": "Descubra los relojes Rolex Sky-Dweller en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER.",
                                 "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/sky-dweller/#breadcrumb" },
                                 "inLanguage": "es-Es",
                                 "potentialAction": { "@type": "ReadAction", "target": "https://devjhernandez--glauser.myvtex.com/rolex/watches/sky-dweller/" }
@@ -221,7 +221,7 @@ const SkyDweller = () => {
                                     Altos vuelos</h1>
                             </div>
                             <div className="col-lg-8-5">
-                                <p className="body-20-light"><strong>El Oyster Perpetual Sky-Dweller, elegante y tÈcnicamente sofisticado, se diseÒÛ para quienes viajan constantemente por el mundo.</strong> Dotado del calendario anual Saros y del sistema Ring Command, indica simult·neamente dos husos horarios, asÌ como la fecha y el mes, y permite ajustarlos con un simple gesto.</p>
+                                <p className="body-20-light"><strong>El Oyster Perpetual Sky-Dweller, elegante y t√≠cnicamente sofisticado, se dise√≠√≠ para quienes viajan constantemente por el mundo.</strong> Dotado del calendario anual Saros y del sistema Ring Command, indica simult√°neamente dos husos horarios, as√≠ como la fecha y el mes, y permite ajustarlos con un simple gesto.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw reloes-componet-2-3">
@@ -430,7 +430,7 @@ const SkyDweller = () => {
                                     className="btn-primary-rlx"
                                     onClick={() => setIsVisible(!isVisible)}
                                 >
-                                    {isVisible ? "Mostrar menos" : "Descubra m·s"}
+                                    {isVisible ? "Mostrar menos" : "Descubra m√°s"}
                                 </button>
                             </div>
                         </div>
@@ -446,8 +446,8 @@ const SkyDweller = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="headline50 c-brown-text pb-20">Inmensamente innovador, el Sky-Dweller combina la sofisticaciÛn mec·nica con una visualizaciÛn original.</p>
-                                <p className="body-20-light">Desde su creaciÛn en 2012, el Sky-Dweller se ha dirigido a quienes ven el mundo como un territorio ˙nico, sin fronteras. Permite a los viajeros evitar los obst·culos de las diferencias horarias e ir siempre un paso por delante.</p>
+                                <p className="headline50 c-brown-text pb-20">Inmensamente innovador, el Sky-Dweller combina la sofisticaci√≠n mec√∫nica con una visualizaci√≥n original.</p>
+                                <p className="body-20-light">Desde su creaci√≥n en 2012, el Sky-Dweller se ha dirigido a quienes ven el mundo como un territorio √∫nico, sin fronteras. Permite a los viajeros evitar los obst√≠culos de las diferencias horarias e ir siempre un paso por delante.</p>
                             </div>
                         </div>
                     </div>
@@ -468,7 +468,7 @@ const SkyDweller = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Segundo huso horario con una simple ojeada</p>
-                                <p className="body-20-light">El Sky-Dweller muestra simult·neamente la hora en un segundo huso horario, asÌ como la hora local, que se indica con las agujas centrales. Este segundo huso horario ñu hora de referenciañ se indica con un pequeÒo tri·ngulo f·cilmente legible con una silueta roja en un disco giratorio graduado 24 horas. Este disco excÈntrico, un elemento caracterÌstico del modelo, permite distinguir sin equÌvoco las horas del dÌa de las de la noche: una ventaja valiosa para quienes viajan al otro lado del mundo.</p>
+                                <p className="body-20-light">El Sky-Dweller muestra simult√°neamente la hora en un segundo huso horario, as√≠ como la hora local, que se indica con las agujas centrales. Este segundo huso horario √≠u hora de referencia√≠ se indica con un peque√±o tri√°ngulo f√≠cilmente legible con una silueta roja en un disco giratorio graduado 24 horas. Este disco exc√≠ntrico, un elemento caracter√≠stico del modelo, permite distinguir sin equ√≠voco las horas del d√≠a de las de la noche: una ventaja valiosa para quienes viajan al otro lado del mundo.</p>
                             </div>
                         </div>
                     </div>
@@ -489,9 +489,9 @@ const SkyDweller = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Calendario anual innovador e intuitivo</p>
-                                <p className="body-20-light pb-30">El calendario anual Saros patentado, especialmente desarrollado para el Sky-Dweller, es un elemento clave en la identidad del modelo. El nombre de este mecanismo, con su innovador diseÒo, se inspira en el tÈrmino griego que designa el ciclo de los eclipses lunar y solar.</p>
-                                <p className="body-20-light pb-30">El calendario Saros distingue autom·ticamente los meses de 30 dÌas de los de 31 dÌas. Por tanto, solo necesita un ˙nico ajuste manual de la fecha al aÒo, en el paso de febrero a marzo. Es intuitivo y f·cil de leer. El mes en curso se indica en rojo en una de las doce ventanas que marcan los Ìndices sobre el contorno de la esfera.</p>
-                                <p className="body-20-light">La innovaciÛn en relojerÌa se basa en dos relaciones de transmisiÛn y solo cuatro trenes de ruedas aÒadidos al calendario de fecha instant·nea de Rolex. Esta estructura elemental confiere al calendario anual Saros una excelente fiabilidad.</p>
+                                <p className="body-20-light pb-30">El calendario anual Saros patentado, especialmente desarrollado para el Sky-Dweller, es un elemento clave en la identidad del modelo. El nombre de este mecanismo, con su innovador dise√±o, se inspira en el t√≠rmino griego que designa el ciclo de los eclipses lunar y solar.</p>
+                                <p className="body-20-light pb-30">El calendario Saros distingue autom√°ticamente los meses de 30 d√≠as de los de 31 d√≠as. Por tanto, solo necesita un √∫nico ajuste manual de la fecha al a√±o, en el paso de febrero a marzo. Es intuitivo y f√≠cil de leer. El mes en curso se indica en rojo en una de las doce ventanas que marcan los √≠ndices sobre el contorno de la esfera.</p>
+                                <p className="body-20-light">La innovaci√≥n en relojer√≠a se basa en dos relaciones de transmisi√≠n y solo cuatro trenes de ruedas a√≠adidos al calendario de fecha instant√≠nea de Rolex. Esta estructura elemental confiere al calendario anual Saros una excelente fiabilidad.</p>
                                 <div className="py-90-60">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/sky-dweller/rolex-sky-dweller-m336935-0001-portrait.webp" />
@@ -499,8 +499,8 @@ const SkyDweller = () => {
                                     </picture>
                                 </div>
                                 <p className="headline50 c-brown-text pb-20">Sistema Ring Command: la hora bajo control</p>
-                                <p className="body-20-light pb-30">El sistema Ring Command desarrollado por Rolex y patentado es un innovador mecanismo de interacciÛn entre el bisel giratorio, la corona y el movimiento. Permite seleccionar las distintas funciones del Sky-Dweller de forma f·cil, r·pida y segura, antes de ajustarlas con la corona.</p>
-                                <p className="body-20-light">Girando el bisel estriado en el sentido contrario a las agujas del reloj ñcuyo perfil est· acentuado para facilitar su manejoñ el usuario elige la indicaciÛn que desea configurar. Primera muesca: fecha y mes. Segunda muesca: hora local. Tercera muesca: hora de referencia.</p>
+                                <p className="body-20-light pb-30">El sistema Ring Command desarrollado por Rolex y patentado es un innovador mecanismo de interacci√≠n entre el bisel giratorio, la corona y el movimiento. Permite seleccionar las distintas funciones del Sky-Dweller de forma f√≠cil, r√≠pida y segura, antes de ajustarlas con la corona.</p>
+                                <p className="body-20-light">Girando el bisel estriado en el sentido contrario a las agujas del reloj √≠cuyo perfil est√° acentuado para facilitar su manejo√≠ el usuario elige la indicaci√≥n que desea configurar. Primera muesca: fecha y mes. Segunda muesca: hora local. Tercera muesca: hora de referencia.</p>
                             </div>
                         </div>
                     </div>
@@ -522,7 +522,7 @@ const SkyDweller = () => {
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Para el verdadero trotamundos</p>
                                 <p className="body-20-light">Ya sea un golfista, un navegante o un jinete que da la vuelta al mundo, siempre debe estar preparado, sea cual sea el destino o la distancia recorrida.</p>
-                                <p className="body-20-light">El golfista espaÒol Jon Rahm, el capit·n brasileÒo Robert Scheidt y el jinete de salto de obst·culos estadounidense Kent Farrington est·n entre los Testimoniales Rolex que han adoptado el Sky-Dweller.</p>
+                                <p className="body-20-light">El golfista espa√±ol Jon Rahm, el capit√≠n brasile√≠o Robert Scheidt y el jinete de salto de obst√≠culos estadounidense Kent Farrington est√°n entre los Testimoniales Rolex que han adoptado el Sky-Dweller.</p>
                             </div>
                         </div>
                     </div>

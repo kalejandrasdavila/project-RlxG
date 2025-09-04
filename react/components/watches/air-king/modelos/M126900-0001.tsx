@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
 import NavM from "../../../parts/NavModels";
 import WatchesForm from "../../../parts/Rlx-watches-formulario";
@@ -36,7 +36,7 @@ const M1269000001: React.FC = () => {
         if (elemento) {
             elemento.value = `Me interesa ${formattedTitle}`;
         } else {
-            console.error("No se encontrÛ el elemento con el ID 'mensajerlx'");
+            console.error("No se encontr√≠ el elemento con el ID 'mensajerlx'");
         }
     }, []);
 
@@ -126,7 +126,7 @@ const M1269000001: React.FC = () => {
                                 {
                                     "@type": "Organization",
                                     "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                    "name": "JoyerÌa Glauser",
+                                    "name": "Joyer√≠a Glauser",
                                     "url": "https://devjhernandez--glauser.myvtex.com/",
                                     "sameAs": [
                                         "https://devjhernandez--glauser.myvtex.com/",
@@ -141,7 +141,7 @@ const M1269000001: React.FC = () => {
                                         "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                         "width": 300,
                                         "height": 102,
-                                        "caption": "JoyerÌa Glauser"
+                                        "caption": "Joyer√≠a Glauser"
                                     },
                                     "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                                 },
@@ -248,8 +248,8 @@ const M1269000001: React.FC = () => {
                                         <h1>Air-King</h1>
                                         <h2>Oyster, 40 mm, acero Oystersteel</h2>
                                         <p className={`${handles.description}`}>
-                                            El Air-King rinde homenaje a los pioneros del vuelo y al papel de Rolex en la Èpica aventura de la aviaciÛn.
-                                            Presenta una esfera negra distintiva con una combinaciÛn de n˙meros grandes de 3, 6 y 9 horas.
+                                            El Air-King rinde homenaje a los pioneros del vuelo y al papel de Rolex en la √≠pica aventura de la aviaci√≠n.
+                                            Presenta una esfera negra distintiva con una combinaci√≥n de n√≠meros grandes de 3, 6 y 9 horas.
                                         </p>
 
                                         <div className={`${handles.price_section}`}>
@@ -261,7 +261,7 @@ const M1269000001: React.FC = () => {
                                             </button>
                                             {showPrice && (
                                                 <p className={`${handles.price_info}`}>
-                                                    Consulte precio y disponibilidad contact·ndonos
+                                                    Consulte precio y disponibilidad contact√≠ndonos
                                                 </p>
                                             )}
                                         </div>
@@ -276,10 +276,10 @@ const M1269000001: React.FC = () => {
                                                 <li><strong>Cristal:</strong> Zafiro resistente a rayaduras</li>
                                                 <li><strong>Esfera:</strong> Negra</li>
                                                 <li><strong>Pulsera:</strong> Oyster</li>
-                                                <li><strong>Movimiento:</strong> Perpetual, mec·nico autom·tico</li>
+                                                <li><strong>Movimiento:</strong> Perpetual, mec√∫nico autom√°tico</li>
                                                 <li><strong>Calibre:</strong> 3230</li>
                                                 <li><strong>Reserva de marcha:</strong> Aproximadamente 70 horas</li>
-                                                <li><strong>CertificaciÛn:</strong> CronÛmetro Superlative</li>
+                                                <li><strong>Certificaci√≠n:</strong> Cron√≠metro Superlative</li>
                                                 <li><strong>Resistencia al agua:</strong> Impermeable hasta 100 metros</li>
                                             </ul>
                                         </div>

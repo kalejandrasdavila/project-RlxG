@@ -1,7 +1,7 @@
 {
-  "vendor": "glauser",
+  "vendor": "glauserlx",
   "name": "storerlx",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "title": "rlx_store",
   "description": "rlx",
   "builders": {

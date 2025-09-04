@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
@@ -14,7 +14,7 @@ const YachtMaster = () => {
                 <title>Relojes Rolex Yacht-Master - GLAUSER</title>
                 <meta
                     name="description"
-                    content="Descubra los relojes Rolex Yacht-Master en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER."
+                    content="Descubra los relojes Rolex Yacht-Master en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER."
                 />
                 {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
                                                                 <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
@@ -52,7 +52,7 @@ const YachtMaster = () => {
                 />
                 <meta
                     property="og:description"
-                    content="Descubra los relojes Rolex Yacht-Master en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER."
+                    content="Descubra los relojes Rolex Yacht-Master en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER."
                 />
                 <meta
                     property="og:image"
@@ -68,7 +68,7 @@ const YachtMaster = () => {
                 />
                 <meta
                     name="twitter:description"
-                    content="Descubra los relojes Rolex Yacht-Master en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER."
+                    content="Descubra los relojes Rolex Yacht-Master en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER."
                 />
                 <meta
                     name="twitter:image"
@@ -96,7 +96,7 @@ const YachtMaster = () => {
                             {
                                 "@type": "Organization",
                                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                "name": "JoyerÌa Glauser",
+                                "name": "Joyer√≠a Glauser",
                                 "url": "https://devjhernandez--glauser.myvtex.com/",
                                 "sameAs": [
                                     "https://www.facebook.com/JoyeriaGlauser/",
@@ -110,7 +110,7 @@ const YachtMaster = () => {
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "width": 300,
                                     "height": 102,
-                                    "caption": "JoyerÌa Glauser"
+                                    "caption": "Joyer√≠a Glauser"
                                 },
                                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                             },
@@ -122,7 +122,7 @@ const YachtMaster = () => {
                                 "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
                                 "datePublished": "2025-04-01T05:23:53+00:00",
                                 "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra los relojes Rolex Yacht-Master en lÌnea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m·s en GLAUSER.",
+                                "description": "Descubra los relojes Rolex Yacht-Master en l√≠nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m√°s en GLAUSER.",
                                 "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/yacht-master/#breadcrumb" },
                                 "inLanguage": "es-Es",
                                 "potentialAction": {
@@ -218,10 +218,10 @@ const YachtMaster = () => {
                         <div className="row-grid-fullw text-introduccion pb-90-60">
                             <div className="col-lg-2-5">
                                 <h1 className="headline50 c-brown-text pb-20">Rolex Yacht-Master
-                                    Car·cter marino</h1>
+                                    Car√≠cter marino</h1>
                             </div>
                             <div className="col-lg-8-5">
-                                <p className="body-20-light"><strong>Lanzado en 1992, el Yacht-Master fue especialmente diseÒado para navegantes y capitanes.</strong> Este reloj de la categorÌa Profesional, que a˙na a la perfecciÛn funcionalidad y estilo n·utico, se desenvuelve con soltura tanto en el mar como en tierra firme.</p>
+                                <p className="body-20-light"><strong>Lanzado en 1992, el Yacht-Master fue especialmente dise√±ado para navegantes y capitanes.</strong> Este reloj de la categor√≠a Profesional, que a√≠na a la perfecci√≥n funcionalidad y estilo n√≠utico, se desenvuelve con soltura tanto en el mar como en tierra firme.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw reloes-componet-2-3">
@@ -355,7 +355,7 @@ const YachtMaster = () => {
                                     className="btn-primary-rlx"
                                     onClick={() => setIsVisible(!isVisible)}
                                 >
-                                    {isVisible ? "Mostrar menos" : "Descubra m·s"}
+                                    {isVisible ? "Mostrar menos" : "Descubra m√°s"}
                                 </button>
                             </div>
                         </div>
@@ -371,7 +371,7 @@ const YachtMaster = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="body-20-light">El Oyster Perpetual Yacht-Master simboliza la uniÛn entre Rolex y el mundo de la vela desde los aÒos 1950. Desarrollado especialmente para responder a las exigencias y necesidades de los navegantes, es un reloj tÈcnico, elegante y deportivo, pero, sobre todo, un instrumento ˙til y fiable a bordo de un barco.</p>
+                                <p className="body-20-light">El Oyster Perpetual Yacht-Master simboliza la uni√≠n entre Rolex y el mundo de la vela desde los a√±os 1950. Desarrollado especialmente para responder a las exigencias y necesidades de los navegantes, es un reloj t√≠cnico, elegante y deportivo, pero, sobre todo, un instrumento √≠til y fiable a bordo de un barco.</p>
                             </div>
                         </div>
                     </div>
@@ -392,7 +392,7 @@ const YachtMaster = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Bisel giratorio graduado en relieve</p>
-                                <p className="body-20-light">El Yacht-Master es reconocible por su bisel giratorio bidireccional graduado 60 minutos en relieve, realizado Ìntegramente en metal precioso (oro Everose o platino) o dotado de un disco Cerachrom negro de cer·mica de alta tecnologÌa. Destacan las graduaciones y los n˙meros pulidos sobre un fondo mate. Este bisel funcional, que permite medir un intervalo de tiempo óun tiempo de recorrido entre dos boyas, por ejemploó, contribuye plenamente a la identidad ˙nica del reloj.</p>
+                                <p className="body-20-light">El Yacht-Master es reconocible por su bisel giratorio bidireccional graduado 60 minutos en relieve, realizado √≠ntegramente en metal precioso (oro Everose o platino) o dotado de un disco Cerachrom negro de cer√°mica de alta tecnolog√≠a. Destacan las graduaciones y los n√≠meros pulidos sobre un fondo mate. Este bisel funcional, que permite medir un intervalo de tiempo √≠un tiempo de recorrido entre dos boyas, por ejemplo√≠, contribuye plenamente a la identidad √∫nica del reloj.</p>
                             </div>
                         </div>
                     </div>
@@ -413,15 +413,15 @@ const YachtMaster = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Materiales exclusivos</p>
-                                <p className="body-20-light">Robusto, adecuado y perfectamente hermÈtico: el Yacht-Master es uno de los relojes Profesionales Rolex disponible en varios di·metros (37, 40 y 42 mm).</p>
-                                <p className="body-20-light">El Yacht-Master 37 y el Yacht-Master 40 est·n disponibles en versiÛn Rolesium (combinaciÛn de acero Oystersteel y platino, exclusivo de la gama Yacht-Master) y en versiÛn Rolesor Everose (combinaciÛn de acero Oystersteel y oro Everose) con un bisel de metal precioso y un brazalete Oyster. Ambos modelos tambiÈn est·n disponibles en oro Everose de 18 quilates y presentan un disco de bisel Cerachrom de cer·mica negra y un brazalete Oysterflex.</p>
+                                <p className="body-20-light">Robusto, adecuado y perfectamente herm√≠tico: el Yacht-Master es uno de los relojes Profesionales Rolex disponible en varios di√≠metros (37, 40 y 42 mm).</p>
+                                <p className="body-20-light">El Yacht-Master 37 y el Yacht-Master 40 est√°n disponibles en versi√≥n Rolesium (combinaci√≥n de acero Oystersteel y platino, exclusivo de la gama Yacht-Master) y en versi√≥n Rolesor Everose (combinaci√≥n de acero Oystersteel y oro Everose) con un bisel de metal precioso y un brazalete Oyster. Ambos modelos tambi√©n est√°n disponibles en oro Everose de 18 quilates y presentan un disco de bisel Cerachrom de cer√°mica negra y un brazalete Oysterflex.</p>
                                 <div className="py-90-60">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/yacht-master/rolex-yacht-master-m126621-0001-portrait.webp" />
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/yacht-master/rolex-yacht-master-m126621-0001-landscape.webp" loading="lazy" />
                                     </picture>
                                 </div>
-                                <p className="body-20-light">El Yacht-Master 42 est· disponible en oro amarillo y blanco de 18 quilates con un brazalete Oysterflex y en titanio RLX óaleaciÛn que se distingue por su ligereza y sus cualidades de alta resistencia mec·nica a la corrosiÛnó con un brazalete Oyster. Esta versiÛn, presentada en 2023, destaca por su acabado satinado tÈcnico, un acabado con grano visible.</p>
+                                <p className="body-20-light">El Yacht-Master 42 est√° disponible en oro amarillo y blanco de 18 quilates con un brazalete Oysterflex y en titanio RLX √≠aleaci√≠n que se distingue por su ligereza y sus cualidades de alta resistencia mec√∫nica a la corrosi√≠n√≠ con un brazalete Oyster. Esta versi√≥n, presentada en 2023, destaca por su acabado satinado t√≠cnico, un acabado con grano visible.</p>
                             </div>
                         </div>
                     </div>
@@ -455,7 +455,7 @@ const YachtMaster = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Calibres Perpetual 2236 y 3235</p>
-                                <p className="body-20-light">Los modelos Yacht-Master est·n equipados con el calibre 2236 (Yacht Master 37) o con el calibre 3235 (Yacht Master 40 y Yacht Master 42), movimientos mec·nicos de cuerda autom·tica completamente desarrollados y manufacturados por Rolex. Presentan un elevado rendimiento en tÈrminos de precisiÛn, autonomÌa, comodidad de uso y fiabilidad. El calibre 2236 cuenta con una reserva de marcha de aproximadamente 55 horas, y el calibre 3235 de aproximadamente 70 horas.</p>
+                                <p className="body-20-light">Los modelos Yacht-Master est√°n equipados con el calibre 2236 (Yacht Master 37) o con el calibre 3235 (Yacht Master 40 y Yacht Master 42), movimientos mec√∫nicos de cuerda autom√°tica completamente desarrollados y manufacturados por Rolex. Presentan un elevado rendimiento en t√≠rminos de precisi√≥n, autonom√≠a, comodidad de uso y fiabilidad. El calibre 2236 cuenta con una reserva de marcha de aproximadamente 55 horas, y el calibre 3235 de aproximadamente 70 horas.</p>
                             </div>
                         </div>
                     </div>
@@ -471,8 +471,8 @@ const YachtMaster = () => {
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/yacht-master/rolex-yacht-master-greenseal-2301-landscape.webp" loading="lazy" />
                                     </picture>
                                 </div>
-                                <p className="headline50 c-brown-text pb-20">CertificaciÛn de CronÛmetro Superlativo</p>
-                                <p className="body-20-light">Como todos los relojes Rolex, el Yacht-Master cuenta con la certificaciÛn de CronÛmetro Superlativo. Esta denominaciÛn atestigua que cada reloj que sale de los talleres de la marca ha superado con Èxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de CronÛmetro Superlativo se simboliza mediante el sello verde y va acompaÒado de una garantÌa internacional de cinco aÒos.</p>
+                                <p className="headline50 c-brown-text pb-20">Certificaci√≠n de Cron√≠metro Superlativo</p>
+                                <p className="body-20-light">Como todos los relojes Rolex, el Yacht-Master cuenta con la certificaci√≥n de Cron√≠metro Superlativo. Esta denominaci√≥n atestigua que cada reloj que sale de los talleres de la marca ha superado con √©xito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cron√≠metro Superlativo se simboliza mediante el sello verde y va acompa√±ado de una garant√≠a internacional de cinco a√±os.</p>
                             </div>
                         </div>
                     </div>

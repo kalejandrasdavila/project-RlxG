@@ -1,5 +1,5 @@
 import React from "react";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../../main-style.css';
 import { Helmet } from "react-helmet-async";
@@ -15,7 +15,7 @@ const Explorer: React.FC = () => {
                 <title>Relojes Rolex Explorer - GLAUSER</title>
                 <meta
                     name="description"
-                    content="Descubra los relojes Rolex Explorer en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Explorer en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
                                                                 <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
@@ -53,7 +53,7 @@ const Explorer: React.FC = () => {
                 />
                 <meta
                     property="og:description"
-                    content="Descubra los relojes Rolex Explorer en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Explorer en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     property="og:image"
@@ -69,7 +69,7 @@ const Explorer: React.FC = () => {
                 />
                 <meta
                     name="twitter:description"
-                    content="Descubra los relojes Rolex Explorer en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Explorer en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     name="twitter:image"
@@ -97,7 +97,7 @@ const Explorer: React.FC = () => {
                             {
                                 "@type": "Organization",
                                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                "name": "Joyer�a Glauser",
+                                "name": "Joyería Glauser",
                                 "url": "https://devjhernandez--glauser.myvtex.com/",
                                 "sameAs": [
                                     "https://www.facebook.com/JoyeriaGlauser/",
@@ -111,7 +111,7 @@ const Explorer: React.FC = () => {
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "width": 300,
                                     "height": 102,
-                                    "caption": "Joyer�a Glauser"
+                                    "caption": "Joyería Glauser"
                                 },
                                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                             },
@@ -123,7 +123,7 @@ const Explorer: React.FC = () => {
                                 "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
                                 "datePublished": "2025-04-01T05:23:53+00:00",
                                 "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra los relojes Rolex Explorer en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER.",
+                                "description": "Descubra los relojes Rolex Explorer en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
                                 "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/explorer/#breadcrumb" },
                                 "inLanguage": "es-Es",
                                 "potentialAction": { "@type": "ReadAction", "target": "https://devjhernandez--glauser.myvtex.com/rolex/watches/explorer/" }
@@ -221,7 +221,7 @@ const Explorer: React.FC = () => {
                                     La grandeza de la aventura</h1>
                             </div>
                             <div className="col-lg-8-5">
-                                <p className="body-20-light"><strong>El Oyster Perpetual Explorer y Oyster Perpetual Explorer II provienen de la implicaci�n de Rolex en la exploraci�n. Llegan donde pocos se atreven.</strong> La marca ha estado equipando con estos relojes a exploradores polares, alpinistas y espele�logos, para que puedan probarlos en situaciones reales. Algunos de los exploradores, alpinistas y cient�ficos m�s intr�pidos del mundo han llevado a estos relojes a lugares que han puesto a prueba su fiabilidad en condiciones extremas.</p>
+                                <p className="body-20-light"><strong>El Oyster Perpetual Explorer y Oyster Perpetual Explorer II provienen de la implicaciín de Rolex en la exploraciín. Llegan donde pocos se atreven.</strong> La marca ha estado equipando con estos relojes a exploradores polares, alpinistas y espeleílogos, para que puedan probarlos en situaciones reales. Algunos de los exploradores, alpinistas y científicos más intrípidos del mundo han llevado a estos relojes a lugares que han puesto a prueba su fiabilidad en condiciones extremas.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw reloes-componet-2-3">
@@ -296,7 +296,7 @@ const Explorer: React.FC = () => {
                                     className="btn-primary-rlx"
                                     onClick={() => setIsVisible(!isVisible)}
                                 >
-                                    {isVisible ? "Mostrar menos" : "Descubra m�s"}
+                                    {isVisible ? "Mostrar menos" : "Descubra más"}
                                 </button>
                             </div>
                         </div>
@@ -312,8 +312,8 @@ const Explorer: React.FC = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="headline50 c-brown-text pb-20">Los relojes Explorer y Explorer II, legibles y duraderos, est�n dise�ados para acompa�ar a aquellos que superan los l�mites del conocimiento humano</p>
-                                <p className="body-20-light">Desde los a�os 1930, Rolex comenz� a equipar con relojes Oyster Perpetual numerosas expediciones. Las valoraciones que ha recibido sirvieron para desarrollar lo que se conoce como la categor�a de relojes Profesionales que pod�an ser utilizados como herramientas: modelos como el Explorer y el Explorer II. Los relojes Rolex han formado parte de algunas de las grandes aventuras de la humanidad. Una de esas aventuras fue la expedici�n al Everest en 1953, liderada por sir John Hunt, en la que sir Edmund Hillary y Tenzing Norgay se convirtieron en los primeros en llegar a la cumbre de la monta�a m�s alta del mundo.</p>
+                                <p className="headline50 c-brown-text pb-20">Los relojes Explorer y Explorer II, legibles y duraderos, están diseñados para acompaíar a aquellos que superan los límites del conocimiento humano</p>
+                                <p className="body-20-light">Desde los años 1930, Rolex comenzí a equipar con relojes Oyster Perpetual numerosas expediciones. Las valoraciones que ha recibido sirvieron para desarrollar lo que se conoce como la categoría de relojes Profesionales que podían ser utilizados como herramientas: modelos como el Explorer y el Explorer II. Los relojes Rolex han formado parte de algunas de las grandes aventuras de la humanidad. Una de esas aventuras fue la expediciín al Everest en 1953, liderada por sir John Hunt, en la que sir Edmund Hillary y Tenzing Norgay se convirtieron en los primeros en llegar a la cumbre de la montaña más alta del mundo.</p>
                             </div>
                         </div>
                     </div>
@@ -333,9 +333,9 @@ const Explorer: React.FC = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="headline50 c-brown-text pb-20">Dise�ado para la exploraci�n</p>
-                                <p className="body-20-light pb-30">Presentado en 1953, el Explorer destaca por su dise�o sencillo y su f�cilmente legible esfera negra con n�meros 3, 6 y 9 caracter�sticos e indicadores de gran tama�o. Es un reloj-herramienta creado para marcar el tiempo bajo cualquier condici�n. Incluso en la oscuridad, su esfera permanece perfectamente legible gracias a la visualizaci�n Chromalight. Actualmente, el Explorer est� disponible en 36 mm de di�metro �el mismo tama�o que el modelo original de 1953� as� como en 40 mm de di�metro.</p>
-                                <p className="body-20-light">El Explorer II, lanzado en 1971, mantiene el mismo esp�ritu que el Explorer: perpetuar la privilegiada relaci�n entre Rolex y la exploraci�n. Gracias a su visualizaci�n 24 horas constituida por una aguja adicional naranja y un bisel grabado, el Explorer II permite distinguir sin equ�voco las horas del d�a de las de la noche �una opci�n �til en lugares donde resulta dif�cil distinguir el d�a de la noche, como en las regiones polares en algunas �pocas del a�o, o en las cuevas� o bien mostrar la hora de un segundo huso horario.</p>
+                                <p className="headline50 c-brown-text pb-20">Diseíado para la exploraciín</p>
+                                <p className="body-20-light pb-30">Presentado en 1953, el Explorer destaca por su diseño sencillo y su fícilmente legible esfera negra con nímeros 3, 6 y 9 característicos e indicadores de gran tamaño. Es un reloj-herramienta creado para marcar el tiempo bajo cualquier condiciín. Incluso en la oscuridad, su esfera permanece perfectamente legible gracias a la visualización Chromalight. Actualmente, el Explorer está disponible en 36 mm de diímetro íel mismo tamaño que el modelo original de 1953í así como en 40 mm de diímetro.</p>
+                                <p className="body-20-light">El Explorer II, lanzado en 1971, mantiene el mismo espíritu que el Explorer: perpetuar la privilegiada relaciín entre Rolex y la exploraciín. Gracias a su visualización 24 horas constituida por una aguja adicional naranja y un bisel grabado, el Explorer II permite distinguir sin equívoco las horas del día de las de la noche —una opciín ítil en lugares donde resulta difícil distinguir el día de la noche, como en las regiones polares en algunas épocas del año, o en las cuevasí o bien mostrar la hora de un segundo huso horario.</p>
                             </div>
                         </div>
                     </div>
@@ -345,8 +345,8 @@ const Explorer: React.FC = () => {
                     <div className="rlx-container-content py-90-60">
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="headline50 c-brown-text pb-20">Soportar las condiciones m�s extremas</p>
-                                <p className="body-20-light">Los relojes de la gama Explorer no han dejado de evolucionar para satisfacer de la mejor manera posible las necesidades de los exploradores. Cada vez m�s robustos. Cada vez m�s fiables. El Explorer 36 est� disponible en acero Oystersteel o en versi�n Rolesor amarillo (combinaci�n de acero Oystersteel y oro amarillo) mientras que el Explorer 40 y el Explorer II est�n fabricados exclusivamente en acero Oystersteel. Especialmente desarrollado para Rolex, el acero Oystersteel es una aleaci�n �nica con excelentes propiedades anticorrosi�n.</p>
+                                <p className="headline50 c-brown-text pb-20">Soportar las condiciones más extremas</p>
+                                <p className="body-20-light">Los relojes de la gama Explorer no han dejado de evolucionar para satisfacer de la mejor manera posible las necesidades de los exploradores. Cada vez más robustos. Cada vez más fiables. El Explorer 36 está disponible en acero Oystersteel o en versión Rolesor amarillo (combinación de acero Oystersteel y oro amarillo) mientras que el Explorer 40 y el Explorer II están fabricados exclusivamente en acero Oystersteel. Especialmente desarrollado para Rolex, el acero Oystersteel es una aleaciín única con excelentes propiedades anticorrosiín.</p>
                             </div>
                         </div>
                     </div>
@@ -369,8 +369,8 @@ const Explorer: React.FC = () => {
                     <div className="rlx-container-content py-90-60">
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="body-20-light pb-30">Los tres modelos est�n equipados con un brazalete Oyster, un brazalete de tres elementos que destaca por su robustez. Equipado con un cierre de seguridad desplegable Oysterlock, dise�ado y patentado por Rolex, que previene cualquier apertura involuntaria, tambi�n dispone del c�modo sistema de extensi�n r�pida Easylink, desarrollado por la marca, que permite ajustar f�cilmente su longitud en torno a unos 5 mm.</p>
-                                <p className="body-20-light">El Explorer 36 y el Explorer 40 est�n equipados con el calibre 3230 y el Explorer II presenta el calibre 3285. Ambos son movimientos mec�nicos de cuerda autom�tica completamente desarrollados y manufacturados por Rolex. Poseen una reserva de marcha de aproximadamente 70 horas.</p>
+                                <p className="body-20-light pb-30">Los tres modelos están equipados con un brazalete Oyster, un brazalete de tres elementos que destaca por su robustez. Equipado con un cierre de seguridad desplegable Oysterlock, diseñado y patentado por Rolex, que previene cualquier apertura involuntaria, también dispone del címodo sistema de extensiín rípida Easylink, desarrollado por la marca, que permite ajustar fícilmente su longitud en torno a unos 5 mm.</p>
+                                <p className="body-20-light">El Explorer 36 y el Explorer 40 están equipados con el calibre 3230 y el Explorer II presenta el calibre 3285. Ambos son movimientos mecúnicos de cuerda automática completamente desarrollados y manufacturados por Rolex. Poseen una reserva de marcha de aproximadamente 70 horas.</p>
                             </div>
                         </div>
                     </div>
@@ -383,11 +383,11 @@ const Explorer: React.FC = () => {
                                 <div className="pb-90-60">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/explorer/rolex-explorer-greenseal-2301-portrait.webp" />
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/explorer/rolex-explorer-greenseal-2301-landscape.webp" loading="lazy" alt="Certificaci�n de Cron�metro Superlativo" />
+                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/explorer/rolex-explorer-greenseal-2301-landscape.webp" loading="lazy" alt="Certificaciín de Cronímetro Superlativo" />
                                     </picture>
                                 </div>
-                                <p className="headline50 c-brown-text pb-20">Certificaci�n de Cron�metro Superlativo</p>
-                                <p className="body-20-light">Como todos los relojes Rolex, el Explorer y el Explorer II cuentan con la certificaci�n de Cron�metro Superlativo. Esta denominaci�n atestigua que cada reloj que sale de los talleres de la marca ha superado con �xito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cron�metro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompa�ado de una garant�a internacional de cinco a�os.</p>
+                                <p className="headline50 c-brown-text pb-20">Certificaciín de Cronímetro Superlativo</p>
+                                <p className="body-20-light">Como todos los relojes Rolex, el Explorer y el Explorer II cuentan con la certificación de Cronímetro Superlativo. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cronímetro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompañado de una garantía internacional de cinco años.</p>
                             </div>
                         </div>
                     </div>

@@ -3,7 +3,7 @@ import { useCssHandles } from 'vtex.css-handles';
 import '../../../main-style.css';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
@@ -29,7 +29,7 @@ const GmtMaster: React.FC = () => {
                 <title>Relojes Rolex GMT-Master II - GLAUSER</title>
                 <meta
                     name="description"
-                    content="Descubra los relojes Rolex GMT-Master II en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex GMT-Master II en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
                                                                 <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
@@ -67,7 +67,7 @@ const GmtMaster: React.FC = () => {
                 />
                 <meta
                     property="og:description"
-                    content="Descubra los relojes Rolex GMT-Master II en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex GMT-Master II en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     property="og:image"
@@ -83,7 +83,7 @@ const GmtMaster: React.FC = () => {
                 />
                 <meta
                     name="twitter:description"
-                    content="Descubra los relojes Rolex GMT-Master II en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex GMT-Master II en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     name="twitter:image"
@@ -114,7 +114,7 @@ const GmtMaster: React.FC = () => {
                                 {
                                     "@type": "Organization",
                                     "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                    "name": "Joyer�a Glauser",
+                                    "name": "Joyería Glauser",
                                     "url": "https://devjhernandez--glauser.myvtex.com/",
                                     "sameAs": [
                                         "https://www.facebook.com/JoyeriaGlauser/",
@@ -128,7 +128,7 @@ const GmtMaster: React.FC = () => {
                                         "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                         "width": 300,
                                         "height": 102,
-                                        "caption": "Joyer�a Glauser"
+                                        "caption": "Joyería Glauser"
                                     },
                                     "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                                 },
@@ -141,7 +141,7 @@ const GmtMaster: React.FC = () => {
                                     "datePublished": "2025-04-01T05:23:53+00:00",
                                     "dateModified": "2025-04-01T05:23:53+00:00",
                                     "description":
-                                        "Descubra los relojes Rolex GMT-Master II en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER.",
+                                        "Descubra los relojes Rolex GMT-Master II en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
                                     "breadcrumb": {
                                         "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/#breadcrumb"
                                     },
@@ -245,10 +245,10 @@ const GmtMaster: React.FC = () => {
                         <div className="row-grid-fullw text-introduccion pb-90-60">
                             <div className="col-lg-2-5">
                                 <h1 className="headline50 c-brown-text pb-20">Rolex GMT-Master II
-                                    Mantener los v�nculos</h1>
+                                    Mantener los vínculos</h1>
                             </div>
                             <div className="col-lg-8-5">
-                                <p className="body-20-light"><strong>El Oyster Perpetual GMT-Master II est� dise�ado para indicar la hora de dos husos horarios simult�neamente. Robusto y funcional, es el reloj ideal para quienes recorren el mundo.</strong> Presentado en 1955, el GMT-Master ha sido testigo privilegiado del auge de los viajes intercontinentales desde la segunda mitad del siglo XX. Incluso se convirti� en reloj oficial de la Pan American World Airways, la principal y m�s importante aerol�nea internacional estadounidense de la �poca.</p>
+                                <p className="body-20-light"><strong>El Oyster Perpetual GMT-Master II está diseñado para indicar la hora de dos husos horarios simultáneamente. Robusto y funcional, es el reloj ideal para quienes recorren el mundo.</strong> Presentado en 1955, el GMT-Master ha sido testigo privilegiado del auge de los viajes intercontinentales desde la segunda mitad del siglo XX. Incluso se convirtió en reloj oficial de la Pan American World Airways, la principal y más importante aerolínea internacional estadounidense de la época.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw reloes-componet-2-3">
@@ -516,7 +516,7 @@ const GmtMaster: React.FC = () => {
                                     className="btn-primary-rlx"
                                     onClick={() => setIsVisible(!isVisible)}
                                 >
-                                    {isVisible ? "Mostrar menos" : "Descubra m�s"}
+                                    {isVisible ? "Mostrar menos" : "Descubra más"}
                                 </button>
                             </div>
                         </div>
@@ -532,7 +532,7 @@ const GmtMaster: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Tanto por sus funciones como por su nombre, el Oyster Perpetual GMT-Master II hace referencia directa a los husos horarios y a los viajes de larga distancia.</p>
-                                <p className="body-20-light">Aut�ntico reloj-herramienta, el GMT-Master no ha dejado de evolucionar para ofrecer unas prestaciones cronom�tricas cada vez m�s punteras. En 1982, Rolex introduce un nuevo calibre que permite ajustar la aguja de las horas de forma independiente de la de los minutos y de la aguja 24 horas. Para marcar esta evoluci�n, el modelo equipado con el movimiento optimizado se bautiz� como GMT-Master II.</p>
+                                <p className="body-20-light">Auténtico reloj-herramienta, el GMT-Master no ha dejado de evolucionar para ofrecer unas prestaciones cronométricas cada vez más punteras. En 1982, Rolex introduce un nuevo calibre que permite ajustar la aguja de las horas de forma independiente de la de los minutos y de la aguja 24 horas. Para marcar esta evolución, el modelo equipado con el movimiento optimizado se bautizó como GMT-Master II.</p>
                             </div>
                         </div>
                     </div>
@@ -552,9 +552,9 @@ const GmtMaster: React.FC = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="headline50 c-brown-text pb-20">Un �nico instrumento, varios husos horarios</p>
-                                <p className="body-20-light pb-30">El GMT-Master II luce un dise�o inmediatamente reconocible con un disco de bisel graduado disponible en diferentes versiones bicolor: la mitad inferior simboliza las horas del d�a y la superior, las de la noche. Con su visualizaci�n tradicional por medio de aguja de las horas, minutero y segundero, su aguja 24 horas rematada en un tri�ngulo y su bisel giratorio bidireccional con disco Cerachrom graduado 24 horas, el GMT-Master II permite leer de forma simult�nea la hora de dos husos horarios: ya sea la hora local y la hora de referencia, o bien la hora local y la de otro huso horario.</p>
-                                <p className="body-20-light">El GMT-Master II actual est� equipado con el calibre 3285, un movimiento mec�nico de cuerda autom�tica completamente desarrollado y manufacturado por Rolex. Este movimiento, concentrado de tecnolog�a, presenta un elevado rendimiento en materia de precisi�n, reserva de marcha, resistencia a los golpes, comodidad de uso y fiabilidad. Est� equipado con la espiral Parachrom azul y cuenta tambi�n con el escape Chronergy patentado. La reserva de marcha del movimiento es de aproximadamente 70 horas.</p>
+                                <p className="headline50 c-brown-text pb-20">Un único instrumento, varios husos horarios</p>
+                                <p className="body-20-light pb-30">El GMT-Master II luce un diseño inmediatamente reconocible con un disco de bisel graduado disponible en diferentes versiones bicolor: la mitad inferior simboliza las horas del día y la superior, las de la noche. Con su visualización tradicional por medio de aguja de las horas, minutero y segundero, su aguja 24 horas rematada en un triángulo y su bisel giratorio bidireccional con disco Cerachrom graduado 24 horas, el GMT-Master II permite leer de forma simultánea la hora de dos husos horarios: ya sea la hora local y la hora de referencia, o bien la hora local y la de otro huso horario.</p>
+                                <p className="body-20-light">El GMT-Master II actual está equipado con el calibre 3285, un movimiento mecánico de cuerda automática completamente desarrollado y manufacturado por Rolex. Este movimiento, concentrado de tecnología, presenta un elevado rendimiento en materia de precisión, reserva de marcha, resistencia a los golpes, comodidad de uso y fiabilidad. Está equipado con la espiral Parachrom azul y cuenta también con el escape Chronergy patentado. La reserva de marcha del movimiento es de aproximadamente 70 horas.</p>
                             </div>
                         </div>
                     </div>
@@ -587,9 +587,9 @@ const GmtMaster: React.FC = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="headline50 c-brown-text pb-20">Cer�mica de alta tecnolog�a</p>
-                                <p className="body-20-light pb-30">El disco de bisel Cerachrom fabricado por Rolex es de una sola pieza con cer�mica extremadamente dura. Este material de alta tecnolog�a es pr�cticamente imposible de rayar y mantiene sus colores vibrantes a trav�s del tiempo. En 2013, Rolex desempe�� un papel pionero al presentar su primer disco de bisel bicolor de cer�mica en una sola pieza �una mitad azul y la otra negra. Un a�o m�s tarde, la marca present� el disco Cerachrom bicolor en rojo y azul, los colores originales del GMT-Master. Rolex llev� a cabo investigaciones in�ditas e innovadoras para desarrollar una cer�mica roja que cumpliese sus criterios est�ticos y de calidad.</p>
-                                <p className="body-20-light">A lo largo de los a�os, Rolex ha presentado otras combinaciones de colores, como marr�n y negro en 2018, verde y negro en 2022, en una versi�n con la corona y los protectores de la corona en el lado izquierdo de la caja y la indicaci�n de la fecha en la posici�n de las 9 h, y gris y negro en 2023.</p>
+                                <p className="headline50 c-brown-text pb-20">Cerámica de alta tecnología</p>
+                                <p className="body-20-light pb-30">El disco de bisel Cerachrom fabricado por Rolex es de una sola pieza con cerámica extremadamente dura. Este material de alta tecnología es prácticamente imposible de rayar y mantiene sus colores vibrantes a través del tiempo. En 2013, Rolex desempeñó un papel pionero al presentar su primer disco de bisel bicolor de cerámica en una sola pieza —una mitad azul y la otra negra. Un año más tarde, la marca presentó el disco Cerachrom bicolor en rojo y azul, los colores originales del GMT-Master. Rolex llevó a cabo investigaciones inéditas e innovadoras para desarrollar una cerámica roja que cumpliese sus criterios estéticos y de calidad.</p>
+                                <p className="body-20-light">A lo largo de los años, Rolex ha presentado otras combinaciones de colores, como marrón y negro en 2018, verde y negro en 2022, en una versión con la corona y los protectores de la corona en el lado izquierdo de la caja y la indicación de la fecha en la posición de las 9 h, y gris y negro en 2023.</p>
                             </div>
                         </div>
                     </div>
@@ -602,11 +602,11 @@ const GmtMaster: React.FC = () => {
                                 <div className="pb-90-60">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/gmt-master-ii/rolex-gmt-master-ii-greenseal-2301-portrait.webp" />
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/gmt-master-ii/rolex-gmt-master-ii-greenseal-2301-landscape.webp" loading="lazy" alt="Certificaci�n de Cron�metro Superlativo" />
+                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/gmt-master-ii/rolex-gmt-master-ii-greenseal-2301-landscape.webp" loading="lazy" alt="Certificación de Cronómetro Superlativo" />
                                     </picture>
                                 </div>
-                                <p className="headline50 c-brown-text pb-20">Certificaci�n de Cron�metro Superlativo</p>
-                                <p className="body-20-light">Como todos los relojes Rolex, el GMT-Master II cuenta con la certificaci�n de Cron�metro Superlativo. Esta denominaci�n atestigua que cada reloj que sale de los talleres de la marca ha superado con �xito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cron�metro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompa�ado de una garant�a internacional de cinco a�os.</p>
+                                <p className="headline50 c-brown-text pb-20">Certificación de Cronómetro Superlativo</p>
+                                <p className="body-20-light">Como todos los relojes Rolex, el GMT-Master II cuenta con la certificación de Cronómetro Superlativo. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cronómetro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompañado de una garantía internacional de cinco años.</p>
                             </div>
                         </div>
                     </div>

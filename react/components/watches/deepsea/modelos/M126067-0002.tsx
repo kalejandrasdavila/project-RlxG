@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useCssHandles } from 'vtex.css-handles';
 import '../../../main-style.css';
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
 import NavM from "../../../parts/NavModels";
 import WatchesForm from "../../../parts/Rlx-watches-formulario";
@@ -26,7 +26,7 @@ const M1260670002: React.FC = () => {
         if (elemento) {
             elemento.value = `Me interesa ${formattedTitle}`;
         } else {
-            console.error("No se encontr� el elemento con el ID 'mensajerlx'");
+            console.error("No se encontrí el elemento con el ID 'mensajerlx'");
         }
     }, []);
 
@@ -121,7 +121,7 @@ const M1260670002: React.FC = () => {
                             {
                                 "@type": "Organization",
                                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                "name": "Joyer�a Glauser",
+                                "name": "Joyería Glauser",
                                 "url": "https://devjhernandez--glauser.myvtex.com/",
                                 "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
                                 "logo": {
@@ -132,7 +132,7 @@ const M1260670002: React.FC = () => {
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "width": 300,
                                     "height": 102,
-                                    "caption": "Joyer�a Glauser"
+                                    "caption": "Joyería Glauser"
                                 },
                                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                             },
@@ -371,7 +371,7 @@ const M1260670002: React.FC = () => {
                                             </a>
                                             <a
                                                 className="social-link button-label"
-                                                href="https://wa.me/573132841334?text=Hola%20GLAUSER%20Joyer�as%20quisiera%20mas%20informaci%C3%B3n"
+                                                href="https://wa.me/573132841334?text=Hola%20GLAUSER%20Joyerías%20quisiera%20mas%20informaci%C3%B3n"
                                                 onClick={() => window._satellite?.track?.('whatsappContact')}
                                                 rel="noopener"
                                                 target="_blank">
@@ -484,7 +484,7 @@ const M1260670002: React.FC = () => {
                                                         </g>
                                                     </svg>
                                                 </i>
-                                                <span className="text-mapita">Encu�ntranos</span>
+                                                <span className="text-mapita">Encuíntranos</span>
                                             </a>
                                         </div>
                                     </div>
@@ -633,7 +633,7 @@ const M1260670002: React.FC = () => {
                                         srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-portrait.webp"
                                     />
                                     <img
-                                        alt="garant�a Rolex"
+                                        alt="garantía Rolex"
                                         loading="lazy"
                                         src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-landscape.webp"
                                     />
@@ -644,19 +644,19 @@ const M1260670002: React.FC = () => {
                                     <div className="accordion-item">
                                         <div className="accordion-header">
                                             <span className="body-24-bold c-brown-text">
-                                                La garant�a Rolex
+                                                La garantía Rolex
                                             </span>
-                                            <span className="icon-acordion c-brown-text">�</span>
+                                            <span className="icon-acordion c-brown-text">í</span>
                                         </div>
                                         <div className="accordion-content pb-30 active">
                                             <p className="body-20-light">
-                                                Para garantizar la precisi�n y la fiabilidad de sus relojes,
+                                                Para garantizar la precisión y la fiabilidad de sus relojes,
                                                 Rolex somete a cada reloj, tras el ensamblaje, a una serie de
                                                 pruebas estrictas. Todos los nuevos relojes adquiridos en uno de
-                                                los Distribuidores Oficiales de la marca incluyen una garant�a
-                                                internacional de cinco a�os. Cuando compra un Rolex, el
+                                                los Distribuidores Oficiales de la marca incluyen una garantía
+                                                internacional de cinco años. Cuando compra un Rolex, el
                                                 Distribuidor Oficial rellena y deja registrada la fecha en la
-                                                tarjeta de garant�a Rolex, que certifica la autenticidad de su
+                                                tarjeta de garantía Rolex, que certifica la autenticidad de su
                                                 reloj.
                                             </p>
                                         </div>
@@ -668,13 +668,13 @@ const M1260670002: React.FC = () => {
                                         </div>
                                         <div className="accordion-content pb-30">
                                             <p className="body-20-light">
-                                                La garant�a de cinco a�os que se aplica a todos los modelos
-                                                Rolex viene acompa�ada de un sello verde, un s�mbolo de su
-                                                estatus de Cron�metro Superlativo. Esta exclusiva certificaci�n
-                                                da fe de que el reloj ha superado con �xito una serie de
-                                                controles finales espec�ficos llevados a cabo por Rolex en sus
-                                                propios laboratorios y seg�n sus propios criterios, como
-                                                complemento de la certificaci�n oficial COSC de su movimiento.
+                                                La garantía de cinco años que se aplica a todos los modelos
+                                                Rolex viene acompañada de un sello verde, un símbolo de su
+                                                estatus de Cronímetro Superlativo. Esta exclusiva certificación
+                                                da fe de que el reloj ha superado con éxito una serie de
+                                                controles finales específicos llevados a cabo por Rolex en sus
+                                                propios laboratorios y segín sus propios criterios, como
+                                                complemento de la certificación oficial COSC de su movimiento.
                                             </p>
                                         </div>
                                     </div>
@@ -686,10 +686,10 @@ const M1260670002: React.FC = () => {
                                         <div className="accordion-content pb-30">
                                             <p className="body-20-light">
                                                 Todos los relojes Rolex se entregan en un precioso estuche verde
-                                                que protege y guarda la joya que anida en su interior. Adem�s,
+                                                que protege y guarda la joya que anida en su interior. Además,
                                                 el estuche simboliza igualmente el acto de regalar. Por ello, si
                                                 usted quiere obsequiar a alguien con un Rolex, es importante que
-                                                lo primero que vea el destinatario est� a la altura de su
+                                                lo primero que vea el destinatario está a la altura de su
                                                 contenido.
                                             </p>
                                         </div>
@@ -717,14 +717,14 @@ const M1260670002: React.FC = () => {
                                         <li>
                                             <span className="body-20-bold block">Hermetecidad</span>
                                             <span className="body-20-light">
-                                                Herm�tico hasta 11 000 metros / 36 090 pies, v�lvula de helio
+                                                Hermítico hasta 11 000 metros / 36 090 pies, vílvula de helio
                                             </span>
                                         </li>
                                         <li>
                                             <span className="body-20-bold block">Bisel</span>
                                             <span className="body-20-light">
                                                 Giratorio unidireccional graduado 60 minutos, disco Cerachrom de
-                                                cer�mica resistente a las rayaduras, n�meros y graduaciones
+                                                cerámica resistente a las rayaduras, nímeros y graduaciones
                                                 recubiertos en platino
                                             </span>
                                         </li>
@@ -733,7 +733,7 @@ const M1260670002: React.FC = () => {
                                 <div className="col-3-5-3-2">
                                     <ul className="list-especification-model-rlx ">
                                         <li>
-                                            <span className="body-20-bold block">Di�metro</span>
+                                            <span className="body-20-bold block">Diímetro</span>
                                             <span className="body-20-light">50 mm</span>
                                         </li>
                                         <li>
@@ -745,7 +745,7 @@ const M1260670002: React.FC = () => {
                                         <li>
                                             <span className="body-20-bold block">Movimiento</span>
                                             <span className="body-20-light">
-                                                Perpetual, mec�nico, de cuerda autom�tica
+                                                Perpetual, mecúnico, de cuerda automática
                                             </span>
                                         </li>
                                         <li>
@@ -765,9 +765,9 @@ const M1260670002: React.FC = () => {
                                             <span className="body-20-light">Aproximadamente 70 horas</span>
                                         </li>
                                         <li>
-                                            <span className="body-20-bold block">Certificaci�n</span>
+                                            <span className="body-20-bold block">Certificaciín</span>
                                             <span className="body-20-light">
-                                                Cron�metro superlativo (COSC + certificaci�n Rolex tras el
+                                                Cronímetro superlativo (COSC + certificación Rolex tras el
                                                 ensamblaje)
                                             </span>
                                         </li>
@@ -825,17 +825,17 @@ const M1260670002: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">
-                                    Bisel de cer�mica y visualizaci�n luminiscente
+                                    Bisel de cerámica y visualización luminiscente
                                 </p>
                                 <p className="body-20-light">
-                                    El bisel giratorio unidireccional graduado 60�minutos del Deepsea
-                                    Challenge permite visualizar los tiempos de inmersi�n y descompresi�n
-                                    con total seguridad. Est� equipado con un disco de bisel Cerachrom
-                                    negro patentado y fabricado por Rolex en una cer�mica pr�cticamente
-                                    imposible de rayar o alterar por los rayos ultravioleta. La graduaci�n
+                                    El bisel giratorio unidireccional graduado 60íminutos del Deepsea
+                                    Challenge permite visualizar los tiempos de inmersión y descompresión
+                                    con total seguridad. Estí equipado con un disco de bisel Cerachrom
+                                    negro patentado y fabricado por Rolex en una cerámica prácticamente
+                                    imposible de rayar o alterar por los rayos ultravioleta. La graduaciín
                                     se obtiene por PVD (Physical Vapour Deposition) de una fina capa de
-                                    platino. La esfera aloja grandes �ndices y agujas Chromalight,
-                                    recubiertas de un material luminiscente de larga duraci�n, que emite
+                                    platino. La esfera aloja grandes índices y agujas Chromalight,
+                                    recubiertas de un material luminiscente de larga duración, que emite
                                     un color azul para una excelente legibilidad en la oscuridad.
                                 </p>
                                 <div className="pb-45-40">
@@ -853,11 +853,11 @@ const M1260670002: React.FC = () => {
                                 </div>
                                 <p className="headline50 c-brown-text pb-20">Esfera negro intenso</p>
                                 <p className="body-20-light">
-                                    La visualizaci�n luminiscente Chromalight de la esfera constituye una
-                                    innovaci�n que mejora la visibilidad en entornos oscuros, una funci�n
-                                    especial para los submarinistas. Los �ndices de formas simples
-                                    �tri�ngulos, c�rculos, rect�ngulos� y las anchas agujas de horas y
-                                    minutos facilitan la lectura y previenen cualquier riesgo de confusi�n
+                                    La visualización luminiscente Chromalight de la esfera constituye una
+                                    innovación que mejora la visibilidad en entornos oscuros, una función
+                                    especial para los submarinistas. Los índices de formas simples
+                                    ítriángulos, círculos, rectíngulosí y las anchas agujas de horas y
+                                    minutos facilitan la lectura y previenen cualquier riesgo de confusiín
                                     bajo el agua.
                                 </p>
                                 <div className="pb-45-40">
@@ -876,17 +876,17 @@ const M1260670002: React.FC = () => {
                                 <div className="pb-90-60">
                                     <p className="headline50 c-brown-text pb-20">Titanio RLX</p>
                                     <p className="body-20-light">
-                                        El titanio�RLX, aleaci�n de titanio grado�5 seleccionada por Rolex,
+                                        El titanioíRLX, aleaciín de titanio gradoí5 seleccionada por Rolex,
                                         se distingue por su ligereza y sus cualidades de resistencia a las
-                                        deformaciones y la corrosi�n. Insensible a la presi�n reinante en
-                                        los abismos, el reloj experimental que descendi� con James�Cameron a
-                                        la fosa de las Marianas, realizado en acero�904L, planteaba un
+                                        deformaciones y la corrosiín. Insensible a la presión reinante en
+                                        los abismos, el reloj experimental que descendií con JamesíCameron a
+                                        la fosa de las Marianas, realizado en aceroí904L, planteaba un
                                         problema de portabilidad debido a su peso. El recurso del
-                                        titanio�RLX para la fabricaci�n de la caja y el brazalete del
-                                        Deepsea Challenge permiti� aligerar el peso del reloj, que se redujo
-                                        en un 30�% con respecto a la pieza experimental de James�Cameron.
-                                        Luce adem�s un satinado especialmente marcado en el conjunto de la
-                                        caja �a excepci�n de los protectores de la corona� y el brazalete.
+                                        titanioíRLX para la fabricación de la caja y el brazalete del
+                                        Deepsea Challenge permitií aligerar el peso del reloj, que se redujo
+                                        en un 30í% con respecto a la pieza experimental de JamesíCameron.
+                                        Luce además un satinado especialmente marcado en el conjunto de la
+                                        caja ía excepciín de los protectores de la coronaí y el brazalete.
                                         Con el fin de resaltar el contorno de las asas, los cantos
                                         superiores se han achaflanado y pulido.
                                     </p>
@@ -934,22 +934,22 @@ const M1260670002: React.FC = () => {
                                             </p>
                                             <p className="body-20-light pb-30">
                                                 Todos los relojes Rolex se ensamblan a mano con sumo cuidado
-                                                para garantizar una Colombiadad excepcional. Unos est�ndares
-                                                tan altos limitan naturalmente la capacidad de producci�n de
+                                                para garantizar una Colombiadad excepcional. Unos estándares
+                                                tan altos limitan naturalmente la capacidad de producciín de
                                                 Rolex y, a veces, la demanda de relojes Rolex supera esta
                                                 capacidad.
                                             </p>
                                             <p className="body-20-light pb-30">
                                                 Por lo tanto, la disponibilidad de ciertos modelos puede ser
                                                 limitada. Los relojes Rolex nuevos se venden exclusivamente a
-                                                trav�s de los Distribuidores Oficiales Rolex, que reciben
+                                                través de los Distribuidores Oficiales Rolex, que reciben
                                                 entregas habituales y gestionan de manera independiente la
-                                                distribuci�n y las ventas a sus clientes.
+                                                distribuciín y las ventas a sus clientes.
                                             </p>
                                             <p className="body-20-light">
                                                 GLAUSER se enorgullece de formar parte de la red mundial de
                                                 Distribuidores Oficiales Rolex, y puede proporcionar
-                                                informaci�n sobre la disponibilidad de los relojes Rolex.
+                                                información sobre la disponibilidad de los relojes Rolex.
                                             </p>
                                         </div>
                                     </div>
@@ -959,7 +959,7 @@ const M1260670002: React.FC = () => {
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126067-0002-presentation-box-portrait.webp"
                                         />
                                         <img
-                                            alt="Rolex Deepsea m126067-0002 caja presentaci�n"
+                                            alt="Rolex Deepsea m126067-0002 caja presentación"
                                             loading="lazy"
                                             src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126067-0002-presentation-box-landscape.webp"
                                         />
@@ -982,7 +982,7 @@ const M1260670002: React.FC = () => {
                                             srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-rolex-deepsea-m136668lb-0001-portrait.webp"
                                         />
                                         <img
-                                            alt="Colecci�n Rolex Deepsea"
+                                            alt="Colecciín Rolex Deepsea"
                                             loading="lazy"
                                             src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-rolex-deepsea-m136668lb-0001-landscape.webp"
                                         />
@@ -1000,7 +1000,7 @@ const M1260670002: React.FC = () => {
                                     <a
                                         className="btn-label-icon-rlx"
                                         href="https://devjhernandez--glauser.myvtex.com/rolex/watches/deepsea/">
-                                        M�s informaci�n
+                                        Mís información
                                         <svg
 
                                             aria-hidden="true"

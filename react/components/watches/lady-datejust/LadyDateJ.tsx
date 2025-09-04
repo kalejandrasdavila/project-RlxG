@@ -3,7 +3,7 @@ import { useCssHandles } from 'vtex.css-handles';
 import '../../../main-style.css';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
@@ -29,7 +29,7 @@ const LadyDate: React.FC = () => {
                 <title>Relojes Rolex Lady-Datejust - GLAUSER</title>
                 <meta
                     name="description"
-                    content="Descubra los relojes Rolex Lady-Datejust en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Lady-Datejust en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
                                                 <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
@@ -67,7 +67,7 @@ const LadyDate: React.FC = () => {
                 />
                 <meta
                     property="og:description"
-                    content="Descubra los relojes Rolex Lady-Datejust en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Lady-Datejust en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     property="og:image"
@@ -83,7 +83,7 @@ const LadyDate: React.FC = () => {
                 />
                 <meta
                     name="twitter:description"
-                    content="Descubra los relojes Rolex Lady-Datejust en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Lady-Datejust en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     name="twitter:image"
@@ -112,7 +112,7 @@ const LadyDate: React.FC = () => {
                             {
                                 "@type": "Organization",
                                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                "name": "Joyer�a Glauser",
+                                "name": "Joyería Glauser",
                                 "url": "https://devjhernandez--glauser.myvtex.com/",
                                 "sameAs": [
                                     "https://www.facebook.com/JoyeriaGlauser/",
@@ -126,7 +126,7 @@ const LadyDate: React.FC = () => {
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "width": 300,
                                     "height": 102,
-                                    "caption": "Joyer�a Glauser"
+                                    "caption": "Joyería Glauser"
                                 },
                                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                             },
@@ -138,7 +138,7 @@ const LadyDate: React.FC = () => {
                                 "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
                                 "datePublished": "2025-04-01T05:23:53+00:00",
                                 "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra los relojes Rolex Lady-Datejust en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER.",
+                                "description": "Descubra los relojes Rolex Lady-Datejust en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
                                 "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/lady-datejust/#breadcrumb" },
                                 "inLanguage": "es-Es",
                                 "potentialAction": { "@type": "ReadAction", "target": "https://devjhernandez--glauser.myvtex.com/rolex/watches/lady-datejust/" }
@@ -237,7 +237,7 @@ const LadyDate: React.FC = () => {
                                     Elegancia en femenino</h1>
                             </div>
                             <div className="col-lg-8-5">
-                                <p className="body-20-light"><strong>�Un reloj cl�sico para mujer�. As� describen algunos a nuestro Oyster Perpetual Lady-Datejust. Y puede que tengan raz�n.</strong> Desde comienzos del siglo XX, Rolex ha dise�ado y fabricado relojes adecuados para todas las mu�ecas femeninas, con el mismo est�ndar de excelencia que todos los modelos que han forjado su leyenda. Si �cl�sico� significa buscar siempre llegar a lo m�s alto, si significa perpetuar las tradiciones al tiempo que combina elegancia con precisi�n, gracia con resistencia, belleza con rendimiento� Entonces el Lady-Datejust es un reloj cl�sico para mujer.</p>
+                                <p className="body-20-light"><strong>íUn reloj clísico para mujerí. Así describen algunos a nuestro Oyster Perpetual Lady-Datejust. Y puede que tengan razín.</strong> Desde comienzos del siglo XX, Rolex ha diseñado y fabricado relojes adecuados para todas las muñecas femeninas, con el mismo estándar de excelencia que todos los modelos que han forjado su leyenda. Si íclísicoí significa buscar siempre llegar a lo más alto, si significa perpetuar las tradiciones al tiempo que combina elegancia con precisión, gracia con resistencia, belleza con rendimientoí Entonces el Lady-Datejust es un reloj clísico para mujer.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw reloes-componet-2-3">
@@ -326,7 +326,7 @@ const LadyDate: React.FC = () => {
                                     className="btn-primary-rlx"
                                     onClick={() => setIsVisible(!isVisible)}
                                 >
-                                    {isVisible ? "Mostrar menos" : "Descubra m�s"}
+                                    {isVisible ? "Mostrar menos" : "Descubra más"}
                                 </button>
                             </div>
                         </div>
@@ -342,7 +342,7 @@ const LadyDate: React.FC = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="headline50 c-brown-text pb-20">El reloj cl�sico femenino de Rolex por excelencia. Con su refinado �glamour�, estilo y prestaciones t�cnicas.</p>
+                                <p className="headline50 c-brown-text pb-20">El reloj clísico femenino de Rolex por excelencia. Con su refinado íglamourí, estilo y prestaciones tícnicas.</p>
                             </div>
                         </div>
                     </div>
@@ -359,7 +359,7 @@ const LadyDate: React.FC = () => {
                                     </picture>
                                 </div>
                                 <p className="headline50 c-brown-text pb-20">Una piedra angular en la historia de Rolex</p>
-                                <p className="body-20-light">Las mujeres pioneras siempre han sido una piedra angular en la historia de Rolex. Desde los inicios de la marca, ellas han inspirado la creaci�n y el desarrollo de relojes especiales que apoyar�an su b�squeda del empoderamiento. El Lady-Datejust es una celebraci�n de aquellas que se atreven a marcar el camino. Representa la precisi�n al tiempo que combina elegancia cl�sica con prestaciones t�cnicas.</p>
+                                <p className="body-20-light">Las mujeres pioneras siempre han sido una piedra angular en la historia de Rolex. Desde los inicios de la marca, ellas han inspirado la creación y el desarrollo de relojes especiales que apoyarían su bísqueda del empoderamiento. El Lady-Datejust es una celebraciín de aquellas que se atreven a marcar el camino. Representa la precisión al tiempo que combina elegancia clísica con prestaciones tícnicas.</p>
                             </div>
                         </div>
                     </div>
@@ -380,7 +380,7 @@ const LadyDate: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Heredero del Datejust</p>
-                                <p className="body-20-light">Presentado en 1957, el Lady-Datejust concentra todos los atributos del Datejust, reloj emblem�tico de Rolex que impuso su estilo y sus prestaciones t�cnicas desde su lanzamiento en 1945. La versi�n para mujeres de este cron�metro con calendario, el Lady-Datejust perpet�a la elegancia del Datejust en una caja m�s peque�a que se adapta a la perfecci�n a las mu�ecas finas.</p>
+                                <p className="body-20-light">Presentado en 1957, el Lady-Datejust concentra todos los atributos del Datejust, reloj emblemítico de Rolex que impuso su estilo y sus prestaciones tícnicas desde su lanzamiento en 1945. La versión para mujeres de este cronómetro con calendario, el Lady-Datejust perpetía la elegancia del Datejust en una caja más pequeña que se adapta a la perfección a las muñecas finas.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw image-center">
@@ -396,7 +396,7 @@ const LadyDate: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Una amplia variedad de versiones</p>
-                                <p className="body-20-light">Desde esferas con acabado tipo sol hasta engastadas de diamantes o esferas de n�car, el Lady-Datejust ofrece una amplia variedad de modalidades entre las que su portadora encontrar� siempre la que refleje su personalidad. Seg�n la modalidad, el Lady-Datejust se propone con bisel abombado, estriado o engastado de diamantes.</p>
+                                <p className="body-20-light">Desde esferas con acabado tipo sol hasta engastadas de diamantes o esferas de nícar, el Lady-Datejust ofrece una amplia variedad de modalidades entre las que su portadora encontrarí siempre la que refleje su personalidad. Segín la modalidad, el Lady-Datejust se propone con bisel abombado, estriado o engastado de diamantes.</p>
                             </div>
                         </div>
                     </div>
@@ -420,7 +420,7 @@ const LadyDate: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center pb-90-60">
                                 <p className="headline50 c-brown-text pb-20">Materiales exclusivos</p>
-                                <p className="body-20-light">El Lady-Datejust est� disponible en acero Oystersteel, oro amarillo, blanco o Everose de 18 quilates o en versi�n Rolesor que combina acero Oystersteel con una de las tres variedades de oro (blanco, amarillo y Everose).</p>
+                                <p className="body-20-light">El Lady-Datejust está disponible en acero Oystersteel, oro amarillo, blanco o Everose de 18 quilates o en versión Rolesor que combina acero Oystersteel con una de las tres variedades de oro (blanco, amarillo y Everose).</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw image-center">
@@ -437,16 +437,16 @@ const LadyDate: React.FC = () => {
                             <div className="col-text-center">
                                 <div className="pb-90-60">
                                     <p className="headline50 c-brown-text pb-20">Caja Oyster de 28 mm</p>
-                                    <p className="body-20-light">La caja Oyster de 28 mm del Lady-Datejust es una perfecta combinaci�n de proporciones, robustez y elegancia. Su distintiva carrura est� tallada en un bloque macizo de acero Oystersteel altamente resistente a la corrosi�n u oro de 18 quilates. Garantiza una hermeticidad de hasta 100 metros.</p>
+                                    <p className="body-20-light">La caja Oyster de 28 mm del Lady-Datejust es una perfecta combinación de proporciones, robustez y elegancia. Su distintiva carrura está tallada en un bloque macizo de acero Oystersteel altamente resistente a la corrosiín u oro de 18 quilates. Garantiza una hermeticidad de hasta 100 metros.</p>
                                 </div>
                                 <div className="pb-90-60">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/lady-datejust/rolex-lady-datejust-m279138rbr-0015-portrait.webp" />
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/lady-datejust/rolex-lady-datejust-m279138rbr-0015-landscape.webp" loading="lazy" alt="Brazaletes emblem�ticos" />
+                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/lady-datejust/rolex-lady-datejust-m279138rbr-0015-landscape.webp" loading="lazy" alt="Brazaletes emblemíticos" />
                                     </picture>
                                 </div>
-                                <p className="headline50 c-brown-text pb-20">Brazaletes emblem�ticos</p>
-                                <p className="body-20-light">El Lady-Datejust luce, en funci�n de la modalidad, un brazalete Oyster de tres elementos equipado con un cierre Oysterclasp, un brazalete Jubilee de cinco elementos �creado en 1945 especialmente para el Datejust� o un brazalete President de tres elementos.</p>
+                                <p className="headline50 c-brown-text pb-20">Brazaletes emblemíticos</p>
+                                <p className="body-20-light">El Lady-Datejust luce, en función de la modalidad, un brazalete Oyster de tres elementos equipado con un cierre Oysterclasp, un brazalete Jubilee de cinco elementos ícreado en 1945 especialmente para el Datejustí o un brazalete President de tres elementos.</p>
                             </div>
                         </div>
                         <div className="row-grid-fullw image-center">
@@ -462,7 +462,7 @@ const LadyDate: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">El calibre Perpetual 2236</p>
-                                <p className="body-20-light">El Lady-Datejust est� equipado con el calibre 2236, un movimiento mec�nico de cuerda autom�tica completamente desarrollado y manufacturado por Rolex. Su arquitectura le confiere una precisi�n y fiabilidad excepcionales. El calibre 2236 consta de la espiral Syloxi de silicio, patentada y manufacturada por Rolex. Resistente a los campos magn�ticos, la espiral Syloxi ofrece una gran estabilidad frente a las variaciones de temperatura. Su geometr�a patentada garantiza su regularidad en todas las posiciones.</p>
+                                <p className="body-20-light">El Lady-Datejust está equipado con el calibre 2236, un movimiento mecúnico de cuerda automática completamente desarrollado y manufacturado por Rolex. Su arquitectura le confiere una precisión y fiabilidad excepcionales. El calibre 2236 consta de la espiral Syloxi de silicio, patentada y manufacturada por Rolex. Resistente a los campos magníticos, la espiral Syloxi ofrece una gran estabilidad frente a las variaciones de temperatura. Su geometría patentada garantiza su regularidad en todas las posiciones.</p>
                             </div>
                         </div>
                     </div>
@@ -475,11 +475,11 @@ const LadyDate: React.FC = () => {
                                 <div className="pb-90-60">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/lady-datejust/rolex-lady-datejust-greenseal-2301-portrait.webp" />
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/lady-datejust/rolex-lady-datejust-greenseal-2301-landscape.webp" loading="lazy" alt="Certificaci�n de Cron�metro Superlativo" />
+                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/lady-datejust/rolex-lady-datejust-greenseal-2301-landscape.webp" loading="lazy" alt="Certificaciín de Cronímetro Superlativo" />
                                     </picture>
                                 </div>
-                                <p className="headline50 c-brown-text pb-20">Certificaci�n de Cron�metro Superlativo</p>
-                                <p className="body-20-light">Como todos los relojes Rolex, el Lady-Datejust cuenta con la certificaci�n de Cron�metro Superlativo. Esta denominaci�n atestigua que cada reloj que sale de los talleres de la marca ha superado con �xito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cron�metro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompa�ado de una garant�a internacional de cinco a�os.</p>
+                                <p className="headline50 c-brown-text pb-20">Certificaciín de Cronímetro Superlativo</p>
+                                <p className="body-20-light">Como todos los relojes Rolex, el Lady-Datejust cuenta con la certificación de Cronímetro Superlativo. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cronímetro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompañado de una garantía internacional de cinco años.</p>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
@@ -24,7 +24,7 @@ const Airking: React.FC = () => {
                 <title>Relojes Rolex Air-King - GLAUSER</title>
                 <meta
                     name="description"
-                    content="Descubra los relojes Rolex Air-King en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
+                    content="Descubra los relojes Rolex Air-King en lÃ­nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra mÃ¡s en GLAUSER."
                 />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link
@@ -57,7 +57,7 @@ const Airking: React.FC = () => {
                 />
                 <meta
                     property="og:description"
-                    content="Descubra los relojes Rolex Air-King en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
+                    content="Descubra los relojes Rolex Air-King en lÃ­nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra mÃ¡s en GLAUSER."
                 />
                 <meta
                     property="og:image"
@@ -73,7 +73,7 @@ const Airking: React.FC = () => {
                 />
                 <meta
                     name="twitter:description"
-                    content="Descubra los relojes Rolex Air-King en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
+                    content="Descubra los relojes Rolex Air-King en lÃ­nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra mÃ¡s en GLAUSER."
                 />
                 <meta
                     name="twitter:image"
@@ -104,7 +104,7 @@ const Airking: React.FC = () => {
                                 {
                                     "@type": "Organization",
                                     "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                    "name": "Joyería Glauser",
+                                    "name": "JoyerÃ­a Glauser",
                                     "url": "https://devjhernandez--glauser.myvtex.com/",
                                     "sameAs": [
                                         "https://devjhernandez--glauser.myvtex.com/",
@@ -119,7 +119,7 @@ const Airking: React.FC = () => {
                                         "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                         "width": 300,
                                         "height": 102,
-                                        "caption": "Joyería Glauser"
+                                        "caption": "JoyerÃ­a Glauser"
                                     },
                                     "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                                 },
@@ -131,7 +131,7 @@ const Airking: React.FC = () => {
                                     "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
                                     "datePublished": "2024-04-10T05:23:53+00:00",
                                     "dateModified": "2024-04-10T05:23:53+00:00",
-                                    "description": "Descubra los relojes Rolex Air-King en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
+                                    "description": "Descubra los relojes Rolex Air-King en lÃ­nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra mÃ¡s en GLAUSER.",
                                     "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/#breadcrumb" },
                                     "inLanguage": "es-Es",
                                     "potentialAction": [{ "@type": "ReadAction", "target": ["https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/"] }]
@@ -200,9 +200,9 @@ const Airking: React.FC = () => {
                                 <div className={`${handles.rolex_family_description} ${handles.pb_15}`}>
                                     <h1>Air-King</h1>
                                     <p className={`${handles.description}`}>
-                                        El Air-King rinde homenaje a los pioneros del vuelo y al papel de Rolex en la épica aventura de la aviación.
-                                        Presenta una esfera negra distintiva con una combinación de números grandes de 3, 6 y 9 horas y una escala de minutos prominente
-                                        para una navegación temporal óptima. El modelo está equipado con el calibre 3230, un movimiento de manufactura
+                                        El Air-King rinde homenaje a los pioneros del vuelo y al papel de Rolex en la Ã­pica aventura de la aviaciÃ­n.
+                                        Presenta una esfera negra distintiva con una combinaciÃ³n de nÃ­meros grandes de 3, 6 y 9 horas y una escala de minutos prominente
+                                        para una navegaciÃ­n temporal Ã­ptima. El modelo estÃ¡ equipado con el calibre 3230, un movimiento de manufactura
                                         totalmente desarrollado y fabricado por Rolex.
                                     </p>
                                 </div>

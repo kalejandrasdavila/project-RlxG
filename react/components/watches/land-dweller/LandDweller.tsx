@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../hooks/useInitScripts';
+import useInitScripts from '../../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
@@ -13,7 +13,7 @@ const MLandDweller: React.FC = () => {
                 <title>Relojes Rolex Land-Dweller - GLAUSER</title>
                 <meta
                     name="description"
-                    content="Descubra los relojes Rolex Land-Dweller en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
                                                                 <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
@@ -51,7 +51,7 @@ const MLandDweller: React.FC = () => {
                 />
                 <meta
                     property="og:description"
-                    content="Descubra los relojes Rolex Land-Dweller en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     property="og:image"
@@ -67,7 +67,7 @@ const MLandDweller: React.FC = () => {
                 />
                 <meta
                     name="twitter:description"
-                    content="Descubra los relojes Rolex Land-Dweller en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER."
+                    content="Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
                 <meta
                     name="twitter:image"
@@ -95,7 +95,7 @@ const MLandDweller: React.FC = () => {
                             {
                                 "@type": "Organization",
                                 "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
-                                "name": "Joyer�a Glauser",
+                                "name": "Joyería Glauser",
                                 "url": "https://devjhernandez--glauser.myvtex.com/",
                                 "sameAs": [
                                     "https://www.facebook.com/JoyeriaGlauser/",
@@ -109,7 +109,7 @@ const MLandDweller: React.FC = () => {
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "width": 300,
                                     "height": 102,
-                                    "caption": "Joyer�a Glauser"
+                                    "caption": "Joyería Glauser"
                                 },
                                 "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
                             },
@@ -121,7 +121,7 @@ const MLandDweller: React.FC = () => {
                                 "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
                                 "datePublished": "2025-04-01T05:23:53+00:00",
                                 "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra los relojes Rolex Land-Dweller en l�nea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra m�s en GLAUSER.",
+                                "description": "Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
                                 "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/land-dweller/#breadcrumb" },
                                 "inLanguage": "es-Es",
                                 "potentialAction": { "@type": "ReadAction", "target": "https://devjhernandez--glauser.myvtex.com/rolex/watches/land-dweller/" }
@@ -219,7 +219,7 @@ const MLandDweller: React.FC = () => {
                                     Ampliar horizontes</h1>
                             </div>
                             <div className="col-lg-8-5">
-                                <p className="body-20-light"><strong>Representaci�n de numerosos logros relojeros, fabricado por aquellos que forjan el futuro de la relojer�a, el Land-Dweller es el reloj de aquellos que construyen hoy el mundo del ma�ana.</strong></p>
+                                <p className="body-20-light"><strong>Representación de numerosos logros relojeros, fabricado por aquellos que forjan el futuro de la relojería, el Land-Dweller es el reloj de aquellos que construyen hoy el mundo del mañana.</strong></p>
                             </div>
                         </div>
                         <div className="row-grid-fullw reloes-componet-2-3">
@@ -378,7 +378,7 @@ const MLandDweller: React.FC = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center text-center pt-30-40">
-                                <button id="rlx-more-watches" className="btn-primary-rlx">Descubra m�s</button>
+                                <button id="rlx-more-watches" className="btn-primary-rlx">Descubra más</button>
                             </div>
                         </div>
                         <div className="row-grid-fullw component-video py-90-60">
@@ -392,8 +392,8 @@ const MLandDweller: React.FC = () => {
                         </div>
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
-                                <p className="headline50 c-brown-text pb-20">Este reloj dispone de un brazalete que se integra con armon�a a la caja, creando una est�tica fluida.</p>
-                                <p className="body-20-light">Su dise�o elegante y audaz alberga el movimiento que presenta innovaciones revolucionarias: el calibre 7135. M�s fino que la mayor�a de movimientos de la marca, est� dise�ado para funcionar a una frecuencia elevada de 5 hercios y pone la excelencia al servicio del rendimiento.</p>
+                                <p className="headline50 c-brown-text pb-20">Este reloj dispone de un brazalete que se integra con armonía a la caja, creando una estética fluida.</p>
+                                <p className="body-20-light">Su diseño elegante y audaz alberga el movimiento que presenta innovaciones revolucionarias: el calibre 7135. Mís fino que la mayoría de movimientos de la marca, está diseñado para funcionar a una frecuencia elevada de 5 hercios y pone la excelencia al servicio del rendimiento.</p>
                             </div>
                         </div>
                     </div>
@@ -428,7 +428,7 @@ const MLandDweller: React.FC = () => {
                             <div className="col-text-center">
                                 <p className="headline50 c-brown-text pb-20">Calibre 7135
                                     Un movimiento de alta frecuencia</p>
-                                <p className="body-20-light">El calibre 7135, �ntegramente desarrollado y manufacturado de forma interna, funciona a una frecuencia excepcional de 5 hercios, o 36 000 alternancias por hora, una cadencia sin precedentes en Rolex. Posibilita que el reloj muestre la hora con una exactitud de d�cimas de segundo. Tambi�n presenta un dise�o particularmente atractivo. A trav�s del fondo transparente del reloj, se puede admirar el resplandor de la masa oscilante en oro amarillo, as� como la decoraci�n C�tes de Gen�ve Rolex que lucen los puentes.</p>
+                                <p className="body-20-light">El calibre 7135, íntegramente desarrollado y manufacturado de forma interna, funciona a una frecuencia excepcional de 5 hercios, o 36 000 alternancias por hora, una cadencia sin precedentes en Rolex. Posibilita que el reloj muestre la hora con una exactitud de dícimas de segundo. Tambiín presenta un diseño particularmente atractivo. A través del fondo transparente del reloj, se puede admirar el resplandor de la masa oscilante en oro amarillo, así como la decoración Cítes de Geníve Rolex que lucen los puentes.</p>
                             </div>
                         </div>
                     </div>
@@ -464,7 +464,7 @@ const MLandDweller: React.FC = () => {
                                 <div>
                                     <p className="headline50 c-brown-text pb-20">Calibre 7135
                                         Escape Dynapulse</p>
-                                    <p className="body-20-light">El escape Dynapulse �la innovaci�n m�s significativa del calibre 7135� constituye una alternativa revolucionaria al tradicional escape de �ncora suizo. Esta distribuci�n secuencial, fabricada principalmente con piezas de silicio, cuenta con una innovadora arquitectura y es sumamente ligera, pr�cticamente insensible a los campos magn�ticos y cuenta con rendimiento energ�tico claramente superior al de un escape tradicional.</p>
+                                    <p className="body-20-light">El escape Dynapulse íla innovación más significativa del calibre 7135í constituye una alternativa revolucionaria al tradicional escape de íncora suizo. Esta distribuciín secuencial, fabricada principalmente con piezas de silicio, cuenta con una innovadora arquitectura y es sumamente ligera, prácticamente insensible a los campos magníticos y cuenta con rendimiento energítico claramente superior al de un escape tradicional.</p>
                                 </div>
                             </div>
                         </div>
@@ -484,7 +484,7 @@ const MLandDweller: React.FC = () => {
                                 <div>
                                     <p className="headline50 c-brown-text pb-20">Calibre 7135
                                         Oscilador de vanguardia</p>
-                                    <p className="body-20-light">El oscilador del calibre 7135 est� dotado de un eje de volante cuyo material y fabricaci�n han supuesto un aut�ntico reto, un volante de lat�n optimizado y una espiral Syloxi de silicio. Y es que el eje patentado est� fabricado en una nueva cer�mica de alta tecnolog�a, exclusiva de Rolex y esculpida con l�ser (una primicia para la marca). Los amortiguadores de golpes Paraflex optimizados confieren al movimiento una mayor resistencia a los golpes en cualquier posici�n. Finalmente, los diferentes materiales empleados para la realizaci�n de los componentes del oscilador le permiten soportar potentes campos magn�ticos.</p>
+                                    <p className="body-20-light">El oscilador del calibre 7135 está dotado de un eje de volante cuyo material y fabricación han supuesto un auténtico reto, un volante de latín optimizado y una espiral Syloxi de silicio. Y es que el eje patentado está fabricado en una nueva cerámica de alta tecnología, exclusiva de Rolex y esculpida con líser (una primicia para la marca). Los amortiguadores de golpes Paraflex optimizados confieren al movimiento una mayor resistencia a los golpes en cualquier posición. Finalmente, los diferentes materiales empleados para la realización de los componentes del oscilador le permiten soportar potentes campos magníticos.</p>
                                 </div>
 
                             </div>
@@ -522,7 +522,7 @@ const MLandDweller: React.FC = () => {
                                 <div>
                                     <p className="headline50 c-brown-text pb-20">Brazalete Flat Jubilee
                                         Fundido a la caja</p>
-                                    <p className="body-20-light">El Land-Dweller reinterpreta el dise�o de los denominados relojes con brazalete integrado, caracterizados por una suave l�nea continua entre la caja y el brazalete. Inspirado en el emblem�tico brazalete Jubilee introducido en el Datejust en 1945, el brazalete Flat Jubilee ha sido especialmente dise�ado para el Land-Dweller. Sus elementos tienen una superficie plana, una caracter�stica �nica entre nuestros brazaletes de metal. Tambi�n cuenta con nuevos acabados, incluyendo elementos centrales pulidos y elementos laterales satinados con los cantos pulidos. Visto de lado, el chafl�n pulido que lucen las aristas superiores de la caja y los elementos laterales revela un c�rculo de luz, acentuando el dise�o armonioso del reloj.</p>
+                                    <p className="body-20-light">El Land-Dweller reinterpreta el diseño de los denominados relojes con brazalete integrado, caracterizados por una suave línea continua entre la caja y el brazalete. Inspirado en el emblemítico brazalete Jubilee introducido en el Datejust en 1945, el brazalete Flat Jubilee ha sido especialmente diseñado para el Land-Dweller. Sus elementos tienen una superficie plana, una característica única entre nuestros brazaletes de metal. Tambiín cuenta con nuevos acabados, incluyendo elementos centrales pulidos y elementos laterales satinados con los cantos pulidos. Visto de lado, el chaflín pulido que lucen las aristas superiores de la caja y los elementos laterales revela un círculo de luz, acentuando el diseño armonioso del reloj.</p>
                                 </div>
 
                             </div>
@@ -542,8 +542,8 @@ const MLandDweller: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="headline50 c-brown-text pb-20">Esfera
-                                        Motivo �nido de abeja�</p>
-                                    <p className="body-20-light">Rodeada por un realce inclinado, esta esfera gr�fica luce un patr�n geom�trico: un motivo �nido de abeja� desarrollado con un l�ser de alta tecnolog�a. El acabado satinado de la esfera blanco intenso y el acabado tipo sol de la esfera azul glaciar son producto de t�cnicas tradicionales. Las modalidades que cuentan con visualizaci�n Chromalight, los n�meros abiertos y los �ndices, con material luminiscente que aflora por cada extremo del componente, son exclusivas de la gama. Le brindan al Land-Dweller una legibilidad �ptima en cualquier circunstancia. Las agujas, tambi�n luminiscentes, han sido especialmente dise�adas para el modelo. El segundero, en particular, se distingue por su contrapeso, cuya forma recuerda al motivo �nido de abeja� de la esfera.</p>
+                                        Motivo ínido de abejaí</p>
+                                    <p className="body-20-light">Rodeada por un realce inclinado, esta esfera grífica luce un patrín geomítrico: un motivo ínido de abejaí desarrollado con un líser de alta tecnología. El acabado satinado de la esfera blanco intenso y el acabado tipo sol de la esfera azul glaciar son producto de tícnicas tradicionales. Las modalidades que cuentan con visualización Chromalight, los nímeros abiertos y los índices, con material luminiscente que aflora por cada extremo del componente, son exclusivas de la gama. Le brindan al Land-Dweller una legibilidad íptima en cualquier circunstancia. Las agujas, también luminiscentes, han sido especialmente diseíadas para el modelo. El segundero, en particular, se distingue por su contrapeso, cuya forma recuerda al motivo ínido de abejaí de la esfera.</p>
                                 </div>
 
                             </div>
@@ -576,8 +576,8 @@ const MLandDweller: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="headline50 c-brown-text pb-20">El sello verde</p>
-                                    <p className="body-20-light pb-30">Como todos los relojes Rolex, el Oyster Perpetual Land-Dweller 40 y el Oyster Perpetual Land-Dweller 36 cuentan con la certificaci�n de Cron�metro Superlativo redefinida por Rolex en 2015. Esta denominaci�n atestigua que cada reloj que sale de los talleres de la marca ha superado con �xito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios, que siguen a la certificaci�n oficial del movimiento por parte del Control Oficial Suizo de Cron�metros (COSC). La precisi�n de un Cron�metro Superlativo Rolex es del orden de �2 /+2 segundos al d�a (la desviaci�n de marcha tolerada por la marca para un reloj terminado es mucho menor que la admitida por el COSC para la certificaci�n oficial del movimiento por s� solo).</p>
-                                    <p className="body-20-light">El estatus de Cron�metro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompa�ado de una garant�a internacional de cinco a�os.</p>
+                                    <p className="body-20-light pb-30">Como todos los relojes Rolex, el Oyster Perpetual Land-Dweller 40 y el Oyster Perpetual Land-Dweller 36 cuentan con la certificación de Cronímetro Superlativo redefinida por Rolex en 2015. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios, que siguen a la certificación oficial del movimiento por parte del Control Oficial Suizo de Cronímetros (COSC). La precisión de un Cronímetro Superlativo Rolex es del orden de í2 /+2 segundos al día (la desviaciín de marcha tolerada por la marca para un reloj terminado es mucho menor que la admitida por el COSC para la certificación oficial del movimiento por sí solo).</p>
+                                    <p className="body-20-light">El estatus de Cronímetro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompañado de una garantía internacional de cinco años.</p>
                                 </div>
 
                             </div>
