@@ -4,6 +4,8 @@ import useInitScripts from '../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMas";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
+import '../../../main-style.css';
+
 
 const RlxCampeonatos: React.FC = () => {
     useInitScripts();
@@ -19,10 +21,8 @@ const RlxCampeonatos: React.FC = () => {
                     name="description"
                     content="La historia comenzó en Wimbledon en 1978, cuando la marca de Rolex colaboró por primera vez con un deporte que captaba la atención mundial"
                 />
-                {/* VTEX IO: Evita dangerouslySetInnerHTML para meta tags específicos de VTEX. */}
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-                {/* CSS: Se elimina la redundancia de Swiper. Considera gestionar CSS vía manifest.json. */}
                 <link
                     rel="stylesheet"
                     type="text/css"
@@ -30,14 +30,9 @@ const RlxCampeonatos: React.FC = () => {
                 />
                 <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-                {/* <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> (Este es redundante) */}
 
-                {/* SCRIPTS: ELIMINADOS de aquí. Deben ser manejados por useInitScripts o la configuración de VTEX IO. */}
-                {/* <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> */}
-                {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> */}
-                {/* <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> */}
 
-                {/* URLs CANÓNICAS Y DE REDES SOCIALES: Usando la URL dinámica o de producción */}
+                {/* URLs CANÓNICAS Y DE REDES SOCIALES*/}
                 <link rel="canonical" href={currentUrl} />
 
                 {/* Facebook Meta Tags */}
@@ -72,7 +67,7 @@ const RlxCampeonatos: React.FC = () => {
                     content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/articulos/wimbledon/rolex_WIM23ac-17669-landscape.webp"
                 />
 
-                {/* Scripts JSON-LD y DataLayer: Se mantienen */}
+                {/* Scripts JSON-LD y DataLayer*/}
                 <script type="text/javascript">
                     {`
                         var digitalDataLayer = {
@@ -158,8 +153,8 @@ const RlxCampeonatos: React.FC = () => {
                         "image": {
                             "@type": "ImageObject",
                             "url": "https://galileo.tsqsa.com/FTPImagenes/rolex-img/articulos/wimbledon/rolex_WIM23ac-17669-landscape.webp",
-                            "height": "2880", // Verificar si estos son los valores correctos para landscape
-                            "width": "1210"  // Verificar si estos son los valores correctos para landscape
+                            "height": "2880",
+                            "width": "1210"
                         },
                         "datePublished": "2024-06-24T05:23:53+00:00",
                         "dateModified": "2024-06-24T05:23:53+00:00",
@@ -185,9 +180,7 @@ const RlxCampeonatos: React.FC = () => {
 
             </Helmet>
             <div className="header-component">
-                {/* VTEX IO: No uses <VTEXTemplate> en JSX. Configúralos en blocks.jsonc o importa componentes React si los tienes custom. */}
                 <header className="main-header" id="main-header">
-                    {/* Contenido del header */}
                 </header>
             </div>
 

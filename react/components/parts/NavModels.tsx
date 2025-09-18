@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useCssHandles } from 'vtex.css-handles';
-import '../../main-style.css';
 
 interface MenuItem {
     text: string;

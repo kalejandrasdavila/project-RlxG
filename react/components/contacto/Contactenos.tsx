@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../hooks/useInitScripts'; // Assuming this is a custom hook
+import useInitScripts from '../../components/hooks/useInitScripts';
 import Nav from '../parts/Nav';
-import RlxExploreMasNModels from '../parts/RlxExploreMas';
-import useHorario from '../hooks/ContactoRlx';
-import Footer from '../parts/Footer';
+import RlxExploreMasNModels from '../../components/parts/RlxExploreMas';
+import useHorario from '../../components/hooks/ContactoRlx';
+import Footer from '../../components/parts/Footer';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../main-style.css';
 

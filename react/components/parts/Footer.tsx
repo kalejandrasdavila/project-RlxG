@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useCssHandles } from 'vtex.css-handles';
-import '../../main-style.css';
 
 const CSS_HANDLES = [
     //HEADER//

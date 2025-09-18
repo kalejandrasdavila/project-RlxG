@@ -1,7 +1,6 @@
 import React, { useEffect, useState, ChangeEvent, FormEvent } from "react";
 //import FooterRlxContacto from "../js/Footer-rlx-Contacto";
 import { useCssHandles } from 'vtex.css-handles';
-import '../../main-style.css';
 import { buildUrl } from '../../utils/urlUtils';
 
 

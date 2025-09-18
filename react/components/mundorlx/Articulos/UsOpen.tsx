@@ -4,11 +4,13 @@ import useInitScripts from '../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMas";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
+import '../../../main-style.css';
+
 
 const UsOpen: React.FC = () => {
     useInitScripts();
     const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/us-open/';
-    const baseUrl = 'https://devjhernandez--glauser.myvtex.com'; // La URL base de tu sitio en producción
+    const baseUrl = 'https://devjhernandez--glauser.myvtex.com'; // La URL base 
 
     return (
         <>
@@ -18,10 +20,8 @@ const UsOpen: React.FC = () => {
                     name="description"
                     content="El US Open es el último torneo de la temporada del tenis. Como socio privilegiado del deporte a nivel internacional durante casi 50 años, Rolex es el Reloj Oficial del evento desde 2018."
                 />
-                {/* VTEX IO: Evita dangerouslySetInnerHTML para meta tags específicos de VTEX. */}
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-                {/* CSS: Se elimina la redundancia de Swiper. Considera gestionar CSS vía manifest.json. */}
                 <link
                     rel="stylesheet"
                     type="text/css"
@@ -29,14 +29,8 @@ const UsOpen: React.FC = () => {
                 />
                 <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-                {/* <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> (Este es redundante) */}
 
-                {/* SCRIPTS: ELIMINADOS de aquí. Deben ser manejados por useInitScripts o la configuración de VTEX IO. */}
-                {/* <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> */}
-                {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> */}
-                {/* <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> */}
-
-                {/* URLs CANÓNICAS Y DE REDES SOCIALES: Usando la URL dinámica o de producción */}
+                {/* URLs CANÓNICAS Y DE REDES SOCIALES */}
                 <link rel="canonical" href={currentUrl} />
 
                 {/* Facebook Meta Tags */}
@@ -71,7 +65,7 @@ const UsOpen: React.FC = () => {
                     content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/articulos/us-open/rolex-tvc-posterframe-uso23jj-0907-landscape.webpp" // Asegúrate de que .webpp sea una extensión válida o corrige a .webp
                 />
 
-                {/* Scripts JSON-LD y DataLayer: Se mantienen */}
+                {/* Scripts JSON-LD y DataLayer */}
                 <script type="text/javascript">
                     {`
                         var digitalDataLayer = {
@@ -184,9 +178,7 @@ const UsOpen: React.FC = () => {
 
             </Helmet>
             <div className="header-component">
-                {/* VTEX IO: No uses <VTEXTemplate> en JSX. Configúralos en blocks.jsonc o importa componentes React si los tienes custom. */}
                 <header className="main-header" id="main-header">
-                    {/* Contenido del header */}
                 </header>
             </div>
 
@@ -253,7 +245,7 @@ const UsOpen: React.FC = () => {
                                             allowFullScreen
                                             frameBorder="0"
                                             height="315"
-                                            src="https://www.youtube.com/embed/MW4gSWJKe28" // URL de embed de YouTube
+                                            src="https://www.youtube.com/embed/MW4gSWJKe28"
                                             title="Rolex y el US Open"
                                             width="560"
                                         />

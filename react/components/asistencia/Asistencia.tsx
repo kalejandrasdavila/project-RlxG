@@ -1,10 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from 'react';
-import useInitScripts from '../hooks/useInitScripts';
-import Nav from '../parts/Nav';
-import RlxExploreMasNModels from '../parts/RlxExploreMas';
-import Footer from '../parts/Footer';
+import useInitScripts from '../../components/hooks/useInitScripts';
+import Nav from '../../components/parts/Nav';
+import RlxExploreMasNModels from '../../components/parts/RlxExploreMas';
+import Footer from '../../components/parts/Footer';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../main-style.css';
 

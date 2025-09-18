@@ -1,12 +1,15 @@
 ﻿import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useCssHandles } from 'vtex.css-handles';
+import useInitScripts from '../../../components/hooks/useInitScripts';
+import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
+
+import NavM from "../../../components/parts/NavModels";
+import Footer from "../../../components/parts/Footer";
 import '../../../main-style.css';
-import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
-import NavM from "../../parts/NavModels";
-import Footer from '../../parts/Footer';
 
 const Daydate: React.FC = () => {
+    useInitScripts();
     const [isVisible, setIsVisible] = useState<boolean>(false);
     return (
         <>

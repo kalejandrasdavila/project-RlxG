@@ -1,15 +1,18 @@
 ﻿import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useCssHandles } from 'vtex.css-handles';
+import useInitScripts from '../../../components/hooks/useInitScripts';
 import '../../../main-style.css';
-import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
-import NavM from "../../parts/NavModels";
-import Footer from '../../parts/Footer';
+import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
+
+import NavM from "../../../components/parts/NavModels";
+import Footer from "../../../components/parts/Footer";
 
 
 const CSS_HANDLES = ['pt_10', 'pt_15', 'pt_20', 'pb_10', 'pb_15', 'pb_20', 'container_rlx', 'btn_primary_rlx', 'text_center', 'mb_20', 'mb_30'];
 
 const Submariner: React.FC = () => {
+    useInitScripts();
     const handles = useCssHandles(CSS_HANDLES);
     const [isVisible, setIsVisible] = useState<boolean>(false);
 

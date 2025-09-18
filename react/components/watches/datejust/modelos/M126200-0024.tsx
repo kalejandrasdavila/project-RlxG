@@ -2,16 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../../../main-style.css';
-import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
-import NavM from "../../../parts/NavModels";
-import WatchesForm from "../../../parts/Rlx-watches-formulario";
+import useInitScripts from '../../../../components/hooks/useInitScripts';
+import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+
+import NavM from "../../../../components/parts/NavModels";
+
+import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
+
 import SectionDateJust from "../../../parts/SectionDateJust";
-import Footer from '../../../parts/Footer';
+import Footer from '../../../../components/parts/Footer';
 
 
 
 const M1262000024: React.FC = () => {
 
+    useInitScripts();
     const [modelorlx, setModelorlx] = useState("");
     const [showPrice, setShowPrice] = useState<boolean>(false);
     const togglePrice = () => setShowPrice(prev => !prev);
@@ -492,7 +497,7 @@ const M1262000024: React.FC = () => {
                                         href="#disponibilidadmodelo">
                                         Disponibilidad de modelo
                                         <svg
-                                           
+
                                             aria-hidden="true"
                                             fill="white"
                                             height="12"
@@ -781,7 +786,7 @@ const M1262000024: React.FC = () => {
                                             href="https://assets.rolex.com/api/brochure/es/datejust/m126200-0024.pdf"
                                             target="_blank">
                                             <svg
-                                               
+
                                                 aria-hidden="true"
                                                 fill="white"
                                                 height="12"
@@ -825,16 +830,16 @@ const M1262000024: React.FC = () => {
                                 <p className="body-20-light">El acabado tipo sol crea delicados reflejos de luz en muchas esferas de la colecciín Oyster Perpetual. Se obtiene utilizando tícnicas magistrales de cepillado que crean surcos que salen del centro de la esfera. La luz se difunde constantemente a lo largo de cada grabado, creando un sutil brillo característico que se mueve segín la posición de la muñeca. Una vez completado el acabado tipo sol, el color de la esfera se aplica mediante PVD (Physical Vapour Deposition) o galvanoplastia. Una ligera capa de barniz le da a la esfera su aspecto final.</p>
                                 <div className="pb-45-40">
                                     <picture className="rlx-pbanner-top p-relative">
-                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-dial-portrait.webp"/>
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-dial-landscape.webp" loading="lazy" alt="Rolex Datejust m126200-0024 esfera"/>
+                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-dial-portrait.webp" />
+                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-dial-landscape.webp" loading="lazy" alt="Rolex Datejust m126200-0024 esfera" />
                                     </picture>
                                 </div>
                                 <p className="headline50 c-brown-text pb-20">El brazalete Oyster</p>
                                 <p className="body-20-light">El brazalete Oyster es fruto de una alquimia perfecta entre forma y función, estética y tícnica, diseñado para ser a la vez robusto y confortable. Estí equipado con un cierre Oysterclasp y cuenta con un címodo sistema de extensiín rípida Easylink, otra característica exclusiva de Rolex. Este ingenioso sistema de extensiín permite ajustar fícilmente la longitud del brazalete de aproximadamente 5 mm, con el fin de ofrecer una mayor comodidad en cualquier circunstancia.</p>
                                 <div className="pb-45-40">
                                     <picture className="rlx-pbanner-top p-relative">
-                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-bracelet-portrait.webp"/>
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-bracelet-landscape.webp" loading="lazy" alt="Rolex Datejust m126200-0024 bisel"/>
+                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-bracelet-portrait.webp" />
+                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-bracelet-landscape.webp" loading="lazy" alt="Rolex Datejust m126200-0024 bisel" />
                                     </picture>
                                 </div>
                                 <div className="pb-90-60">
@@ -846,8 +851,8 @@ const M1262000024: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <picture className="rlx-pbanner-top p-relative">
-                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-material-portrait.webp"/>
-                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-material-landscape.webp" loading="lazy" alt="Rolex Datejust m126200-0024 material"/>
+                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-material-portrait.webp" />
+                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m126200-0024-material-landscape.webp" loading="lazy" alt="Rolex Datejust m126200-0024 material" />
                                 </picture>
                             </div>
                         </div>

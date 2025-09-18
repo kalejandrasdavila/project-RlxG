@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import useInitScripts from "../hooks/useInitScripts";
-import RlxExploreMasNModels from "../parts/RlxExploreMas";
-import Nav from '../parts/Nav';
-import Footer from "../parts/Footer";
+import useInitScripts from "../../components/hooks/useInitScripts";
+import RlxExploreMasNModels from "../../components/parts/RlxExploreMas";
+import Nav from '../../components/parts/Nav';
+import Footer from '../../components/parts/Footer';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../main-style.css';
 

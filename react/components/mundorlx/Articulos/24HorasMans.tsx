@@ -4,12 +4,13 @@ import useInitScripts from '../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMas";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
+import '../../../main-style.css';
 
 const HorasMans: React.FC = () => {
     useInitScripts();
 
     const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/24-horas-de-le-mans/';
-    const baseUrl = 'https://devjhernandez--glauser.myvtex.com'; // La URL base de tu sitio en producción
+    const baseUrl = 'https://devjhernandez--glauser.myvtex.com'; // La URL base 
 
     return (
         <>

@@ -1,11 +1,12 @@
 import React from "react";
-import useInitScripts from '../../../hooks/useInitScripts';
+import useInitScripts from '../../../components/hooks/useInitScripts';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../../main-style.css';
 import { Helmet } from "react-helmet-async";
-import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
-import NavM from "../../parts/NavModels";
-import Footer from '../../parts/Footer';
+import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
+
+import NavM from "../../../components/parts/NavModels";
+import Footer from "../../../components/parts/Footer";
 
 const Explorer: React.FC = () => {
     useInitScripts();

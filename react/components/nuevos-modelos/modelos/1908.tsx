@@ -1,23 +1,19 @@
 import React from "react";
-import { Helmet } from "react-helmet-async"; // Importación correcta para react-helmet-async
-import useInitScripts from '../../hooks/useInitScripts'; // Asumiendo que es un hook .ts o .tsx
+import { Helmet } from "react-helmet-async";
+import useInitScripts from '../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
-import NavM from "../../parts/NavModels"; // Asumiendo que es .tsx (NavModels -> NavModels.tsx)
-import Footer from '../../parts/Footer'; // Asumiendo que es .tsx
+import NavM from "../../parts/NavModels";
+import Footer from '../../parts/Footer';
+import '../../../main-style.css';
 
-const Mod1980: React.FC = () => { // Tipado del componente funcional
+const Mod1980: React.FC = () => {
     useInitScripts();
 
-    // Obtener la URL actual dinámicamente para canonical y OG tags
     const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/nuevos-modelos-2025/1980/';
-    const baseUrl = 'https://devjhernandez--glauser.myvtex.com'; // La URL base de tu sitio en producción
+    const baseUrl = 'https://devjhernandez--glauser.myvtex.com';
 
 
     return (
-        // Si este componente (Mod1980) es el punto de entrada principal para una ruta o página
-        // y no está ya envuelto por HelmetProvider en un componente superior (como Home.tsx o el layout principal de tu store-theme),
-        // ENTONCES DEBES envolver todo el contenido del return con <HelmetProvider>.
-        // Ejemplo: <HelmetProvider>...</HelmetProvider>
         <>
             <Helmet>
                 <title>Nuevos modelos Rolex 1908 2024 - GLAUSER</title>
@@ -25,10 +21,8 @@ const Mod1980: React.FC = () => { // Tipado del componente funcional
                     name="description"
                     content="GLAUSER presenta el nuevo Rolex 1908, lo último en relojes de lujo suizos de Rolex. Descubra las características únicas de este nuevo modelo ahora."
                 />
-                {/* VTEX IO: Evita dangerouslySetInnerHTML para meta tags específicos de VTEX. */}
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-                {/* CSS: Se elimina la redundancia de Swiper. Considera gestionar CSS vía manifest.json. */}
                 <link
                     rel="stylesheet"
                     type="text/css"
@@ -36,14 +30,9 @@ const Mod1980: React.FC = () => { // Tipado del componente funcional
                 />
                 <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-                {/* <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> (Este es redundante) */}
 
-                {/* SCRIPTS: ELIMINADOS de aquí. Deben ser manejados por useInitScripts o la configuración de VTEX IO. */}
-                {/* <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> */}
-                {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> */}
-                {/* <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> */}
 
-                {/* URLs CANÓNICAS Y DE REDES SOCIALES: Usando la URL dinámica o de producción */}
+                {/* URLs CANÓNICAS Y DE REDES SOCIALES*/}
                 <link rel="canonical" href={currentUrl} />
 
                 {/* Facebook Meta Tags */}
@@ -78,7 +67,7 @@ const Mod1980: React.FC = () => { // Tipado del componente funcional
                     content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/modelos-2024/w-1908/rolex-new-watches-2024-1908-ambiance-m52506-0002-landscape.webp"
                 />
 
-                {/* Scripts JSON-LD y DataLayer: Se mantienen */}
+                {/* Scripts JSON-LD y DataLayer */}
                 <script type="text/javascript">
                     {`
                         var digitalDataLayer = {
@@ -161,9 +150,7 @@ const Mod1980: React.FC = () => { // Tipado del componente funcional
                 />
             </Helmet>
             <div className="header-component">
-                {/* VTEX IO: No uses <VTEXTemplate> en JSX. Configúralos en blocks.jsonc o importa componentes React si los tienes custom. */}
                 <header className="main-header" id="main-header">
-                    {/* Contenido del header */}
                 </header>
             </div>
 
@@ -180,7 +167,7 @@ const Mod1980: React.FC = () => { // Tipado del componente funcional
                                 </a>
                             </div>
 
-                            <NavM /> {/* Nav Models (NavM) */}
+                            <NavM />
                         </div>
                         <div className="row-grid breadcrum-page" style={{ height: "40px" }}>
                             <div className="breadcrum-column">

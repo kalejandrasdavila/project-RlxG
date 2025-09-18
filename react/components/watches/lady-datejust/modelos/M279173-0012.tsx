@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useCssHandles } from 'vtex.css-handles';
 import '../../../../main-style.css';
-import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
+import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+
 import { Helmet } from "react-helmet-async";
-import useInitScripts from '../../../hooks/useInitScripts';
-import NavM from "../../../parts/NavModels";
-import WatchesForm from "../../../parts/Rlx-watches-formulario";
+import useInitScripts from '../../../../components/hooks/useInitScripts';
+
+import NavM from "../../../../components/parts/NavModels";
+
+import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
+
 import SectionLadyDateJust from "../../../parts/SectionLadyDateJust";
-import Footer from '../../../parts/Footer';
+import Footer from '../../../../components/parts/Footer';
+
 
 const CSS_HANDLES = [
     'container', 'wrapper', 'content', 'section', 'title', 'subtitle',

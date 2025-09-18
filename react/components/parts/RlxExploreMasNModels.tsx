@@ -1,6 +1,5 @@
 import React from 'react';
 import { useCssHandles } from 'vtex.css-handles';
-import '../../main-style.css';
 import { buildUrl } from '../../utils/urlUtils';
 
 interface ExploreItem {

@@ -1,12 +1,16 @@
 ﻿import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useCssHandles } from 'vtex.css-handles';
+import useInitScripts from '../../../components/hooks/useInitScripts';
 import '../../../main-style.css';
-import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
-import NavM from "../../parts/NavModels";
-import Footer from '../../parts/Footer';
+import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
+
+import NavM from "../../../components/parts/NavModels";
+import Footer from "../../../components/parts/Footer";
+import '../../../../main-style.css';
 
 const DateJust: React.FC = () => {
+    useInitScripts();
     const [isVisible, setIsVisible] = useState<boolean>(false);
     return (
         <>
@@ -16,11 +20,6 @@ const DateJust: React.FC = () => {
                     name="description"
                     content="Descubra los relojes Rolex Datejust en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
                 />
-                {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
-                                        <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
-                                        <div dangerouslySetInnerHTML={{ __html: '<vtex:template id="GL-Favicon" />' }} />*/}
-
-                {/* <vtex.cmc:GLMetaTags /> */}
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link
                     rel="stylesheet"

@@ -2,14 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../../../main-style.css';
-import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
-import NavM from "../../../parts/NavModels";
-import WatchesForm from "../../../parts/Rlx-watches-formulario";
+import useInitScripts from '../../../../components/hooks/useInitScripts';
+
+import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+
+import NavM from "../../../../components/parts/NavModels";
+
+import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
+
 import SectionDayDate from "../../../parts/SectionDayDate";
-import Footer from '../../../parts/Footer';
+import Footer from '../../../../components/parts/Footer';
+
 
 const M228348rbr0002: React.FC = () => {
 
+    useInitScripts();
     const [modelorlx, setModelorlx] = useState("");
     const [showPrice, setShowPrice] = useState<boolean>(false);
     const togglePrice = () => setShowPrice(prev => !prev);
@@ -492,7 +499,7 @@ const M228348rbr0002: React.FC = () => {
                                         href="#disponibilidadmodelo">
                                         Disponibilidad de modelo
                                         <svg
-                                           
+
                                             aria-hidden="true"
                                             fill="white"
                                             height="12"
@@ -783,7 +790,7 @@ const M228348rbr0002: React.FC = () => {
                                             href="https://assets.rolex.com/api/brochure/es/day-date/m228348rbr-0002.pdf"
                                             target="_blank">
                                             <svg
-                                               
+
                                                 aria-hidden="true"
                                                 fill="white"
                                                 height="12"

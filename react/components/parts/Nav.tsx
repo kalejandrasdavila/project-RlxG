@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRuntime } from 'vtex.render-runtime';
 import { useCssHandles } from 'vtex.css-handles';
-import '../../main-style.css';
 
 const CSS_HANDLES = [
     //HEADER "rlx-sm btn-toggle"//

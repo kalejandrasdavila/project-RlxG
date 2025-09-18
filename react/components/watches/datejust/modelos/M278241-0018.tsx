@@ -2,14 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../../../main-style.css';
-import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
-import NavM from "../../../parts/NavModels";
-import WatchesForm from "../../../parts/Rlx-watches-formulario";
+import useInitScripts from '../../../../components/hooks/useInitScripts';
+import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+
+import NavM from "../../../../components/parts/NavModels";
+
+import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
+
 import SectionDateJust from "../../../parts/SectionDateJust";
-import Footer from '../../../parts/Footer';
+import Footer from '../../../../components/parts/Footer';
+
 
 const M2782410018: React.FC = () => {
 
+    useInitScripts();
     const [modelorlx, setModelorlx] = useState("");
     const [showPrice, setShowPrice] = useState<boolean>(false);
     const togglePrice = () => setShowPrice(prev => !prev);
@@ -115,8 +121,8 @@ const M2782410018: React.FC = () => {
                         };
                     `}
                 </script>
-                 <script type="application/ld+json">
-                {`
+                <script type="application/ld+json">
+                    {`
                         "@context": "https://schema.org",
                         "@graph": [
                             {
@@ -154,8 +160,8 @@ const M2782410018: React.FC = () => {
                    `}
 
                 </script>
-                 <script type="application/ld+json">
-                {`
+                <script type="application/ld+json">
+                    {`
                         "@context": "https://schema.org/",
                         "@type": "Product",
                         "name": "Datejust 31",
@@ -181,8 +187,8 @@ const M2782410018: React.FC = () => {
                    `}
 
                 </script>
-                 <script type="application/ld+json">
-                {`
+                <script type="application/ld+json">
+                    {`
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         "itemListElement": [{
@@ -492,7 +498,7 @@ const M2782410018: React.FC = () => {
                                         href="#disponibilidadmodelo">
                                         Disponibilidad de modelo
                                         <svg
-                                           
+
                                             aria-hidden="true"
                                             fill="white"
                                             height="12"
@@ -507,43 +513,43 @@ const M2782410018: React.FC = () => {
                             </div>
                             <div className="col-6-6-4 order-1-mob">
                                 <div className="swiper swiper-container-mobile">
-                                <div className="swiper-wrapper">
-                                    <div className="swiper-slide">
-                                    <div className="swiper-slider">
-                                        <picture className="rlx-pbanner-top p-relative">
-                                            <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-drp-upright-bba-with-shadow-portrait.webp"/>
-                                            <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj"/>
-                                        </picture>
+                                    <div className="swiper-wrapper">
+                                        <div className="swiper-slide">
+                                            <div className="swiper-slider">
+                                                <picture className="rlx-pbanner-top p-relative">
+                                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-drp-upright-bba-with-shadow-portrait.webp" />
+                                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj" />
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div className="swiper-slide">
+                                            <picture className="rlx-pbanner-top p-relative">
+                                                <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery1-portrait.webp" />
+                                                <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery1-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria" />
+                                            </picture>
+                                        </div>
+                                        <div className="swiper-slide">
+                                            <picture className="rlx-pbanner-top p-relative">
+                                                <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery2-portrait.webp" />
+                                                <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery2-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria" />
+                                            </picture>
+                                        </div>
+                                        <div className="swiper-slide">
+                                            <picture className="rlx-pbanner-top p-relative">
+                                                <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery3-portrait.webp" />
+                                                <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery3-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria" />
+                                            </picture>
+                                        </div>
+                                        <div className="swiper-slide">
+                                            <picture className="rlx-pbanner-top p-relative">
+                                                <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery4-portrait.webp" />
+                                                <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery4-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria" />
+                                            </picture>
+                                        </div>
                                     </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                    <picture className="rlx-pbanner-top p-relative">
-                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery1-portrait.webp" />
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery1-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria"/>
-                                    </picture>
-                                    </div>
-                                    <div className="swiper-slide">
-                                    <picture className="rlx-pbanner-top p-relative">
-                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery2-portrait.webp" />
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery2-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria"/>
-                                    </picture>
-                                    </div>
-                                    <div className="swiper-slide">
-                                    <picture className="rlx-pbanner-top p-relative">
-                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery3-portrait.webp" />
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery3-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria"/>
-                                    </picture>
-                                    </div>
-                                    <div className="swiper-slide">
-                                    <picture className="rlx-pbanner-top p-relative">
-                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery4-portrait.webp" />
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery4-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria"/>
-                                    </picture>
-                                    </div>
-                                </div>
-                                <div className="swiper-pagination swiper-pagination-model"></div>
-                                <div className="swiper-button-model-prev"></div>
-                                <div className="swiper-button-model-next"></div>
+                                    <div className="swiper-pagination swiper-pagination-model"></div>
+                                    <div className="swiper-button-model-prev"></div>
+                                    <div className="swiper-button-model-next"></div>
                                 </div>
                             </div>
                         </div>
@@ -551,103 +557,103 @@ const M2782410018: React.FC = () => {
                 </section>
 
                 <section className="c-lightbeige-bg d-none-md">
-                <div className="rlx-container-content">
-                    <div className="row-grid-fullw galeria-models">
-                    <div className="span-3-1">
-                        <picture className="rlx-pbanner-top p-relative">
-                            <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery1-portrait.webp" />
-                            <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery1-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria"/>
-                        </picture>
+                    <div className="rlx-container-content">
+                        <div className="row-grid-fullw galeria-models">
+                            <div className="span-3-1">
+                                <picture className="rlx-pbanner-top p-relative">
+                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery1-portrait.webp" />
+                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery1-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria" />
+                                </picture>
+                            </div>
+                            <div className="span-3-2">
+                                <picture className="rlx-pbanner-top p-relative">
+                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery2-portrait.webp" />
+                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery2-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria" />
+                                </picture>
+                            </div>
+                            <div className="span-3-3">
+                                <picture className="rlx-pbanner-top p-relative">
+                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery3-portrait.webp" />
+                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery3-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria" />
+                                </picture>
+                            </div>
+                            <div className="span-3-4">
+                                <picture className="rlx-pbanner-top p-relative">
+                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery4-portrait.webp" />
+                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery4-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria" />
+                                </picture>
+                            </div>
+                        </div>
+                        <div id="lightbox" className="lightbox">
+                            <span className="close-button">x</span>
+                            <div className="lightbox-content">
+                                <button id="prev-button" className="nav-button prev-button">&lt;</button>
+                                <img id="lightbox-image" src="" alt="m278241-0018 reloj galeria" />
+                                <button id="next-button" className="nav-button next-button">&gt;</button>
+                            </div>
+                            <div className="pagination-dots"></div>
+                        </div>
                     </div>
-                    <div className="span-3-2">
-                        <picture className="rlx-pbanner-top p-relative">
-                            <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery2-portrait.webp" />
-                            <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery2-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria"/>
-                        </picture>
-                    </div>
-                    <div className="span-3-3">
-                        <picture className="rlx-pbanner-top p-relative">
-                            <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery3-portrait.webp" />
-                            <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery3-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria"/>
-                        </picture>
-                    </div>
-                    <div className="span-3-4">
-                        <picture className="rlx-pbanner-top p-relative">
-                            <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery4-portrait.webp" />
-                            <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-gallery4-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 reloj galeria"/>
-                        </picture>
-                    </div>
-                    </div>
-                    <div id="lightbox" className="lightbox">
-                    <span className="close-button">x</span>
-                    <div className="lightbox-content">
-                        <button id="prev-button" className="nav-button prev-button">&lt;</button>
-                        <img id="lightbox-image" src="" alt="m278241-0018 reloj galeria"/>
-                        <button id="next-button" className="nav-button next-button">&gt;</button>
-                    </div>
-                    <div className="pagination-dots"></div>
-                    </div>
-                </div>
                 </section>
 
                 <section className="c-lightbeige-bg">
-                <div className="rlx-container-content py-90-60">
-                    <div className="row-grid-fullw component-2-col watck-key-selling alig-item-center">
-                    <div className="col-lg-2-6">
-                        <picture className="rlx-pbanner-top p-relative">
-                        <source media="(max-width: 767px)"
-                            srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-portrait.webp" />
-                        <img
-                            src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-landscape.webp"
-                            loading="lazy" alt="garantía Rolex" />
-                        </picture>
+                    <div className="rlx-container-content py-90-60">
+                        <div className="row-grid-fullw component-2-col watck-key-selling alig-item-center">
+                            <div className="col-lg-2-6">
+                                <picture className="rlx-pbanner-top p-relative">
+                                    <source media="(max-width: 767px)"
+                                        srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-portrait.webp" />
+                                    <img
+                                        src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/rolex-guarantee-retail-guarantee-card-landscape.webp"
+                                        loading="lazy" alt="garantía Rolex" />
+                                </picture>
+                            </div>
+                            <div className="col-lg-9-6">
+                                <div className="accordion">
+                                    <div className="accordion-item">
+                                        <div className="accordion-header">
+                                            <span className="body-24-bold c-brown-text">La garantía Rolex</span>
+                                            <span className="icon-acordion c-brown-text">í</span>
+                                        </div>
+                                        <div className="accordion-content pb-30 active">
+                                            <p className="body-20-light">Para garantizar la precisión y la fiabilidad de sus relojes, Rolex somete a cada
+                                                reloj, tras el ensamblaje, a una serie de pruebas estrictas. Todos los nuevos relojes adquiridos en uno
+                                                de los Distribuidores Oficiales de la marca incluyen una garantía internacional de cinco años. Cuando
+                                                compra un Rolex, el Distribuidor Oficial rellena y deja registrada la fecha en la tarjeta de garantía
+                                                Rolex, que certifica la autenticidad de su reloj.</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="accordion-item">
+                                        <div className="accordion-header">
+                                            <span className="body-24-bold c-brown-text">El sello verde</span>
+                                            <span className="icon-acordion c-brown-text">+</span>
+                                        </div>
+                                        <div className="accordion-content pb-30">
+                                            <p className="body-20-light">La garantía de cinco años que se aplica a todos los modelos Rolex viene
+                                                acompañada de un sello verde, un símbolo de su estatus de Cronímetro Superlativo. Esta exclusiva
+                                                certificación da fe de que el reloj ha superado con éxito una serie de controles finales específicos
+                                                llevados a cabo por Rolex en sus propios laboratorios y segín sus propios criterios, como complemento de
+                                                la certificación oficial COSC de su movimiento.</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="accordion-item">
+                                        <div className="accordion-header">
+                                            <span className="body-24-bold c-brown-text">Estuche Rolex</span>
+                                            <span className="icon-acordion c-brown-text">+</span>
+                                        </div>
+                                        <div className="accordion-content pb-30">
+                                            <p className="body-20-light">Todos los relojes Rolex se entregan en un precioso estuche verde que protege y
+                                                guarda la joya que anida en su interior. Además, el estuche simboliza igualmente el acto de regalar. Por
+                                                ello, si usted quiere obsequiar a alguien con un Rolex, es importante que lo primero que vea el
+                                                destinatario está a la altura de su contenido.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-lg-9-6">
-                        <div className="accordion">
-                        <div className="accordion-item">
-                            <div className="accordion-header">
-                            <span className="body-24-bold c-brown-text">La garantía Rolex</span>
-                            <span className="icon-acordion c-brown-text">í</span>
-                            </div>
-                            <div className="accordion-content pb-30 active">
-                            <p className="body-20-light">Para garantizar la precisión y la fiabilidad de sus relojes, Rolex somete a cada
-                                reloj, tras el ensamblaje, a una serie de pruebas estrictas. Todos los nuevos relojes adquiridos en uno
-                                de los Distribuidores Oficiales de la marca incluyen una garantía internacional de cinco años. Cuando
-                                compra un Rolex, el Distribuidor Oficial rellena y deja registrada la fecha en la tarjeta de garantía
-                                Rolex, que certifica la autenticidad de su reloj.</p>
-                            </div>
-                        </div>
-                
-                        <div className="accordion-item">
-                            <div className="accordion-header">
-                            <span className="body-24-bold c-brown-text">El sello verde</span>
-                            <span className="icon-acordion c-brown-text">+</span>
-                            </div>
-                            <div className="accordion-content pb-30">
-                            <p className="body-20-light">La garantía de cinco años que se aplica a todos los modelos Rolex viene
-                                acompañada de un sello verde, un símbolo de su estatus de Cronímetro Superlativo. Esta exclusiva
-                                certificación da fe de que el reloj ha superado con éxito una serie de controles finales específicos
-                                llevados a cabo por Rolex en sus propios laboratorios y segín sus propios criterios, como complemento de
-                                la certificación oficial COSC de su movimiento.</p>
-                            </div>
-                        </div>
-                
-                        <div className="accordion-item">
-                            <div className="accordion-header">
-                            <span className="body-24-bold c-brown-text">Estuche Rolex</span>
-                            <span className="icon-acordion c-brown-text">+</span>
-                            </div>
-                            <div className="accordion-content pb-30">
-                            <p className="body-20-light">Todos los relojes Rolex se entregan en un precioso estuche verde que protege y
-                                guarda la joya que anida en su interior. Además, el estuche simboliza igualmente el acto de regalar. Por
-                                ello, si usted quiere obsequiar a alguien con un Rolex, es importante que lo primero que vea el
-                                destinatario está a la altura de su contenido.</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
                 </section>
 
                 <section className="c-lightbeige-bg c-beige-mobile">
@@ -717,13 +723,13 @@ const M2782410018: React.FC = () => {
                                                 <path d="M15,10v5h-1h-1H2H0v-2v-3h2v3h11v-3H15z M5.5,9.5l2,2l2-2l2-2h-3V0H8H7H6.5v7.5h-3L5.5,9.5z"></path></svg>
                                             Descargar brochure
                                         </a>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
-                            <div className="col-6-6-5-3 order-1-mob"  style={{ display: "none" }}>
+                            <div className="col-6-6-5-3 order-1-mob" style={{ display: "none" }}>
                                 <picture className="rlx-pbanner-top p-relative">
-                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-cor-specs-portrait.webp"/>
-                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-cor-specs-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 especificaciones"/>
+                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-cor-specs-portrait.webp" />
+                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m278241-0018-cor-specs-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 especificaciones" />
                                 </picture>
                             </div>
                         </div>
@@ -738,16 +744,16 @@ const M2782410018: React.FC = () => {
                                 <p className="body-20-light">El acabado tipo sol crea delicados reflejos de luz en muchas esferas de la colecciín Oyster Perpetual. Se obtiene utilizando tícnicas magistrales de cepillado que crean surcos que salen del centro de la esfera. La luz se difunde constantemente a lo largo de cada grabado, creando un sutil brillo característico que se mueve segín la posición de la muñeca. Una vez completado el acabado tipo sol, el color de la esfera se aplica mediante PVD (Physical Vapour Deposition) o galvanoplastia. Una ligera capa de barniz le da a la esfera su aspecto final.</p>
                                 <div className="pb-45-40">
                                     <picture className="rlx-pbanner-top p-relative">
-                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m278241-0018-dial-portrait.webp"/>
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m278241-0018-dial-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 esfera"/>
+                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m278241-0018-dial-portrait.webp" />
+                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m278241-0018-dial-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 esfera" />
                                     </picture>
                                 </div>
                                 <p className="headline50 c-brown-text pb-20">El brazalete jubilee</p>
                                 <p className="body-20-light">El diseño, desarrollo y producciín de los brazaletes y cierres Rolex, así como las estrictas pruebas que deben superar, requieren la tecnología más avanzada. Al igual que sucede con los demás componentes del reloj, los controles estéticos realizados por nuestros expertos garantizan una belleza impecable. El Jubilee, un brazalete fluido y confortable de eslabones de cinco elementos de metal, se creí específicamente para el lanzamiento del modelo Oyster Perpetual Datejust en 1945.</p>
                                 <div className="pb-45-40">
                                     <picture className="rlx-pbanner-top p-relative">
-                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/anim-bracelet-material-portrait-278241-63361.webp"/>
-                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/anim-bracelet-material-portrait-278241-63361.webp" loading="lazy" alt="Rolex Datejust m278241-0018 bisel"/>
+                                        <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/anim-bracelet-material-portrait-278241-63361.webp" />
+                                        <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/anim-bracelet-material-portrait-278241-63361.webp" loading="lazy" alt="Rolex Datejust m278241-0018 bisel" />
                                     </picture>
                                 </div>
                                 <div className="pb-90-60">
@@ -759,8 +765,8 @@ const M2782410018: React.FC = () => {
                         <div className="row-grid-fullw cuerpotexto">
                             <div className="col-text-center">
                                 <picture className="rlx-pbanner-top p-relative">
-                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m278241-0018-material-portrait.webp"/>
-                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m278241-0018-material-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 material"/>
+                                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m278241-0018-material-portrait.webp" />
+                                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-espec/m278241-0018-material-landscape.webp" loading="lazy" alt="Rolex Datejust m278241-0018 material" />
                                 </picture>
                             </div>
                         </div>
@@ -833,5 +839,5 @@ const M2782410018: React.FC = () => {
     );
 }
 
-export default M2782410018; 
+export default M2782410018;
 

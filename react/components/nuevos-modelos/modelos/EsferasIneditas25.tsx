@@ -4,6 +4,7 @@ import useInitScripts from '../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
+import '../../../main-style.css';
 
 const ModEsferasIneditas2025: React.FC = () => {
     useInitScripts();
@@ -12,10 +13,6 @@ const ModEsferasIneditas2025: React.FC = () => {
     const baseUrl = 'https://devjhernandez--glauser.myvtex.com';
 
     return (
-        // Si este componente (ModEsferasIneditas2025) es el punto de entrada principal para una ruta o página
-        // y no está ya envuelto por HelmetProvider en un componente superior (como Home.tsx o el layout principal de tu store-theme),
-        // ENTONCES DEBES envolver todo el contenido del return con <HelmetProvider>.
-        // Ejemplo: <HelmetProvider>...</HelmetProvider>
         <>
             <Helmet>
                 <title>Nuevos modelos Rolex Esferas inéditas 2025 - GLAUSER</title>
@@ -23,10 +20,8 @@ const ModEsferasIneditas2025: React.FC = () => {
                     name="description"
                     content="GLAUSER presenta el nuevo Rolex Esferas inéditas, lo último en relojes de lujo suizos de Rolex. Descubra las características únicas de este nuevo modelo ahora."
                 />
-                {/* VTEX IO: Evita dangerouslySetInnerHTML para meta tags específicos de VTEX. */}
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-                {/* CSS: Se elimina la redundancia de Swiper. Considera gestionar CSS vía manifest.json. */}
                 <link
                     rel="stylesheet"
                     type="text/css"
@@ -34,14 +29,7 @@ const ModEsferasIneditas2025: React.FC = () => {
                 />
                 <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-                {/* <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> (Este es redundante) */}
 
-                {/* SCRIPTS: ELIMINADOS de aquí. Deben ser manejados por useInitScripts o la configuración de VTEX IO. */}
-                {/* <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> */}
-                {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> */}
-                {/* <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> */}
-
-                {/* URLs CANÓNICAS Y DE REDES SOCIALES: Usando la URL dinámica o de producción */}
                 <link rel="canonical" href={currentUrl} />
 
                 {/* Facebook Meta Tags */}
@@ -76,7 +64,7 @@ const ModEsferasIneditas2025: React.FC = () => {
                     content="https://galileo.tsqsa.com/FTPImagenes/rolex-imgmodelos-2025/w-esferas/rolex-new-watches-2025-new-dials-cover-m126518ln-0014-portrait.webp" // URL de imagen para Twitter
                 />
 
-                {/* Scripts JSON-LD y DataLayer: Se mantienen */}
+                {/* Scripts JSON-LD y DataLayer */}
                 <script type="text/javascript">
                     {`
                         var digitalDataLayer = {
@@ -160,9 +148,7 @@ const ModEsferasIneditas2025: React.FC = () => {
                 />
             </Helmet>
             <div className="header-component">
-                {/* VTEX IO: No uses <VTEXTemplate> en JSX. Configúralos en blocks.jsonc o importa componentes React si los tienes custom. */}
                 <header className="main-header" id="main-header">
-                    {/* Contenido del header */}
                 </header>
             </div>
 

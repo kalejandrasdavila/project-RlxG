@@ -2,15 +2,22 @@
 import { Helmet } from "react-helmet-async";
 import { useCssHandles } from 'vtex.css-handles';
 import '../../../../main-style.css';
-import RlxExploreMasNModels from "../../../parts/RlxExploreMasNModels";
-import NavM from "../../../parts/NavModels";
-import WatchesForm from "../../../parts/Rlx-watches-formulario";
+import useInitScripts from '../../../../components/hooks/useInitScripts';
+
+import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+
+import NavM from "../../../../components/parts/NavModels";
+
+import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
+
 import SectionSubmarine from "../../../parts/SectionSubmarine";
-import Footer from '../../../parts/Footer';
+import Footer from '../../../../components/parts/Footer';
+
 
 const CSS_HANDLES = ['pt_10', 'pt_15', 'pt_20', 'pb_10', 'pb_15', 'pb_20', 'container_rlx', 'btn_primary_rlx', 'text_center', 'mb_20', 'mb_30'];
 
 const M126619lb0003: React.FC = () => {
+    useInitScripts();
     const handles = useCssHandles(CSS_HANDLES);
 
     const [modelorlx, setModelorlx] = useState("");

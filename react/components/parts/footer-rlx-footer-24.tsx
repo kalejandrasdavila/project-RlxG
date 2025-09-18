@@ -37,7 +37,7 @@ const MainEffects: React.FC = () => {
         menu.style.display = menu.style.display === "block" ? "none" : "block";
       }
     };
-    window.toggleMenu = toggleMenu; // Para poder usarlo en HTML si lo necesitas
+    window.toggleMenu = toggleMenu;
 
     // Scroll hacia arriba
     const btn = document.getElementById('btnVolverArriba');
