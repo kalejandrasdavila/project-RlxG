@@ -293,7 +293,7 @@ const ColeccionRlx: React.FC = () => {
                   <h3 className={`${handles.body_24_bold} ${handles.c_brown_text}`}>Datejust</h3>
                 </div>
               </div>
-              <div className={`${handles.col_span_2_1} ${handles.col_6_10}`}>
+              <div className={`${handles.col_span_2_2} ${handles.col_6_10}`}>
                 <a href="/rolex/watches/oyster-perpetual/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
@@ -483,7 +483,7 @@ const ColeccionRlx: React.FC = () => {
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
-                      srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/rolex-watches-1908-2025-portrait.webp"
+                      srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-1908-2025-portrait.webp"
                     />
                     <img
                       alt="Rolex 1908"
