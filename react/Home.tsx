@@ -120,24 +120,24 @@ const Home: React.FC = () => {
               <div className={`${handles.swiper_slide} ${handles.row_grid_fullw}`}>
                 <div className={`${handles.slide_content} ${handles.banner_text_absolute2}`}>
                   <span className={`${handles.headline26} ${handles.c_white_text}`}>Rolex</span>
-                  <p className={`${handles.headline70} ${handles.c_white_text} ${handles.pb_20}`} >Sea-Dweller</p>
+                  <p className={`${handles.headline70} ${handles.c_white_text} ${handles.pb_20}`} >Yacht-Master</p>
                   <a
                     className={`${handles.btn_primary_rlx}`}
-                    href="https://devjhernandez--glauser.myvtex.com/rolex/watches/sea-dweller/">
+                    href="https://devjhernandez--glauser.myvtex.com/rolex/watches/yacht-master/">
                     Descubra más
                   </a>
                 </div>
                 <div className={`${handles.slider_image_6_12}`}>
-                  <a href="http://localhost:3000/rolex/watches/sea-dweller/">
+                  <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/yacht-master/">
                     <picture className="banner-10">
                       <source
                         media="(max-width: 767px)"
-                        srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-sea-dweller-mar-25-portrait.webp"
+                        srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-yacht-master-42-sep-25-portrait.webp"
                       />
                       <img
                         alt="Relojes Rolex Sea-Dweller"
                         loading="lazy"
-                        src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-sea-dweller-mar-25-landscape.webp"
+                        src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-yacht-master-42-sep-25-landscape.webp"
                       />
                     </picture>
                   </a>
@@ -145,27 +145,27 @@ const Home: React.FC = () => {
               </div>
               <div className={`${handles.swiper_slide} ${handles.row_grid_fullw}`}>
                 <div className={`${handles.slide_content} ${handles.banner_text_absolute2}`}>
-                  <span className={`${handles.headline26} ${handles.c_dark_text}`}>Rolex y la hípica</span>
+                  <span className={`${handles.headline26} ${handles.c_dark_text}`}>Rolex y la vela</span>
                   <p className={`${handles.headline70} ${handles.pb_20} ${handles.c_dark_text} `}>
-                    Rolex Grand Slam of Show Jumping
+                    Rolex SailGP Championship
                   </p>
                   <a
                     className={`${handles.btn_primary_rlx}`}
-                    href="https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/grand-slam-of-show-jumping/">
+                    href="https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/sailgp/">
                     Descubra más
                   </a>
                 </div>
                 <div className={`${handles.slider_image_6_12}`}>
-                  <a href="http://localhost:3000/rolex/mundo-rolex/grand-slam-of-show-jumping/">
+                  <a href="https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/sailgp/">
                     <picture className="banner-10">
                       <source
                         media="(max-width: 767px)"
-                        srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-rolex-grand-slam-of-show-jumping-portrait.webp"
+                        srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-world-of-rolex-sailgp-sep-25-portrait.webp"
                       />
                       <img
-                        alt="Rolex Grand Slam of Show Jumping"
+                        alt="Rolex SailGP Championship"
                         loading="lazy"
-                        src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-rolex-rolex-grand-slam-of-show-jumping-portrait-landscape.webp"
+                        src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/home/discover-world-of-rolex-sailgp-sep-25-landscape.webp"
                       />
                     </picture>
                   </a>
