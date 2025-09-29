@@ -7,7 +7,7 @@ import NavM from "../../../../components/parts/NavModels";
 
 import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
 
-import SectionYachtMaster from "../../../parts/SectionYachtMaster";
+import SectionYachtMaster from "../../../../components/parts/SectionYachtMaster";
 import Footer from '../../../../components/parts/Footer';
 
 import '../../../../main-style.css';
@@ -59,13 +59,8 @@ const M1266210002: React.FC = () => {
                     type="text/css"
                     href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css"
                 />
-                <link
-                    rel="stylesheet preload"
-                    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-                />
                 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
                 <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/watches/yacht-master/m126621-0002/" />
 
