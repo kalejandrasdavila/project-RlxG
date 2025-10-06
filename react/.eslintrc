@@ -4,10 +4,6 @@
     "plugin:react/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "react"
-  ],
   "env": {
     "browser": true,
     "es6": true,
@@ -19,7 +15,8 @@
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "jsx": "react"
   },
   "settings": {
     "react": {

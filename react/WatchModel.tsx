@@ -8,21 +8,33 @@ const CSS_HANDLES = [
     'container', 'wrapper', 'content', 'error_message', 'model_container'
 ] as const;
 
+// Cache para componentes ya cargados
+const componentCache = new Map();
+
 // Función para importar dinámicamente componentes de modelos
 const getModelComponent = async (collection: string, model: string) => {
     try {
+        const cacheKey = `${collection}-${model}`;
+
+        // Verificar si ya está en caché
+        if (componentCache.has(cacheKey)) {
+            return componentCache.get(cacheKey);
+        }
+
         // Convertir el modelo a PascalCase para el nombre del componente
         const modelFileName = model.toUpperCase().replace(/-/g, '');
-        
-        console.log(`Intentando importar modelo: ${model} de colección: ${collection}`);
 
         // Importar dinámicamente usando require.context para evitar el warning de webpack
         const context = require.context('./components/watches', true, /\.tsx$/);
         const modulePath = `./${collection}/modelos/${modelFileName}.tsx`;
-        
+
         if (context.keys().includes(modulePath)) {
             const module = context(modulePath);
-            return module.default;
+            const component = module.default;
+
+            // Guardar en caché
+            componentCache.set(cacheKey, component);
+            return component;
         } else {
             console.warn(`No se encontró el componente: ${modulePath}`);
             return null;
