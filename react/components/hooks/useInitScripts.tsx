@@ -1,10 +1,15 @@
-import Swiper from "swiper";
+import { Swiper } from "swiper";
 import $ from "jquery";
 import { useEffect } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
-Swiper.use([Navigation, Pagination]);
+// Configuración de Swiper v8+
+const swiperConfig = {
+    modules: [Navigation, Pagination],
+    navigation: true,
+    pagination: true,
+};
 
 const useInitScripts = () => {
     useEffect(() => {

@@ -3,6 +3,12 @@ module.exports = {
     setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
     moduleNameMapper: {
         '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+        '^vtex\\.css-handles$': '<rootDir>/src/__mocks__/vtex-css-handles.js',
+        '^vtex\\.render-runtime$': '<rootDir>/src/__mocks__/vtex-render-runtime.js',
+        '^utils/urlUtils$': '<rootDir>/src/__mocks__/urlUtils.js',
+        '^swiper$': '<rootDir>/src/__mocks__/swiper.js',
+        '^swiper/modules$': '<rootDir>/src/__mocks__/swiper.js',
+        '^react-helmet-async$': '<rootDir>/src/__mocks__/react-helmet-async.js',
     },
     testMatch: [
         '<rootDir>/components/__tests__/**/*.{test,spec}.{js,jsx,ts,tsx}',
@@ -18,5 +24,10 @@ module.exports = {
     collectCoverage: false,
     testEnvironmentOptions: {
         customExportConditions: ['node', 'node-addons'],
-    }
+    },
+    globals: {
+        'ts-jest': {
+            useESM: true,
+        },
+    },
 };
