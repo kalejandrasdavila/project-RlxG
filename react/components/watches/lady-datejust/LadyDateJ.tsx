@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useCssHandles } from 'vtex.css-handles';
-import '../../../main-style.css';
+import "../../../main-style.css";
 import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
 
 import { Helmet } from "react-helmet-async";

@@ -11,7 +11,7 @@ import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
 import SectionOysterPerpetual from "../../../parts/SectionOysterPerpetual";
 import Footer from '../../../../components/parts/Footer';
 
-import '../../../../main-style.css';
+import "../../../../main-style.css";
 const M1242000011: React.FC = () => {
 
     useInitScripts();

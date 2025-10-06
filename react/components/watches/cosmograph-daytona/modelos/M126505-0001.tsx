@@ -11,7 +11,7 @@ import SectionCosmoGraphD from "../../../parts/SectionCosmoGraphD";
 import Footer from '../../../../components/parts/Footer';
 
 import { useCssHandles } from 'vtex.css-handles';
-import '../../../main-style.css';
+import "../../../../main-style.css";
 const CSS_HANDLES = [
     'headercomponent', 'rlx_html', 'home_rlx', 'rlx_menu', 'rlx_container', 'row_grid', 'rlx_logo', 'placa_rolex_logo',
     'breadcrum_page', 'breadcrum_column', 'breadcrum_menu_list', 'description', 'fixed_14', 'active',

@@ -4,7 +4,7 @@ import useInitScripts from '../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMasNModels";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
-import '../../../main-style.css';
+import "../../../main-style.css";
 
 const ModEsferasIneditas2025: React.FC = () => {
     useInitScripts();

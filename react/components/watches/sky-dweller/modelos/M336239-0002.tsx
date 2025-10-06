@@ -11,7 +11,7 @@ import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
 import SectionSkyDweller from "../../../parts/SectionSkyDweller";
 import Footer from '../../../../components/parts/Footer';
 
-import '../../../../main-style.css';
+import "../../../../main-style.css";
 
 
 const M3362390002: React.FC = () => {

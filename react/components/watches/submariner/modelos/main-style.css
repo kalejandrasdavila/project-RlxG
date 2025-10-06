@@ -1,0 +1,2948 @@
+.menu {
+    position: relative;
+}
+
+#placapatek a {
+    display: none;
+}
+
+#navbarNavDropdown>div>div>div>div:nth-child(1)>a {
+    display: none;
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) ul li {
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+:global(.glauser-storerlx-0-x-swiper_pagination) {
+    width: 100%;
+    bottom: 20px;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_pagination_bullets) {
+    margin: 0px 4px !important;
+}
+
+:global(.glauser-storerlx-0-x-headercomponent).header-fixed {
+    position: inherit;
+}
+
+.swiper-fixed {
+    margin-top: 0px !important;
+}
+
+
+
+/*---------------- GENERAL ----------------*/
+
+:root {
+    /* GEENRAL */
+    --c-rolex-green: #006039;
+    --c-green: #127749;
+    --c-ocean-green: #61bd93;
+    --c-brown: #452c1e;
+    --c-dark: #212121;
+    --c-darkgrey: #767676;
+    --c-grey: #d4d4d4;
+    --c-beige: #f4efea;
+    --c-lightbeige: #f9f7f4;
+    --c-brown: #452c1e;
+    --c-white: #ffffff;
+    --vw100: 100dvw;
+    --degradado-rlx: linear-gradient(90deg, #0b3e27, #197149);
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-rotate: -90deg;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0px !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) p {
+    margin-bottom: 0px;
+}
+
+/* COLORES */
+:global(.glauser-storerlx-0-x-c_rolex_green_text) {
+    color: var(--c-rolex-green);
+}
+
+.c-green-text {
+    color: var(--c-green)
+}
+
+.c-ocean-green-text {
+    color: var(--c-ocean-green)
+}
+
+:global(.glauser-storerlx-0-x-c_brown_text) {
+    color: var(--c-brown);
+}
+
+:global(.glauser-storerlx-0-x-c_dark_text) {
+    color: var(--c-dark);
+}
+
+.c-darkgrey-text {
+    color: var(--c-darkgrey);
+}
+
+.c-grey-text {
+    color: var(--c-grey);
+}
+
+.c-beige-text {
+    color: var(--c-beige);
+}
+
+.c-lightbeige-text {
+    color: var(--c-lightbeige);
+}
+
+:global(.glauser-storerlx-0-x-c_brown_text) {
+    color: var(--c-brown);
+}
+
+:global(.glauser-storerlx-0-x-c_white_text) {
+    color: var(--c-white);
+}
+
+:global(.glauser-storerlx-0-x-rlx_menu) {
+    background: linear-gradient(90deg, #0b3e27, #197149) !important;
+}
+
+.c-rolex-green-bg {
+    background-color: var(--c-rolex-green);
+}
+
+.c-green-bg {
+    background-color: var(--c-green)
+}
+
+.c-ocean-green-bg {
+    background-color: var(--c-ocean-green)
+}
+
+.c-brown-bg {
+    background-color: var(--c-brown);
+}
+
+.c-darkgrey-bg {
+    background-color: var(--c-darkgrey);
+}
+
+.c-grey-bg {
+    background-color: var(--c-grey);
+}
+
+:global(.glauser-storerlx-0-x-c_beige_bg) {
+    background-color: var(--c-beige);
+}
+
+:global(.glauser-storerlx-0-x-c_lightbeige_bg) {
+    background-color: var(--c-lightbeige);
+}
+
+:global(.glauser-storerlx-0-x-c_white_bg) {
+    background-color: var(--c-white);
+}
+
+:global(.glauser-storerlx-0-x-rlx_container) {
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+:global(.glauser-storerlx-0-x-row_grid) {
+    display: grid;
+    grid-gap: 8px;
+    align-items: center;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+:global(.glauser-storerlx-0-x-row_grid_fullw) {
+    display: grid;
+    grid-template-columns: 8vw repeat(12, minmax(0, 1fr)) 8vw;
+    grid-gap: 8px;
+}
+
+:global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) {
+    display: grid;
+    grid-template-columns: 8vw repeat(12, minmax(0, 1fr)) 8vw;
+    grid-gap: 8px;
+}
+
+.d-none-rlx {
+    display: none;
+}
+
+:global(.glauser-storerlx-0-x-p_relative) {
+    position: relative !important;
+}
+
+.p-absolute {
+    position: absolute !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_grid_column_full) {
+    grid-column: 1/15;
+}
+
+:global(.glauser-storerlx-0-x-mb_10) {
+    margin-bottom: 10px !important;
+}
+
+:global(.glauser-storerlx-0-x-mb_20) {
+    margin-bottom: 20px !important;
+}
+
+:global(.glauser-storerlx-0-x-pb_20) {
+    padding-bottom: 20px !important;
+}
+
+:global(.glauser-storerlx-0-x-py_30) {
+    padding-bottom: 30px !important;
+}
+
+.pb-5 {
+    padding-bottom: 5px !important;
+}
+
+.pt-8 {
+    padding-top: 8px !important;
+}
+
+:global(.glauser-storerlx-0-x-px-8) {
+    padding: 0px 8px !important;
+}
+
+:global(.glauser-storerlx-0-x-py_20_30) {
+    padding: 30px 0px !important;
+}
+
+:global(.glauser-storerlx-0-x-py_90_60) {
+    padding: 90px 0px !important;
+}
+
+:global(.glauser-storerlx-0-x-pb_45_40) {
+    padding-bottom: 45px !important;
+}
+
+:global(.glauser-storerlx-0-x-pb_90_60) {
+    padding-bottom: 90px !important;
+}
+
+:global(.glauser-storerlx-0-x-pt_90_60) {
+    padding-top: 90px !important;
+}
+
+:global(.glauser-storerlx-0-x-pt_10) {
+    padding-top: 10px !important;
+}
+
+:global(.glauser-storerlx-0-x-pb_50_0) {
+    padding-bottom: 0px !important;
+}
+
+:global(.glauser-storerlx-0-x-pb_40_50) {
+    padding-bottom: 50px !important;
+}
+
+.pt-0-5vh {
+    padding-top: 5% !important;
+}
+
+.pt-30-40 {
+    padding-top: 40px !important;
+}
+
+.pb-30-40 {
+    padding-bottom: 40px !important;
+}
+
+:global(.glauser-storerlx-0-x-text_center) {
+    text-align: center !important;
+}
+
+figure {
+    margin: 0 0 0rem !important;
+}
+
+:global(.glauser-storerlx-0-x-ratio) {
+    position: relative;
+    width: 100%;
+}
+
+:global(.glauser-storerlx-0-x-ratio_16x9) {
+    aspect-ratio: 16 / 9;
+}
+
+:global(.glauser-storerlx-0-x-ratio)>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.alig-item-center {
+    align-items: center;
+}
+
+
+/* TEXTOS TAB/DESK */
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+:global(.glauser-storerlx-0-x-headline70) {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+:global(.glauser-storerlx-0-x-headline50) {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+:global(.glauser-storerlx-0-x-headline36) {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+:global(.glauser-storerlx-0-x-headline30) {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+:global(.glauser-storerlx-0-x-headline26) {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+strong:global(.glauser-storerlx-0-x-body_24_bold),
+:global(.glauser-storerlx-0-x-body_24_bold) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.body-24-light {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+strong.body-20-bold,
+.body-20-bold {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+:global(.glauser-storerlx-0-x-body_20_light) {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+:global(.glauser-storerlx-0-x-body_20_light) strong {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+strong:global(.glauser-storerlx-0-x-legend_16_bold),
+:global(.glauser-storerlx-0-x-legend_16_bold) {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+:global(.glauser-storerlx-0-x-legend_16_light) {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+.legend-14-bold {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.fixed-22 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+:global(.glauser-storerlx-0-x-fixed_16) {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+:global(.glauser-storerlx-0-x-fixed_14) {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.quote50 {
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+/* BUTONS -RLX */
+:global(.glauser-storerlx-0-x-btn_primary_rlx) {
+    background: var(--c-green);
+    color: var(--c-white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+    padding: 12px 30px;
+    border-radius: 200px;
+    border: transparent !important;
+}
+
+:global(.glauser-storerlx-0-x-btn_primary_rlx):hover,
+:global(.glauser-storerlx-0-x-btn_primary_rlx):focus,
+:global(.glauser-storerlx-0-x-btn_primary_rlx):active {
+    background: var(--c-rolex-green);
+    color: var(--c-white);
+}
+
+:global(.glauser-storerlx-0-x-btn_primary_icon_rlx) {
+    background: var(--c-green);
+    color: var(--c-white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+    padding: 12px 30px;
+    border-radius: 200px;
+}
+
+:global(.glauser-storerlx-0-x-btn_primary_icon_rlx):hover,
+:global(.glauser-storerlx-0-x-btn_primary_icon_rlx):focus,
+:global(.glauser-storerlx-0-x-btn_primary_icon_rlx):active {
+    background: var(--c-rolex-green);
+}
+
+:global(.glauser-storerlx-0-x-btn_primary_icon_rlx) svg {
+    margin-left: 8px;
+}
+
+:global(.glauser-storerlx-0-x-btn_label_icon_rlx) {
+    color: var(--c-green);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+:global(.glauser-storerlx-0-x-btn_label_icon_rlx):hover,
+:global(.glauser-storerlx-0-x-btn_label_icon_rlx):focus,
+:global(.glauser-storerlx-0-x-btn_label_icon_rlx):active {
+    color: #212121;
+}
+
+:global(.glauser-storerlx-0-x-btn_label_icon_rlx) svg path {
+    fill: var(--c-green);
+}
+
+:global(.glauser-storerlx-0-x-btn_label_icon_rlx):hover svg path {
+    fill: #212121;
+}
+
+:global(.glauser-storerlx-0-x-btn_label_icon_rlx) svg {
+    margin-left: 6px;
+}
+
+/* HEADER */
+:global(.glauser-storerlx-0-x-rlx_logo) {
+    grid-column: 1 / 1;
+}
+
+:global(.glauser-storerlx-0-x-rlx_header_menu_top) {
+    grid-column: 2 / 13;
+    margin: 0;
+    padding: 0;
+}
+
+:global(.glauser-storerlx-0-x-rlx_header_menu_top) :global(.glauser-storerlx-0-x-nav_link) {
+    color: #ffffff !important;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+:global(.glauser-storerlx-0-x-rlx_header_menu_top) :global(.glauser-storerlx-0-x-nav_link):hover,
+:global(.glauser-storerlx-0-x-rlx_header_menu_top) :global(.glauser-storerlx-0-x-nav_link):focus {
+    color: var(--c-ocean-green) !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_header_menu_top) :global(.glauser-storerlx-0-x-nav_link):hover:global(.glauser-storerlx-0-x-rlx_header_menu_top) :global(.glauser-storerlx-0-x-nav_link):focus,
+:global(.glauser-storerlx-0-x-rlx_header_menu_top) :global(.glauser-storerlx-0-x-nav_link) :global(.glauser-storerlx-0-x-active) {
+    color: var(--c-ocean-green) !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) ul {
+    margin-bottom: 0px;
+    list-style: none;
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) ul {
+    margin-bottom: 0px;
+    list-style: none;
+}
+
+:global(.glauser-storerlx-0-x-toggle_menu_btn) {
+    display: none;
+}
+
+:global(.glauser-storerlx-0-x-menu_list_rolex) {
+    padding-left: 0px;
+}
+
+:global(.glauser-storerlx-0-x-rlx_header_menu_top) :global(.glauser-storerlx-0-x-menu_list_rolex) {
+    text-align: left;
+}
+
+:global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_page) .breadcrum-menu-list {
+    padding-left: 0px;
+}
+
+:global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_page) .breadcrum-menu-list li {
+    display: inline-block !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_page) .breadcrum-menu-list li a {
+    color: var(--c-white);
+}
+
+:global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_page) .breadcrum-menu-list li a :global(.glauser-storerlx-0-x-active),
+:global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_page) .breadcrum-menu-list li a:hover,
+:global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_page) .breadcrum-menu-list li a:focus {
+    color: var(--c-ocean-green);
+}
+
+:global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_column) ul {
+    background: transparent !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-btn_toggle) {
+    color: var(--c-white);
+}
+
+:global(.glauser-storerlx-0-x-breadcrum_page) ul.breadcrum-menu-list li+li:before {
+    padding: 0 8px;
+    color: var(--c-white);
+    font-size: 10px;
+    content: "\276F";
+}
+
+
+/* FOOTER */
+:global(.glauser-storerlx-0-x-rlx_footer) {
+    background: var(--degradado-rlx);
+}
+
+:global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-rlxcrown) {
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-rlxcrown) img {
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+}
+
+:global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-back2top) {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-back2top) a:hover,
+:global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-back2top) a svg path:hover {
+    color: var(--c-ocean-green);
+}
+
+:global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-back2top) a:hover svg path {
+    fill: var(--c-ocean-green);
+}
+
+:global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-back2top) a {
+    display: grid;
+    justify-items: center;
+}
+
+:global(.glauser-storerlx-0-x-_rotate_90),
+.-translate-y-full {
+    transform: rotate(var(--tw-rotate));
+}
+
+:global(.glauser-storerlx-0-x-rlx_pbanner_top) img {
+    object-fit: cover;
+    width: 100%;
+}
+
+:global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-btnVolverArriba) {
+    color: var(--c-white);
+}
+
+
+/* COMPONENTES GENERALES - RESPOSIVE */
+:global(.glauser-storerlx-0-x-component_video) .col-6-11-11 {
+    grid-column: 3 / span 10 !important;
+}
+
+:global(.glauser-storerlx-0-x-component_video) :global(.glauser-storerlx-0-x-col_6_12) {
+    grid-column: 2 / span 12 !important;
+}
+
+:global(.glauser-storerlx-0-x-image_center) :global(.glauser-storerlx-0-x-col_6_10) {
+    grid-column: 3 / span 10 !important;
+}
+
+:global(.glauser-storerlx-0-x-component_3_col):global(.glauser-storerlx-0-x-col_6_2) {
+    grid-column: 2 / span 4;
+}
+
+:global(.glauser-storerlx-0-x-component_3_col) :global(.glauser-storerlx-0-x-col_6_6) {
+    grid-column: 6 / span 4;
+}
+
+:global(.glauser-storerlx-0-x-component_3_col) :global(.glauser-storerlx-0-x-col_6_10) {
+    grid-column: 10 / span 4;
+}
+
+:global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) .banner-text-absolute1 {
+    grid-column: 2 / span 5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+:global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-banner_text_absolute2) {
+    grid-column: 9 / span 5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+:global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-slider_image_6_12) {
+    grid-column: 1 / span 14;
+}
+
+
+
+/* EXPLORE MAS - SLIDERS */
+.swiper-container-home {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+:globlal(.glauser-storerlx-0-x-swiper_slide) {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    display: block
+}
+
+:global(.glauser-storerlx-0-x-swiper_wrapper) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    box-sizing: content-box
+}
+
+:global(.glauser-storerlx-0-x-swiper_container) {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-rlx_banner_slider) :global(.glauser-storerlx-0-x-swiper_pagination_home) {
+    position: absolute;
+    bottom: 40px;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center;
+    z-index: 99999;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-rlx_banner_slider) :global(.glauser-storerlx-0-x-swiper_button_prev),
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-rlx_banner_slider) :global(.glauser-storerlx-0-x-swiper_button_next)-home {
+    background-color: rgba(212, 212, 212, .80) !important;
+    border-radius: 50% !important;
+    width: 44px !important;
+    height: 44px !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-rlx_banner_slider) :global(.glauser-storerlx-0-x-swiper_button_prev):hover,
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-rlx_banner_slider) :global(.glauser-storerlx-0-x-swiper_button_next)-home:hover {
+    background-color: rgba(212, 212, 212, 1) !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-rlx_banner_slider) :global(.glauser-storerlx-0-x-swiper_button_prev):after,
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-rlx_banner_slider) :global(.glauser-storerlx-0-x-swiper_button_next)-home:after {
+    font-size: 12px !important;
+    color: var(--c-brown) !important;
+    font-weight: bold;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-rlx_banner_slider) :global(.glauser-storerlx-0-x-swiper_button_next) {
+    right: 2vw !important;
+    position: absolute;
+    z-index: 99999;
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-rlx_banner_slider) :global(.glauser-storerlx-0-x-swiper_button_prev) {
+    left: 2vw !important;
+    position: absolute;
+    z-index: 99999;
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+
+:global(.glauser-storerlx-0-x-swiper_button_prev) :global(.glauser-storerlx-0-x-swiper_button_disabled),
+:global(.glauser-storerlx-0-x-swiper_button_next) :global(.glauser-storerlx-0-x-swiper_button_disabled) {
+    opacity: 0 !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) img {
+    object-fit: cover;
+    width: 100%;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_pagination_bullets) {
+    width: 20px !important;
+    height: 4px !important;
+    border-radius: 0 !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_pagination_bullet_active) {
+    width: 50px !important;
+    opacity: 1;
+    background: #127749 !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 40px;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_button_prev),
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_button_next) {
+    background-color: rgba(212, 212, 212, .80) !important;
+    border-radius: 50% !important;
+    width: 44px !important;
+    height: 44px !important;
+    position: absolute;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_button_next),
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_button_prev) {
+    top: 144px;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_button_prev):hover,
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_button_next):hover {
+    background-color: rgba(212, 212, 212, 1) !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_button_prev):after,
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_button_next):after {
+    font-size: 12px !important;
+    color: var(--c-brown) !important;
+    font-weight: bold;
+}
+
+:global(.glauser-storerlx-0-x-swiper_button_next) {
+    right: -3vw !important;
+}
+
+:global(.glauser-storerlx-0-x-swiper_button_prev) {
+    left: -3vw !important;
+}
+
+:global(.glauser-storerlx-0-x-swiper_button_prev) :global(.glauser-storerlx-0-x-swiper_button_disabled),
+:global(.glauser-storerlx-0-x-swiper_button_next) :global(.glauser-storerlx-0-x-swiper_button_disabled) {
+    opacity: 0 !important;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-exploremas) picture figcaption {
+    padding-top: 10px;
+    font-weight: 700;
+}
+
+/* MODELOS INDIVIDUALES ROLEX */
+.list-especification-model-rlx {
+    padding-left: 0px;
+}
+
+.list-especification-model-rlx li {
+    list-style: none;
+    margin-bottom: 20px !important;
+}
+
+.list-especification-model-rlx li:last-child {
+    margin-bottom: 0px;
+}
+
+.list-especification-model-rlx li .block {
+    display: block;
+}
+
+.watch-model-titleimg .rolex-detail .block {
+    display: block;
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.msg-price-rlx {
+    position: absolute;
+    background: var(--c-beige);
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.msg-price-rlx {
+    width: 440px;
+}
+
+.border-top-brown {
+    border-top: 1px solid rgba(69, 44, 30, 0.2);
+    padding: 40px 0px 10vh 0px;
+}
+
+.border-top-brown2 {
+    border-top: 1px solid rgba(69, 44, 30, 0.2);
+    padding: 20px 0px 10px 0px;
+}
+
+:global(.glauser-storerlx-0-x-dispmodel) .pb-40-60 {
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+:global(.glauser-storerlx-0-x-info_detail)ed {
+    margin: 20px 0px;
+}
+
+:global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a {
+    display: block;
+    color: var(--c-brown) !important;
+    margin-bottom: 10px;
+}
+
+:global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a:hover,
+:global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a:focus {
+    color: var(--c-rolex-green) !important;
+}
+
+:global(.glauser-storerlx-0-x-info_detail)ed .social-links-rolex-lista i svg g polygon,
+:global(.glauser-storerlx-0-x-info_detail)ed .social-links-rolex-lista i svg g path {
+    fill: var(--c-brown);
+}
+
+:global(.glauser-storerlx-0-x-info_detail)ed .social-links-rolex-lista a:hover i svg g polygon,
+:global(.glauser-storerlx-0-x-info_detail)ed .social-links-rolex-lista a:hover i svg g path {
+    fill: var(--c-rolex-green);
+}
+
+:global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)i svg g polygon,
+:global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)i svg g path {
+    fill: var(--c-brown);
+}
+
+:global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a:hover i svg g polygon,
+:global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a:hover i svg g path {
+    fill: var(--c-rolex-green);
+}
+
+:global(.glauser-storerlx-0-x-contacto_rolex) :global(.glauser-storerlx-0-x-form_inputs) :global(.glauser-storerlx-0-x-mensaje) {
+    background-color: var(--c-beige) !important;
+}
+
+:global(.glauser-storerlx-0-x-contacto_rolex) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-rlx_grid_column_full) {
+    grid-column: 2 / 14;
+}
+
+.watch-model-titleimg :global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a {
+    position: relative;
+}
+
+.watch-model-titleimg :global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a span {
+    position: absolute;
+    top: 10px;
+    margin-left: 10px;
+}
+
+.watch-model-titleimg :global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.watck-key-selling .accordion {
+    overflow: hidden;
+    border: 0px solid transparent !important;
+}
+
+.watck-key-selling .accordion-item {
+    border-bottom: 1px solid #ddd;
+    border: 0px solid transparent !important;
+    background-color: transparent !important;
+}
+
+.watck-key-selling .accordion-item :global(.glauser-storerlx-0-x-accordion_header) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    height: 80px;
+    border-top: 1px solid rgba(69, 44, 30, 0.2)
+}
+
+.watck-key-selling .accordion-item :global(.glauser-storerlx-0-x-accordion_header):last-child {
+    border-bottom: 1px solid rgba(69, 44, 30, 0.2)
+}
+
+.watck-key-selling :global(.glauser-storerlx-0-x-accordion_content) {
+    display: none;
+}
+
+.watck-key-selling :global(.glauser-storerlx-0-x-accordion_content) :global(.glauser-storerlx-0-x-active) {
+    display: block;
+}
+
+.watck-key-selling :global(.glauser-storerlx-0-x-accordion_header) :global(.glauser-storerlx-0-x-icon_acordion) {
+    font-size: 12px;
+}
+
+.galeria-models {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-models img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c-lightbeige);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) .lightbox :global(.glauser-storerlx-0-x-active) {
+    display: flex;
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) .lightbox-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 95%;
+    max-height: 85%;
+    position: relative;
+    padding: 0px 30px;
+    background-color: transparent;
+    -webkit-box-shadow: 0px 0px 00px 0 rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    line-height: 1.3;
+    border-radius: 50%;
+    background-color: var(--c-white);
+    color: var(--c-brown);
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.close-button:hover {
+    opacity: 1;
+    color: var(--c-green);
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) #lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--c-brown);
+    background-color: var(--c-white);
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 0.2;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    padding: 10px;
+    z-index: 10;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    min-height: 0px;
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) .nav-button:hover {
+    opacity: 1;
+    color: var(--c-green);
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) .prev-button {
+    left: -40px;
+}
+
+:global(.glauser-storerlx-0-x-rlx_html) .next-button {
+    right: -40px;
+}
+
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 20px;
+    height: 4px;
+    background-color: var(--c-grey);
+    margin: 0 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dot :global(.glauser-storerlx-0-x-active) {
+    background-color: var(--c-green);
+    width: 50px;
+}
+
+.galeria-models .span-3-1 {
+    grid-column: 2 / span 3;
+}
+
+.galeria-models .span-3-2 {
+    grid-column: 5 / span 3;
+}
+
+.galeria-models .span-3-3 {
+    grid-column: 8 / span 3;
+}
+
+.galeria-models .span-3-4 {
+    grid-column: 11 / span 3;
+}
+
+/* CONTACTO ROLEX */
+.listadistribuidores .rlx-watch .social-links-rolex-lista i {
+    margin-right: 20px;
+}
+
+:global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)i {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.lista-distribuidor-rolex .social-links-rolex-lista i svg g polygon,
+.lista-distribuidor-rolex .social-links-rolex-lista i svg g path {
+    fill: var(--c-brown);
+}
+
+.lista-distribuidor-rolex .social-links-rolex-lista a:hover i svg g polygon,
+.lista-distribuidor-rolex .social-links-rolex-lista a:hover i svg g path {
+    fill: var(--c-rolex-green);
+}
+
+:global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)i svg g polygon,
+:global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)i svg g path {
+    fill: var(--c-brown);
+}
+
+:global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)a:hover i svg g polygon,
+:global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)a:hover i svg g path {
+    fill: var(--c-rolex-green);
+}
+
+:global(.glauser-storerlx-0-x-social_links_rolex)i svg g polygon {
+    fill: #12784A;
+}
+
+:global(.glauser-storerlx-0-x-social_links_rolex)a:hover i svg g polygon {
+    fill: #ffffff;
+}
+
+.link-rolex {
+    color: #212121 !important;
+    text-decoration: none !important;
+    font-weight: bold;
+}
+
+.link-rolex:hover,
+.link-rolex:focus,
+.link-rolex:active {
+    color: #127749 !important;
+}
+
+.cierra-distribuidor {
+    float: right;
+    padding: 20px 10px;
+}
+
+.cierra-distribuidor .cierra-detail-distribuidor {
+    font-size: 16px;
+    cursor: pointer;
+    color: #212121;
+}
+
+#map {
+    height: 700px;
+    width: 100%;
+}
+
+#Mapa .detailed-distribuidor {
+    height: 700px;
+    position: absolute;
+    width: 410px;
+    z-index: 2;
+}
+
+:global(.glauser-storerlx-0-x-info_detail) {
+    height: 700px;
+}
+
+#Mapa .cerra-distribuidor {
+    transform: translateX(-367px);
+    transition-timing-function: linear;
+    transition-duration: 0.4s;
+    display: none;
+}
+
+#Mapa .aparecer-distribuidor {
+    transform: translateX(0px);
+    transition-timing-function: linear;
+    transition-duration: 0.4s;
+}
+
+.form-rolex-contacto .form-group {
+    margin-bottom: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+#Mapa .d-inline-block a {
+    display: inline-block !important;
+}
+
+.detailed-distribuidor img.img-sucursal-distribuidor {
+    object-fit: cover;
+    height: 239px;
+    width: 100%;
+    object-position: bottom;
+}
+
+.lista-distribuidor-rolex .rlx-watch .bg-gray-rolex {
+    padding: 10% 40px;
+}
+
+#map .gm-control-active {
+    color: #fff !important;
+    background-color: #212121 !important;
+}
+
+:global(.glauser-storerlx-0-x-address_store) span {
+    display: block;
+}
+
+.gmap-google {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.gmap-google {
+    height: 700px;
+    width: 100%;
+}
+
+.tab {
+    overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 2.5vw 0px 0px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #212121;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    color: #127749;
+}
+
+/* Create an active/current tablink class */
+.tab button :global(.glauser-storerlx-0-x-active) {
+    color: #127749;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 20px 0px;
+    border: 0px solid #ccc;
+    border-top: none;
+}
+
+.lista-distribuidor-rolex .rlx-watch :global(.glauser-storerlx-0-x-c_white_bg) {
+    background-color: var(--c-white);
+}
+
+.listadistribuidores :global(.glauser-storerlx-0-x-row_grid_fullw) {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 8px;
+}
+
+:global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-mapa_and_detail) {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 8px;
+}
+
+:global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-col_span_6_8_1) {
+    grid-column: 1 / span 8;
+}
+
+:global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-col_span_6_4_2) {
+    grid-column: 9 / span 4;
+}
+
+:global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) {
+    display: grid;
+    grid-template-columns: 8vw repeat(12, minmax(0, 1fr)) 8vw;
+    grid-gap: 8px;
+}
+
+:global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-col_span_6_8_1) {
+    grid-column: 2 / span 8;
+}
+
+:global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-col_span_6_4_2) {
+    grid-column: 10 / span 4;
+}
+
+:global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)a {
+    position: relative;
+}
+
+:global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)a span {
+    position: absolute;
+    top: 10px;
+}
+
+:global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-fas) {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.listadistribuidores address {
+    margin-bottom: 0px;
+}
+
+.listadistribuidores :global(.glauser-storerlx-0-x-address_store) span {
+    font-weight: 400 !important;
+}
+
+.listmap {
+    padding-bottom: 80px;
+}
+
+:global(.glauser-storerlx-0-x-info_detail) .py30-x20 {
+    background-color: var(--c-white);
+    padding: 15% 40px;
+}
+
+:global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-address_store) span {
+    font-weight: 400 !important;
+}
+
+:global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)a {
+    display: block;
+    color: var(--c-brown) !important;
+}
+
+:global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)a:hover,
+:global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)a:focus {
+    color: var(--c-rolex-green) !important;
+}
+
+:global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-info_detail) {
+    padding: 0px 10%;
+}
+
+:global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-address_store) {
+    padding: 20px 0px;
+}
+
+:global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-info_detail) {
+    display: flex;
+    align-items: center;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) {
+    line-height: 24px;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 0;
+    font-style: normal;
+    padding-bottom: 20px !important;
+    font-size: 16px;
+    min-width: 300px;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours_summary) {
+    z-index: 10000;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours_summary)::after {
+    content: "";
+    display: inline-block;
+    vertical-align: 3px;
+    width: 0;
+    height: 0;
+    margin-left: 12px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #818181;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) table tr th {
+    background-color: var(--c-beige);
+    text-transform: none;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) table tr:nth-child(2n) td {
+    background-color: var(--c-beige);
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) table {
+    display: none;
+    position: absolute;
+    top: 25px;
+    background-color: var(--c-beige);
+    border: 1px solid #efefef;
+    width: 400px;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) :global(.glauser-storerlx-0-x-is_open2) {
+    background-color: transparent;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) :global(.glauser-storerlx-0-x-is_open2) table {
+    display: table;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) table {
+    z-index: 10001;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) tr:first-child td::after {
+    content: "";
+    display: inline-block;
+    vertical-align: 3px;
+    width: 0;
+    height: 0;
+    margin-left: 12px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #818181;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) th:first-child {
+    padding: 15px 10px 10px 10px;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) th:last-child {
+    padding: 0px 10px 15px 10px;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) th {
+    text-align: left;
+    line-height: 24px;
+    font-weight: normal;
+    border: none;
+    padding: 0px 10px 10px 10px !important;
+    font-size: 16px;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) tr:first-child td {
+    padding: 15px 10px 10px 10px !important;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) th:last-child td {
+    padding: 0px 32px 15px 10px;
+}
+
+:global(.glauser-storerlx-0-x-rolex_retailer_openinghours) td {
+    text-align: right;
+    line-height: 24px;
+    border: none;
+    padding: 0px 32px 10px 10px !important;
+    font-size: 16px;
+}
+
+/* FORMULARIOS ROLEX */
+.formulario-rolex :global(.glauser-storerlx-0-x-col_formrlx) {
+    grid-column: 5 / span 6 !important;
+}
+
+:global(.glauser-storerlx-0-x-w_100) {
+    width: 100%;
+}
+
+:global(.glauser-storerlx-0-x-form_inputs) {
+    display: block;
+    box-sizing: border-box;
+}
+
+#formulario-rolex :global(.glauser-storerlx-0-x-form_inputs) :global(.glauser-storerlx-0-x-mensaje) {
+    background-color: var(--c-white);
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 6px;
+    height: 180px;
+    resize: vertical;
+}
+
+#formulario-rolex :global(.glauser-storerlx-0-x-form_inputs) :global(.glauser-storerlx-0-x-mensaje) :focus-visible {
+    outline: 2px solid var(--c-green);
+}
+
+#formulario-rolex :global(.glauser-storerlx-0-x-form_inputs) :global(.glauser-storerlx-0-x-mensaje) .p-30-40 {
+    padding: 40px;
+}
+
+#formulario-rolex :global(.glauser-storerlx-0-x-flex) {
+    display: flex;
+}
+
+#formulario-rolex :global(.glauser-storerlx-0-x-flex_col) {
+    flex-direction: column;
+}
+
+#formulario-rolex label :global(.glauser-storerlx-0-x-text_13px) {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.grid {
+    display: grid;
+}
+
+.md\:grid-cols-\[calc\(var\(--grid-col-unit\)\*2\)\2c 1fr\2c 1fr\] {
+    grid-template-columns: calc(var(--grid-col-unit)* 2) 1fr 1fr;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+    margin-bottom: 20px;
+}
+
+.gap-x-4 {
+    column-gap: 1rem;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+#formulario-rolex :global(.glauser-storerlx-0-x-datosperson) input,
+#formulario-rolex :global(.glauser-storerlx-0-x-datosperson) select {
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 2px solid var(--c-brown);
+    height: 40px;
+    font-weight: 700;
+    box-shadow: unset !important;
+    margin-bottom: 0px !important;
+}
+
+#formulario-rolex :global(.glauser-storerlx-0-x-datosperson) input:focus-visible,
+#formulario-rolex :global(.glauser-storerlx-0-x-datosperson) select:focus-visible {
+    outline: 2px solid var(--c-green);
+}
+
+.border-bottom {
+    border-bottom: 0px solid transparent !important;
+}
+
+#formulario-rolex input[type='checkbox']:checked:after,
+#formulario-rolex input[type='checkbox']:checked:begore {
+    background: var(--c-green) !important;
+}
+
+#formulario-rolex input[type=checkbox] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    outline: none !important;
+    content: none;
+}
+
+#formulario-rolex input[type=checkbox]:before {
+    content: "\002713";
+    font-size: 12px;
+    border-radius: 4px;
+    color: transparent !important;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d3d6db;
+    margin-right: 7px;
+    padding: 1px 3px !important;
+}
+
+#formulario-rolex label,
+#formulario-rolex legend {
+    font-weight: normal;
+}
+
+#formulario-rolex input[type=checkbox]:checked:before {
+    background: #127749;
+    color: rgba(255, 255, 255, 0.85) !important;
+    border: 2px solid #127749;
+    border-radius: 4px;
+}
+
+.max-md\:col-span-2 {
+    grid-column: span 2 / span 2;
+}
+
+:global(.glauser-storerlx-0-x-continuarBtn) {
+    cursor: pointer;
+}
+
+#formulario-rolex .hidden {
+    display: none;
+}
+
+#btnEnviar {
+    border: 0px solid transparent !important;
+    cursor: pointer !important;
+}
+
+#formulario-rolex .error {
+    color: red;
+}
+
+#terminos-error {
+    position: absolute;
+    margin-top: -14px;
+}
+
+.checkbox-wrapper-24 .checkbox {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.checkbox-wrapper-24 label {
+    display: inline-block;
+    color: var(--c-green);
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-wrapper-24 label span {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    transform-origin: center;
+    border: 2px solid var(--c-green);
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+}
+
+.checkbox-wrapper-24 label span:before {
+    content: "";
+    width: 0px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--c-green);
+    position: absolute;
+    transform: rotate(45deg);
+    top: 10px;
+    left: 6px;
+    transition: width 50ms ease 50ms;
+    transform-origin: 0% 0%;
+}
+
+.checkbox-wrapper-24 label span:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--c-green);
+    position: absolute;
+    transform: rotate(305deg);
+    top: 13px;
+    left: 8px;
+    transition: width 50ms ease;
+    transform-origin: 0% 0%;
+}
+
+.checkbox-wrapper-24 label:hover span:before {
+    width: 5px;
+    transition: width 100ms ease;
+}
+
+.checkbox-wrapper-24 label:hover span:after {
+    width: 10px;
+    transition: width 150ms ease 100ms;
+}
+
+.checkbox-wrapper-24 input[type=checkbox] {
+    display: none;
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label span {
+    background-color: var(--c-green);
+    transform: scale(1);
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label span:after {
+    width: 10px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label span:before {
+    width: 5px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label:hover span {
+    background-color: var(--c-green);
+    transform: scale(1);
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label:hover span:after {
+    width: 10px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label:hover span:before {
+    width: 5px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+
+.link-form {
+    color: var(--c-green);
+}
+
+.link-form:focus,
+.link-form:hover {
+    color: var(--c-dark);
+}
+
+
+
+/*  RESPONSIVE */
+/* Responsive MOBILE */
+@media only screen and (max-width: 767px) {
+    .swiper-fixed {
+        margin-top: 0px !important;
+    }
+
+    :global(.glauser-storerlx-0-x-py_20_30) {
+        padding: 20px 0px !important;
+    }
+
+    :global(.glauser-storerlx-0-x-py_90_60) {
+        padding: 60px 0px !important;
+    }
+
+    :global(.glauser-storerlx-0-x-pb_90_60) {
+        padding-bottom: 60px !important;
+    }
+
+    :global(.glauser-storerlx-0-x-pt_90_60) {
+        padding-top: 60px !important;
+    }
+
+    :global(.glauser-storerlx-0-x-pb_45_40) {
+        padding-bottom: 40px !important;
+    }
+
+    :global(.glauser-storerlx-0-x-pb_50_0) {
+        padding-bottom: 50px !important;
+    }
+
+    :global(.glauser-storerlx-0-x-pb_40_50) {
+        padding-bottom: 40px !important;
+    }
+
+    .pt-30-40 {
+        padding-top: 30px !important;
+    }
+
+    .pb-30-40 {
+        padding-bottom: 30px !important;
+    }
+
+    .pt-0-5vh {
+        padding-top: 0px !important;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(glauser-storerlx-0-x-row_grid) {
+        height: 80px
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_logo) {
+        grid-column: 1 / 5;
+    }
+
+    :global(.glauser-storerlx-0-x-placa_rolex_logo) img {
+        width: 100px;
+        height: 50px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_container) {
+        margin-right: 8%;
+        margin-left: 8%;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw) {
+        grid-template-columns: 7vw repeat(6, minmax(0, 1fr)) 8vw;
+    }
+
+    :global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) {
+        grid-template-columns: 7vw repeat(6, minmax(0, 1fr)) 8vw;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_grid_column_full) {
+        grid-column: 1/9;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_header_menu_top) {
+        grid-column: 12 / 12;
+    }
+
+    :global(.glauser-storerlx-0-x-toggle_menu_btn) {
+        display: block;
+    }
+
+    :global(.glauser-storerlx-0-x-btn_toggle) {
+        text-align: right;
+        grid-column: 5 / 8;
+        font-size: 16px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) nav :global(.glauser-storerlx-0-x-rlx_lg) {
+        display: block !important;
+        position: absolute;
+        width: 100%;
+        padding: 0;
+        left: 0;
+        top: -100em;
+        text-align: center;
+        z-index: -100;
+        opacity: 0;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) nav.rlx-lg.showme {
+        display: block !important;
+        position: absolute;
+        width: 100%;
+        padding: 0;
+        top: 217px;
+        text-align: center;
+        z-index: 4;
+        opacity: 1;
+        height: 100%;
+    }
+
+    :global(.glauser-storerlx-0-x-home_rlx) :global(.glauser-storerlx-0-x-rlx_menu) nav.rlx-lg.showme {
+        top: 172px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) ul {
+        background: var(--degradado-rlx);
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 30px 0px 30px;
+        height: 100%;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_page) ul.breadcrum-menu-list {
+        padding-top: 0px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) ul li a {
+        display: block !important;
+        padding: 0px 0px 35px 0px;
+    }
+
+    ul.breadcrum-menu-list li:global(.glauser-storerlx-0-x-none_mobil) {
+        display: none;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_column) {
+        grid-column: 1/ span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_column) ul li a {
+        padding: 0px 0px 0px 0px;
+    }
+
+    :global(.glauser-storerlx-0-x-breadcrum_page) ul.breadcrum-menu-list li:global(.glauser-storerlx-0-x-none_mobil) {
+        display: none !important;
+    }
+
+    :global(.glauser-storerlx-0-x-breadcrum_page) ul.breadcrum-menu-list li+li:before {
+        content: "\276E";
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_page) ul li a {
+        display: inline-block !important;
+    }
+
+    /* FOOTER */
+    :global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-rlxcrown) {
+        height: 120px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-rlxcrown) img {
+        height: 32px;
+        width: 32px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_footer) :global(.glauser-storerlx-0-x-back2top) {
+        height: 60px;
+    }
+
+    /* TEXTOS TAB/MOB */
+    .text-uppercase {
+        text-transform: uppercase !important;
+    }
+
+    :global(.glauser-storerlx-0-x-headline70) {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+
+    :global(.glauser-storerlx-0-x-headline50) {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    :global(.glauser-storerlx-0-x-headline36) {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    :global(.glauser-storerlx-0-x-headline30) {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    :global(.glauser-storerlx-0-x-headline26) {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    strong:global(.glauser-storerlx-0-x-body_24_bold),
+    :global(.glauser-storerlx-0-x-body_24_bold) {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .body-24-light {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.2;
+    }
+
+    strong.body-20-bold,
+    .body-20-bold {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+    :global(.glauser-storerlx-0-x-body_20_light) {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.6;
+    }
+
+    :global(.glauser-storerlx-0-x-body_20_light) strong {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.6;
+    }
+
+    strong:global(.glauser-storerlx-0-x-legend_16_bold),
+    :global(.glauser-storerlx-0-x-legend_16_bold) {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+
+    :global(.glauser-storerlx-0-x-legend_16_light) {
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 1.1;
+    }
+
+    .legend-14-bold {
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+
+    .fixed-22 {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+    :global(.glauser-storerlx-0-x-fixed_16) {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+    :global(.glauser-storerlx-0-x-fixed_14) {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+    .quote50 {
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 1.3;
+    }
+
+
+    /* COMPONENTE GENERALES  */
+    :global(.glauser-storerlx-0-x-text_introduccion) :global(.glauser-storerlx-0-x-col_lg_2_5) {
+        grid-column: 2/ span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-text_introduccion) :global(.glauser-storerlx-0-x-col_lg_8_5) {
+        grid-column: 2/ span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col) :global(.glauser-storerlx-0-x-col_lg_2_6) {
+        grid-column: 2/ span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col) :global(.glauser-storerlx-0-x-col_lg_8_6) {
+        grid-column: 2/ span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col) .watck-key-selling :global(.glauser-storerlx-0-x-col_lg_2_6) {
+        grid-column: 2/ span 6 !important;
+        order: 1;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col) .watck-key-selling .col-lg-9-6 {
+        grid-column: 2/ span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_video) .col-6-11-11 {
+        grid-column: 2 / span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_video) :global(.glauser-storerlx-0-x-col_6_12) {
+        grid-column: 2 / span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-col_text_center) {
+        grid-column: 2 / span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-dispmodel) :global(.glauser-storerlx-0-x-cuerpotextobg) {
+        grid-column: 2 / span 6 !important;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        background: var(--c-white);
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-dispmodel) .cuerpotextobeigebg {
+        grid-column: 2 / span 6 !important;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        background: var(--c-beige);
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-dispmodel) :global(.glauser-storerlx-0-x-cuerpotextobg) :global(.glauser-storerlx-0-x-col_text_center) {
+        grid-column: 1 / span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-image_center) :global(.glauser-storerlx-0-x-col_6_10) {
+        grid-column: 2 / span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col):global(.glauser-storerlx-0-x-col_6_2) {
+        grid-column: 2 / span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col) :global(.glauser-storerlx-0-x-col_6_6) {
+        grid-column: 2 / span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col) :global(.glauser-storerlx-0-x-col_6_10) {
+        grid-column: 2 / span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_span_2_1) {
+        grid-column: 2 / span 3;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_span_2_2) {
+        grid-column: 5 / span 3;
+    }
+
+    .listadistribuidores :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_span_2_1) {
+        grid-column: 1 / span 6;
+    }
+
+    .listadistribuidores :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_span_2_2) {
+        grid-column: 1 / span 6;
+    }
+
+    .banner-text-absolute :global(.glauser-storerlx-0-x-col_6_2) {
+        grid-column: 2 / span 6;
+    }
+
+    .banner-text-absolute .col-6-8 {
+        grid-column: 2 / span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-slider_image_6_12) {
+        grid-column: 1 / span 8;
+    }
+
+    :global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) .banner-text-absolute1 {
+        grid-column: 2 / span 6;
+        position: absolute;
+        top: 80%;
+        transform: translateY(-80%);
+        z-index: 10;
+    }
+
+    :global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-banner_text_absolute2) {
+        grid-column: 2 / span 6;
+        position: absolute;
+        top: 80%;
+        transform: translateY(-80%);
+        z-index: 10;
+    }
+
+    .watch-caracteristicas .col-3-5-3-1 {
+        grid-column: 1 / span 3;
+    }
+
+    .watch-caracteristicas .col-3-5-3-2 {
+        grid-column: 4 / span 3;
+    }
+
+    .watch-caracteristicas .col-3-5-3-3 {
+        grid-column: 1 / span 6;
+    }
+
+    .watch-caracteristicas .col-3-5-3-3 .list-especification-model-rlx {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 8px;
+    }
+
+    .watch-caracteristicas .col-6-6-5-3 {
+        grid-column: 2 / span 6;
+    }
+
+    .watch-caracteristicas .col-6-12-7 {
+        grid-column: 1 / span 6;
+    }
+
+    .watch-caracteristicas .row-grid-6-12-7 {
+        grid-column: 2 / span 6 !important;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 6px;
+    }
+
+    .order-1-mob {
+        order: -1;
+    }
+
+    .watch-model-titleimg .col-6-4-3 {
+        grid-column: 2 / span 6;
+    }
+
+    .watch-model-titleimg .col-6-6-4 {
+        grid-column: 2 / span 6;
+    }
+
+    .reloes-componet-2-3 .col-span3-1 {
+        grid-column: 2 / span 3;
+    }
+
+    .reloes-componet-2-3 .col-span3-2 {
+        grid-column: 5 / span 3;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-mapa_and_detail) {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-gap: 6px;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-col_span_6_8_1) {
+        grid-column: 2 / span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-mapa_and_detail) .col-span-6-8-2 {
+        grid-column: 2 / span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-dispmodel) .pb-40-60 {
+        padding-bottom: 40px;
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotextobg) :global(.glauser-storerlx-0-x-col_text_center) :global(.glauser-storerlx-0-x-px_20) {
+        padding: 0px 20px;
+    }
+
+    .rlx-padding-indv {
+        padding: 0px 20px 30px 20px;
+    }
+
+    /* EXPLORE MAS */
+    :global(.glauser-storerlx-0-x-swiper_button_next),
+    :global(.glauser-storerlx-0-x-swiper_button_prev) {
+        display: none !important;
+    }
+
+    #Mapa .detailed-distribuidor {
+        height: 240px;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        bottom: 0;
+    }
+
+    /* CONTACTO */
+    .watch-model-titleimg :global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a {
+        display: inline-block;
+    }
+
+    .watch-model-titleimg :global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a :global(.glauser-storerlx-0-x-text_mapita) {
+        display: none;
+    }
+
+    .watch-model-titleimg :global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex) {
+        text-align: center;
+    }
+
+    .watch-model-titleimg :global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a {
+        font-size: 12px;
+    }
+
+    .watch-model-titleimg :global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)i {
+        margin-right: 20px;
+    }
+
+    :global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)a {
+        display: inline-block;
+    }
+
+    :global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex)a :global(.glauser-storerlx-0-x-text_mapita) {
+        display: none;
+    }
+
+    :global(.glauser-storerlx-0-x-info_detail) :global(.glauser-storerlx-0-x-social_links_rolex) {
+        text-align: center;
+    }
+
+    :global(.glauser-storerlx-0-x-info_detail) .img-sucursal-distribuidor {
+        display: none;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-col_span_6_8_1) {
+        grid-column: 1 / span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-col_span_6_4_2) {
+        grid-column: 1 / span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-info_detail) {
+        height: auto;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) {
+        grid-template-columns: 7vw repeat(6, minmax(0, 1fr)) 8vw;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-col_span_6_8_1) {
+        grid-column: 2 / span 6;
+        order: 1;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-col_span_6_4_2) {
+        grid-column: 2 / span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-info_detail) {
+        height: auto;
+    }
+
+    :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-info_detail) {
+        padding: 0px 10%;
+    }
+
+    :global(.glauser-storerlx-0-x-row_grid_fullw)-container :global(.glauser-storerlx-0-x-mapa_and_detail) :global(.glauser-storerlx-0-x-info_detail) {
+        padding: 40px 10%;
+    }
+
+    .gmap-google {
+        height: 400px;
+    }
+
+    /* FORMULARIOS ROLEX */
+    .formulario-rolex :global(.glauser-storerlx-0-x-col_formrlx) {
+        grid-column: 2 / span 6 !important;
+    }
+
+    .max-md\:col-start-1 {
+        grid-column-start: 1;
+    }
+
+    .max-md\:row-start-2 {
+        grid-row-start: 2;
+    }
+
+    :global(.glauser-storerlx-0-x-contacto_rolex) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-rlx_grid_column_full) {
+        grid-column: 2 / 8;
+    }
+
+    :global(.glauser-storerlx-0-x-rolex_retailer_openinghours) table {
+        width: 280px;
+    }
+
+    .watck-key-selling .accordion {
+        padding-top: 30px;
+    }
+
+    .watck-key-selling :global(.glauser-storerlx-0-x-accordion_header) {
+        height: 60px !important;
+    }
+
+    :global(.glauser-storerlx-0-x-c_lightbeige_bg).c-beige-mobile {
+        background-color: var(--c-beige);
+    }
+
+    .d-none-md {
+        display: none;
+    }
+
+    .swiper.swiper-container-mobile {
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper-container-mobile :global(.glauser-storerlx-0-x-swiper_slide) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-container-mobile :global(.glauser-storerlx-0-x-swiper_slide) img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        height: 450px;
+        object-fit: contain;
+    }
+
+    .swiper-container-mobile .swiper-pagination-model {
+        text-align: center !important;
+        position: absolute;
+        transition: .3s opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 10;
+    }
+
+    .swiper-container-mobile :global(.glauser-storerlx-0-x-swiper_pagination_bullets) {
+        border-radius: 0;
+        width: 25px;
+        height: 4px;
+        color: var(--c-grey);
+        text-align: center !important;
+        margin: 0px 12px;
+    }
+
+    .swiper-container-mobile :global(.glauser-storerlx-0-x-swiper_pagination_bullet_active) {
+        width: 40px;
+        background-color: var(--c-green) !important;
+    }
+
+}
+
+/* Responsive TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    :global(.glauser-storerlx-0-x-py_90_60) {
+        padding: 60px 0px;
+    }
+
+    :global(.glauser-storerlx-0-x-pb_90_60) {
+        padding-bottom: 60px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-row_grid) {
+        height: 100px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_logo) {
+        grid-column: 1 / 1;
+    }
+
+    :global(.glauser-storerlx-0-x-placa_rolex_logo) img {
+        width: 120px;
+        max-width: 120px;
+        height: 60px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_container) {
+        margin-right: 8%;
+        margin-left: 8%;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_header_menu_top) {
+        grid-column: 1 / 13;
+    }
+
+    :global(.glauser-storerlx-0-x-toggle_menu_btn) {
+        display: block;
+    }
+
+    :global(.glauser-storerlx-0-x-btn_toggle) {
+        text-align: right;
+        grid-column: 4 / 13;
+        font-size: 16px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) ul {
+        background: var(--degradado-rlx);
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) ul li a {
+        display: block !important;
+        padding: 0px 0px 25px 0px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) nav.rlx-lg {
+        display: block !important;
+        position: absolute;
+        width: 100%;
+        padding: 0;
+        left: 0;
+        top: -100em;
+        text-align: center;
+        z-index: -100;
+        opacity: 0;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) nav.rlx-lg.showme {
+        display: block !important;
+        position: absolute;
+        width: 100%;
+        padding: 0;
+        top: 268px;
+        text-align: center;
+        z-index: 4;
+        opacity: 1;
+    }
+
+    :global(.glauser-storerlx-0-x-home_rlx) :global(.glauser-storerlx-0-x-rlx_menu) nav.rlx-lg.showme {
+        top: 228px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_column) {
+        grid-column: 1/ span 8;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_page) ul.breadcrum-menu-list {
+        padding-top: 0px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_column) ul li a {
+        padding: 0px 0px 0px 0px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_page) ul li a {
+        display: inline-block !important;
+    }
+
+
+    /* TEXTOS TAB/MOB */
+    .text-uppercase {
+        text-transform: uppercase !important;
+    }
+
+    :global(.glauser-storerlx-0-x-headline70) {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+
+    :global(.glauser-storerlx-0-x-headline50) {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    :global(.glauser-storerlx-0-x-headline36) {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    :global(.glauser-storerlx-0-x-headline30) {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    :global(.glauser-storerlx-0-x-headline26) {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    strong:global(.glauser-storerlx-0-x-body_24_bold),
+    :global(.glauser-storerlx-0-x-body_24_bold) {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .body-24-light {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.2;
+    }
+
+    strong.body-20-bold,
+    .body-20-bold {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+    :global(.glauser-storerlx-0-x-body_20_light) {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.6;
+    }
+
+    :global(.glauser-storerlx-0-x-body_20_light) strong {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.6;
+    }
+
+    strong:global(.glauser-storerlx-0-x-legend_16_bold),
+    :global(.glauser-storerlx-0-x-legend_16_bold) {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+
+    :global(.glauser-storerlx-0-x-legend_16_light) {
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 1.1;
+    }
+
+    .legend-14-bold {
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+
+    .fixed-22 {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+    :global(.glauser-storerlx-0-x-fixed_16) {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+    :global(.glauser-storerlx-0-x-fixed_14) {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+    .quote50 {
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 1.6;
+    }
+
+    /* COMPONENTE GENERALES  */
+    :global(.glauser-storerlx-0-x-text_introduccion) :global(.glauser-storerlx-0-x-col_lg_2_5) {
+        grid-column: 2/ span 9 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-text_introduccion) :global(.glauser-storerlx-0-x-col_lg_8_5) {
+        grid-column: 2/ span 12 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col) :global(.glauser-storerlx-0-x-col_lg_2_6) {
+        grid-column: 2/ span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col) :global(.glauser-storerlx-0-x-col_lg_8_6) {
+        grid-column: 8/ span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col).watck-key-selling :global(.glauser-storerlx-0-x-col_lg_2_6) {
+        grid-column: 2/ span 12 !important;
+        order: 1;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col).watck-key-selling .col-lg-9-6 {
+        grid-column: 2/ span 12 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-col_text_center) {
+        grid-column: 4 / span 8 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-dispmodel) :global(.glauser-storerlx-0-x-cuerpotextobg) {
+        grid-column: 2 / span 12 !important;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        background: var(--c-white);
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-dispmodel) .cuerpotextobeigebg {
+        grid-column: 2 / span 12 !important;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        background: var(--c-beige);
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-dispmodel) :global(.glauser-storerlx-0-x-cuerpotextobg) :global(.glauser-storerlx-0-x-col_text_center) {
+        grid-column: 3 / span 8 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_2) {
+        grid-column: 2 / span 4 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_6) {
+        grid-column: 6 / span 4;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_10) {
+        grid-column: 10 / span 4;
+    }
+
+    .listadistribuidores :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_2) {
+        grid-column: 1 / span 4;
+    }
+
+    .listadistribuidores :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_6) {
+        grid-column: 4 / span 4;
+    }
+
+    .listadistribuidores :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_10) {
+        grid-column: 7 / span 4;
+    }
+
+    .watch-caracteristicas .col-3-5-3-1 {
+        grid-column: 1 / span 3;
+    }
+
+    .watch-caracteristicas .col-3-5-3-2 {
+        grid-column: 5 / span 3;
+    }
+
+    .watch-caracteristicas .col-3-5-3-3 {
+        grid-column: 9 / span 3;
+    }
+
+    .watch-caracteristicas .col-3-5-3-3 .list-especification-model-rlx {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .watch-caracteristicas .col-6-6-5-3 {
+        grid-column: 4 / span 7;
+    }
+
+    .watch-caracteristicas .col-6-12-7 {
+        grid-column: 1 / span 12;
+    }
+
+    .watch-caracteristicas .row-grid-6-12-7 {
+        grid-column: 2 / span 12 !important;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 8px;
+    }
+
+    .watch-model-titleimg .col-6-4-3 {
+        grid-column: 2 / span 4;
+    }
+
+    .watch-model-titleimg .col-6-6-4 {
+        grid-column: 6 / span 5;
+    }
+
+    .watch-model-titleimg .order-1-mob {
+        order: 0;
+    }
+
+    .order-1-mob {
+        order: -1;
+    }
+
+    .reloes-componet-2-3 .col-md-span4-1 {
+        grid-column: 2 / span 4;
+    }
+
+    .reloes-componet-2-3 .col-md-span4-2 {
+        grid-column: 6 / span 4;
+    }
+
+    .reloes-componet-2-3 .col-md-span4-3 {
+        grid-column: 10 / span 4;
+    }
+
+    .reloes-componet-2-3 .watch-ind img {
+        width: 70% !important;
+    }
+
+    .rlx-padding-indv {
+        padding: 0px 30px 50px 30px;
+    }
+
+    .watch-model-titleimg :global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a {
+        width: 49%;
+    }
+
+
+}
+
+/* Responsive dDESKTOP */
+@media only screen and (min-width: 1025px) {
+    :global(.glauser-storerlx-0-x-rlx_sm) {
+        display: none !important;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_lg) {
+        display: block !important;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-row_grid) {
+        height: 110px
+    }
+
+    :global(.glauser-storerlx-0-x-placa_rolex_logo) img {
+        width: 120px;
+        height: 60px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_container) {
+        margin-right: 8%;
+        margin-left: 8%;
+    }
+
+    /*.rlx-container {  margin-right: 8%; margin-left: 8%; }*/
+    :global(.glauser-storerlx-0-x-rlx_header_menu_top) :global(.glauser-storerlx-0-x-menu_list_rolex) {
+        text-align: right;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-menu_list_rolex) li {
+        display: inline-block !important;
+        padding: 0px 2.5vw 0px 0px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-menu_list_rolex) li:last-child {
+        padding: 0px 0px 0px 0px;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_menu) :global(.glauser-storerlx-0-x-breadcrum_column) {
+        grid-column: 1/ span 6;
+    }
+
+    :global(.glauser-storerlx-0-x-rlx_header_menu_top) .nav-link {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    /*:global(.glauser-storerlx-0-x-rlx_header_menu_top) .nav-link:last-child { padding: 0px 0px 0px 0px; }*/
+
+    /* COMPONENTE GENERALES  */
+    :global(.glauser-storerlx-0-x-text_introduccion) :global(.glauser-storerlx-0-x-col_lg_2_5) {
+        grid-column: 2/ span 5 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-text_introduccion) :global(.glauser-storerlx-0-x-col_lg_8_5) {
+        grid-column: 8/ span 5 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col) :global(.glauser-storerlx-0-x-col_lg_2_6) {
+        grid-column: 2 / span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col) :global(.glauser-storerlx-0-x-col_lg_8_6) {
+        grid-column: 8 / span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col).watck-key-selling :global(.glauser-storerlx-0-x-col_lg_2_6) {
+        grid-column: 2 / span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_2_col).watck-key-selling .col-lg-9-6 {
+        grid-column: 9 / span 5 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-col_text_center) {
+        grid-column: 5 / span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-dispmodel) :global(.glauser-storerlx-0-x-cuerpotextobg) {
+        grid-column: 2 / span 12 !important;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        background: var(--c-white);
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-dispmodel) .cuerpotextobeigebg {
+        grid-column: 2 / span 12 !important;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        background: var(--c-beige);
+    }
+
+    :global(.glauser-storerlx-0-x-cuerpotexto) :global(.glauser-storerlx-0-x-dispmodel) :global(.glauser-storerlx-0-x-cuerpotextobg) :global(.glauser-storerlx-0-x-col_text_center) {
+        grid-column: 4 / span 6 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_2) {
+        grid-column: 2 / span 4 !important;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_6) {
+        grid-column: 6 / span 4;
+    }
+
+    :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_10) {
+        grid-column: 10 / span 4;
+    }
+
+    .listadistribuidores :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_2) {
+        grid-column: 1 / span 3;
+    }
+
+    .listadistribuidores :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_6) {
+        grid-column: 4 / span 3;
+    }
+
+    .listadistribuidores :global(.glauser-storerlx-0-x-component_3_col_2) :global(.glauser-storerlx-0-x-col_6_10) {
+        grid-column: 7 / span 3;
+    }
+
+    .watch-caracteristicas .col-3-5-3-1 {
+        grid-column: 2 / span 2;
+    }
+
+    .watch-caracteristicas .col-3-5-3-2 {
+        grid-column: 5 / span 2;
+    }
+
+    .watch-caracteristicas .col-3-5-3-3 {
+        grid-column: 8 / span 2;
+    }
+
+    .watch-caracteristicas .col-3-5-3-3 .list-especification-model-rlx {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .watch-caracteristicas .col-6-6-5-3 {
+        grid-column: 9 / span 5;
+    }
+
+    .watch-caracteristicas .col-6-12-7 {
+        grid-column: 2 / span 10;
+    }
+
+    .watch-caracteristicas .row-grid-6-12-7 {
+        grid-column: 2 / span 7 !important;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 8px;
+    }
+
+    .watch-model-titleimg .col-6-4-3 {
+        grid-column: 2 / span 3;
+    }
+
+    .watch-model-titleimg .col-6-6-4 {
+        grid-column: 6 / span 4;
+    }
+
+    .reloes-componet-2-3 .col-md-span4-1 {
+        grid-column: 4 / span 3;
+    }
+
+    .reloes-componet-2-3 .col-md-span4-2 {
+        grid-column: 7 / span 3;
+    }
+
+    .reloes-componet-2-3 .col-md-span4-3 {
+        grid-column: 10 / span 3;
+    }
+
+    .reloes-componet-2-3 .watch-ind img {
+        width: 70% !important;
+    }
+
+    .rlx-padding-indv {
+        padding: 0px 50px 50px 50px;
+    }
+
+    .watch-model-titleimg :global(.glauser-storerlx-0-x-info_detail)ed :global(.glauser-storerlx-0-x-social_links_rolex)a {
+        width: 49%;
+    }
+
+
+
+}

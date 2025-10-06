@@ -10,7 +10,7 @@ import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
 import Footer from '../../../../components/parts/Footer';
 
 import { useCssHandles } from 'vtex.css-handles';
-import '../../../main-style.css';
+import "../../../../main-style.css";
 
 const CSS_HANDLES = [
     'headercomponent', 'rlx_html', 'home_rlx', 'rlx_menu', 'rlx_container', 'row_grid', 'rlx_logo', 'placa_rolex_logo',

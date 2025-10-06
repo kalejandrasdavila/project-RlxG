@@ -10,7 +10,7 @@ import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
 
 import Footer from '../../../../components/parts/Footer';
 
-import '../../../../main-style.css';
+import "../../../../main-style.css";
 
 const M127285TBR0002: React.FC = () => {
 

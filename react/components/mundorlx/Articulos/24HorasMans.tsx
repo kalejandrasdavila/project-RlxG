@@ -4,7 +4,7 @@ import useInitScripts from '../../hooks/useInitScripts';
 import RlxExploreMasNModels from "../../parts/RlxExploreMas";
 import NavM from "../../parts/NavModels";
 import Footer from '../../parts/Footer';
-import '../../../main-style.css';
+import "../../../main-style.css";
 
 const HorasMans: React.FC = () => {
     useInitScripts();

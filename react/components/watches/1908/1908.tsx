@@ -4,7 +4,7 @@ import useInitScripts from '../../../components/hooks/useInitScripts';
 import RlxExploreMasNModels from '../../../components/parts/RlxExploreMasNModels';
 import NavM from '../../../components/parts/NavModels';
 import Footer from '../../../components/parts/Footer';
-import '../../../main-style.css';
+import "../../../main-style.css";
 
 
 

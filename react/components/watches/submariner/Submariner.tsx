@@ -2,7 +2,7 @@
 import { Helmet } from "react-helmet-async";
 import { useCssHandles } from 'vtex.css-handles';
 import useInitScripts from '../../../components/hooks/useInitScripts';
-import '../../../main-style.css';
+import "../../../main-style.css";
 import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
 
 import NavM from "../../../components/parts/NavModels";

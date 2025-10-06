@@ -1,7 +1,7 @@
 import React from "react";
 import useInitScripts from '../../../components/hooks/useInitScripts';
 import { useCssHandles } from 'vtex.css-handles';
-import '../../../main-style.css';
+import "../../../main-style.css";
 import { Helmet } from "react-helmet-async";
 import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
 

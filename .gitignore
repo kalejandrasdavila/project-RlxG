@@ -39,3 +39,13 @@ yarn.lock
 lerna-debug.log
 yarn-error.log
 *.orig
+
+# Test files and directories
+**/__tests__/
+**/*.test.*
+**/*.spec.*
+**/coverage/
+**/test-report.json
+**/test-runner.js
+**/jest.config.js
+**/src/setupTests.ts

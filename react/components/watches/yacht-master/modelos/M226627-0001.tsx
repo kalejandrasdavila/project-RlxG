@@ -11,7 +11,7 @@ import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
 import SectionYachtMaster from "../../../parts/SectionYachtMaster";
 import Footer from '../../../../components/parts/Footer';
 
-import '../../../../main-style.css';
+import "../../../../main-style.css";
 
 const M2266270001: React.FC = () => {
 
