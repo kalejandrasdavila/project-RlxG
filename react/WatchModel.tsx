@@ -13,13 +13,20 @@ const getModelComponent = async (collection: string, model: string) => {
     try {
         // Convertir el modelo a PascalCase para el nombre del componente
         const modelFileName = model.toUpperCase().replace(/-/g, '');
-        const path = `./components/watches/${collection}/modelos/${modelFileName}`;
+        
+        console.log(`Intentando importar modelo: ${model} de colección: ${collection}`);
 
-        console.log(`Intentando importar: ${path}`);
-
-        // Importar dinámicamente el componente
-        const module = await import(path);
-        return module.default;
+        // Importar dinámicamente usando require.context para evitar el warning de webpack
+        const context = require.context('./components/watches', true, /\.tsx$/);
+        const modulePath = `./${collection}/modelos/${modelFileName}.tsx`;
+        
+        if (context.keys().includes(modulePath)) {
+            const module = context(modulePath);
+            return module.default;
+        } else {
+            console.warn(`No se encontró el componente: ${modulePath}`);
+            return null;
+        }
     } catch (error) {
         console.error(`Error importando modelo ${model} de colección ${collection}:`, error);
         return null;
