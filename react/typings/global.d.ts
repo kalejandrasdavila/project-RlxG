@@ -4,17 +4,26 @@ declare global {
     __RENDER_8_SESSION__?: any;
     __RUNTIME__?: any;
 
+    // Adobe Satellite
     _satelliteLoaded?: boolean;
     _satellite?: {
-      pageBottom: () => void;
-      track: (eventName: string, data?: any) => void;
+      pageBottom?: () => void;
+      track?: (eventName: string, data?: any) => void;
     };
     _satelliteBackup?: {
-      pageBottom: () => void;
-      track: (eventName: string, data?: any) => void;
+      pageBottom?: () => void;
+      track?: (eventName: string, data?: any) => void;
     };
 
+    // Swiper
+    Swiper?: any;
+
+    // jQuery
+    $?: any;
+
+    // Custom functions
     showhideprice: () => void;
+    toggleMenu?: () => void;
   }
 }
 

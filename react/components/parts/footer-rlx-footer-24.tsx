@@ -5,10 +5,6 @@ import 'swiper/css';
 declare global {
   interface Window {
     toggleMenu?: () => void;
-    _satellite?: {
-      pageBottom?: () => void;
-      track?: (event: string) => void;
-    };
   }
 }
 

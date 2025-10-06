@@ -1,14 +1,66 @@
-import { Swiper } from "swiper";
-import $ from "jquery";
 import { useEffect } from "react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/swiper-bundle.css";
 
-// Configuración de Swiper v8+
-const swiperConfig = {
-    modules: [Navigation, Pagination],
-    navigation: true,
-    pagination: true,
+// Los tipos globales están definidos en typings/global.d.ts
+// Actualizado para usar Swiper core en lugar de bundle
+
+// Importación dinámica para reducir el bundle size
+const loadSwiper = async () => {
+    if (typeof window !== 'undefined' && !window.Swiper) {
+        try {
+            // Usar Swiper core (más liviano que el bundle)
+            const swiperModule = await import('swiper');
+            const Swiper = swiperModule.default || swiperModule.Swiper;
+
+            // Importar solo los módulos necesarios
+            let Navigation = null;
+            let Pagination = null;
+
+            try {
+                const modulesModule = await import('swiper/modules');
+                Navigation = modulesModule.Navigation || {};
+                Pagination = modulesModule.Pagination || {};
+            } catch (moduleError) {
+                console.warn('Could not load Swiper modules, using basic functionality');
+                Navigation = {};
+                Pagination = {};
+            }
+
+            // Asignar Swiper al window para uso global
+            window.Swiper = Swiper;
+
+            // Cargar CSS de forma manual si es necesario
+            if (!document.querySelector('link[href*="swiper"]')) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+                document.head.appendChild(link);
+            }
+
+            return {
+                Swiper,
+                Navigation,
+                Pagination
+            };
+        } catch (error) {
+            console.error('Error loading Swiper:', error);
+            console.warn('Fallback: Using CDN version');
+            return null;
+        }
+    }
+    return {
+        Swiper: window.Swiper,
+        Navigation: null,
+        Pagination: null
+    };
+};
+
+const loadJQuery = async () => {
+    if (typeof window !== 'undefined' && !window.$) {
+        const $ = await import('jquery');
+        window.$ = $.default;
+        return $.default;
+    }
+    return window.$;
 };
 
 const useInitScripts = () => {
@@ -42,13 +94,16 @@ const useInitScripts = () => {
         }, 2000);
 
         // === Toggle Nav ===
-        if ($) {
-            $(document)
-                .off("click", "a.rlx-sm.btn-toggle")
-                .on("click", "a.rlx-sm.btn-toggle", function () {
-                    $("nav.rlx-header-menu-top").toggleClass("showme");
-                });
-        }
+        const initToggleNav = async () => {
+            const $ = await loadJQuery();
+            if ($) {
+                $(document)
+                    .off("click", "a.rlx-sm.btn-toggle")
+                    .on("click", "a.rlx-sm.btn-toggle", function () {
+                        $("nav.rlx-header-menu-top").toggleClass("showme");
+                    });
+            }
+        };
 
         // === Volver Arriba ===
         const btnVolverArriba = document.getElementById("btnVolverArriba");
@@ -79,11 +134,15 @@ const useInitScripts = () => {
         }
 
         // === Swiper Principal y Footer ===
-        const initializeSwiper = () => {
+        const initializeSwiper = async () => {
+            const swiperData = await loadSwiper();
+            if (!swiperData || !swiperData.Swiper) return;
+
+            const { Swiper, Navigation, Pagination } = swiperData;
             const sliderPrincipal = document.querySelector(".slider-home-principal") as HTMLElement;
             const sliderFooter = document.querySelector(".exploremas") as HTMLElement;
 
-            const updateNavigationButtons = (swiperInstance: Swiper) => {
+            const updateNavigationButtons = (swiperInstance: any) => {
                 const currentIndex = swiperInstance.activeIndex;
                 const totalSlides = swiperInstance.slides.length;
                 const nextButton = document.querySelector(".principal-next") as HTMLElement;
@@ -99,7 +158,7 @@ const useInitScripts = () => {
 
             if (sliderPrincipal) {
                 new Swiper(sliderPrincipal, {
-                    modules: [Navigation],
+                    modules: [Navigation, Pagination],
                     pagination: {
                         el: ".swiper-pagination-home",
                         clickable: true,
@@ -110,15 +169,15 @@ const useInitScripts = () => {
                     },
                     loop: false,
                     on: {
-                        init: (swiper: Swiper) => updateNavigationButtons(swiper),
-                        slideChange: (swiper: Swiper) => updateNavigationButtons(swiper),
+                        init: (swiper: any) => updateNavigationButtons(swiper),
+                        slideChange: (swiper: any) => updateNavigationButtons(swiper),
                     },
                 });
             }
 
             if (sliderFooter) {
                 new Swiper(sliderFooter, {
-                    modules: [Pagination],
+                    modules: [Navigation, Pagination],
                     slidesPerView: 4,
                     spaceBetween: 8,
                     slidesPerGroup: 4,
@@ -150,11 +209,17 @@ const useInitScripts = () => {
         };
 
         // === Swiper Mobile ===
-        let swiperMobile: Swiper | null = null;
-        const initMobileSwiper = () => {
+        let swiperMobile: any = null;
+        const initMobileSwiper = async () => {
+            const swiperData = await loadSwiper();
+            if (!swiperData || !swiperData.Swiper) return;
+
+            const { Swiper, Navigation, Pagination } = swiperData;
             const container = document.querySelector(".swiper-container-mobile") as HTMLElement;
+
             if (window.innerWidth <= 767 && container && !swiperMobile) {
                 swiperMobile = new Swiper(container, {
+                    modules: [Navigation, Pagination],
                     slidesPerView: 1,
                     loop: false,
                     pagination: {
@@ -166,7 +231,7 @@ const useInitScripts = () => {
                         prevEl: ".swiper-button-model-prev",
                     },
                     on: {
-                        init(swiper: Swiper) {
+                        init(swiper: any) {
                             swiper.update();
                         },
                     },
@@ -178,20 +243,23 @@ const useInitScripts = () => {
         };
 
         // === Accordion ===
-        if ($) {
-            $(document)
-                .off("click", ".accordion-header")
-                .on("click", ".accordion-header", function () {
-                    const $header = $(this);
-                    $(".accordion-content").not($header.next()).removeClass("active");
-                    $(".accordion-header span:last-child").text("+");
-                    const content = $header.next();
-                    const icon = $header.find("span:last-child");
-                    const isActive = content.hasClass("active");
-                    content.toggleClass("active");
-                    icon.text(isActive ? "+" : "–");
-                });
-        }
+        const initAccordion = async () => {
+            const $ = await loadJQuery();
+            if ($) {
+                $(document)
+                    .off("click", ".accordion-header")
+                    .on("click", ".accordion-header", function () {
+                        const $header = $(this);
+                        $(".accordion-content").not($header.next()).removeClass("active");
+                        $(".accordion-header span:last-child").text("+");
+                        const content = $header.next();
+                        const icon = $header.find("span:last-child");
+                        const isActive = content.hasClass("active");
+                        content.toggleClass("active");
+                        icon.text(isActive ? "+" : "–");
+                    });
+            }
+        };
 
         // === Lightbox ===
         const galleryImages = Array.from(document.querySelectorAll<HTMLImageElement>(".galeria-models img"));
@@ -293,9 +361,15 @@ const useInitScripts = () => {
             icon.addEventListener("click", handleShowHidePrice);
         });
 
-        // === Wait y resize ===
-        waitForSlides();
-        initMobileSwiper();
+        // === Inicialización ===
+        const initializeAll = async () => {
+            await initToggleNav();
+            await initAccordion();
+            waitForSlides();
+            await initMobileSwiper();
+        };
+
+        initializeAll();
         window.addEventListener("resize", initMobileSwiper);
 
         // === Satellite download tracking ===
