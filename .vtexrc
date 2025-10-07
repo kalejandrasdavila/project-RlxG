@@ -1,0 +1,21 @@
+{
+    "workspaces": {
+        "react": {
+            "preinstall": "node vtex-no-workers-browser.js",
+            "postinstall": "node vtex-no-workers-browser.js"
+        }
+    },
+    "env": {
+        "UV_THREADPOOL_SIZE": "1",
+        "NODE_OPTIONS": "--max-old-space-size=6144 --no-warnings",
+        "NODE_NO_WARNINGS": "1",
+        "WORKERPOOL_DISABLED": "true",
+        "VTEX_DISABLE_WORKERS": "true"
+    },
+    "builders": {
+        "react": {
+            "timeout": 600,
+            "maxMemory": "6144m"
+        }
+    }
+}

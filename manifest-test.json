@@ -1,0 +1,26 @@
+{
+    "vendor": "glauser",
+    "name": "storerlx",
+    "version": "0.0.7",
+    "title": "rlx_store_test",
+    "description": "rlx test version",
+    "builders": {
+        "react": "3.x"
+    },
+    "builderOptions": {
+        "react": {
+            "enableTypeScript": true,
+            "enableESLint": false,
+            "enableSass": false
+        }
+    },
+    "registries": [
+        "react"
+    ],
+    "dependencies": {
+        "vtex.store": "2.x",
+        "vtex.css-handles": "0.x",
+        "vtex.render-runtime": "8.x"
+    },
+    "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

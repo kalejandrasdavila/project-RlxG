@@ -1,401 +1,95 @@
 import { useEffect } from "react";
 
-// Los tipos globales están definidos en typings/global.d.ts
-// Actualizado para usar Swiper core en lugar de bundle
-
-// Importación dinámica para reducir el bundle size
-const loadSwiper = async () => {
-    if (typeof window !== 'undefined' && !window.Swiper) {
-        try {
-            // Usar Swiper core (más liviano que el bundle)
-            const swiperModule = await import('swiper');
-            const Swiper = swiperModule.default || swiperModule.Swiper;
-
-            // Importar solo los módulos necesarios
-            let Navigation = null;
-            let Pagination = null;
-
-            try {
-                const modulesModule = await import('swiper/modules');
-                Navigation = modulesModule.Navigation || {};
-                Pagination = modulesModule.Pagination || {};
-            } catch (moduleError) {
-                console.warn('Could not load Swiper modules, using basic functionality');
-                Navigation = {};
-                Pagination = {};
-            }
-
-            // Asignar Swiper al window para uso global
-            window.Swiper = Swiper;
-
-            // Cargar CSS de forma manual si es necesario
-            if (!document.querySelector('link[href*="swiper"]')) {
-                const link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
-                document.head.appendChild(link);
-            }
-
-            return {
-                Swiper,
-                Navigation,
-                Pagination
-            };
-        } catch (error) {
-            console.error('Error loading Swiper:', error);
-            console.warn('Fallback: Using CDN version');
-            return null;
-        }
-    }
-    return {
-        Swiper: window.Swiper,
-        Navigation: null,
-        Pagination: null
-    };
-};
-
-const loadJQuery = async () => {
-    if (typeof window !== 'undefined' && !window.$) {
-        const $ = await import('jquery');
-        window.$ = $.default;
-        return $.default;
-    }
-    return window.$;
-};
-
+// Versión ultra-simplificada para evitar problemas con workers en VTEX
 const useInitScripts = () => {
     useEffect(() => {
         if (typeof window === "undefined") return;
 
-        // === Adobe Launch ===
-        if (!window._satelliteLoaded) {
-            window._satelliteLoaded = true;
-
-            const script = document.createElement("script");
-            script.src = "https://assets.adobedtm.com/7e3b3fa0902e/7ba12da1470f/launch-73c56043319a-staging.min.js";
-            script.async = true;
-            script.onload = () => {
-                if (window._satellite) {
-                    window._satellite.pageBottom?.();
-                    window._satellite.track?.("PageView");
+        // Función simple para cargar jQuery
+        const loadJQuery = async () => {
+            if (!window.$) {
+                try {
+                    const $ = await import('jquery');
+                    window.$ = $.default;
+                    return $.default;
+                } catch (error) {
+                    console.error('Error loading jQuery:', error);
+                    return null;
                 }
-            };
-            script.onerror = () => console.error("Error al cargar Adobe Satellite.");
-            document.head.appendChild(script);
-        } else if (window._satellite) {
-            window._satellite.pageBottom?.();
-            window._satellite.track?.("PageView");
-        }
-
-        const satelliteInterval = setInterval(() => {
-            if (!window._satellite) {
-                window._satellite = window._satelliteBackup;
             }
-        }, 2000);
+            return window.$;
+        };
 
-        // === Toggle Nav ===
-        const initToggleNav = async () => {
+        // Función simple para cargar Swiper
+        const loadSwiper = async () => {
+            if (!window.Swiper) {
+                try {
+                    const swiperModule = await import('swiper');
+                    const Swiper = swiperModule.default || swiperModule.Swiper;
+                    window.Swiper = Swiper;
+
+                    // Cargar CSS
+                    if (!document.querySelector('link[href*="swiper"]')) {
+                        const link = document.createElement('link');
+                        link.rel = 'stylesheet';
+                        link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+                        document.head.appendChild(link);
+                    }
+
+                    return Swiper;
+                } catch (error) {
+                    console.error('Error loading Swiper:', error);
+                    return null;
+                }
+            }
+            return window.Swiper;
+        };
+
+        // Inicialización simple
+        const init = async () => {
+            // Cargar dependencias
             const $ = await loadJQuery();
+            const Swiper = await loadSwiper();
+
+            // Toggle navigation simple
             if ($) {
-                $(document)
-                    .off("click", "a.rlx-sm.btn-toggle")
-                    .on("click", "a.rlx-sm.btn-toggle", function () {
-                        $("nav.rlx-header-menu-top").toggleClass("showme");
+                $(document).off("click", "a.rlx-sm.btn-toggle").on("click", "a.rlx-sm.btn-toggle", function () {
+                    $("nav.rlx-header-menu-top").toggleClass("showme");
+                });
+            }
+
+            // Swiper simple
+            if (Swiper) {
+                const sliderPrincipal = document.querySelector(".slider-home-principal");
+                if (sliderPrincipal) {
+                    new Swiper(sliderPrincipal, {
+                        pagination: { el: ".swiper-pagination-home", clickable: true },
+                        navigation: { nextEl: ".swiper-button-next-home", prevEl: ".swiper-button-prev-home" },
+                        loop: false,
                     });
-            }
-        };
+                }
 
-        // === Volver Arriba ===
-        const btnVolverArriba = document.getElementById("btnVolverArriba");
-        const scrollToTop = () => {
-            const duration = 300;
-            const start = window.scrollY;
-            const startTime = performance.now();
-
-            function easeInOutCubic(t: number, b: number, c: number, d: number) {
-                t /= d / 2;
-                if (t < 1) return (c / 2) * t * t * t + b;
-                t -= 2;
-                return (c / 2) * (t * t * t + 2) + b;
-            }
-
-            function scrollStep() {
-                const now = performance.now();
-                const elapsed = now - startTime;
-                window.scrollTo(0, easeInOutCubic(elapsed, start, -start, duration));
-                if (elapsed < duration) requestAnimationFrame(scrollStep);
-            }
-
-            requestAnimationFrame(scrollStep);
-        };
-
-        if (btnVolverArriba) {
-            btnVolverArriba.addEventListener("click", scrollToTop);
-        }
-
-        // === Swiper Principal y Footer ===
-        const initializeSwiper = async () => {
-            const swiperData = await loadSwiper();
-            if (!swiperData || !swiperData.Swiper) return;
-
-            const { Swiper, Navigation, Pagination } = swiperData;
-            const sliderPrincipal = document.querySelector(".slider-home-principal") as HTMLElement;
-            const sliderFooter = document.querySelector(".exploremas") as HTMLElement;
-
-            const updateNavigationButtons = (swiperInstance: any) => {
-                const currentIndex = swiperInstance.activeIndex;
-                const totalSlides = swiperInstance.slides.length;
-                const nextButton = document.querySelector(".principal-next") as HTMLElement;
-                const prevButton = document.querySelector(".principal-prev") as HTMLElement;
-
-                if (!nextButton || !prevButton) return;
-                nextButton.style.display = "flex";
-                prevButton.style.display = "flex";
-
-                if (currentIndex === 0) prevButton.style.display = "none";
-                else if (currentIndex === totalSlides - 1) nextButton.style.display = "none";
-            };
-
-            if (sliderPrincipal) {
-                new Swiper(sliderPrincipal, {
-                    modules: [Navigation, Pagination],
-                    pagination: {
-                        el: ".swiper-pagination-home",
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: ".principal-next",
-                        prevEl: ".principal-prev",
-                    },
-                    loop: false,
-                    on: {
-                        init: (swiper: any) => updateNavigationButtons(swiper),
-                        slideChange: (swiper: any) => updateNavigationButtons(swiper),
-                    },
-                });
-            }
-
-            if (sliderFooter) {
-                new Swiper(sliderFooter, {
-                    modules: [Navigation, Pagination],
-                    slidesPerView: 4,
-                    spaceBetween: 8,
-                    slidesPerGroup: 4,
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: ".footer-next",
-                        prevEl: ".footer-prev",
-                    },
-                    loop: false,
-                    breakpoints: {
-                        320: { slidesPerView: 2, slidesPerGroup: 2 },
-                        480: { slidesPerView: 2, slidesPerGroup: 2 },
-                        768: { slidesPerView: 4, slidesPerGroup: 4 },
-                    },
-                });
-            }
-        };
-
-        const waitForSlides = () => {
-            const wrapper = document.querySelector('.exploremas .swiper-wrapper');
-            if (wrapper && wrapper.children.length >= 4) {
-                initializeSwiper();
-            } else {
-                requestAnimationFrame(waitForSlides);
-            }
-        };
-
-        // === Swiper Mobile ===
-        let swiperMobile: any = null;
-        const initMobileSwiper = async () => {
-            const swiperData = await loadSwiper();
-            if (!swiperData || !swiperData.Swiper) return;
-
-            const { Swiper, Navigation, Pagination } = swiperData;
-            const container = document.querySelector(".swiper-container-mobile") as HTMLElement;
-
-            if (window.innerWidth <= 767 && container && !swiperMobile) {
-                swiperMobile = new Swiper(container, {
-                    modules: [Navigation, Pagination],
-                    slidesPerView: 1,
-                    loop: false,
-                    pagination: {
-                        el: ".swiper-pagination-model",
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: ".swiper-button-model-next",
-                        prevEl: ".swiper-button-model-prev",
-                    },
-                    on: {
-                        init(swiper: any) {
-                            swiper.update();
+                const sliderFooter = document.querySelector(".exploremas");
+                if (sliderFooter) {
+                    new Swiper(sliderFooter, {
+                        slidesPerView: 4,
+                        spaceBetween: 8,
+                        breakpoints: {
+                            320: { slidesPerView: 1.2 },
+                            768: { slidesPerView: 2.5 },
+                            1024: { slidesPerView: 4 },
                         },
-                    },
-                });
-            } else if (swiperMobile && window.innerWidth > 767) {
-                swiperMobile.destroy();
-                swiperMobile = null;
-            }
-        };
-
-        // === Accordion ===
-        const initAccordion = async () => {
-            const $ = await loadJQuery();
-            if ($) {
-                $(document)
-                    .off("click", ".accordion-header")
-                    .on("click", ".accordion-header", function () {
-                        const $header = $(this);
-                        $(".accordion-content").not($header.next()).removeClass("active");
-                        $(".accordion-header span:last-child").text("+");
-                        const content = $header.next();
-                        const icon = $header.find("span:last-child");
-                        const isActive = content.hasClass("active");
-                        content.toggleClass("active");
-                        icon.text(isActive ? "+" : "–");
                     });
-            }
-        };
-
-        // === Lightbox ===
-        const galleryImages = Array.from(document.querySelectorAll<HTMLImageElement>(".galeria-models img"));
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImage = document.getElementById("lightbox-image") as HTMLImageElement;
-        const closeButton = document.querySelector(".close-button");
-        const prevButton = document.getElementById("prev-button");
-        const nextButton = document.getElementById("next-button");
-        const paginationDotsContainer = document.querySelector(".pagination-dots");
-
-        let currentIndex = 0;
-        const images = galleryImages.map(img => img.src);
-        let dots: HTMLElement[] = [];
-
-        const openLightbox = (src: string, index: number) => {
-            if (!lightbox || !lightboxImage || !paginationDotsContainer) return;
-            lightboxImage.src = src;
-            currentIndex = index;
-            lightbox?.classList.add("active");
-            createPaginationDots();
-            updatePagination();
-        };
-
-        const closeLightbox = () => {
-            if (!lightbox || !paginationDotsContainer) return;
-            lightbox?.classList.remove("active");
-            paginationDotsContainer.innerHTML = "";
-            dots = [];
-        };
-
-        const showPrevious = () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            lightboxImage.src = images[currentIndex];
-            updatePagination();
-        };
-
-        const showNext = () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            lightboxImage.src = images[currentIndex];
-            updatePagination();
-        };
-
-        const createPaginationDots = () => {
-            if (!paginationDotsContainer) return;
-            paginationDotsContainer.innerHTML = "";
-            dots = images.map((_, i) => {
-                const dot = document.createElement("div");
-                if (dot?.classList) {
-                    dot.classList.add("dot");
-                } else {
-                    console.warn("dot.classList no está disponible.");
                 }
-                dot.dataset.index = String(i);
-                dot.addEventListener("click", () => {
-                    currentIndex = i;
-                    lightboxImage.src = images[currentIndex];
-                    updatePagination();
-                });
-                paginationDotsContainer.appendChild(dot);
-                return dot;
-            });
-        };
-
-        const updatePagination = () => {
-            dots.forEach((dot, i) => {
-                dot?.classList.toggle("active", i === currentIndex);
-            });
-        };
-
-        galleryImages.forEach((img, index) => {
-            img.addEventListener("click", () => openLightbox(img.src, index));
-        });
-
-        closeButton?.addEventListener("click", closeLightbox);
-        prevButton?.addEventListener("click", showPrevious);
-        nextButton?.addEventListener("click", showNext);
-        lightbox?.addEventListener("click", (e) => {
-            if (e.target === lightbox) closeLightbox();
-        });
-
-        const handleKeyDown = (e: KeyboardEvent) => {
-            if (lightbox?.classList.contains("active")) {
-                if (e.key === "Escape") closeLightbox();
-                if (e.key === "ArrowLeft") showPrevious();
-                if (e.key === "ArrowRight") showNext();
             }
         };
-        document.addEventListener("keydown", handleKeyDown);
 
-        // === Show/Hide Precio ===
-        const handleShowHidePrice = () => {
-            const x = document.getElementById("priceshow");
-            if (x) x.style.display = x.style.display === "none" ? "block" : "none";
-        };
-        window.showhideprice = handleShowHidePrice;
+        // Ejecutar inicialización
+        init();
 
-        const priceIcons = document.querySelectorAll<HTMLElement>(".icon-price-rlx");
-        priceIcons.forEach(icon => {
-            icon.addEventListener("click", handleShowHidePrice);
-        });
-
-        // === Inicialización ===
-        const initializeAll = async () => {
-            await initToggleNav();
-            await initAccordion();
-            waitForSlides();
-            await initMobileSwiper();
-        };
-
-        initializeAll();
-        window.addEventListener("resize", initMobileSwiper);
-
-        // === Satellite download tracking ===
-        const downloadLink = document.querySelector<HTMLAnchorElement>(
-            '.row-grid-fullw.watch-caracteristicas .cuerpotextobeigebg .p-absolutes a'
-        );
-        const handleClickDownload = () => {
-            if (window._satellite?.track) {
-                window._satellite.track('download');
-            } else {
-                console.warn('No se encontró _satellite.track');
-            }
-        };
-        downloadLink?.addEventListener('click', handleClickDownload);
-
-        // === Limpieza ===
+        // Cleanup simple
         return () => {
-            clearInterval(satelliteInterval);
-            btnVolverArriba?.removeEventListener("click", scrollToTop);
-            priceIcons.forEach(icon => {
-                icon.removeEventListener("click", handleShowHidePrice);
-            });
-            window.removeEventListener("resize", initMobileSwiper);
-            document.removeEventListener("keydown", handleKeyDown);
-            downloadLink?.removeEventListener('click', handleClickDownload);
-            if (swiperMobile) swiperMobile.destroy();
+            // Cleanup básico si es necesario
         };
     }, []);
 

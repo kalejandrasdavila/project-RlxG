@@ -1,0 +1,16 @@
+📊 Información del Sistema:
+Fecha: Tue Oct  7 10:50:36 CST 2025
+Sistema: Darwin Alejandras-MacBook-Air.local 25.0.0 Darwin Kernel Version 25.0.0: Mon Aug 25 21:17:45 PDT 2025; root:xnu-12377.1.9~3/RELEASE_ARM64_T8103 arm64
+Node: v22.19.0
+Yarn: 1.22.22
+VTEX: vtex/4.2.2 darwin-arm64 node-v22.19.0
+
+🏢 Información de VTEX:
+10:50:38.122 - [32minfo[39m: Logged into glauser as karlaasaucedoda@gmail.com at dev workspace devjhernandez  
+
+📦 Información del Proyecto:
+Tamaño del directorio react:
+369M	react/
+Número de archivos:
+   32513
+

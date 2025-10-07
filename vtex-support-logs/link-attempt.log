@@ -1,0 +1,3 @@
+Iniciando vtex link con verbose...
+./collect-vtex-logs.sh: line 43: timeout: command not found
+Exit code: 127

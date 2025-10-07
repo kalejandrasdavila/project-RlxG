@@ -1,0 +1,17 @@
+{
+    "workspaceUsage": "master",
+    "account": "glauser",
+    "workspace": "devjhernandez",
+    "env": "dev",
+    "builders": {
+        "react": {
+            "maxWorkers": 1,
+            "cache": false,
+            "parallel": false,
+            "optimization": {
+                "minimize": false,
+                "splitChunks": false
+            }
+        }
+    }
+}
