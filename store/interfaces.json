@@ -1,6 +1,8 @@
 {
     "store.home-rlx": {
-        "component": "Home"
+        "allowed": [
+            "Home"
+        ]
     },
     "store.coleccionRlx": {
         "component": "ColeccionRlx"
@@ -28,5 +30,15 @@
     },
     "store.contactenos": {
         "component": "Contactenos"
+    },
+    "store.custom#rolex": {
+        "allowed": [
+            "Home"
+        ]
+    },
+    "store.custom#coleccion-rolex": {
+        "allowed": [
+            "store.coleccionRlx"
+        ]
     }
 }
