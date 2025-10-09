@@ -46,7 +46,7 @@ const Home: React.FC = () => {
         <link
           rel="stylesheet"
           type="text/css"
-          href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+          href="https://glauser--glauser.myvtex.com/files/style.min.css"
         />
         <link
           rel="stylesheet"
@@ -59,9 +59,9 @@ const Home: React.FC = () => {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/" />
+        <link rel="canonical" href="https://glauser--glauser.myvtex.com/rolex/" />
 
-        <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/" />
+        <meta property="og:url" content="https://glauser--glauser.myvtex.com/rolex/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -123,12 +123,12 @@ const Home: React.FC = () => {
                   <p className={`${handles.headline70} ${handles.c_white_text} ${handles.pb_20}`} >Yacht-Master</p>
                   <a
                     className={`${handles.btn_primary_rlx}`}
-                    href="https://devjhernandez--glauser.myvtex.com/rolex/watches/yacht-master/">
+                    href="https://glauser--glauser.myvtex.com/rolex/watches/yacht-master/">
                     Descubra más
                   </a>
                 </div>
                 <div className={`${handles.slider_image_6_12}`}>
-                  <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/yacht-master/">
+                  <a href="https://glauser--glauser.myvtex.com/rolex/watches/yacht-master/">
                     <picture className="banner-10">
                       <source
                         media="(max-width: 767px)"
@@ -151,12 +151,12 @@ const Home: React.FC = () => {
                   </p>
                   <a
                     className={`${handles.btn_primary_rlx}`}
-                    href="https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/sailgp/">
+                    href="https://glauser--glauser.myvtex.com/rolex/mundo-rolex/sailgp/">
                     Descubra más
                   </a>
                 </div>
                 <div className={`${handles.slider_image_6_12}`}>
-                  <a href="https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/sailgp/">
+                  <a href="https://glauser--glauser.myvtex.com/rolex/mundo-rolex/sailgp/">
                     <picture className="banner-10">
                       <source
                         media="(max-width: 767px)"
@@ -177,7 +177,7 @@ const Home: React.FC = () => {
                   <p className={`${handles.headline70} ${handles.pb_20}`}>Excelencia en desarrollo</p>
                   <a
                     className={`${handles.btn_primary_rlx}`}
-                    href="https://devjhernandez--glauser.myvtex.com/rolex/watchmaking/">
+                    href="https://glauser--glauser.myvtex.com/rolex/watchmaking/">
                     Descubra más
                   </a>
                 </div>

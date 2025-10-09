@@ -1,7 +1,7 @@
 {
     "workspaceUsage": "master",
     "account": "glauser",
-    "workspace": "devjhernandez",
+    "workspace": "glauser",
     "env": "dev",
     "builders": {
         "react": {

@@ -1,7 +1,7 @@
 // Utility functions for URL management
 export const getBaseUrl = (): string => {
     // Always use the development workspace URL
-    return 'https://devjhernandez--glauser.myvtex.com';
+    return 'https://glauser--glauser.myvtex.com';
 };
 
 export const getCurrentUrl = (path?: string): string => {

@@ -1,3 +1,7 @@
 {
-    "store.home-rlx": {}
+    "store.home-rlx": {
+        "blocks": [
+            "Home"
+        ]
+    }
 }
