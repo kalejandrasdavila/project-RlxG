@@ -30,7 +30,7 @@ const Airking: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
                 <link
@@ -46,10 +46,10 @@ const Airking: React.FC = () => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/" />
+                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/air-king/" />
 
                 {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/" />
+                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/air-king/" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -66,7 +66,7 @@ const Airking: React.FC = () => {
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/" />
+                <meta property="twitter:url" content="https://glauser.myvtex.com/rolex/watches/air-king/" />
                 <meta
                     name="twitter:title"
                     content="Relojes Rolex Air-King - GLAUSER"
@@ -103,17 +103,17 @@ const Airking: React.FC = () => {
                             "@graph": [
                                 {
                                     "@type": "Organization",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
+                                    "@id": "https://glauser.myvtex.com/#organization",
                                     "name": "Joyería Glauser",
-                                    "url": "https://devjhernandez--glauser.myvtex.com/",
+                                    "url": "https://glauser.myvtex.com/",
                                     "sameAs": [
-                                        "https://devjhernandez--glauser.myvtex.com/",
+                                        "https://glauser.myvtex.com/",
                                         "https://www.facebook.com/JoyeriaGlauser/",
                                         "https://www.instagram.com/joyeriaglauser/?hl=es-la"
                                     ],
                                     "logo": {
                                         "@type": "ImageObject",
-                                        "@id": "https://devjhernandez--glauser.myvtex.com/#logo",
+                                        "@id": "https://glauser.myvtex.com/#logo",
                                         "inLanguage": "es-CO",
                                         "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                         "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
@@ -121,42 +121,42 @@ const Airking: React.FC = () => {
                                         "height": 102,
                                         "caption": "Joyería Glauser"
                                     },
-                                    "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
+                                    "image": { "@id": "https://glauser.myvtex.com/#logo" }
                                 },
                                 {
                                     "@type": "WebPage",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/#webpage",
-                                    "url": "https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/",
+                                    "@id": "https://glauser.myvtex.com/rolex/watches/air-king/#webpage",
+                                    "url": "https://glauser.myvtex.com/rolex/watches/air-king/",
                                     "name": "Relojes Rolex Air-King - GLAUSER",
-                                    "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
+                                    "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
                                     "datePublished": "2024-04-10T05:23:53+00:00",
                                     "dateModified": "2024-04-10T05:23:53+00:00",
                                     "description": "Descubra los relojes Rolex Air-King en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
-                                    "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/#breadcrumb" },
+                                    "breadcrumb": { "@id": "https://glauser.myvtex.com/rolex/watches/air-king/#breadcrumb" },
                                     "inLanguage": "es-Es",
-                                    "potentialAction": [{ "@type": "ReadAction", "target": ["https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/"] }]
+                                    "potentialAction": [{ "@type": "ReadAction", "target": ["https://glauser.myvtex.com/rolex/watches/air-king/"] }]
                                 },
                                 {
                                     "@type": "BreadcrumbList",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/#breadcrumb",
+                                    "@id": "https://glauser.myvtex.com/rolex/watches/air-king/#breadcrumb",
                                     "itemListElement": [
                                         {
                                             "@type": "ListItem",
                                             "position": 1,
                                             "name": "Rolex",
-                                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/"
+                                            "item": "https://glauser.myvtex.com/rolex/"
                                         },
                                         {
                                             "@type": "ListItem",
                                             "position": 2,
                                             "name": "Relojes Rolex",
-                                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/"
+                                            "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
                                         },
                                         {
                                             "@type": "ListItem",
                                             "position": 3,
                                             "name": "Air-King",
-                                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/watches/air-king/"
+                                            "item": "https://glauser.myvtex.com/rolex/watches/air-king/"
                                         }
                                     ]
                                 }
@@ -176,8 +176,8 @@ const Airking: React.FC = () => {
                                 <div className={`${handles.breadcrum_page}`}>
                                     <div className={`${handles.breadcrum_column}`}>
                                         <ul className={`${handles.breadcrum_menu_list}`}>
-                                            <li><a href="https://devjhernandez--glauser.myvtex.com/rolex/">Rolex</a></li>
-                                            <li><a href="https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/">Relojes Rolex</a></li>
+                                            <li><a href="https://glauser.myvtex.com/rolex/">Rolex</a></li>
+                                            <li><a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">Relojes Rolex</a></li>
                                             <li><span className={`${handles.active}`}>Air-King</span></li>
                                         </ul>
                                     </div>

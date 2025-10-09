@@ -9,8 +9,8 @@ import "../../../main-style.css";
 const ViajeCorazon: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/';
-    const baseUrl = 'https://devjhernandez--glauser.myvtex.com'; // La URL base 
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/';
+    const baseUrl = 'https://glauser.myvtex.com'; // La URL base 
 
     return (
         <>
@@ -25,7 +25,7 @@ const ViajeCorazon: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -553,7 +553,7 @@ const ViajeCorazon: React.FC = () => {
                                     <p className="headline36 c-brown-text">Una fecha para recordar</p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/">
+                                        href="https://glauser.myvtex.com/rolex/watches/datejust/">
                                         Más información
                                         <svg
                                             aria-hidden="true"

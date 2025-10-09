@@ -27,7 +27,7 @@ const OysterP: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
                 <link
@@ -43,10 +43,10 @@ const OysterP: React.FC = () => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/" />
+                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/" />
 
                 {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/" />
+                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -63,7 +63,7 @@ const OysterP: React.FC = () => {
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/" />
+                <meta property="twitter:url" content="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/" />
                 <meta
                     name="twitter:title"
                     content="Relojes Rolex Oyster Perpetual - GLAUSER"
@@ -100,16 +100,16 @@ const OysterP: React.FC = () => {
                             "@graph": [
                                 {
                                     "@type": "Organization",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
+                                    "@id": "https://glauser.myvtex.com/#organization",
                                     "name": "Joyería Glauser",
-                                    "url": "https://devjhernandez--glauser.myvtex.com/",
+                                    "url": "https://glauser.myvtex.com/",
                                     "sameAs": [
                                         "https://www.facebook.com/JoyeriaGlauser/",
                                         "https://www.instagram.com/joyeriaglauser/?hl=es-la"
                                     ],
                                     "logo": {
                                         "@type": "ImageObject",
-                                        "@id": "https://devjhernandez--glauser.myvtex.com/#logo",
+                                        "@id": "https://glauser.myvtex.com/#logo",
                                         "inLanguage": "es-CO",
                                         "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                         "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
@@ -117,25 +117,25 @@ const OysterP: React.FC = () => {
                                         "height": 102,
                                         "caption": "Joyería Glauser"
                                     },
-                                    "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
+                                    "image": { "@id": "https://glauser.myvtex.com/#logo" }
                                 },
                                 {
                                     "@type": "WebPage",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/#webpage",
-                                    "url": "https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/",
+                                    "@id": "https://glauser.myvtex.com/rolex/watches/oyster-perpetual/#webpage",
+                                    "url": "https://glauser.myvtex.com/rolex/watches/oyster-perpetual/",
                                     "name": "Relojes Rolex Oyster Perpetual - GLAUSER",
-                                    "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
+                                    "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
                                     "datePublished": "2025-04-01T05:23:53+00:00",
                                     "dateModified": "2025-04-01T05:23:53+00:00",
                                     "description":
                                         "Descubra los relojes Rolex Oyster Perpetual en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
                                     "breadcrumb": {
-                                        "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/#breadcrumb"
+                                        "@id": "https://glauser.myvtex.com/rolex/watches/oyster-perpetual/#breadcrumb"
                                     },
                                     "inLanguage": "es-Es",
                                     "potentialAction": {
                                         "@type": "ReadAction",
-                                        "target": "https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/"
+                                        "target": "https://glauser.myvtex.com/rolex/watches/oyster-perpetual/"
                                     }
                                 }
                             ]
@@ -154,13 +154,13 @@ const OysterP: React.FC = () => {
                                     "@type": "ListItem",
                                     "position": 1,
                                     "name": "Rolex GLAUSER",
-                                    "item": "https://devjhernandez--glauser.myvtex.com/rolex/"
+                                    "item": "https://glauser.myvtex.com/rolex/"
                                 },
                                 {
                                     "@type": "ListItem",
                                     "position": 2,
                                     "name": "Relojes Rolex",
-                                    "item": "https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/"
+                                    "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
                                 },
                                 {
                                     "@type": "ListItem",
@@ -185,7 +185,7 @@ const OysterP: React.FC = () => {
                     <div className="rlx-container">
                         <div className="row-grid">
                             <div className="rlx-logo">
-                                <a href="https://devjhernandez--glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className="placa-rolex-logo">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" />
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" loading="lazy" />
@@ -199,13 +199,13 @@ const OysterP: React.FC = () => {
                             <div className="breadcrum-column">
                                 <ul className="breadcrum-menu-list description">
                                     <li className="fixed-14 none-mobil">
-                                        <a href="https://devjhernandez--glauser.myvtex.com/rolex/">Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/">Rolex</a>
                                     </li>
                                     <li className="fixed-14">
-                                        <a href="https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/">Relojes Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">Relojes Rolex</a>
                                     </li>
                                     <li className="fixed-14 none-mobil active">
-                                        <a className="active" href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual">Oyster Perpetual</a>
+                                        <a className="active" href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual">Oyster Perpetual</a>
                                     </li>
                                 </ul>
                             </div>
@@ -241,7 +241,7 @@ const OysterP: React.FC = () => {
                         <div className="row-grid-fullw reloes-componet-2-3">
                             <div className="col-span3-1 col-md-span4-1 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m134300-0006/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m134300-0006/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m134300-0006-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m134300-0006-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -256,7 +256,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-2 col-md-span4-2 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m277200-0017/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m277200-0017/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m277200-0017-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m277200-0017-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -271,7 +271,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-1 col-md-span4-3 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m276200-0001/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m276200-0001/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m276200-0001-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m276200-0001-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -286,7 +286,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-2 col-md-span4-1 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m126000-0013/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m126000-0013/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126000-0013-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126000-0013-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -301,7 +301,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-1 col-md-span4-2 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m124200-0007/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m124200-0007/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m124200-0007-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m124200-0007-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -316,7 +316,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-2 col-md-span4-3 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m277200-0014/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m277200-0014/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m277200-0014-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m277200-0014-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -334,7 +334,7 @@ const OysterP: React.FC = () => {
                         <div id="masrelojescargados" className="row-grid-fullw reloes-componet-2-3 d-none-rlx pt-8" style={{ display: 'none' }}>
                             <div className="col-span3-1 col-md-span4-1 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m124200-0001/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m124200-0001/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m124200-0001-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m124200-0001-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -349,7 +349,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-2 col-md-span4-2 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m124200-0008/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m124200-0008/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m124200-0008-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m124200-0008-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -364,7 +364,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-1 col-md-span4-3 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m124200-0010/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m124200-0010/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m124200-0010-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m124200-0010-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -379,7 +379,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-2 col-md-span4-1 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m124200-0011/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m124200-0011/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m124200-0011-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m124200-0011-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -394,7 +394,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-1 col-md-span4-2 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m126000-0005/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m126000-0005/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126000-0005-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126000-0005-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -409,7 +409,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-2 col-md-span4-3 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m126000-0011/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m126000-0011/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126000-0011-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126000-0011-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -424,7 +424,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-1 col-md-span4-1 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m126000-0015/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m126000-0015/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126000-0015-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126000-0015-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -439,7 +439,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-2 col-md-span4-2 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m134300-0008/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m134300-0008/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m134300-0008-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m134300-0008-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />
@@ -454,7 +454,7 @@ const OysterP: React.FC = () => {
                             </div>
                             <div className="col-span3-1 col-md-span4-3 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/oyster-perpetual/m277200-0007/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/m277200-0007/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m277200-0007-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m277200-0007-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" />

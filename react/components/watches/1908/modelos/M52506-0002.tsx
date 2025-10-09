@@ -42,22 +42,22 @@ const M525060002: React.FC = () => {
                     name="description"
                     content="Descubra el reloj Rolex 1908 de 39 mm, platino, acabado pulido modelo M52506-0002 en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex en Colombia."
                 />
-                <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/watches/1908/M52506-0002" />
+                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/1908/M52506-0002" />
                 <meta property="og:title" content="Rolex 1908 M52506-0002 - GLAUSER Colombia" />
                 <meta property="og:description" content="Descubra el reloj Rolex 1908 de 39 mm, platino, acabado pulido modelo M52506-0002 en GLAUSER." />
-                <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/1908/M52506-0002" />
+                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/1908/M52506-0002" />
                 <meta property="og:type" content="product" />
-                <meta property="og:image" content="https://devjhernandez--glauser.myvtex.com/arquivos/rolex-1908-M52506-0002.jpg" />
+                <meta property="og:image" content="https://glauser.myvtex.com/arquivos/rolex-1908-M52506-0002.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Rolex 1908 M52506-0002 - GLAUSER Colombia" />
                 <meta name="twitter:description" content="Descubra el reloj Rolex 1908 de 39 mm, platino, acabado pulido modelo M52506-0002." />
-                <meta name="twitter:image" content="https://devjhernandez--glauser.myvtex.com/arquivos/rolex-1908-M52506-0002.jpg" />
+                <meta name="twitter:image" content="https://glauser.myvtex.com/arquivos/rolex-1908-M52506-0002.jpg" />
 
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link
                     rel="preconnect"

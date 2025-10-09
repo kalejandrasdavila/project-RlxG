@@ -12,8 +12,8 @@ const M1908: React.FC = () => {
     useInitScripts();
 
     const [isVisible, setIsVisible] = useState<boolean>(false);
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/watches/1908/';
-    const baseUrl = 'https://devjhernandez--glauser.myvtex.com';
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/watches/1908/';
+    const baseUrl = 'https://glauser.myvtex.com';
 
     return (
         <>
@@ -27,7 +27,7 @@ const M1908: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
                 <link
@@ -131,13 +131,13 @@ const M1908: React.FC = () => {
                                 "@type": "ListItem",
                                 "position": 1,
                                 "name": "Rolex GLAUSER",
-                                "item": "https://devjhernandez--glauser.myvtex.com/rolex/"
+                                "item": "https://glauser.myvtex.com/rolex/"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 2,
                                 "name": "Relojes Rolex",
-                                "item": "https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/"
+                                "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
                             },
                             {
                                 "@type": "ListItem",

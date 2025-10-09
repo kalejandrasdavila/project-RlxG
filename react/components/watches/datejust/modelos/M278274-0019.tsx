@@ -52,7 +52,7 @@ const M2782740019: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
                 <link
@@ -68,10 +68,10 @@ const M2782740019: React.FC = () => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/m278274-0019/" />
+                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/datejust/m278274-0019/" />
 
                 {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/m278274-0019/" />
+                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/datejust/m278274-0019/" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -88,7 +88,7 @@ const M2782740019: React.FC = () => {
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/m278274-0019/" />
+                <meta property="twitter:url" content="https://glauser.myvtex.com/rolex/watches/datejust/m278274-0019/" />
                 <meta
                     name="twitter:title"
                     content="Rolex Datejust 31 de Oyster, 31 mm, acero Oystersteel y oro blanco, m278274-0019 - GLAUSER"
@@ -125,13 +125,13 @@ const M2782740019: React.FC = () => {
                         "@graph": [
                             {
                                 "@type": "Organization",
-                                "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
+                                "@id": "https://glauser.myvtex.com/#organization",
                                 "name": "Joyería Glauser",
-                                "url": "https://devjhernandez--glauser.myvtex.com/",
+                                "url": "https://glauser.myvtex.com/",
                                 "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
                                 "logo": {
                                     "@type": "ImageObject",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/#logo",
+                                    "@id": "https://glauser.myvtex.com/#logo",
                                     "inLanguage": "es-CO",
                                     "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
@@ -139,20 +139,20 @@ const M2782740019: React.FC = () => {
                                     "height": 102,
                                     "caption": "Joyería Glauser"
                                 },
-                                "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
+                                "image": { "@id": "https://glauser.myvtex.com/#logo" }
                             },
                             {
                                 "@type": "WebPage",
-                                "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/m278274-0019/#webpage",
-                                "url": "https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/m278274-0019/",
+                                "@id": "https://glauser.myvtex.com/rolex/watches/datejust/m278274-0019/#webpage",
+                                "url": "https://glauser.myvtex.com/rolex/watches/datejust/m278274-0019/",
                                 "name": "Rolex Datejust 31 de Oyster, 31 mm, acero Oystersteel y oro blanco, m278274-0019 - GLAUSER",
-                                "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
+                                "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
                                 "datePublished": "2025-04-01T05:23:53+00:00",
                                 "dateModified": "2025-04-01T05:23:53+00:00",
                                 "description": "Descubra el reloj Rolex Datejust 31 de Oyster, 31 mm, acero Oystersteel y oro blanco en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex",
-                                "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/m278274-0019/#breadcrumb" },
+                                "breadcrumb": { "@id": "https://glauser.myvtex.com/rolex/watches/datejust/m278274-0019/#breadcrumb" },
                                 "inLanguage": "es-Es",
-                                "potentialAction": [{ "@type": "ReadAction", "target": ["https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/m278274-0019/"] }]
+                                "potentialAction": [{ "@type": "ReadAction", "target": ["https://glauser.myvtex.com/rolex/watches/datejust/m278274-0019/"] }]
                             }
                         ]
                    `}
@@ -175,7 +175,7 @@ const M2782740019: React.FC = () => {
                         },
                         "offers": {
                             "@type": "Offer",
-                            "url": "https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/m278274-0019/",
+                            "url": "https://glauser.myvtex.com/rolex/watches/datejust/m278274-0019/",
                             "priceCurrency": "USD",
                             "price": "10100.00",
                             "priceValidUntil": "2025-04-01",
@@ -193,17 +193,17 @@ const M2782740019: React.FC = () => {
                             "@type": "ListItem",
                             "position": 1,
                             "name": "Rolex GLAUSER",
-                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/"
+                            "item": "https://glauser.myvtex.com/rolex/"
                         }, {
                             "@type": "ListItem",
                             "position": 2,
                             "name": "Relojes Rolex",
-                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/"
+                            "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
                         }, {
                             "@type": "ListItem",
                             "position": 3,
                             "name": "Datejust",
-                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/"
+                            "item": "https://glauser.myvtex.com/rolex/watches/datejust/"
                         }, {
                             "@type": "ListItem",
                             "position": 4,
@@ -246,7 +246,7 @@ const M2782740019: React.FC = () => {
                     <div className="rlx-container">
                         <div className="row-grid">
                             <div className="rlx-logo">
-                                <a href="https://devjhernandez--glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className="placa-rolex-logo">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" />
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" loading="lazy" alt="placa distribuidor oficial rolex" />
@@ -264,20 +264,20 @@ const M2782740019: React.FC = () => {
                             <div className="breadcrum-column">
                                 <ul className="breadcrum-menu-list description">
                                     <li className="fixed-14 none-mobil">
-                                        <a href="https://devjhernandez--glauser.myvtex.com/">Rolex</a>
+                                        <a href="https://glauser.myvtex.com/">Rolex</a>
                                     </li>
                                     <li className="fixed-14 none-mobil">
-                                        <a href="https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/">
+                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">
                                             Relojes Rolex
                                         </a>
                                     </li>
                                     <li className="fixed-14">
-                                        <a className="active" href="https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/">Datejust</a>
+                                        <a className="active" href="https://glauser.myvtex.com/rolex/watches/datejust/">Datejust</a>
                                     </li>
                                     <li className="fixed-14 none-mobil">
                                         <a
                                             className="active"
-                                            href="https://devjhernandez--glauser.myvtex.com/rolex/watches/datejust/m278274-0019/">m278274-0019
+                                            href="https://glauser.myvtex.com/rolex/watches/datejust/m278274-0019/">m278274-0019
                                         </a>
                                     </li>
                                 </ul>
@@ -458,7 +458,7 @@ const M2782740019: React.FC = () => {
                                             </a>
                                             <a
                                                 className="social-link button-label"
-                                                href="https://devjhernandez--glauser.myvtex.com/rolex/contactenos/"
+                                                href="https://glauser.myvtex.com/rolex/contactenos/"
                                                 onClick={() => window._satellite?.track?.('findStore')}
                                                 rel="noopener">
                                                 <i className="fas">

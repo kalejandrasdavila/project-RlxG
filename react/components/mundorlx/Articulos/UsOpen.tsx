@@ -9,8 +9,8 @@ import "../../../main-style.css";
 
 const UsOpen: React.FC = () => {
     useInitScripts();
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/us-open/';
-    const baseUrl = 'https://devjhernandez--glauser.myvtex.com'; // La URL base 
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/us-open/';
+    const baseUrl = 'https://glauser.myvtex.com'; // La URL base 
 
     return (
         <>
@@ -25,7 +25,7 @@ const UsOpen: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />

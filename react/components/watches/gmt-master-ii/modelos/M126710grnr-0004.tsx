@@ -65,7 +65,7 @@ const M126710grnr0004 = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
                 <link
@@ -81,10 +81,10 @@ const M126710grnr0004 = () => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/" />
+                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/" />
 
                 {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/" />
+                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -101,7 +101,7 @@ const M126710grnr0004 = () => {
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/" />
+                <meta property="twitter:url" content="https://glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/" />
                 <meta
                     name="twitter:title"
                     content="Rolex GMT-Master II de Oyster, 40 mm, acero Oystersteel, m126710grnr-0004 - GLAUSER"
@@ -138,13 +138,13 @@ const M126710grnr0004 = () => {
                         "@graph": [
                             {
                                 "@type": "Organization",
-                                "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
+                                "@id": "https://glauser.myvtex.com/#organization",
                                 "name": "Joyería Glauser",
-                                "url": "https://devjhernandez--glauser.myvtex.com/",
+                                "url": "https://glauser.myvtex.com/",
                                 "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
                                 "logo": {
                                     "@type": "ImageObject",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/#logo",
+                                    "@id": "https://glauser.myvtex.com/#logo",
                                     "inLanguage": "es-CO",
                                     "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                     "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
@@ -152,20 +152,20 @@ const M126710grnr0004 = () => {
                                     "height": 102,
                                     "caption": "Joyería Glauser"
                                 },
-                                "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
+                                "image": { "@id": "https://glauser.myvtex.com/#logo" }
                             },
                             {
                                 "@type": "WebPage",
-                                "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/#webpage",
-                                "url": "https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/",
+                                "@id": "https://glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/#webpage",
+                                "url": "https://glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/",
                                 "name": "Rolex GMT-Master II de Oyster, 40 mm, acero Oystersteel, m126710grnr-0004 - GLAUSER",
-                                "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
+                                "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
                                 "datePublished": "2025-04-01T05:23:53+00:00",
                                 "dateModified": "2025-04-01T05:23:53+00:00",
                                 "description": "Descubra el reloj Rolex GMT-Master II de Oyster, 40 mm, acero Oystersteel en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex",
-                                "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/#breadcrumb" },
+                                "breadcrumb": { "@id": "https://glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/#breadcrumb" },
                                 "inLanguage": "es-Es",
-                                "potentialAction": [{ "@type": "ReadAction", "target": ["https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/"] }]
+                                "potentialAction": [{ "@type": "ReadAction", "target": ["https://glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/"] }]
                             }
                         ]
                    `}
@@ -188,7 +188,7 @@ const M126710grnr0004 = () => {
                         },
                         "offers": {
                             "@type": "Offer",
-                            "url": "https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/",
+                            "url": "https://glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/",
                             "priceCurrency": "USD",
                             "price": "12850.00",
                             "priceValidUntil": "2025-04-01",
@@ -206,17 +206,17 @@ const M126710grnr0004 = () => {
                             "@type": "ListItem",
                             "position": 1,
                             "name": "Rolex GLAUSER",
-                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/"
+                            "item": "https://glauser.myvtex.com/rolex/"
                         }, {
                             "@type": "ListItem",
                             "position": 2,
                             "name": "Relojes Rolex",
-                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/"
+                            "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
                         }, {
                             "@type": "ListItem",
                             "position": 3,
                             "name": "GMT-Master II",
-                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/"
+                            "item": "https://glauser.myvtex.com/rolex/watches/gmt-master-ii/"
                         }, {
                             "@type": "ListItem",
                             "position": 4,
@@ -259,7 +259,7 @@ const M126710grnr0004 = () => {
                     <div className="rlx-container">
                         <div className="row-grid">
                             <div className="rlx-logo">
-                                <a href="https://devjhernandez--glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className="placa-rolex-logo">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" />
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" loading="lazy" alt="placa distribuidor oficial rolex" />
@@ -277,22 +277,22 @@ const M126710grnr0004 = () => {
                             <div className="breadcrum-column">
                                 <ul className="breadcrum-menu-list description">
                                     <li className="fixed-14 none-mobil">
-                                        <a href="https://devjhernandez--glauser.myvtex.com/">Rolex</a>
+                                        <a href="https://glauser.myvtex.com/">Rolex</a>
                                     </li>
                                     <li className="fixed-14 none-mobil">
-                                        <a href="https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/">
+                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">
                                             Relojes Rolex
                                         </a>
                                     </li>
                                     <li className="fixed-14">
-                                        <a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/">
+                                        <a href="https://glauser.myvtex.com/rolex/watches/gmt-master-ii/">
                                             GMT-Master II
                                         </a>
                                     </li>
                                     <li className="fixed-14 none-mobil">
                                         <a
                                             className="active"
-                                            href="https://devjhernandez--glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/">m126710grnr-0004
+                                            href="https://glauser.myvtex.com/rolex/watches/gmt-master-ii/m126710grnr-0004/">m126710grnr-0004
                                         </a>
                                     </li>
                                 </ul>
@@ -473,7 +473,7 @@ const M126710grnr0004 = () => {
                                             </a>
                                             <a
                                                 className="social-link button-label"
-                                                href="https://devjhernandez--glauser.myvtex.com/rolex/contactenos/"
+                                                href="https://glauser.myvtex.com/rolex/contactenos/"
                                                 onClick={() => window._satellite?.track?.('findStore')}
                                                 rel="noopener">
                                                 <i className="fas">

@@ -20,7 +20,7 @@ const ExternalResources: React.FC<ExternalResourcesProps> = ({
                     <link
                         rel="stylesheet"
                         type="text/css"
-                        href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                        href="https://glauser.myvtex.com/files/style.min.css"
                     />
                     <link
                         rel="stylesheet"

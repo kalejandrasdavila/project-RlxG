@@ -57,7 +57,7 @@ const M126500ln0001: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
                 <link
@@ -73,10 +73,10 @@ const M126500ln0001: React.FC = () => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/" />
+                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/" />
 
                 {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/" />
+                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -93,7 +93,7 @@ const M126500ln0001: React.FC = () => {
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/" />
+                <meta property="twitter:url" content="https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/" />
                 <meta
                     name="twitter:title"
                     content="Rolex Cosmograph Daytona de Oyster, 40 mm, acero Oystersteel, m126500ln-0001 - GLAUSER"
@@ -130,17 +130,17 @@ const M126500ln0001: React.FC = () => {
                             "@graph": [
                                 {
                                     "@type": "Organization",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/#organization",
+                                    "@id": "https://glauser.myvtex.com/#organization",
                                     "name": "Joyería Glauser",
-                                    "url": "https://devjhernandez--glauser.myvtex.com/",
+                                    "url": "https://glauser.myvtex.com/",
                                     "sameAs": [
-                                        "https://devjhernandez--glauser.myvtex.com/",
+                                        "https://glauser.myvtex.com/",
                                         "https://www.facebook.com/JoyeriaGlauser/",
                                         "https://www.instagram.com/joyeriaglauser/?hl=es-la"
                                     ],
                                     "logo": {
                                         "@type": "ImageObject",
-                                        "@id": "https://devjhernandez--glauser.myvtex.com/#logo",
+                                        "@id": "https://glauser.myvtex.com/#logo",
                                         "inLanguage": "es-CO",
                                         "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
                                         "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
@@ -148,26 +148,26 @@ const M126500ln0001: React.FC = () => {
                                         "height": 102,
                                         "caption": "Joyería Glauser"
                                     },
-                                    "image": { "@id": "https://devjhernandez--glauser.myvtex.com/#logo" }
+                                    "image": { "@id": "https://glauser.myvtex.com/#logo" }
                                 },
                                 {
                                     "@type": "WebPage",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/#webpage",
-                                    "url": "https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/",
+                                    "@id": "https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/#webpage",
+                                    "url": "https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/",
                                     "name": "Rolex Cosmograph Daytona de Oyster, 40 mm, acero Oystersteel, m126500ln-0001 - GLAUSER",
-                                    "isPartOf": { "@id": "https://devjhernandez--glauser.myvtex.com/#website" },
+                                    "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
                                     "datePublished": "2024-04-10T05:23:53+00:00",
                                     "dateModified": "2024-04-10T05:23:53+00:00",
                                     "description": "Descubra el reloj Rolex Cosmograph Daytona de Oyster, 40 mm, acero Oystersteel en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex",
-                                    "breadcrumb": { "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/#breadcrumb" },
+                                    "breadcrumb": { "@id": "https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/#breadcrumb" },
                                     "inLanguage": "es-Es",
-                                    "potentialAction": [{ "@type": "ReadAction", "target": ["https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001"] }]
+                                    "potentialAction": [{ "@type": "ReadAction", "target": ["https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001"] }]
                                 },
                                 {
                                     "@type": "Product",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/#product",
+                                    "@id": "https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/#product",
                                     "name": "Rolex Cosmograph Daytona m126500ln-0001",
-                                    "url": "https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001",
+                                    "url": "https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001",
                                     "description": "Descubra el reloj Rolex Cosmograph Daytona de Oyster, 40 mm, acero Oystersteel en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex",
                                     "image": "https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches/cosmograph-daytona/m126500ln-0001/rolex-cosmograph-daytona-m126500ln-0001-at-0-1-1-1.webp",
                                     "brand": {
@@ -181,31 +181,31 @@ const M126500ln0001: React.FC = () => {
                                 },
                                 {
                                     "@type": "BreadcrumbList",
-                                    "@id": "https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/#breadcrumb",
+                                    "@id": "https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/#breadcrumb",
                                     "itemListElement": [
                                         {
                                             "@type": "ListItem",
                                             "position": 1,
                                             "name": "Rolex",
-                                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/"
+                                            "item": "https://glauser.myvtex.com/rolex/"
                                         },
                                         {
                                             "@type": "ListItem",
                                             "position": 2,
                                             "name": "Relojes Rolex",
-                                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/"
+                                            "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
                                         },
                                         {
                                             "@type": "ListItem",
                                             "position": 3,
                                             "name": "Cosmograph Daytona",
-                                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/"
+                                            "item": "https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/"
                                         },
                                         {
                                             "@type": "ListItem",
                                             "position": 4,
                                             "name": "m126500ln-0001",
-                                            "item": "https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/"
+                                            "item": "https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/m126500ln-0001/"
                                         }
                                     ]
                                 }
@@ -225,9 +225,9 @@ const M126500ln0001: React.FC = () => {
                                 <div className={`${handles.breadcrum_page}`}>
                                     <div className={`${handles.breadcrum_column}`}>
                                         <ul className={`${handles.breadcrum_menu_list}`}>
-                                            <li><a href="https://devjhernandez--glauser.myvtex.com/rolex/">Rolex</a></li>
-                                            <li><a href="https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/">Relojes Rolex</a></li>
-                                            <li><a href="https://devjhernandez--glauser.myvtex.com/rolex/watches/cosmograph-daytona/">Cosmograph Daytona</a></li>
+                                            <li><a href="https://glauser.myvtex.com/rolex/">Rolex</a></li>
+                                            <li><a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">Relojes Rolex</a></li>
+                                            <li><a href="https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/">Cosmograph Daytona</a></li>
                                             <li><span className={`${handles.active}`}>m126500ln-0001</span></li>
                                         </ul>
                                     </div>

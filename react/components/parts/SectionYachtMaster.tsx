@@ -30,7 +30,7 @@ function SectionYachtMaster() {
                                 <p className="headline36 c-brown-text">Carícter marino</p>
                                 <a
                                     className="btn-label-icon-rlx"
-                                    href="https://devjhernandez--glauser.myvtex.com/rolex/watches/yacht-master/">
+                                    href="https://glauser.myvtex.com/rolex/watches/yacht-master/">
                                     Mís información
                                     <svg
                                         aria-hidden="true"

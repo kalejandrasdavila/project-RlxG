@@ -25,8 +25,8 @@ const NewsModels: React.FC = () => {
     useInitScripts();
     const handles = useCssHandles(CSS_HANDLES)
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/nuevos-modelos-2025/';
-    const baseUrl = 'https://devjhernandez--glauser.myvtex.com';
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/';
+    const baseUrl = 'https://glauser.myvtex.com';
 
     return (
 
@@ -42,7 +42,7 @@ const NewsModels: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
                 <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -50,9 +50,9 @@ const NewsModels: React.FC = () => {
                 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-                <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/nuevos-modelos-2025/" />
+                <link rel="canonical" href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/" />
 
-                <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/nuevos-modelos-2025/" />
+                <meta property="og:url" content="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"

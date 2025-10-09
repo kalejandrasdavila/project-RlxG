@@ -9,8 +9,8 @@ import "../../../main-style.css";
 
 const TheOpen: React.FC = () => {
     useInitScripts();
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://devjhernandez--glauser.myvtex.com/rolex/mundo-rolex/the-open/';
-    const baseUrl = 'https://devjhernandez--glauser.myvtex.com';
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/the-open/';
+    const baseUrl = 'https://glauser.myvtex.com';
 
     return (
         <>
@@ -24,7 +24,7 @@ const TheOpen: React.FC = () => {
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+                    href="https://glauser.myvtex.com/files/style.min.css"
                 />
                 <link
                     rel="stylesheet"

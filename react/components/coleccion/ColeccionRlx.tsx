@@ -37,7 +37,7 @@ const ColeccionRlx: React.FC = () => {
         <link
           rel="stylesheet"
           type="text/css"
-          href="https://devjhernandez--glauser.myvtex.com/files/style.min.css"
+          href="https://glauser.myvtex.com/files/style.min.css"
         />
         <link
           rel="stylesheet"
@@ -46,9 +46,9 @@ const ColeccionRlx: React.FC = () => {
         />
         <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-        <link rel="canonical" href="https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/" />
+        <link rel="canonical" href="https://glauser.myvtex.com/rolex/coleccion-rolex/" />
 
-        <meta property="og:url" content="https://devjhernandez--glauser.myvtex.com/rolex/coleccion-rolex/" />
+        <meta property="og:url" content="https://glauser.myvtex.com/rolex/coleccion-rolex/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
