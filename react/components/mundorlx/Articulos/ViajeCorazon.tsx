@@ -186,7 +186,7 @@ const ViajeCorazon: React.FC = () => {
                     <div className="rlx-container">
                         <div className="row-grid">
                             <div className="rlx-logo">
-                                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className="placa-rolex-logo">
                                         <source
                                             media="(max-width: 767px)"
@@ -207,13 +207,13 @@ const ViajeCorazon: React.FC = () => {
                             <div className="breadcrum-column">
                                 <ul className="breadcrum-menu-list description">
                                     <li className="fixed-14">
-                                        <a href="/rolex/">Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/">Rolex</a>
                                     </li>
                                     <li className="fixed-14">
-                                        <a href="/rolex/mundo-rolex/">Mundo Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/mundo-rolex/">Mundo Rolex</a>
                                     </li>
                                     <li className="fixed-14 active none-mobil">
-                                        <a className="active" href="/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/">Viaje al corazón del universo Rolex</a>
+                                        <a className="active" href="https://glauser.myvtex.com/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/">Viaje al corazón del universo Rolex</a>
                                     </li>
                                 </ul>
                             </div>

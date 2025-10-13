@@ -157,7 +157,7 @@ const ModDatejust2025: React.FC = () => {
                     <div className="rlx-container">
                         <div className="row-grid">
                             <div className="rlx-logo">
-                                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className="placa-rolex-logo">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" />
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" loading="lazy" alt="placa distribuidor oficial rolex" />
@@ -171,13 +171,13 @@ const ModDatejust2025: React.FC = () => {
                             <div className="breadcrum-column">
                                 <ul className="breadcrum-menu-list description">
                                     <li className="fixed-14 none-mobil">
-                                        <a href="/rolex/">Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/">Rolex</a>
                                     </li>
                                     <li className="fixed-14">
-                                        <a href="/rolex/nuevos-modelos-2025/">Nuevos Modelos 2025</a>
+                                        <a href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/">Nuevos Modelos 2025</a>
                                     </li>
                                     <li className="fixed-14 none-mobil active">
-                                        <a className="active" href="/rolex/nuevos-modelos-2025/datejust/">Datejust</a>
+                                        <a className="active" href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/datejust/">Datejust</a>
                                     </li>
                                 </ul>
                             </div>

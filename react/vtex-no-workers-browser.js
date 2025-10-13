@@ -83,7 +83,7 @@ if (typeof window !== 'undefined') {
     window.Atomics = undefined;
 }
 
-// Solo en Node.js - interceptar módulos nativos
+// Solo en Node.js - interceptar módulos nativos (sin usar require directo)
 if (typeof process !== 'undefined' && typeof require !== 'undefined' && typeof module !== 'undefined') {
     try {
         // Configuración equilibrada para prevenir workerpool
@@ -92,99 +92,62 @@ if (typeof process !== 'undefined' && typeof require !== 'undefined' && typeof m
         process.env.NODE_NO_WARNINGS = '1';
         process.env.WORKERPOOL_DISABLED = 'true';
 
-        // Interceptar el require de workerpool específicamente
-        const Module = require('module');
-        const originalRequire = Module.prototype.require;
+        // Interceptar workerpool específicamente usando una función más segura
+        const originalRequire = module.constructor.prototype.require;
+        if (originalRequire) {
+            module.constructor.prototype.require = function (id) {
+                // Lista mínima de módulos problemáticos
+                const blockedModules = [
+                    'workerpool',
+                    'jest-worker'
+                ];
 
-        Module.prototype.require = function (id) {
-            // Lista mínima de módulos problemáticos
-            const blockedModules = [
-                'workerpool',
-                'jest-worker'
-            ];
+                // Verificar si el módulo está en la lista de bloqueados
+                if (typeof id === 'string') {
+                    const isBlocked = blockedModules.some(blocked =>
+                        id === blocked ||
+                        id.includes(blocked) ||
+                        id.endsWith('/' + blocked)
+                    );
 
-            // Verificar si el módulo está en la lista de bloqueados
-            if (typeof id === 'string') {
-                const isBlocked = blockedModules.some(blocked =>
-                    id === blocked ||
-                    id.includes(blocked) ||
-                    id.endsWith('/' + blocked)
-                );
+                    if (isBlocked) {
+                        console.warn(`[VTEX-NO-WORKERS] Blocked module: ${id}`);
 
-                if (isBlocked) {
-                    console.warn(`[VTEX-NO-WORKERS] Blocked module: ${id}`);
+                        // Retornar un mock específico para workerpool
+                        if (id.includes('workerpool')) {
+                            return {
+                                pool: () => ({
+                                    exec: () => Promise.resolve({}),
+                                    terminate: () => Promise.resolve(),
+                                    stats: () => ({}),
+                                    proxy: () => Promise.resolve({})
+                                }),
+                                worker: () => ({}),
+                                isMainThread: true,
+                                cpus: () => 1
+                            };
+                        }
 
-                    // Retornar un mock específico para workerpool
-                    if (id.includes('workerpool')) {
+                        // Mock genérico para otros workers
                         return {
-                            pool: () => ({
-                                exec: () => Promise.resolve({}),
-                                terminate: () => Promise.resolve(),
-                                stats: () => ({}),
-                                proxy: () => Promise.resolve({})
-                            }),
-                            worker: () => ({}),
+                            Worker: function () {
+                                return {
+                                    terminate: () => Promise.resolve(),
+                                    postMessage: () => { },
+                                    on: () => { },
+                                    removeListener: () => { }
+                                };
+                            },
                             isMainThread: true,
-                            cpus: () => 1
+                            parentPort: null,
+                            workerData: null,
+                            threadId: 0
                         };
                     }
-
-                    // Mock genérico para otros workers
-                    return {
-                        Worker: function () {
-                            return {
-                                terminate: () => Promise.resolve(),
-                                postMessage: () => { },
-                                on: () => { },
-                                removeListener: () => { }
-                            };
-                        },
-                        isMainThread: true,
-                        parentPort: null,
-                        workerData: null,
-                        threadId: 0
-                    };
                 }
-            }
 
-            return originalRequire.apply(this, arguments);
-        };
-
-        // Interceptar spawn y fork para prevenir procesos worker
-        try {
-            const cp = require('child_process');
-            const originalSpawn = cp.spawn;
-            const originalFork = cp.fork;
-
-            cp.spawn = function (command, args, options) {
-                if (command && (command.includes('worker') || command.includes('pool'))) {
-                    console.warn(`[VTEX-NO-WORKERS] Blocked spawn: ${command}`);
-                    return {
-                        pid: -1,
-                        kill: () => { },
-                        on: () => { },
-                        stdout: { on: () => { } },
-                        stderr: { on: () => { } }
-                    };
-                }
-                return originalSpawn.apply(this, arguments);
+                return originalRequire.apply(this, arguments);
             };
-
-            cp.fork = function (modulePath, args, options) {
-                if (modulePath && modulePath.includes('worker')) {
-                    console.warn(`[VTEX-NO-WORKERS] Blocked fork: ${modulePath}`);
-                    return {
-                        pid: -1,
-                        kill: () => { },
-                        send: () => { },
-                        on: () => { },
-                        disconnect: () => { }
-                    };
-                }
-                return originalFork.apply(this, arguments);
-            };
-        } catch (e) {
-            // Silenciosamente fallar si no se puede interceptar child_process
         }
     } catch (e) {
         // Silenciosamente fallar si no se puede interceptar Module

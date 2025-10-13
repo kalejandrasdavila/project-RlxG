@@ -231,7 +231,7 @@ const WatchModel: React.FC = () => {
             </a>
           </p>
           <p>
-            <a href="/rolex/coleccion-rolex/">← Ver todas las colecciones</a>
+            <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">← Ver todas las colecciones</a>
           </p>
         </div>
       </div>

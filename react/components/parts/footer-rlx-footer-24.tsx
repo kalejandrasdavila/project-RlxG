@@ -84,15 +84,6 @@ const MainEffects: React.FC = () => {
       },
     });
 
-    // Swiper Home Principal
-    const swiperHome = new (window as any).Swiper('.slider-home-principal', {
-      pagination: { el: '.swiper-pagination-home', clickable: true },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-
     // Accordion
     const headers = document.querySelectorAll('.accordion-header');
     const toggleAccordion = (element: Element) => {

@@ -105,7 +105,7 @@ const WatchesForm: React.FC = () => {
                                 <p className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20}`}>¡Gracias por contactarnos!</p>
                                 <p className={`${handles.body_20_blod} ${handles.pb_30}`}>Su mensaje se ha enviado correctamente al equipo Rolex en GLAUSER</p>
                                 <p className={`${handles.body_20_light} ${handles.pb_30}`}>Uno de nuestros asesores de ventas Rolex revisará su solicitud y le responderá lo antes posible.</p>
-                                <a href="/rolex/" className="btn-primary-rlx">Terminar</a>
+                                <a href="https://glauser.myvtex.com/rolex/" className="btn-primary-rlx">Terminar</a>
                             </div>
                         </div>
                     );

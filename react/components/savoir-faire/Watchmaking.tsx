@@ -174,7 +174,7 @@ const WatchMaking: React.FC = () => {
                     <div className={`${handles.rlx_container}`}>
                         <div className={`${handles.row_grid}`}>
                             <div className={`${handles.rlx_logo}`}>
-                                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className={`${handles.placa_rolex_logo}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -195,12 +195,12 @@ const WatchMaking: React.FC = () => {
                             <div className={`${handles.breadcrum_column}`}>
                                 <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
                                     <li className={`${handles.fixed_14}`}>
-                                        <a href="/rolex/coleccion-rolex/">
+                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">
                                             Relojes Rolex
                                         </a>
                                     </li>
                                     <li className={`${handles.fixed_14} ${handles.active}`}>
-                                        <a className={`${handles.active}`} href="/rolex/watchmaking/">Watchmaking</a>
+                                        <a className={`${handles.active}`} href="https://glauser.myvtex.com/rolex/watchmaking/">Watchmaking</a>
                                     </li>
                                 </ul>
                             </div>

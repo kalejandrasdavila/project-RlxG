@@ -193,7 +193,7 @@ const HorasMans: React.FC = () => {
                     <div className="rlx-container">
                         <div className="row-grid">
                             <div className="rlx-logo">
-                                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className="placa-rolex-logo">
                                         <source
                                             media="(max-width: 767px)"
@@ -214,13 +214,13 @@ const HorasMans: React.FC = () => {
                             <div className="breadcrum-column">
                                 <ul className="breadcrum-menu-list description">
                                     <li className="fixed-14">
-                                        <a href="/rolex/">Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/">Rolex</a>
                                     </li>
                                     <li className="fixed-14">
-                                        <a href="/rolex/mundo-rolex/">Mundo Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/mundo-rolex/">Mundo Rolex</a>
                                     </li>
                                     <li className="fixed-14 active  none-mobil">
-                                        <a className="active" href="/rolex/mundo-rolex/24-horas-de-le-mans/">Las 24 Horas de Le Mans</a>
+                                        <a className="active" href="https://glauser.myvtex.com/rolex/mundo-rolex/24-horas-de-le-mans/">Las 24 Horas de Le Mans</a>
                                     </li>
                                 </ul>
                             </div>
@@ -408,7 +408,7 @@ const HorasMans: React.FC = () => {
                     <div className="rlx-container-content py-90-60">
                         <div className="row-grid-fullw component-video">
                             <div className="col-6-12">
-                                <a href="/rolex/watches/cosmograph-daytona/">
+                                <a href="https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source
                                             media="(max-width: 767px)"
@@ -432,7 +432,7 @@ const HorasMans: React.FC = () => {
                                     </p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="/rolex/watches/cosmograph-daytona/">
+                                        href="https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/">
                                         Más información
                                         <svg
                                             aria-hidden="true"

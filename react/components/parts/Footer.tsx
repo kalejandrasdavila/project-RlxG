@@ -1,31 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useCssHandles } from 'vtex.css-handles';
 
 const CSS_HANDLES = [
-    //HEADER//
-    'rlx_footer', 'rlx_container', 'legend_16_bold', '_rotate_90', 'btnVolverArriba', 'rlxcrown', 'back2top',
-    'legend_16_bold'
-
+    'rlx_footer', 'rlx_container', 'legend_16_bold', '_rotate_90', 'btnVolverArriba', 'rlxcrown', 'back2top'
 ] as const
 
 const Footer: React.FC = () => {
     const handles = useCssHandles(CSS_HANDLES)
-    useEffect(() => {
-        const scrollToTop = () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
 
-        const backToTopButton = document.getElementById('btnVolverArriba');
-        if (backToTopButton) {
-            backToTopButton.addEventListener('click', scrollToTop);
-        }
-
-        return () => {
-            if (backToTopButton) {
-                backToTopButton.removeEventListener('click', scrollToTop);
-            }
-        };
-    }, []);
+    const scrollToTop = (e: React.MouseEvent) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     return (
         <>
@@ -45,10 +31,12 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                     <div className={`${handles.back2top}`}>
-                        <a id="btnVolverArriba" className={`${handles.rlx_container} ${handles.btnVolverArriba} ${handles.legend_16_bold}`} onClick={(e) => {
-                            e.preventDefault();
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }}>
+                        <a
+                            id="btnVolverArriba"
+                            className={`${handles.rlx_container} ${handles.btnVolverArriba} ${handles.legend_16_bold}`}
+                            onClick={scrollToTop}
+                            href="#"
+                        >
                             <svg
                                 className={`${handles._rotate_90}`}
                                 height="15"
@@ -68,8 +56,6 @@ const Footer: React.FC = () => {
             </footer>
             <div className="rolex-page">
             </div>
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         </>
     );
 };

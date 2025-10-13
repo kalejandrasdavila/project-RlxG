@@ -168,7 +168,7 @@ const MundoRolex: React.FC = () => {
                     <div className={`${handles.rlx_container}`}>
                         <div className={`${handles.row_grid}`}>
                             <div className={`${handles.rlx_logo}`}>
-                                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className={`${handles.placa_rolex_logo}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -189,10 +189,10 @@ const MundoRolex: React.FC = () => {
                             <div className={`${handles.breadcrum_column}`}>
                                 <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
                                     <li className={`${handles.fixed_14}`}>
-                                        <a href="/rolex/">Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/">Rolex</a>
                                     </li>
                                     <li className={`${handles.fixed_14} ${handles.active}`}>
-                                        <a className={`${handles.active}`} href="/rolex/mundo-rolex/">Mundo Rolex</a>
+                                        <a className={`${handles.active}`} href="https://glauser.myvtex.com/rolex/mundo-rolex/">Mundo Rolex</a>
                                     </li>
                                 </ul>
                             </div>
@@ -240,7 +240,7 @@ const MundoRolex: React.FC = () => {
                         </div>
                         <div className={`${handles.row_grid_fullw} ${handles.component_video}`}>
                             <div className={`${handles.col_6_12}`}>
-                                <a href="/rolex/mundo-rolex/grand-slam-of-show-jumping/">
+                                <a href="https://glauser.myvtex.com/rolex/mundo-rolex/grand-slam-of-show-jumping/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -274,7 +274,7 @@ const MundoRolex: React.FC = () => {
                                     </p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="/rolex/mundo-rolex/grand-slam-of-show-jumping/">
+                                        href="https://glauser.myvtex.com/rolex/mundo-rolex/grand-slam-of-show-jumping/">
                                         Más información
                                         <svg
                                             aria-hidden="true"
@@ -290,7 +290,7 @@ const MundoRolex: React.FC = () => {
                                 </div>
                             </div>
                             <div className={`${handles.col_lg_8_6} ${handles.pb_45_40}`}>
-                                <a href="/rolex/mundo-rolex/filarmonica-viena/">
+                                <a href="https://glauser.myvtex.com/rolex/mundo-rolex/filarmonica-viena/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -317,7 +317,7 @@ const MundoRolex: React.FC = () => {
                                     </p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="/rolex/mundo-rolex/filarmonica-viena/">
+                                        href="https://glauser.myvtex.com/rolex/mundo-rolex/filarmonica-viena/">
                                         Más información
                                         <svg
                                             aria-hidden="true"
@@ -335,7 +335,7 @@ const MundoRolex: React.FC = () => {
                         </div>
                         <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
                             <div className={`${handles.col_lg_2_6} ${handles.pb_45_40}`}>
-                                <a href="/rolex/mundo-rolex/sailgp/">
+                                <a href="https://glauser.myvtex.com/rolex/mundo-rolex/sailgp/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -364,7 +364,7 @@ const MundoRolex: React.FC = () => {
                                     </p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="/rolex/mundo-rolex/sailgp/">
+                                        href="https://glauser.myvtex.com/rolex/mundo-rolex/sailgp/">
                                         Más información
                                         <svg
                                             aria-hidden="true"
@@ -380,7 +380,7 @@ const MundoRolex: React.FC = () => {
                                 </div>
                             </div>
                             <div className={`${handles.col_lg_8_6} ${handles.pb_45_40}`}>
-                                <a href="/rolex/mundo-rolex/us-open/">
+                                <a href="https://glauser.myvtex.com/rolex/mundo-rolex/us-open/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -406,7 +406,7 @@ const MundoRolex: React.FC = () => {
                                     </p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="/rolex/mundo-rolex/us-open/">
+                                        href="https://glauser.myvtex.com/rolex/mundo-rolex/us-open/">
                                         Más información
                                         <svg
                                             aria-hidden="true"
@@ -424,7 +424,7 @@ const MundoRolex: React.FC = () => {
                         </div>
                         <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
                             <div className={`${handles.col_lg_2_6} ${handles.pb_45_40}`}>
-                                <a href="/rolex/mundo-rolex/the-open/">
+                                <a href="https://glauser.myvtex.com/rolex/mundo-rolex/the-open/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -452,7 +452,7 @@ const MundoRolex: React.FC = () => {
                                     </p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="/rolex/mundo-rolex/the-open/">
+                                        href="https://glauser.myvtex.com/rolex/mundo-rolex/the-open/">
                                         Más información
                                         <svg
                                             aria-hidden="true"
@@ -468,7 +468,7 @@ const MundoRolex: React.FC = () => {
                                 </div>
                             </div>
                             <div className={`${handles.col_lg_8_6} ${handles.pb_45_40}`}>
-                                <a href="/rolex/mundo-rolex/amundi-evian/">
+                                <a href="https://glauser.myvtex.com/rolex/mundo-rolex/amundi-evian/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -494,7 +494,7 @@ const MundoRolex: React.FC = () => {
                                     </p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="/rolex/mundo-rolex/amundi-evian/">
+                                        href="https://glauser.myvtex.com/rolex/mundo-rolex/amundi-evian/">
                                         Más información
                                         <svg
                                             aria-hidden="true"
@@ -512,7 +512,7 @@ const MundoRolex: React.FC = () => {
                         </div>
                         <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
                             <div className={`${handles.col_lg_2_6} ${handles.pb_45_40}`}>
-                                <a href="/rolex/mundo-rolex/24-horas-de-le-mans/">
+                                <a href="https://glauser.myvtex.com/rolex/mundo-rolex/24-horas-de-le-mans/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -539,7 +539,7 @@ const MundoRolex: React.FC = () => {
                                     </p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="/rolex/mundo-rolex/24-horas-de-le-mans/">
+                                        href="https://glauser.myvtex.com/rolex/mundo-rolex/24-horas-de-le-mans/">
                                         Más información
                                         <svg
                                             aria-hidden="true"
@@ -555,7 +555,7 @@ const MundoRolex: React.FC = () => {
                                 </div>
                             </div>
                             <div className={`${handles.col_lg_8_6} ${handles.pb_45_40}`}>
-                                <a href="/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/">
+                                <a href="https://glauser.myvtex.com/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -585,7 +585,7 @@ const MundoRolex: React.FC = () => {
                                     </p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/">
+                                        href="https://glauser.myvtex.com/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/">
                                         Más información
                                         <svg
                                             aria-hidden="true"

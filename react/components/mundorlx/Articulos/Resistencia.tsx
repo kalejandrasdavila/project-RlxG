@@ -189,7 +189,7 @@ const Resistencia: React.FC = () => {
                     <div className="rlx-container">
                         <div className="row-grid">
                             <div className="rlx-logo">
-                                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className="placa-rolex-logo">
                                         <source
                                             media="(max-width: 767px)"
@@ -210,13 +210,13 @@ const Resistencia: React.FC = () => {
                             <div className="breadcrum-column">
                                 <ul className="breadcrum-menu-list description">
                                     <li className="fixed-14">
-                                        <a href="/rolex/">Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/">Rolex</a>
                                     </li>
                                     <li className="fixed-14">
-                                        <a href="/rolex/mundo-rolex/">Mundo Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/mundo-rolex/">Mundo Rolex</a>
                                     </li>
                                     <li className="fixed-14 active none-mobil">
-                                        <a className="active" href="/rolex/mundo-rolex/resistencia/">Resistencia</a>
+                                        <a className="active" href="https://glauser.myvtex.com/rolex/mundo-rolex/resistencia/">Resistencia</a>
                                     </li>
                                 </ul>
                             </div>
@@ -342,7 +342,7 @@ const Resistencia: React.FC = () => {
                     <div className="rlx-container-content py-90-60">
                         <div className="row-grid-fullw component-video">
                             <div className="col-6-12">
-                                <a href="/rolex/watches/cosmograph-daytona/">
+                                <a href="https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-cosmograph-daytona-m126508-0008-portrait.webp" />
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-cosmograph-daytona-m126508-0008-landscape.webp" loading="lazy" alt="Colección Rolex Cosmograph Daytona" />
@@ -357,7 +357,7 @@ const Resistencia: React.FC = () => {
                                     <p className="headline36 c-brown-text">El triunfo de la resistencia</p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="/rolex/watches/cosmograph-daytona/">
+                                        href="https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/">
                                         Más información
                                         <svg
                                             aria-hidden="true"

@@ -1,0 +1,32 @@
+/* Estilos globales para la aplicación Rolex - Compatible con VTEX */
+
+/* Contenedores principales */
+.vtex-store-components-3-x-container {
+    width: 100%;
+}
+
+.vtex-store-components-3-x-headercomponent {
+    width: 100%;
+}
+
+/* Estilos Rolex específicos */
+.vtex-store-components-3-x-rlx_html {
+    font-family: 'Rolex', Arial, sans-serif;
+}
+
+.vtex-store-components-3-x-home_rlx {
+    background-color: #f8f8f8;
+}
+
+/* Slider principal */
+.vtex-store-components-3-x-slider_home_principal {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vtex-store-components-3-x-rlx_container {
+        padding: 0 15px;
+    }
+}

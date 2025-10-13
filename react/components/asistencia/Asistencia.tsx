@@ -93,7 +93,7 @@ const Asistencia: React.FC = () => {
                     <div className={`${handles.rlx_container}`}>
                         <div className={`${handles.row_grid}`}>
                             <div className={`${handles.rlx_logo}`}>
-                                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className={`${handles.placa_rolex_logo}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -114,7 +114,7 @@ const Asistencia: React.FC = () => {
                             <div className={`${handles.breadcrum_column}`}>
                                 <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
                                     <li className={`${handles.fixed_14}`}>
-                                        <a href="/rolex/coleccion-rolex/">
+                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">
                                             Relojes Rolex
                                         </a>
                                     </li>
@@ -271,7 +271,7 @@ const Asistencia: React.FC = () => {
                                     pruebas estrictas para garantizar el nivel de Colombiadad y fiabilidad que se espera de un reloj Rolex.
                                 </p>
                                 <a
-                                    href="/rolex/asistencia-rolex/mantenimiento-rolex/"
+                                    href="https://glauser.myvtex.com/rolex/asistencia-rolex/mantenimiento-rolex/"
                                     className={`${handles.btn_primary_rlx}`}
                                 >
                                     Descubra más

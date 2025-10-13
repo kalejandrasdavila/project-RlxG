@@ -83,7 +83,7 @@ const NewsModels: React.FC = () => {
                     <div className={`${handles.rlx_container}`}>
                         <div className={`${handles.row_grid}`}>
                             <div className={`${handles.rlx_logo}`}>
-                                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className={`${handles.placa_rolex_logo}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -104,12 +104,12 @@ const NewsModels: React.FC = () => {
                             <div className={`${handles.breadcrum_column}`}>
                                 <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
                                     <li className={`${handles.fixed_14}`}>
-                                        <a href="/rolex/coleccion-rolex/">
+                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">
                                             Relojes Rolex
                                         </a>
                                     </li>
                                     <li className={`${handles.fixed_14} ${handles.active}`}>
-                                        <a className={`${handles.active}`} href="/rolex/nuevos-modelos-2025/">Nuevos Modelos 2024</a>
+                                        <a className={`${handles.active}`} href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/">Nuevos Modelos 2024</a>
                                     </li>
                                 </ul>
                             </div>
@@ -161,7 +161,7 @@ const NewsModels: React.FC = () => {
                         </div>
                         <div className={`${handles.row_grid_fullw} ${handles.component_2_col} ${handles.pb_90_60}`}>
                             <div className={`${handles.col_lg_2_6} ${handles.pb_50_0}`}>
-                                <a href="/rolex/nuevos-modelos-2025/gmt-master-ii/">
+                                <a href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/gmt-master-ii/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative} `}>
                                         <source
                                             media="(max-width: 767px)"
@@ -180,7 +180,7 @@ const NewsModels: React.FC = () => {
                                 </a>
                             </div>
                             <div className={`${handles.col_lg_8_6}`}>
-                                <a href="/rolex/nuevos-modelos-2025/day-date/">
+                                <a href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/day-date/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative} `}>
                                         <source
                                             media="(max-width: 767px)"
@@ -201,7 +201,7 @@ const NewsModels: React.FC = () => {
                         </div>
                         <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
                             <div className={`${handles.col_lg_2_6} ${handles.pb_50_0}`}>
-                                <a href="/rolex/nuevos-modelos-2025/1908/">
+                                <a href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/1908/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative} `}>
                                         <source
                                             media="(max-width: 767px)"
@@ -220,7 +220,7 @@ const NewsModels: React.FC = () => {
                                 </a>
                             </div>
                             <div className={`${handles.col_lg_8_6}`}>
-                                <a href="/rolex/nuevos-modelos-2025/deepsea/">
+                                <a href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/deepsea/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative} `}>
                                         <source
                                             media="(max-width: 767px)"
@@ -241,7 +241,7 @@ const NewsModels: React.FC = () => {
                         </div>
                         <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
                             <div className={`${handles.col_lg_2_6} ${handles.pb_50_0}`}>
-                                <a href="/rolex/nuevos-modelos-2025/cosmograph-daytona/">
+                                <a href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/cosmograph-daytona/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative} `}>
                                         <source
                                             media="(max-width: 767px)"
@@ -262,7 +262,7 @@ const NewsModels: React.FC = () => {
                                 </a>
                             </div>
                             <div className={`${handles.col_lg_8_6}`}>
-                                <a href="/rolex/nuevos-modelos-2025/sky-dweller/">
+                                <a href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/sky-dweller/">
                                     <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative} `}>
                                         <source
                                             media="(max-width: 767px)"

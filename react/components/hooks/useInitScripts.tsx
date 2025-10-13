@@ -1,79 +1,55 @@
 import { useEffect } from "react";
 
-// Versión ultra-simplificada para evitar problemas con workers en VTEX
+// Hook simplificado y seguro para inicializar scripts
 const useInitScripts = () => {
     useEffect(() => {
         if (typeof window === "undefined") return;
 
-        // Función simple para cargar jQuery
-        const loadJQuery = async () => {
-            if (!window.$) {
-                try {
-                    const $ = await import('jquery');
-                    window.$ = $.default;
-                    return $.default;
-                } catch (error) {
-                    console.error('Error loading jQuery:', error);
-                    return null;
-                }
-            }
-            return window.$;
-        };
-
-        // Función simple para cargar Swiper
-        const loadSwiper = async () => {
-            if (!window.Swiper) {
-                try {
-                    const swiperModule = await import('swiper');
-                    const Swiper = swiperModule.default || swiperModule.Swiper;
-                    window.Swiper = Swiper;
-
-                    // Cargar CSS
-                    if (!document.querySelector('link[href*="swiper"]')) {
-                        const link = document.createElement('link');
-                        link.rel = 'stylesheet';
-                        link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
-                        document.head.appendChild(link);
-                    }
-
-                    return Swiper;
-                } catch (error) {
-                    console.error('Error loading Swiper:', error);
-                    return null;
-                }
-            }
-            return window.Swiper;
-        };
-
-        // Inicialización simple
-        const init = async () => {
-            // Cargar dependencias
-            const $ = await loadJQuery();
-            const Swiper = await loadSwiper();
-
-            // Toggle navigation simple
-            if ($) {
-                $(document).off("click", "a.rlx-sm.btn-toggle").on("click", "a.rlx-sm.btn-toggle", function () {
-                    $("nav.rlx-header-menu-top").toggleClass("showme");
-                });
-            }
-
-            // Swiper simple
-            if (Swiper) {
-                const sliderPrincipal = document.querySelector(".slider-home-principal");
-                if (sliderPrincipal) {
-                    new Swiper(sliderPrincipal, {
-                        pagination: { el: ".swiper-pagination-home", clickable: true },
-                        navigation: { nextEl: ".swiper-button-next-home", prevEl: ".swiper-button-prev-home" },
+        const initSwiper = () => {
+            if (typeof window.Swiper !== 'undefined') {
+                // Slider principal
+                const sliderPrincipal = document.querySelector('.slider-home-principal');
+                if (sliderPrincipal && !sliderPrincipal.classList.contains('swiper-initialized')) {
+                    new window.Swiper(sliderPrincipal, {
+                        pagination: {
+                            el: '.swiper-pagination-home',
+                            clickable: true,
+                            bulletClass: 'swiper-pagination-bullet',
+                            bulletActiveClass: 'swiper-pagination-bullet-active'
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        },
                         loop: false,
+                        autoplay: {
+                            delay: 5000,
+                            disableOnInteraction: false
+                        },
+                        speed: 600,
+                        effect: 'slide',
+                        spaceBetween: 0,
+                        slidesPerView: 1,
+                        watchOverflow: true,
+                        observer: true,
+                        observeParents: true
                     });
                 }
 
-                const sliderFooter = document.querySelector(".exploremas");
-                if (sliderFooter) {
-                    new Swiper(sliderFooter, {
+                // Slider de explorar más
+                const sliderExplore = document.querySelector('.exploremas');
+                if (sliderExplore && !sliderExplore.classList.contains('swiper-initialized')) {
+                    new window.Swiper(sliderExplore, {
                         slidesPerView: 4,
                         spaceBetween: 8,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true
+                        },
+                        navigation: {
+                            nextEl: '.footer-next',
+                            prevEl: '.footer-prev'
+                        },
                         breakpoints: {
                             320: { slidesPerView: 1.2 },
                             768: { slidesPerView: 2.5 },
@@ -84,12 +60,42 @@ const useInitScripts = () => {
             }
         };
 
-        // Ejecutar inicialización
-        init();
+        // Toggle navigation simple usando jQuery global si está disponible
+        const handleToggle = () => {
+            if (window.$ && typeof window.$ === 'function') {
+                window.$("nav.rlx-header-menu-top").toggleClass("showme");
+            } else {
+                // Fallback sin jQuery
+                const menu = document.querySelector("nav.rlx-header-menu-top");
+                if (menu) {
+                    menu.classList.toggle("showme");
+                }
+            }
+        };
 
-        // Cleanup simple
+        // Inicializar cuando el DOM esté listo y Swiper esté cargado
+        const checkAndInit = () => {
+            if (typeof window.Swiper !== 'undefined') {
+                initSwiper();
+            } else {
+                setTimeout(checkAndInit, 100);
+            }
+        };
+
+        const timer = setTimeout(checkAndInit, 1000);
+
+        // Agregar event listener al botón de toggle
+        const toggleButton = document.querySelector("a.rlx-sm.btn-toggle");
+        if (toggleButton) {
+            toggleButton.addEventListener("click", handleToggle);
+        }
+
+        // Cleanup
         return () => {
-            // Cleanup básico si es necesario
+            clearTimeout(timer);
+            if (toggleButton) {
+                toggleButton.removeEventListener("click", handleToggle);
+            }
         };
     }, []);
 

@@ -89,7 +89,7 @@ const Mantenimiento: React.FC = () => {
                     <div className={`${handles.rlx_container}`}>
                         <div className={`${handles.row_grid}`}>
                             <div className={`${handles.rlx_logo}`}>
-                                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className={`${handles.placa_rolex_logo}`}>
                                         <source
                                             media="(max-width: 767px)"
@@ -110,15 +110,15 @@ const Mantenimiento: React.FC = () => {
                             <div className={`${handles.breadcrum_column}`}>
                                 <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
                                     <li className={`${handles.fixed_14}`}>
-                                        <a href="/rolex/coleccion-rolex/">
+                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">
                                             Relojes Rolex
                                         </a>
                                     </li>
                                     <li className={`${handles.fixed_14} ${handles.active}`}>
-                                        <a href="/rolex/asistencia-rolex/">Mantenimiento</a> {/* Use relative paths */}
+                                        <a href="https://glauser.myvtex.com/rolex/asistencia-rolex/">Mantenimiento</a> {/* Use relative paths */}
                                     </li>
                                     <li className={`${handles.fixed_14} ${handles.active} ${handles.none_mobil}`}>
-                                        <a className={`${handles.active}`} href="/rolex/asistencia-rolex/mantenimiento-rolex/">Procedimiento de mantenimiento</a> {/* Use relative paths */}
+                                        <a className={`${handles.active}`} href="https://glauser.myvtex.com/rolex/asistencia-rolex/mantenimiento-rolex/">Procedimiento de mantenimiento</a> {/* Use relative paths */}
                                     </li>
                                 </ul>
                             </div>

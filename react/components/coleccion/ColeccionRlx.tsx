@@ -80,7 +80,7 @@ const ColeccionRlx: React.FC = () => {
           <div className={`${handles.rlx_container}`}>
             <div className={`${handles.row_grid}`}>
               <div className={`${handles.rlx_logo}`}>
-                <a href="/rolex/" aria-label="Inicio" title="Inicio">
+                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                   <picture className={`${handles.placa_rolex_logo}`}>
                     <source
                       media="(max-width: 767px)"
@@ -101,10 +101,10 @@ const ColeccionRlx: React.FC = () => {
               <div className={`${handles.breadcrum_column}`}>
                 <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
                   <li className={`${handles.fixed_14}`}>
-                    <a href="/rolex/">Rolex</a>
+                    <a href="https://glauser.myvtex.com/rolex/">Rolex</a>
                   </li>
                   <li className={`${handles.fixed_14} ${handles.active}`}>
-                    <a className={`${handles.active}`} href="/rolex/coleccion-rolex/">Relojes Rolex</a>
+                    <a className={`${handles.active}`} href="https://glauser.myvtex.com/rolex/coleccion-rolex/">Relojes Rolex</a>
                   </li>
                 </ul>
               </div>
@@ -154,7 +154,7 @@ const ColeccionRlx: React.FC = () => {
             <div className={`${handles.row_grid_fullw} ${handles.component_video}`}>
               <div className={`${handles.col_6_12}`}>
                 <h2 className={`${handles.headline36} ${handles.c_brown_text} ${handles.pb_20}`}>Nuevos modelos 2025</h2>
-                <a href="/rolex/nuevos-modelos-2025/">
+                <a href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -176,7 +176,7 @@ const ColeccionRlx: React.FC = () => {
                   <h3 className={`${handles.headline36} ${handles.c_brown_text}`}>Ampliar horizontes</h3>
                   <a
                     className={`${handles.btn_label_icon_rlx}`}
-                    href="/rolex/nuevos-modelos-2025/">
+                    href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/">
                     Más información
                     <svg
                       aria-hidden="true"
@@ -199,7 +199,7 @@ const ColeccionRlx: React.FC = () => {
             </div>
             <div className={`${handles.row_grid_fullw} ${handles.component_3_col} ${handles.pb_90_60}`}>
               <div className={`${handles.col_span_2_1} ${handles.col_6_2} ${handles.pb_50_0}`}>
-                <a href="/rolex/watches/land-dweller/">
+                <a href="https://glauser.myvtex.com/rolex/watches/land-dweller/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -218,7 +218,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className={`${handles.col_span_2_2} ${handles.col_6_6} ${handles.pb_50_0}`}>
-                <a href="/rolex/watches/day-date/">
+                <a href="https://glauser.myvtex.com/rolex/watches/day-date/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -237,7 +237,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className={`${handles.col_span_2_1} ${handles.col_6_10}`}>
-                <a href="/rolex/watches/sky-dweller/">
+                <a href="https://glauser.myvtex.com/rolex/watches/sky-dweller/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -256,7 +256,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className={`${handles.col_span_2_2} ${handles.col_6_2} ${handles.pb_50_0}`}>
-                <a href="/rolex/watches/lady-datejust/">
+                <a href="https://glauser.myvtex.com/rolex/watches/lady-datejust/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -275,7 +275,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className={`${handles.col_span_2_1} ${handles.col_6_6}`}>
-                <a href="/rolex/watches/datejust/">
+                <a href="https://glauser.myvtex.com/rolex/watches/datejust/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -294,7 +294,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className={`${handles.col_span_2_2} ${handles.col_6_10}`}>
-                <a href="/rolex/watches/oyster-perpetual/">
+                <a href="https://glauser.myvtex.com/rolex/watches/oyster-perpetual/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -320,7 +320,7 @@ const ColeccionRlx: React.FC = () => {
             </div>
             <div className={`${handles.row_grid_fullw} ${handles.component_3_col} ${handles.pb_90_60}`}>
               <div className={`${handles.col_span_2_1} ${handles.col_6_2} ${handles.pb_50_0}`}>
-                <a href="/rolex/watches/cosmograph-daytona/">
+                <a href="https://glauser.myvtex.com/rolex/watches/cosmograph-daytona/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -339,7 +339,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className={`${handles.col_span_2_2} ${handles.col_6_6} ${handles.pb_50_0}`}>
-                <a href="/rolex/watches/submariner/">
+                <a href="https://glauser.myvtex.com/rolex/watches/submariner/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -358,7 +358,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className={`${handles.col_span_2_1} ${handles.col_6_10}`}>
-                <a href="/rolex/watches/sea-dweller/">
+                <a href="https://glauser.myvtex.com/rolex/watches/sea-dweller/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -377,7 +377,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className={`${handles.col_span_2_2} ${handles.col_6_2} ${handles.pb_50_0}`}>
-                <a href="/rolex/watches/deepsea/">
+                <a href="https://glauser.myvtex.com/rolex/watches/deepsea/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -396,7 +396,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className={`${handles.col_span_2_1} ${handles.col_6_6} ${handles.pb_50_0}`}>
-                <a href="/rolex/watches/gmt-master-ii/">
+                <a href="https://glauser.myvtex.com/rolex/watches/gmt-master-ii/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -415,7 +415,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className="col-span-2-2 col-6-10">
-                <a href="/rolex/watches/yacht-master/">
+                <a href="https://glauser.myvtex.com/rolex/watches/yacht-master/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -434,7 +434,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className="col-span-2-1 col-6-2">
-                <a href="/rolex/watches/explorer/">
+                <a href="https://glauser.myvtex.com/rolex/watches/explorer/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -453,7 +453,7 @@ const ColeccionRlx: React.FC = () => {
                 </div>
               </div>
               <div className="col-span-2-2 col-6-6">
-                <a href="/rolex/watches/air-king/">
+                <a href="https://glauser.myvtex.com/rolex/watches/air-king/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
@@ -479,7 +479,7 @@ const ColeccionRlx: React.FC = () => {
             </div>
             <div className={`${handles.row_grid_fullw} ${handles.component_3_col_2}`}>
               <div className={`${handles.col_span_2_1} ${handles.col_6_2} ${handles.pb_50_0}`}>
-                <a href="/rolex/watches/1908/">
+                <a href="https://glauser.myvtex.com/rolex/watches/1908/">
                   <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
                     <source
                       media="(max-width: 767px)"
