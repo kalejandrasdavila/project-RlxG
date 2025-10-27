@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../components/hooks/useInitScripts';
-import RlxExploreMasNModels from "../../components/parts/RlxExploreMas";
+import RlxExploreMasNModels from "../../components/parts/RlxExploreMasNModels";
 import Nav from "../../components/parts/Nav";
 import Footer from "../../components/parts/Footer";
 import { useCssHandles } from 'vtex.css-handles';
@@ -31,48 +31,7 @@ const NewsModels: React.FC = () => {
     return (
 
         <>
-            <Helmet>
-                <title>Nuevos modelos Rolex 2024 - GLAUSER</title>
-                <meta
-                    name="description"
-                    content="GLAUSER presenta la última colección de relojes de lujo suizos de Rolex. Descubra las características únicas de los nuevos modelos de este año."
-                />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.myvtex.com/files/style.min.css"
-                />
-                <link rel="stylesheet" type="text/css" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
-                <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-                <link rel="canonical" href="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/" />
-
-                <meta property="og:url" content="https://glauser.myvtex.com/rolex/nuevos-modelos-2025/" />
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Nuevos modelos Rolex 2024 - GLAUSER"
-                />
-                <meta
-                    property="og:description"
-                    content="GLAUSER presenta la última colección de relojes de lujo suizos de Rolex. Descubra las características únicas de los nuevos modelos de este año."
-                />
-                <meta
-                    property="og:image"
-                    content="https://glauser.vteximg.com.br/arquivos/nuevos-modelos-rolex-2024-1200x630.jpg"
-                />
-
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@glauser_col" />
-                <meta name="twitter:title" content="Nuevos modelos Rolex 2024 - GLAUSER" />
-                <meta name="twitter:description" content="GLAUSER presenta la última colección de relojes de lujo suizos de Rolex. Descubra las características únicas de los nuevos modelos de este año." />
-                <meta name="twitter:image" content="https://glauser.vteximg.com.br/arquivos/nuevos-modelos-rolex-2024-1200x630.jpg" />
-            </Helmet>
             <div className={`${handles.headercomponent}`}>
                 <header className="main-header" id="main-header">
                 </header>

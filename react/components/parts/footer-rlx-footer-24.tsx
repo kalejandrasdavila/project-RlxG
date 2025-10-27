@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import Swiper from 'swiper';
-import 'swiper/css';
 
 declare global {
   interface Window {
@@ -63,26 +61,6 @@ const MainEffects: React.FC = () => {
       scrollToTop();
     });
 
-    // Swiper Explore Mas
-    const swiperExplore = new (window as any).Swiper('.exploremas', {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      loopFillGroupWithBlank: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: (index: number, className: string) => `<span class="${className}"></span>`,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        320: { slidesPerView: 2, slidesPerGroup: 2 },
-        480: { slidesPerView: 2, slidesPerGroup: 2 },
-        768: { slidesPerView: 4, slidesPerGroup: 4 },
-      },
-    });
 
     // Accordion
     const headers = document.querySelectorAll('.accordion-header');
@@ -186,15 +164,19 @@ const MainEffects: React.FC = () => {
       }
     });
 
-    // Swiper solo para móvil
-    let swiperMobile: any = null;
-    const initMobileSwiper = () => {
+    // Swiper para móvil y desktop
+    let swiperInstance: any = null;
+    const initSwiper = () => {
       const container = document.querySelector('.swiper-container-mobile') as HTMLElement | null;
-      if (window.innerWidth <= 767 && container && !swiperMobile) {
-        swiperMobile = new (window as any).Swiper(container, {
-          slidesPerView: 1,
-          spaceBetween: 0,
+      if (container && !swiperInstance) {
+        // Configuración diferente según el tamaño de pantalla
+        const isMobile = window.innerWidth <= 767;
+
+        swiperInstance = new (window as any).Swiper(container, {
+          slidesPerView: isMobile ? 1 : 3, // 1 slide en móvil, 3 en desktop
+          spaceBetween: isMobile ? 0 : 20, // Sin espacio en móvil, 20px en desktop
           loop: true,
+          centeredSlides: !isMobile, // Centrar slides en desktop
           pagination: {
             el: '.swiper-pagination-model',
             clickable: true,
@@ -203,20 +185,46 @@ const MainEffects: React.FC = () => {
             nextEl: '.swiper-button-model-next',
             prevEl: '.swiper-button-model-prev',
           },
+          breakpoints: {
+            // Configuración específica para diferentes tamaños
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 25,
+            }
+          }
         });
-      } else if (swiperMobile && window.innerWidth > 767) {
-        swiperMobile.destroy();
-        swiperMobile = null;
+      } else if (swiperInstance && window.innerWidth !== window.innerWidth) {
+        // Solo reinicializar si realmente cambió el tamaño significativamente
+        const currentIsMobile = window.innerWidth <= 767;
+        const wasMobile = swiperInstance.params.slidesPerView === 1;
+
+        if (currentIsMobile !== wasMobile) {
+          swiperInstance.destroy();
+          swiperInstance = null;
+          initSwiper();
+        }
       }
     };
 
-    initMobileSwiper();
-    window.addEventListener('resize', initMobileSwiper);
+    initSwiper();
+    window.addEventListener('resize', initSwiper);
 
     return () => {
       toggleBtn?.removeEventListener('click', toggleNav);
       btn?.removeEventListener('click', scrollToTop);
-      window.removeEventListener('resize', initMobileSwiper);
+      window.removeEventListener('resize', initSwiper);
+      if (swiperInstance) {
+        swiperInstance.destroy();
+        swiperInstance = null;
+      }
     };
   }, []);
 

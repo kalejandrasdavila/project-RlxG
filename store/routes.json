@@ -1,14 +1,11 @@
 {
-    "store.home-rlx": {
+    "store.home": {
         "path": "/"
     },
-    "store.custom#rolex": {
+    "store.rolex": {
         "path": "/rolex"
     },
-    "store.coleccionRlx": {
-        "path": "/rolex/coleccion-rolex/"
-    },
-    "store.custom#coleccion-rolex": {
+    "store.coleccion-rolex": {
         "path": "/rolex/coleccion-rolex/"
     },
     "store.watch-collection": {

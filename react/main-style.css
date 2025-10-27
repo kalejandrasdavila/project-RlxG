@@ -909,6 +909,8 @@ textarea:focus {
     display: grid;
     grid-template-columns: 8vw repeat(12, minmax(0, 1fr)) 8vw;
     grid-gap: 8px;
+    min-height: 70vh;
+    align-items: center;
 }
 
 .pb-5 {
@@ -1199,12 +1201,233 @@ textarea:focus {
     width: 100%;
     height: auto;
     overflow: hidden;
+    position: relative;
+}
+
+:global(.glauser-storerlx-0-x-slider_home_principal) {
+    min-height: 70vh;
+    background-color: white;
+}
+
+/* Mapeo de clases CSS handles a clases CSS reales */
+:global(.glauser-storerlx-0-x-swiper_container).swiper-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+:global(.glauser-storerlx-0-x-swiper_wrapper).swiper-wrapper {
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+:global(.glauser-storerlx-0-x-swiper_slide).swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+
+/* Estilos para clases CSS estándar de Swiper */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    min-height: 70vh;
+    background-color: white;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+
+.swiper-slide .row-grid-fullw {
+    display: grid;
+    grid-template-columns: 8vw repeat(12, minmax(0, 1fr)) 8vw;
+    grid-gap: 8px;
+    min-height: 70vh;
+    align-items: center;
+}
+
+.swiper-slide .banner-text-absolute2 {
+    grid-column: 9 / span 5;
+    position: relative;
+    top: auto;
+    transform: none;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.swiper-slide .slider-image-6-12 {
+    grid-column: 1 / span 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.swiper-slide .slider-image-6-12 img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 60vh;
+}
+
+/* Estilos para botones de navegación */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-white);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+}
+
+/* Estilos para paginación */
+.swiper-pagination-home {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #006341;
+}
+
+/* Estilos para clases de texto estándar */
+.headline26 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.headline70 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.c-white-text {
+    color: white !important;
+}
+
+.btn-primary-rlx {
+    background-color: #006341;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-rlx:hover {
+    background-color: #004d2e;
+}
+
+/* Responsive styles for main slider */
+@media (max-width: 768px) {
+    .swiper-slide .row-grid-fullw {
+        grid-template-columns: 1fr;
+        min-height: 60vh;
+        text-align: center;
+    }
+
+    .swiper-slide .slider-image-6-12 {
+        grid-column: 1;
+        order: 1;
+    }
+
+    .swiper-slide .banner-text-absolute2 {
+        grid-column: 1;
+        order: 2;
+        align-items: center;
+    }
+
+    .swiper-slide .banner-text-absolute2 .headline70 {
+        font-size: 2.5rem;
+    }
 }
 
 :global(.glauser-storerlx-0-x-swiper_wrapper) {
     display: flex;
     transition-property: transform;
     box-sizing: content-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 :global(.glauser-storerlx-0-x-swiper_slide) {
@@ -1954,20 +2177,90 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
 
 :global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-banner_text_absolute2) {
     grid-column: 9 / span 5;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    top: auto;
+    transform: none;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+:global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-banner_text_absolute2) :global(.glauser-storerlx-0-x-headline26) {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+:global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-banner_text_absolute2) :global(.glauser-storerlx-0-x-headline70) {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+:global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-banner_text_absolute2) :global(.glauser-storerlx-0-x-btn_primary_rlx) {
+    background-color: #006341;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+:global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-banner_text_absolute2) :global(.glauser-storerlx-0-x-btn_primary_rlx):hover {
+    background-color: #004d2e;
+}
+
+/* Responsive styles for main slider */
+@media (max-width: 768px) {
+    :global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) {
+        grid-template-columns: 1fr;
+        min-height: 60vh;
+        text-align: center;
+    }
+
+    :global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-slider_image_6_12) {
+        grid-column: 1;
+        order: 1;
+    }
+
+    :global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-banner_text_absolute2) {
+        grid-column: 1;
+        order: 2;
+        align-items: center;
+    }
+
+    :global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-banner_text_absolute2) :global(.glauser-storerlx-0-x-headline70) {
+        font-size: 2.5rem;
+    }
 }
 
 :global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-slider_image_6_12) {
-    grid-column: 1 / span 14;
+    grid-column: 1 / span 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+:global(.glauser-storerlx-0-x-swiper_slide) :global(.glauser-storerlx-0-x-row_grid_fullw) :global(.glauser-storerlx-0-x-slider_image_6_12) img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 60vh;
 }
 
 
 
 /* EXPLORE MAS - SLIDERS */
-.swiper-container-home {
+:global(.glauser-storerlx-0-x-swiper_container) {
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -1975,15 +2268,17 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
     list-style: none;
     padding: 0;
     z-index: 1;
+    width: 100%;
+    height: auto;
 }
 
-:globlal(.glauser-storerlx-0-x-swiper_slide) {
+:global(.glauser-storerlx-0-x-swiper_slide) {
     flex-shrink: 0;
     width: 100%;
     height: 100%;
     position: relative;
     transition-property: transform;
-    display: block
+    display: block;
 }
 
 :global(.glauser-storerlx-0-x-swiper_wrapper) {
@@ -1994,17 +2289,7 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
     display: flex;
     transition-property: transform;
     transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
-    box-sizing: content-box
-}
-
-:global(.glauser-storerlx-0-x-swiper_container) {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
+    box-sizing: content-box;
 }
 
 :global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-rlx_banner_slider) :global(.glauser-storerlx-0-x-swiper_pagination_home) {
@@ -2060,6 +2345,42 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
 :global(.glauser-storerlx-0-x-rlx_exploremas) img {
     object-fit: cover;
     width: 100%;
+}
+
+/* Estilos específicos para el slider de explore mas */
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_container) {
+    overflow: visible;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_wrapper) {
+    display: flex;
+    align-items: stretch;
+}
+
+:global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_slide) {
+    width: auto !important;
+    flex-shrink: 0;
+    height: auto;
+    margin-right: 8px;
+}
+
+/* Responsive behavior for explore mas slider */
+@media (max-width: 768px) {
+    :global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_slide) {
+        width: 280px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    :global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_slide) {
+        width: 320px !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    :global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_slide) {
+        width: 434.5px !important;
+    }
 }
 
 :global(.glauser-storerlx-0-x-rlx_exploremas) :global(.glauser-storerlx-0-x-swiper_pagination_bullets) {
@@ -3705,6 +4026,468 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
         background-color: var(--c-green) !important;
     }
 
+}
+
+/* Estilos para Swiper en desktop */
+@media (min-width: 768px) {
+    .swiper.swiper-container-mobile {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .swiper-container-mobile :global(.glauser-storerlx-0-x-swiper_slide) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .swiper-container-mobile :global(.glauser-storerlx-0-x-swiper_slide) img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        height: 300px;
+        object-fit: contain;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .swiper-container-mobile :global(.glauser-storerlx-0-x-swiper_slide) img:hover {
+        transform: scale(1.05);
+    }
+
+    .swiper-container-mobile .swiper-pagination-model {
+        text-align: center !important;
+        position: relative;
+        margin-top: 20px;
+        transition: .3s opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 10;
+    }
+
+    .swiper-container-mobile :global(.glauser-storerlx-0-x-swiper_pagination_bullets) {
+        border-radius: 0;
+        width: 25px;
+        height: 4px;
+        color: var(--c-grey);
+        text-align: center !important;
+        margin: 0px 12px;
+    }
+
+    .swiper-container-mobile :global(.glauser-storerlx-0-x-swiper_pagination_bullet_active) {
+        width: 40px;
+        background-color: var(--c-green) !important;
+    }
+
+    /* Botones de navegación para desktop */
+    .swiper-container-mobile .swiper-button-model-prev,
+    .swiper-container-mobile .swiper-button-model-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        border: 1px solid var(--c-grey);
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.3s ease;
+    }
+
+    .swiper-container-mobile .swiper-button-model-prev {
+        left: 10px;
+    }
+
+    .swiper-container-mobile .swiper-button-model-next {
+        right: 10px;
+    }
+
+    .swiper-container-mobile .swiper-button-model-prev:hover,
+    .swiper-container-mobile .swiper-button-model-next:hover {
+        background-color: var(--c-green);
+        border-color: var(--c-green);
+        color: white;
+    }
+
+    .swiper-container-mobile .swiper-button-model-prev:after,
+    .swiper-container-mobile .swiper-button-model-next:after {
+        font-family: swiper-icons;
+        font-size: 18px;
+        color: var(--c-grey);
+    }
+
+    .swiper-container-mobile .swiper-button-model-prev:hover:after,
+    .swiper-container-mobile .swiper-button-model-next:hover:after {
+        color: white;
+    }
+}
+
+/* Estilos específicos para el Swiper de Explore más */
+.exploremas.swiper-container {
+    overflow: hidden;
+    position: relative;
+    padding: 0 50px;
+    /* Espacio para los botones de navegación */
+}
+
+.exploremas .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.exploremas .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.exploremas .swiper-slide .banner-10 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.exploremas .swiper-slide .banner-10 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.exploremas .swiper-slide .banner-10:hover img {
+    transform: scale(1.05);
+}
+
+.exploremas .swiper-slide figcaption {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--c-brown-text);
+}
+
+/* Botones de navegación para Explore más */
+.exploremas .swiper-button-prev,
+.exploremas .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    border: 1px solid var(--c-grey);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exploremas .swiper-button-prev {
+    left: 10px;
+}
+
+.exploremas .swiper-button-next {
+    right: 10px;
+}
+
+.exploremas .swiper-button-prev:hover,
+.exploremas .swiper-button-next:hover {
+    background-color: var(--c-green);
+    border-color: var(--c-green);
+    color: white;
+}
+
+.exploremas .swiper-button-prev:after,
+.exploremas .swiper-button-next:after {
+    font-family: swiper-icons;
+    font-size: 18px;
+    color: var(--c-grey);
+}
+
+.exploremas .swiper-button-prev:hover:after,
+.exploremas .swiper-button-next:hover:after {
+    color: white;
+}
+
+.exploremas .swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Paginación para Explore más */
+.exploremas .swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.exploremas .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: var(--c-grey);
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.exploremas .swiper-pagination-bullet-active {
+    background-color: var(--c-green);
+    transform: scale(1.2);
+}
+
+/* Responsive para Explore más */
+@media (max-width: 767px) {
+    .exploremas.swiper-container {
+        padding: 0 20px;
+    }
+
+    .exploremas .swiper-slide .banner-10 img {
+        height: 180px;
+    }
+
+    .exploremas .swiper-button-prev,
+    .exploremas .swiper-button-next {
+        width: 36px;
+        height: 36px;
+    }
+
+    .exploremas .swiper-button-prev {
+        left: 5px;
+    }
+
+    .exploremas .swiper-button-next {
+        right: 5px;
+    }
+}
+
+/* Estilos para los carruseles de relojes en ColeccionRlx */
+.classic-watches-swiper,
+.professional-watches-swiper,
+.perpetual-watches-swiper {
+    overflow: hidden;
+    position: relative;
+    padding: 0 50px;
+    margin: 20px 0;
+}
+
+.classic-watches-swiper .swiper-wrapper,
+.professional-watches-swiper .swiper-wrapper,
+.perpetual-watches-swiper .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.classic-watches-swiper .swiper-slide,
+.professional-watches-swiper .swiper-slide,
+.perpetual-watches-swiper .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.classic-watches-swiper .swiper-slide a,
+.professional-watches-swiper .swiper-slide a,
+.perpetual-watches-swiper .swiper-slide a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.classic-watches-swiper .swiper-slide a:hover,
+.professional-watches-swiper .swiper-slide a:hover,
+.perpetual-watches-swiper .swiper-slide a:hover {
+    transform: translateY(-5px);
+}
+
+.classic-watches-swiper .swiper-slide picture,
+.professional-watches-swiper .swiper-slide picture,
+.perpetual-watches-swiper .swiper-slide picture {
+    display: block;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.classic-watches-swiper .swiper-slide img,
+.professional-watches-swiper .swiper-slide img,
+.perpetual-watches-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.classic-watches-swiper .swiper-slide a:hover img,
+.professional-watches-swiper .swiper-slide a:hover img,
+.perpetual-watches-swiper .swiper-slide a:hover img {
+    transform: scale(1.05);
+}
+
+.classic-watches-swiper .swiper-slide h3,
+.professional-watches-swiper .swiper-slide h3,
+.perpetual-watches-swiper .swiper-slide h3 {
+    margin: 12px 0 4px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--c-brown-text);
+}
+
+.classic-watches-swiper .swiper-slide p,
+.professional-watches-swiper .swiper-slide p,
+.perpetual-watches-swiper .swiper-slide p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--c-brown-text);
+    opacity: 0.8;
+}
+
+/* Botones de navegación para carruseles de relojes */
+.classic-watches-prev,
+.classic-watches-next,
+.professional-watches-prev,
+.professional-watches-next,
+.perpetual-watches-prev,
+.perpetual-watches-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    border: 1px solid var(--c-grey);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.classic-watches-prev,
+.professional-watches-prev,
+.perpetual-watches-prev {
+    left: 10px;
+}
+
+.classic-watches-next,
+.professional-watches-next,
+.perpetual-watches-next {
+    right: 10px;
+}
+
+.classic-watches-prev:hover,
+.classic-watches-next:hover,
+.professional-watches-prev:hover,
+.professional-watches-next:hover,
+.perpetual-watches-prev:hover,
+.perpetual-watches-next:hover {
+    background-color: var(--c-green);
+    border-color: var(--c-green);
+    color: white;
+}
+
+.classic-watches-prev:after,
+.classic-watches-next:after,
+.professional-watches-prev:after,
+.professional-watches-next:after,
+.perpetual-watches-prev:after,
+.perpetual-watches-next:after {
+    font-family: swiper-icons;
+    font-size: 18px;
+    color: var(--c-grey);
+}
+
+.classic-watches-prev:hover:after,
+.classic-watches-next:hover:after,
+.professional-watches-prev:hover:after,
+.professional-watches-next:hover:after,
+.perpetual-watches-prev:hover:after,
+.perpetual-watches-next:hover:after {
+    color: white;
+}
+
+/* Paginación para carruseles de relojes */
+.classic-watches-pagination,
+.professional-watches-pagination,
+.perpetual-watches-pagination {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.classic-watches-pagination .swiper-pagination-bullet,
+.professional-watches-pagination .swiper-pagination-bullet,
+.perpetual-watches-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: var(--c-grey);
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.classic-watches-pagination .swiper-pagination-bullet-active,
+.professional-watches-pagination .swiper-pagination-bullet-active,
+.perpetual-watches-pagination .swiper-pagination-bullet-active {
+    background-color: var(--c-green);
+    transform: scale(1.2);
+}
+
+/* Responsive para carruseles de relojes */
+@media (max-width: 767px) {
+
+    .classic-watches-swiper,
+    .professional-watches-swiper,
+    .perpetual-watches-swiper {
+        padding: 0 20px;
+    }
+
+    .classic-watches-swiper .swiper-slide,
+    .professional-watches-swiper .swiper-slide,
+    .perpetual-watches-swiper .swiper-slide {
+        width: 250px;
+    }
+
+    .classic-watches-swiper .swiper-slide picture,
+    .professional-watches-swiper .swiper-slide picture,
+    .perpetual-watches-swiper .swiper-slide picture {
+        height: 200px;
+    }
+
+    .classic-watches-prev,
+    .classic-watches-next,
+    .professional-watches-prev,
+    .professional-watches-next,
+    .perpetual-watches-prev,
+    .perpetual-watches-next {
+        width: 36px;
+        height: 36px;
+    }
+
+    .classic-watches-prev,
+    .professional-watches-prev,
+    .perpetual-watches-prev {
+        left: 5px;
+    }
+
+    .classic-watches-next,
+    .professional-watches-next,
+    .perpetual-watches-next {
+        right: 5px;
+    }
 }
 
 /* Responsive TABLET */

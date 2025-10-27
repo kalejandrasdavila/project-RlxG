@@ -34,4 +34,18 @@ declare module '*.jpg';
 declare module '*.jpeg';
 declare module '*.gif';
 
+// VTEX CSS Handles
+declare module 'vtex.css-handles' {
+  export function useCssHandles(handles: readonly string[]): Record<string, string>;
+}
+
+// jQuery types
+declare const $: any;
+
+// Testing types
+declare module '@testing-library/jest-dom';
+declare module 'jest';
+declare module 'jquery';
+declare module 'node';
+
 export { }; // Mantiene el archivo como un módulo para evitar polución global si no se desea.

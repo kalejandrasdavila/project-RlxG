@@ -1,5 +1,6 @@
 import React from 'react';
-import { useCssHandles } from 'vtex.css-handles';
+import FooterRlxFooter24 from './footer-rlx-footer-24';
+import useExploreSwiper from '../hooks/useExploreSwiper';
 
 interface ExploreItem {
   href: string;
@@ -9,18 +10,9 @@ interface ExploreItem {
   caption: string;
 }
 
-const CSS_HANDLES = [
-  //HEADER//
-  'rlx_exploremas', 'pt_90_60', 'row_grid_fullw', 'component_2_col', 'col_lg_2_6', 'headline36', 'c_brown_text', 'pb_20',
-  'rlx_container', 'p_relative', 'pb_90_60', 'mb_20', 'px_8', 'exploremas', 'swiper_pagination', 'swiper_pagination_clickable',
-  'swiper_pagination_bullets', 'swiper_pagination_bullet_active', 'footer_prev', 'swiper_button_disabled', 'swiper_button_next',
-  'footer_next', 'swiper_wrapper', 'swiper_slider',
-  // Missing handles
-  'swiper_container', 'swiper_button_prev'
-] as const
-const RlxExploreMas: React.FC = () => {
 
-  const handles = useCssHandles(CSS_HANDLES)
+const RlxExploreMas: React.FC = () => {
+  const swiperContainerRef = useExploreSwiper();
 
   const exploreItems: ExploreItem[] = [
     {
@@ -76,79 +68,97 @@ const RlxExploreMas: React.FC = () => {
 
 
   return (
-    <section className={`${handles.rlx_exploremas} ${handles.pt_90_60}`}>
+    <section className="rlx-exploremas pt-90-60">
       <div className="rlx-container-content">
-        <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
-          <div className={`${handles.col_lg_2_6}`}>
-            <p className={`${handles.headline36} ${handles.c_brown_text} ${handles.pb_20}`}>Explore más</p>
+        <div className="row-grid-fullw component-2-col">
+          <div className="col-lg-2-6">
+            <p className="headline36 c-brown-text pb-20">Explore más</p>
           </div>
         </div>
       </div>
-      <div className={`${handles.rlx_container} ${handles.p_relative} ${handles.pb_90_60} ${handles.mb_20} ${handles.px_8}`}>
-        <div className={`${handles.swiper_container} ${handles.p_relative} ${handles.exploremas}`}>
-          <div
-            aria-live="polite"
-            className={`${handles.swiper_wrapper}`}
-            id="swiper-wrapper-10ac3e6672fe9a10e0"
-            style={{
-              transform: 'translate3d(0px, 0px, 0px)',
-            }}
-          >
-            {exploreItems.map((item, index) => (
-              <div
-                key={index}
-                aria-label={`${index + 1} / ${exploreItems.length}`}
-                className={`${handles.swiper_slider} ${index === 0 ? 'swiper-slide-active' : ''} ${index === 1 ? 'swiper-slide-next' : ''}`}
-                role="group"
-                style={{
-                  marginRight: '8px',
-                  width: '434.5px',
-                }}
-              >
-                <a href={item.href}>
-                  <picture className="banner-10">
-                    <source media="(max-width: 767px)" srcSet={item.srcMobile} />
-                    <img
-                      alt={item.alt}
-                      loading="lazy"
-                      src={item.srcDesktop}
-                    />
-                    <figcaption className={`${handles.c_brown_text}`}>{item.caption}</figcaption>
-                  </picture>
-                </a>
-              </div>
-            ))}
+      <div className="rlx-container p-relative pb-90-60 mb-20 px-8 ">
+        <div ref={swiperContainerRef} className="swiper-container p-relative exploremas">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide" style={{ width: '226.25px', marginRight: '8px' }}>
+              <a href="https://www.glauser.com.co/rolex/">
+                <picture className="banner-10">
+                  <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-discover-rolex-portrait.webp" />
+                  <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-discover-rolex-landscape.webp" loading="lazy" alt="Relojes Rolex en GLAUSER distribuidor oficial" />
+                  <figcaption className="c-brown-text">Descubra Rolex</figcaption>
+                </picture>
+              </a>
+            </div>
+
+            <div className="swiper-slide" style={{ width: '226.25px', marginRight: '8px' }}>
+              <a href="https://www.glauser.com.co/rolex/coleccion-rolex/">
+                <picture className="banner-10">
+                  <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-rolex-watches-1945-portrait.webp" />
+                  <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-rolex-watches-1945-landscape.webp" loading="lazy" alt="Coleccion Relojes Rolex" />
+                  <figcaption className="c-brown-text">Relojes Rolex</figcaption>
+                </picture>
+              </a>
+            </div>
+
+            <div className="swiper-slide" style={{ width: '226.25px', marginRight: '8px' }}>
+              <a href="https://www.glauser.com.co/rolex/nuevos-modelos-2025/">
+                <picture className="banner-10">
+                  <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-new-watches-2025-portrait.webp" />
+                  <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-new-watches-2025-landscape.webp" loading="lazy" alt="Nuevos modelos Relojes Rolex 2025" />
+                  <figcaption className="c-brown-text">Nuevos modelos 2025</figcaption>
+                </picture>
+              </a>
+            </div>
+
+            <div className="swiper-slide" style={{ width: '226.25px', marginRight: '8px' }}>
+              <a href="https://www.glauser.com.co/rolex/watchmaking/">
+                <picture className="banner-10">
+                  <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-watchmaking-2023-portrait.webp" />
+                  <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-watchmaking-2023-landscape.webp" loading="lazy" alt="Rolex Watchmaking - GLAUSER" />
+                  <figcaption className="c-brown-text">«Savoir-faire» relojero</figcaption>
+                </picture>
+              </a>
+            </div>
+
+            <div className="swiper-slide" style={{ width: '226.25px', marginRight: '8px' }}>
+              <a href="https://www.glauser.com.co/rolex/asistencia-rolex/">
+                <picture className="banner-10">
+                  <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-servicing-portrait.webp" />
+                  <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-servicing-landscape.webp" loading="lazy" alt="Servicio Mantenimiento Rolex - GLAUSER" />
+                  <figcaption className="c-brown-text">Mantenimiento</figcaption>
+                </picture>
+              </a>
+            </div>
+
+            <div className="swiper-slide" style={{ width: '226.25px', marginRight: '8px' }}>
+              <a href="https://www.glauser.com.co/rolex/mundo-rolex/">
+                <picture className="banner-10">
+                  <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-hub-world-of-rolex-wim23ac-portrait.webp" />
+                  <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-hub-world-of-rolex-wim23ac-landscape.webp" loading="lazy" alt="Mundo Rolex - GLAUSER" />
+                  <figcaption className="c-brown-text">El mundo de Rolex</figcaption>
+                </picture>
+              </a>
+            </div>
+
+            <div className="swiper-slide" style={{ width: '226.25px', marginRight: '8px' }}>
+              <a href="https://www.glauser.com.co/rolex/contactenos/">
+                <picture className="banner-10">
+                  <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-contact-us-portrait.webp" />
+                  <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/keep-exploring-24/rolex-keep-exploring-contact-us-landscape.webp" loading="lazy" alt="Contacto GLAUSER, Distribuidor Oficial Rolex" />
+                  <figcaption className="c-brown-text">Póngase en contacto con nosotros</figcaption>
+                </picture>
+              </a>
+            </div>
           </div>
-          <span
-            aria-atomic="true"
-            aria-live="assertive"
-            className="swiper-notification"
-          />
+          <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
-        <div className={`${handles.swiper_pagination} ${handles.swiper_pagination_clickable} ${handles.swiper_pagination_bullets}`}>
-          <span
-            className={`${handles.swiper_pagination_bullets} ${handles.swiper_pagination_bullet_active}`}
-            tabIndex={0}
-          />
-          <span className="swiper-pagination-bullet" tabIndex={0} />
+        <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+          <span className="swiper-pagination-bullet swiper-pagination-bullet-active" tabIndex={0}></span>
+          <span className="swiper-pagination-bullet" tabIndex={0}></span>
         </div>
-        <div
-          aria-controls="swiper-wrapper-10ac3e6672fe9a10e0"
-          aria-disabled="true"
-          aria-label="Previous slide"
-          className={`${handles.swiper_button_prev} ${handles.footer_prev} ${handles.swiper_button_disabled}`}
-          role="button"
-          tabIndex={-1}
-        />
-        <div
-          aria-controls="swiper-wrapper-10ac3e6672fe9a10e0"
-          aria-disabled="false"
-          aria-label="Next slide"
-          className={`${handles.swiper_button_next} ${handles.footer_next}`}
-          role="button"
-          tabIndex={0}
-        />
+        <div className="swiper-button-prev swiper-button-disabled" tabIndex={-1} role="button" aria-label="Previous slide" aria-disabled="true"></div>
+        <div className="swiper-button-next" tabIndex={0} role="button" aria-label="Next slide" aria-disabled="false"></div>
       </div>
+      <FooterRlxFooter24 />
     </section>
   );
 };

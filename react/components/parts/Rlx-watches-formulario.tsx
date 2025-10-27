@@ -19,7 +19,7 @@ const CSS_HANDLES = [
     'cuerpotexto', 'pt_90_60', 'cuerpotextobg', 'datosperson', 'mb_10'
 ] as const
 
-declare const $: JQueryStatic;
+declare const $: any;
 
 interface FormData {
     Dirigirse: string;

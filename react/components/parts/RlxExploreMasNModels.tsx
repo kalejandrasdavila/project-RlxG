@@ -15,9 +15,9 @@ const CSS_HANDLES = [
     'rlx_exploremas', 'pt_90_60', 'row_grid_fullw', 'component_2_col', 'col_lg_2_6', 'headline36', 'c_brown_text', 'pb_20',
     'rlx_container', 'p_relative', 'pb_90_60', 'mb_20', 'px_8', 'exploremas', 'swiper_pagination', 'swiper_pagination_clickable',
     'swiper_pagination_bullets', 'swiper_pagination_bullet_active', 'footer_prev', 'swiper_button_disabled', 'swiper_button_next',
-    'footer_next',
+    'footer_next', 'swiper_wrapper', 'swiper_slide',
     // Missing handles
-    'swiper_container', 'swiper_button_prev'
+    'swiper_container', 'swiper_button_prev', 'rlx_container_content', 'banner_10'
 ] as const
 
 const RlxExploreMasNewModels2025: React.FC = () => {
@@ -70,7 +70,7 @@ const RlxExploreMasNewModels2025: React.FC = () => {
 
     return (
         <section className={`${handles.rlx_exploremas} ${handles.pt_90_60}`}>
-            <div className="rlx-container-content">
+            <div className={`${handles.rlx_container_content}`}>
                 <div className={`${handles.row_grid_fullw} ${handles.component_2_col}`}>
                     <div className={`${handles.col_lg_2_6}`}>
                         <p className={`${handles.headline36} ${handles.c_brown_text} ${handles.pb_20}`}>Explore más</p>
@@ -79,11 +79,11 @@ const RlxExploreMasNewModels2025: React.FC = () => {
             </div>
             <div className={`${handles.rlx_container} ${handles.p_relative} ${handles.pb_90_60} ${handles.mb_20} ${handles.px_8}`}>
                 <div className={`${handles.swiper_container} ${handles.p_relative} ${handles.exploremas}`}>
-                    <div className="swiper-wrapper">
+                    <div className={`${handles.swiper_wrapper}`}>
                         {exploreItems.map((item, index) => (
-                            <div key={index} className="swiper-slide">
+                            <div key={index} className={`${handles.swiper_slide}`}>
                                 <a href={item.href}>
-                                    <picture className="banner-10">
+                                    <picture className={`${handles.banner_10}`}>
                                         <source media="(max-width: 767px)" srcSet={item.srcMobile} />
                                         <img
                                             src={item.srcDesktop}
@@ -96,13 +96,7 @@ const RlxExploreMasNewModels2025: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                    <div className={`${handles.swiper_pagination} ${handles.swiper_pagination_clickable} ${handles.swiper_pagination_bullets}`}>
-                        <span
-                            className={`${handles.swiper_pagination_bullets} ${handles.swiper_pagination_bullet_active}`}
-                            tabIndex={0}
-                        />
-                        <span className="swiper-pagination-bullet" tabIndex={0} />
-                    </div>
+                    <div className={`${handles.swiper_pagination}`}></div>
                     <div
                         aria-controls="swiper-wrapper-10ac3e6672fe9a10e0"
                         aria-disabled="true"

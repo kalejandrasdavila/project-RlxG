@@ -1,14 +1,12 @@
 {
-    "store.home-rlx": {
-        "allowed": [
-            "Home"
-        ]
-    },
-    "store.coleccionRlx": {
-        "component": "ColeccionRlx"
-    },
-    "Home": {
+    "store.home": {
         "component": "Home"
+    },
+    "store.rolex": {
+        "component": "Home"
+    },
+    "store.coleccion-rolex": {
+        "component": "ColeccionRlx"
     },
     "store.watch-collection": {
         "component": "WatchCollection"
@@ -30,15 +28,5 @@
     },
     "store.contactenos": {
         "component": "Contactenos"
-    },
-    "store.custom#rolex": {
-        "allowed": [
-            "Home"
-        ]
-    },
-    "store.custom#coleccion-rolex": {
-        "allowed": [
-            "store.coleccionRlx"
-        ]
     }
 }
