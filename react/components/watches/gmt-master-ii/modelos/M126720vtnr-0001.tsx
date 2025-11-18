@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useCssHandles } from 'vtex.css-handles';
 import "../../../../main-style.css";
-import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../../components/parts/RlxExploreMasNModels";
 
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../../../components/hooks/useInitScripts';
@@ -994,7 +994,7 @@ const M126720vtnr0001 = () => {
                 </section>
                 <WatchesForm />
                 <SectionGmtMaster />
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </main>
         </>

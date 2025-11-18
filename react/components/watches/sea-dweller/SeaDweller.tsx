@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useCssHandles } from 'vtex.css-handles';
 import "../../../main-style.css";
 import useInitScripts from '../../../components/hooks/useInitScripts';
-import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../components/parts/RlxExploreMasNModels";
 
 import NavM from "../../../components/parts/NavModels";
 import Footer from "../../../components/parts/Footer";
@@ -52,10 +52,10 @@ const SeaDweller: React.FC = () => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                <link rel="canonical" href="http://localhost:3000/rolex/watches/sea-dweller/" />
+                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/sea-dweller/" />
 
                 {/* Facebook Meta Tags */}
-                <meta property="og:url" content="http://localhost:3000/rolex/watches/sea-dweller/" />
+                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/sea-dweller/" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -72,7 +72,7 @@ const SeaDweller: React.FC = () => {
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="http://localhost:3000/rolex/watches/sea-dweller/" />
+                <meta property="twitter:url" content="https://glauser.myvtex.com/rolex/watches/sea-dweller/" />
                 <meta
                     name="twitter:title"
                     content="Relojes Rolex Sea-Dweller - GLAUSER"
@@ -194,7 +194,7 @@ const SeaDweller: React.FC = () => {
                     <div className="rlx-container">
                         <div className="row-grid">
                             <div className="rlx-logo">
-                                <a href="http://localhost:3000/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className="placa-rolex-logo">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" />
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" loading="lazy" alt="placa distribuidor oficial rolex" />
@@ -208,13 +208,13 @@ const SeaDweller: React.FC = () => {
                             <div className="breadcrum-column">
                                 <ul className="breadcrum-menu-list description">
                                     <li className="fixed-14 none-mobil">
-                                        <a href="http://localhost:3000/rolex/">Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/">Rolex</a>
                                     </li>
                                     <li className="fixed-14">
-                                        <a href="http://localhost:3000/rolex/coleccion-rolex/">Relojes Rolex</a>
+                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">Relojes Rolex</a>
                                     </li>
                                     <li className="fixed-14 none-mobil active">
-                                        <a className="active" href="http://localhost:3000/rolex/watches/sea-dweller/">Sea-Dweller</a>
+                                        <a className="active" href="https://glauser.myvtex.com/rolex/watches/sea-dweller/">Sea-Dweller</a>
                                     </li>
                                 </ul>
                             </div>
@@ -250,7 +250,7 @@ const SeaDweller: React.FC = () => {
                         <div className="row-grid-fullw reloes-componet-2-3">
                             <div className="col-span3-1 col-md-span4-1 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="http://localhost:3000/rolex/watches/sea-dweller/m126600-0002/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/sea-dweller/m126600-0002/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126600-0002-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126600-0002-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" alt="Rolex Sea-Dweller m126600-0002 reloj" />
@@ -265,7 +265,7 @@ const SeaDweller: React.FC = () => {
                             </div>
                             <div className="col-span3-2 col-md-span4-2 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="http://localhost:3000/rolex/watches/sea-dweller/m126603-0001/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/sea-dweller/m126603-0001/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126603-0001-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m126603-0001-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" alt="Rolex Sea-Dweller m126603-0001 reloj" />
@@ -410,7 +410,7 @@ const SeaDweller: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </main>
         </>

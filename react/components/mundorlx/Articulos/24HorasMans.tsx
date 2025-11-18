@@ -9,7 +9,7 @@ import "../../../main-style.css";
 const HorasMans: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/24-horas-de-le-mans/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/24-horas-de-le-mans/';
     const baseUrl = 'https://glauser.myvtex.com'; // La URL base 
 
     return (

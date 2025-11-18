@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../../../components/hooks/useInitScripts';
 
-import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../../components/parts/RlxExploreMasNModels";
 
 import NavM from "../../../../components/parts/NavModels";
 
@@ -920,7 +920,7 @@ const M1242000011: React.FC = () => {
                 </section>
                 <WatchesForm />
                 <SectionOysterPerpetual />
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </main>
         </>

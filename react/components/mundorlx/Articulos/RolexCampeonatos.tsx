@@ -10,7 +10,7 @@ import "../../../main-style.css";
 const RlxCampeonatos: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/rolex-y-los-campeonatos-de-wimbledon/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/rolex-y-los-campeonatos-de-wimbledon/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (

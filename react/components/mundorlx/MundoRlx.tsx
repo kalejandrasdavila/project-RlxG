@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../components/hooks/useInitScripts';
 import Nav from '../../components/parts/Nav';
-import RlxExploreMasNModels from '../../components/parts/RlxExploreMas';
+import RlxExploreMas from '../../components/parts/RlxExploreMas';
 import Footer from '../../components/parts/Footer';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../main-style.css';
@@ -25,7 +25,7 @@ const MundoRolex: React.FC = () => {
     useInitScripts();
     const handles = useCssHandles(CSS_HANDLES)
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (
@@ -185,20 +185,21 @@ const MundoRolex: React.FC = () => {
                             <Nav />
                         </div>
 
-                        <div className={`${handles.row_grid} ${handles.breadcrum_page}`} style={{ height: "40px" }}>
-                            <div className={`${handles.breadcrum_column}`}>
-                                <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
-                                    <li className={`${handles.fixed_14}`}>
-                                        <a href="https://glauser.myvtex.com/rolex/">Rolex</a>
-                                    </li>
-                                    <li className={`${handles.fixed_14} ${handles.active}`}>
-                                        <a className={`${handles.active}`} href="https://glauser.myvtex.com/rolex/mundo-rolex/">Mundo Rolex</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </header>
+
+                {/* Breadcrumb */}
+                <section className={`${handles.breadcrum_page}`} style={{ background: 'linear-gradient(90deg, #0b3e27, #197149)', padding: '10px 0' }}>
+                    <div className={`${handles.rlx_container}`}>
+                        <div className={`${handles.breadcrum_column}`}>
+                            <nav className={`${handles.breadcrum_menu_list}`}>
+                                <a href="https://glauser.myvtex.com/rolex/" className={`${handles.description} ${handles.fixed_14}`} style={{ color: '#ffffff' }}>Rolex</a>
+                                <span className={`${handles.description} ${handles.fixed_14}`} style={{ color: '#ffffff', padding: '0 8px' }}> / </span>
+                                <span className={`${handles.description} ${handles.fixed_14} ${handles.active}`} style={{ color: '#61bd93' }}>Mundo Rolex</span>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
 
                 <section className="single-imagen-componet">
                     <div className="rlx-container-content">
@@ -603,7 +604,7 @@ const MundoRolex: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMasNModels />
+                <RlxExploreMas />
                 <Footer />
             </main>
         </>

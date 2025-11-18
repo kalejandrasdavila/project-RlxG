@@ -11,7 +11,7 @@ const CSS_HANDLES = [
     ///c-lightbeige-bg//
     'row_grid_fullw', 'grid_column_full', 'rlx_pbanner_top', 'p_relative', 'rlx_container_content', 'py_90_60', 'text_introduccion',
     'pb_90_60', 'col_lg_8_5', 'col_lg_2_5', 'headline50', 'c_brown_text', 'pb_20', 'body_20_light', 'component_video', 'col_6_12',
-    'headline36', 'component_2_col', 'fixed_16', 'btn_label_icon_rlx', 'component_3_col', 'col_span_2_1', 'col_6_2', 'body_24_bold',
+    'headline36', 'component_2_col', 'fixed_16', 'btn_label_icon_rlx', 'btn_primary_icon_rlx', 'btn_primary_rlx', 'component_3_col', 'col_span_2_1', 'col_6_2', 'body_24_bold',
     'legend_16_light', 'col_span_2_2', 'col_6_6', 'col_6_10', 'col_lg_2_6', 'component_3_col_2', 'col_text_center', 'text_center',
     'pb_30', 'body_20_blod', 'accordion_header', 'accordion_content', 'contacto_rolex', 'py_20_30', 'dispmodel', 'formulario_rolex',
     'col_formrlx', 'px_20', 'w_100', 'form_inputs', 'mensaje', 'p_30_40', 'continuarBtn', 'mb_100', 'flex', 'flex_col', 'text_13px',
@@ -19,7 +19,7 @@ const CSS_HANDLES = [
     'cuerpotexto', 'pt_90_60', 'cuerpotextobg', 'datosperson', 'mb_10'
 ] as const
 
-declare const $: any;
+// jQuery ya no se usa, se reemplazó con JavaScript vanilla y fetch API
 
 interface FormData {
     Dirigirse: string;
@@ -30,9 +30,8 @@ interface FormData {
     MensajeRolex: string;
 }
 
-const handles = useCssHandles(CSS_HANDLES)
-
 const WatchesForm: React.FC = () => {
+    const handles = useCssHandles(CSS_HANDLES)
     const [atencion, setAtencion] = useState<string>("0");
     const [nombre, setNombre] = useState<string>("");
     const [apellido, setApellido] = useState<string>("");
@@ -89,15 +88,21 @@ const WatchesForm: React.FC = () => {
         setIsSubmitting(true);
         setSubmitMessage("");
 
-        $.ajax({
-            dataType: "JSON",
-            url: "/api/ds/pub/documents/FR",
-            type: "POST",
-            contentType: "application/json",
-            data: JSON.stringify(data),
-            beforeSend: function () {
+        // Usar fetch API en lugar de jQuery.ajax
+        fetch("/api/ds/pub/documents/FR", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
             },
-            success: function (response: any) {
+            body: JSON.stringify(data),
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then((response: any) => {
                 if (response?.Id) {
                     setSubmitMessage(
                         <div className={`${handles.row_grid_fullw} ${handles.cuerpotexto}`}>
@@ -121,14 +126,14 @@ const WatchesForm: React.FC = () => {
                 } else {
                     setSubmitMessage(<div className="alert alert-danger">{response.msg || "Ocurrió un error al enviar el formulario."}</div>);
                 }
-            },
-            error: function () {
+            })
+            .catch((error) => {
+                console.error("Error submitting form:", error);
                 setSubmitMessage(<div className="alert alert-danger">Ocurrió un error, intentar más tarde.</div>);
-            },
-            complete: function () {
+            })
+            .finally(() => {
                 setIsSubmitting(false);
-            },
-        });
+            });
     };
 
     useEffect(() => {
@@ -143,79 +148,89 @@ const WatchesForm: React.FC = () => {
             btnEnviar.disabled = !terminosAceptados;
         }
 
-        const accordionHeaders = $(".glauser-storerlx-0-x-accordion_header");
-        accordionHeaders.on("click", function () {
-            $(this).next(".accordion_content").slideToggle();
-            const icon = $(this).find(".glauser-storerlx-0-x-icon_acordion");
-            if (icon.text() === "+") {
-                icon.text("–");
-            } else {
-                icon.text("+");
+        // Reemplazar jQuery con JavaScript vanilla para el acordeón
+        // Usar clases CSS como se define en main-style.css
+        const accordionHeaders = document.querySelectorAll(".glauser-storerlx-0-x-accordion_header");
+
+        const handleAccordionClick = function (this: Element, event: Event) {
+            const header = this as HTMLElement;
+            const content = header.nextElementSibling as HTMLElement | null;
+            const icon = header.querySelector(".glauser-storerlx-0-x-icon_acordion") as HTMLElement | null;
+
+            if (content) {
+                // Toggle usando clases CSS (glauser-storerlx-0-x-active)
+                const isActive = content.classList.contains("glauser-storerlx-0-x-active");
+                if (isActive) {
+                    content.classList.remove("glauser-storerlx-0-x-active");
+                    if (icon) icon.textContent = "+";
+                } else {
+                    content.classList.add("glauser-storerlx-0-x-active");
+                    if (icon) icon.textContent = "–";
+                }
             }
+        };
+
+        accordionHeaders.forEach((header) => {
+            header.addEventListener("click", handleAccordionClick);
         });
 
         // Cleanup function for useEffect
         return () => {
-            accordionHeaders.off("click");
+            accordionHeaders.forEach((header) => {
+                header.removeEventListener("click", handleAccordionClick);
+            });
         };
     }, [terminosAceptados]); // Re-run effect if terminosAceptados changes for button state
 
     return (
         <>
-            <section className={`c-lightbeige-bg ${handles.pt_90_60} ${handles.contacto_rolex}`} id="contacto-rolex">
+            <section className="c-lightbeige-bg pt-90-60" id="contacto-rolex">
                 <div className="rlx-container-content">
-                    <div className={`${handles.row_grid_fullw} ${handles.component_video}`}>
-                        <div className={`${handles.col_6_12}`}>
-                            <p className={`${handles.headline36} ${handles.c_brown_text} ${handles.pb_20}`}>Contáctenos</p>
-                            <p
-                                className={`${handles.fixed_16} ${handles.c_brown_text} ${handles.py_20_30}`}
-                                style={{
-                                    borderTop: "1px solid rgba(69, 44, 30, 0.2)",
-                                }}>
-                                Envíenos un mensaje
-                            </p>
+                    <div className="row-grid-fullw component-video">
+                        <div className="col-6-12">
+                            <p className="headline36 c-brown-text pb-20">Contáctenos</p>
+                            <p className="fixed-16 c-brown-text py-20-30" style={{ borderTop: "1px solid rgba(69, 44, 30, 0.2)" }}>Envíenos un mensaje</p>
                         </div>
                     </div>
-                    <div className={`${handles.row_grid_fullw}`}>
+                    <div className="row-grid-fullw">
                         <div className="grid-column-full">
-                            <picture className={`${handles.rlx_pbanner_top} ${handles.p_relative}`}>
+                            <picture className="rlx-pbanner-top p-relative">
                                 <source
                                     media="(max-width: 767px)"
                                     srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/contacto/rolex-contact-message-portrait.webp"
                                 />
                                 <img
-                                    alt="contacto"
-                                    loading="lazy"
                                     src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/contacto/rolex-contact-message-landscape.webp"
+                                    loading="lazy"
+                                    alt="contacto"
                                 />
                             </picture>
                         </div>
                     </div>
-                    <div className={`${handles.row_grid_fullw} ${handles.cuerpotexto} ${handles.dispmodel}`}>
-                        <div className={`${handles.row_grid_fullw} ${handles.cuerpotextobg}`}>
-                            <div className={`${handles.col_text_center}`}>
-                                <div className={`${handles.py_90_60} ${handles.formulario_rolex}`} id="rowformtop">
-                                    <div className={`${handles.col_formrlx} ${handles.px_20}`}>
-                                        <p className={`${handles.body_24_bold} ${handles.c_brown_text} ${handles.pb_20} ${handles.text_center}`}>
-                                            Enviar un mensaje
+                    <div className="row-grid-fullw cuerpotexto dispmodel">
+                        <div className="row-grid-fullw cuerpotextobg">
+                            <div className="col-text-center">
+                                <div className="py-90-60 formulario-rolex" id="rowformtop">
+                                    <div className="col-formrlx px-20">
+                                        <p className="body-24-bold c-brown-text pb-20 text-center">Enviar un mensaje</p>
+                                        <p
+                                            id="tituloPrincipal"
+                                            className="headline50 c-brown-text pb-30 text-center">
+                                            {showPersonalData ? "Introduzca su información de contacto" : "Introduzca su mensaje"}
                                         </p>
                                         <p
-                                            className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20} ${handles.pb_30} ${handles.text_center}`}
-                                            id="tituloPrincipal">
-                                            Introduzca su mensaje
+                                            id="subtituloPrincipal"
+                                            className="body-20-light pb-30 text-center">
+                                            {showPersonalData
+                                                ? "Utilizamos esta información para mandarle una respuesta."
+                                                : "Le agradecemos su interés por los relojes Rolex. Introduzca su mensaje, pronto le responderemos."}
                                         </p>
-                                        <p
-                                            className={`${handles.body_20_light} ${handles.pb_30} ${handles.text_center}`}
-                                            id="subtituloPrincipal">
-                                            Le agradecemos su interés por los relojes Rolex. Introduzca su
-                                            mensaje, pronto le responderemos.
-                                        </p>
-                                        <form className={`${handles.w_100}`} onSubmit={handleSubmit}>
+                                        <form id="formulario-rolex" className="w-100" onSubmit={handleSubmit}>
                                             {/* Mensaje Section */}
                                             <div id="mensajeSection" style={{ display: showPersonalData ? "none" : "block" }}>
                                                 <textarea
-                                                    className={`${handles.form_inputs} ${handles.mensaje} ${handles.legend_16_light} ${handles.p_30_40}`}
                                                     id="mensajerlx"
+                                                    className="form-inputs mensaje legend-16-light p-30-40"
                                                     name="mensaje"
                                                     placeholder="Introduzca su mensaje"
                                                     value={mensaje}
@@ -223,20 +238,27 @@ const WatchesForm: React.FC = () => {
                                                         setMensaje(e.target.value);
                                                         setErrors(prev => ({ ...prev, mensaje: "" })); // Clear error on change
                                                     }}
-                                                    required // Add required for HTML5 validation
+                                                    required
                                                 />
-                                                {errors.mensaje && <span className="error text-red-500 text-sm">{errors.mensaje}</span>}
-                                                <div className={`${handles.text_center}`}>
-                                                    <a className={`btn-primary-icon-rlx  ${handles.continuarBtn}`} id="continuarBtn" onClick={handleContinuar}>
+                                                {errors.mensaje && <span className="error">{errors.mensaje}</span>}
+                                                <div className="text-center">
+                                                    <a
+                                                        className="btn-primary-icon-rlx"
+                                                        id="continuarBtn"
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            handleContinuar();
+                                                        }}
+                                                        style={{ cursor: 'pointer' }}>
                                                         Siguiente
                                                         <svg
-                                                            aria-hidden="true"
-                                                            fill="white"
                                                             height="12"
-                                                            role="img"
-                                                            viewBox="0 0 15 15"
                                                             width="12"
-                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            viewBox="0 0 15 15"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            role="img"
+                                                            aria-hidden="true"
+                                                            fill="white">
                                                             <path d="M11.7,7.5l-1.4,1.4l-5.7,5.7l-1.4-1.4l5.7-5.7L3.3,1.9l1.4-1.4l5.7,5.7l0,0L11.7,7.5z" />
                                                         </svg>
                                                     </a>
@@ -244,154 +266,138 @@ const WatchesForm: React.FC = () => {
                                             </div>
 
                                             {/* Datos Personales Section */}
-                                            <div className={`${handles.datosperson}  ${showPersonalData ? "" : "hidden"}`} id="datosPersonalesSection">
+                                            <div className={showPersonalData ? "datosperson" : "hidden datosperson"} id="datosPersonalesSection">
                                                 <div className="grid grid-cols-[calc(var(--grid-col-unit)*2),1fr] md:grid-cols-[calc(var(--grid-col-unit)*2),1fr,1fr] grid-flow-col gap-x-4 items-end">
-                                                    <div className={`${handles.mb_10} ${handles.flex} ${handles.flex_col} relative`}>
-                                                        <label className={`${handles.text_13px} ${handles.c_brown_text} `}>
-                                                            Tratamiento
-                                                        </label>
+                                                    <div className="mb-10 relative flex flex-col">
+                                                        <label className="text-13px c-brown-text">Tratamiento</label>
                                                         <select
-                                                            aria-label="Default select example"
                                                             className="nocero1"
                                                             id="atencion"
                                                             name="atencion"
                                                             value={atencion}
                                                             onChange={(e: ChangeEvent<HTMLSelectElement>) => {
                                                                 setAtencion(e.target.value);
-                                                                setErrors(prev => ({ ...prev, atencion: "" })); // Clear error on change
+                                                                setErrors(prev => ({ ...prev, atencion: "" }));
                                                             }}
-                                                            required // Add required for HTML5 validation
-                                                        >
-                                                            <option disabled value="0">
-                                                                ----
-                                                            </option>
+                                                            required>
+                                                            <option value="0" disabled>----</option>
                                                             <option value="Sr.">Sr.</option>
                                                             <option value="Sra.">Sra.</option>
                                                         </select>
-                                                        {errors.atencion && <span className="error text-red-500 text-sm">{errors.atencion}</span>}
+                                                        {errors.atencion && <span className="error">{errors.atencion}</span>}
                                                     </div>
-                                                    <div className={`${handles.mb_10} ${handles.flex} ${handles.flex_col} relative`}>
-                                                        <label className={`${handles.text_13px} ${handles.c_brown_text} `}>Nombre:</label>
+                                                    <div className="mb-10 relative flex flex-col">
+                                                        <label className="text-13px c-brown-text">Nombre:</label>
                                                         <input
-                                                            id="nombre"
-                                                            name="nombre"
-                                                            placeholder=""
                                                             type="text"
+                                                            id="nombre"
+                                                            placeholder=""
+                                                            name="nombre"
                                                             value={nombre}
                                                             onChange={(e: ChangeEvent<HTMLInputElement>) => {
                                                                 setNombre(e.target.value);
-                                                                setErrors(prev => ({ ...prev, nombre: "" })); // Clear error on change
+                                                                setErrors(prev => ({ ...prev, nombre: "" }));
                                                             }}
-                                                            required // Add required for HTML5 validation
+                                                            required
                                                         />
-                                                        {errors.nombre && <span className="error text-red-500 text-sm">{errors.nombre}</span>}
+                                                        {errors.nombre && <span className="error">{errors.nombre}</span>}
                                                     </div>
-                                                    <div className="mb-10 relative flex flex-col max-md:row-start-2 max-md:col-start-1 max-md:col-span-2 ">
-                                                        <label className={`${handles.text_13px} ${handles.c_brown_text} `}>
-                                                            Apellido(s)
-                                                        </label>
+                                                    <div className="mb-10 relative flex flex-col max-md:row-start-2 max-md:col-start-1 max-md:col-span-2">
+                                                        <label className="text-13px c-brown-text">Apellido(s)</label>
                                                         <input
-                                                            id="apellido"
-                                                            name="apellido"
-                                                            placeholder="Apellido(s)"
                                                             type="text"
+                                                            id="apellido"
+                                                            placeholder="Apellido(s)"
+                                                            name="apellido"
                                                             value={apellido}
                                                             onChange={(e: ChangeEvent<HTMLInputElement>) => {
                                                                 setApellido(e.target.value);
-                                                                setErrors(prev => ({ ...prev, apellido: "" })); // Clear error on change
+                                                                setErrors(prev => ({ ...prev, apellido: "" }));
                                                             }}
-                                                            required // Add required for HTML5 validation
+                                                            required
                                                         />
-                                                        {errors.apellido && <span className="error text-red-500 text-sm">{errors.apellido}</span>}
+                                                        {errors.apellido && <span className="error">{errors.apellido}</span>}
                                                     </div>
                                                 </div>
                                                 <div className="grid grid-cols-[calc(var(--grid-col-unit)*2),1fr] md:grid-cols-[calc(var(--grid-col-unit)*2),1fr,1fr] grid-flow-col gap-x-4 items-end">
-                                                    <div className={`${handles.mb_10} ${handles.flex} ${handles.flex_col} relative`}>
-                                                        <label className={`${handles.text_13px} ${handles.c_brown_text} `}>
-                                                            Dirección de correo electrónico *
-                                                        </label>
+                                                    <div className="mb-10 relative flex flex-col">
+                                                        <label className="text-13px c-brown-text">Dirección de correo electrónico *</label>
                                                         <input
-                                                            id="email"
-                                                            name="email"
-                                                            placeholder="Dirección de correo electrónico *"
                                                             type="email"
+                                                            id="email"
+                                                            placeholder="Dirección de correo electrónico *"
+                                                            name="email"
                                                             value={email}
                                                             onChange={(e: ChangeEvent<HTMLInputElement>) => {
                                                                 setEmail(e.target.value);
-                                                                setErrors(prev => ({ ...prev, email: "" })); // Clear error on change
+                                                                setErrors(prev => ({ ...prev, email: "" }));
                                                             }}
-                                                            required // Add required for HTML5 validation
+                                                            required
                                                         />
-                                                        {errors.email && <span className="error text-red-500 text-sm">{errors.email}</span>}
+                                                        {errors.email && <span className="error">{errors.email}</span>}
                                                     </div>
                                                 </div>
                                                 <div className="grid grid-cols-[calc(var(--grid-col-unit)*2),1fr] md:grid-cols-[calc(var(--grid-col-unit)*2),1fr,1fr] grid-flow-col gap-x-4 items-end">
-                                                    <div className={`${handles.mb_10} ${handles.flex} ${handles.flex_col} relative`}>
-                                                        <label className={`${handles.text_13px} ${handles.c_brown_text} `}>
-                                                            Teléfono *
-                                                        </label>
+                                                    <div className="mb-10 relative flex flex-col">
+                                                        <label className="text-13px c-brown-text">Teléfono *</label>
                                                         <input
+                                                            type="tel"
                                                             id="telefono"
+                                                            placeholder="Teléfono *"
                                                             name="telefono"
                                                             maxLength={10}
-                                                            placeholder="Teléfono *"
-                                                            type="tel"
                                                             value={telefono}
                                                             onChange={(e: ChangeEvent<HTMLInputElement>) => {
                                                                 setTelefono(e.target.value);
-                                                                setErrors(prev => ({ ...prev, telefono: "" })); // Clear error on change
+                                                                setErrors(prev => ({ ...prev, telefono: "" }));
                                                             }}
-                                                            required // Add required for HTML5 validation
+                                                            required
                                                         />
-                                                        {errors.telefono && <span className="error text-red-500 text-sm">{errors.telefono}</span>}
+                                                        {errors.telefono && <span className="error">{errors.telefono}</span>}
                                                     </div>
                                                 </div>
                                                 <div className="grid grid-cols-[calc(var(--grid-col-unit)*2),1fr] md:grid-cols-[calc(var(--grid-col-unit)*2),1fr,1fr] grid-flow-col gap-x-4 items-end">
-                                                    <div className={`${handles.mb_10} ${handles.flex} ${handles.flex_col} relative`}>
-                                                        <p className="text-13px ">*Obligatorio</p>
+                                                    <div className="mb-10 relative flex flex-col">
+                                                        <p className="text-13px">*Obligatorio</p>
                                                     </div>
                                                 </div>
                                                 <div className="grid grid-cols-[calc(var(--grid-col-unit)*2),1fr] md:grid-cols-[calc(var(--grid-col-unit)*2),1fr,1fr] grid-flow-col gap-x-4 items-end">
-                                                    <div className={`${handles.mb_10} ${handles.flex} ${handles.flex_col} relative`}>
+                                                    <div className="mb-10 relative flex flex-col">
                                                         <div className="checkbox-wrapper-24">
                                                             <input
+                                                                type="checkbox"
                                                                 id="terminos"
                                                                 name="terminos"
-                                                                type="checkbox"
                                                                 checked={terminosAceptados}
                                                                 onChange={(e: ChangeEvent<HTMLInputElement>) => {
                                                                     setTerminosAceptados(e.target.checked);
-                                                                    setErrors(prev => ({ ...prev, terminos: "" })); // Clear error on change
+                                                                    setErrors(prev => ({ ...prev, terminos: "" }));
                                                                 }}
-                                                                required // Add required for HTML5 validation
+                                                                required
                                                             />
                                                             <label htmlFor="terminos">
                                                                 <span />
                                                                 *He leído y acepto los{" "}
                                                                 <a
-                                                                    className="link-form"
                                                                     href={buildUrl('/nosotros/terminos-y-condiciones/')}
-                                                                    style={{
-                                                                        display: "contents",
-                                                                        position: "relative",
-                                                                    }}
+                                                                    style={{ position: "relative", display: "contents" }}
                                                                     target="_blank"
-                                                                    rel="noopener noreferrer" // Added for security
-                                                                >
+                                                                    rel="noopener noreferrer"
+                                                                    className="link-form">
                                                                     Términos y Condiciones y la Política de Privacidad *
                                                                 </a>
                                                             </label>
-                                                            {errors.terminos && <span className="error text-red-500 text-sm">{errors.terminos}</span>}
+                                                            {errors.terminos && <span className="error">{errors.terminos}</span>}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="text-center">
                                                     <button
-                                                        className="btn-primary-rlx"
-                                                        id="btnEnviar"
                                                         type="submit"
+                                                        id="btnEnviar"
+                                                        className="btn-primary-rlx"
                                                         disabled={isSubmitting || !terminosAceptados}>
-                                                        {isSubmitting ? "ENVIANDO..." : "ENVIAR MENSAJE"}
+                                                        {isSubmitting ? "ENVIANDO..." : "Enviar"}
                                                     </button>
                                                 </div>
                                             </div>
@@ -404,7 +410,8 @@ const WatchesForm: React.FC = () => {
                     <div className="col-formrlx">
                         <div id="msg">{submitMessage}</div>
                     </div>
-                    <div id="respuesta"></div>
+                    <div id="respuesta">
+                    </div>
                 </div>
             </section>
             {/*<FooterRlxContacto />*/}

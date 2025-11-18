@@ -9,7 +9,7 @@ import "../../../main-style.css";
 const ModEsferasIneditas2025: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/esferas-ineditas/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/esferas-ineditas/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (

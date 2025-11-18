@@ -10,7 +10,7 @@ import "../../../main-style.css";
 const Sail: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/sailgp/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/sailgp/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (

@@ -8,7 +8,7 @@ import Footer from '../../parts/Footer';
 const ModGmtMasterII2025: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/gmt-master-ii/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/gmt-master-ii/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (

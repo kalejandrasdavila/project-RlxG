@@ -1,5 +1,4 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React, { useEffect } from "react";
 import useInitScripts from '../../../components/hooks/useInitScripts';
 import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
 
@@ -8,155 +7,200 @@ import Footer from "../../../components/parts/Footer";
 
 const MLandDweller: React.FC = () => {
     useInitScripts();
+
+    useEffect(() => {
+        // Solo ejecutar en el cliente
+        if (typeof window === 'undefined' || typeof document === 'undefined' || !document.head) {
+            return;
+        }
+
+        // Configurar título
+        document.title = 'Relojes Rolex Land-Dweller - GLAUSER';
+
+        // Función para configurar meta tags
+        const setMetaTag = (name: string, content: string, property?: string) => {
+            if (!document.head) return;
+            const selector = property ? `meta[property="${property}"]` : `meta[name="${name}"]`;
+            let meta = document.querySelector(selector) as HTMLMetaElement;
+            if (!meta) {
+                meta = document.createElement('meta');
+                if (property) {
+                    meta.setAttribute('property', property);
+                } else {
+                    meta.setAttribute('name', name);
+                }
+                if (document.head) {
+                    document.head.appendChild(meta);
+                }
+            }
+            meta.setAttribute('content', content);
+        };
+
+        // Función para agregar link tags
+        const addLinkTag = (rel: string, href: string) => {
+            if (!document.head) return;
+            const existingLink = document.querySelector(`link[rel="${rel}"][href="${href}"]`);
+            if (!existingLink) {
+                const link = document.createElement('link');
+                link.rel = rel;
+                link.href = href;
+                if (rel === 'stylesheet') {
+                    link.type = 'text/css';
+                }
+                document.head.appendChild(link);
+            }
+        };
+
+        // Función para agregar scripts
+        const addScript = (src: string, async: boolean = true) => {
+            if (!document.head) return;
+            const existingScript = document.querySelector(`script[src="${src}"]`);
+            if (!existingScript) {
+                const script = document.createElement('script');
+                script.src = src;
+                script.async = async;
+                document.head.appendChild(script);
+            }
+        };
+
+        // Meta tags básicos
+        setMetaTag('description', 'Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.');
+        setMetaTag('viewport', 'width=device-width, initial-scale=1');
+
+        // CSS Links
+        addLinkTag('stylesheet', 'https://glauser.myvtex.com/files/style.min.css');
+        addLinkTag('stylesheet', 'https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css');
+        addLinkTag('stylesheet', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+
+        // Scripts
+        addScript('https://unpkg.com/swiper/swiper-bundle.min.js', true);
+        addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', true);
+        addScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', true);
+
+        // Canonical
+        let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+        if (!canonical) {
+            canonical = document.createElement('link');
+            canonical.rel = 'canonical';
+            document.head.appendChild(canonical);
+        }
+        canonical.href = 'https://glauser.myvtex.com/rolex/watches/land-dweller/';
+
+        // Open Graph Meta Tags
+        setMetaTag('', 'https://glauser.myvtex.com/rolex/watches/land-dweller/', 'og:url');
+        setMetaTag('', 'website', 'og:type');
+        setMetaTag('', 'Relojes Rolex Land-Dweller - GLAUSER', 'og:title');
+        setMetaTag('', 'Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.', 'og:description');
+        setMetaTag('', 'https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-land-dweller-m127334-0001-portrait.webp', 'og:image');
+
+        // Twitter Meta Tags
+        setMetaTag('twitter:card', 'summary_large_image');
+        setMetaTag('twitter:url', 'https://glauser.myvtex.com/rolex/watches/land-dweller/');
+        setMetaTag('twitter:title', 'Relojes Rolex Land-Dweller - GLAUSER');
+        setMetaTag('twitter:description', 'Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.');
+        setMetaTag('twitter:image', 'https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-land-dweller-m127334-0001-portrait.webp');
+
+        // Digital Data Layer Script
+        const digitalDataScript = document.createElement('script');
+        digitalDataScript.type = 'text/javascript';
+        digitalDataScript.textContent = `
+            var digitalDataLayer = {
+                environment: {
+                    environmentVersion: "V7",
+                    coBrandedVersion: "Bespoke"
+                },
+                page: {
+                    pageType: "family page",
+                    pageFamilyName: "land-dweller"
+                }
+            };
+        `;
+        if (!document.querySelector('script[data-digital-data-layer]')) {
+            digitalDataScript.setAttribute('data-digital-data-layer', 'true');
+            document.head.appendChild(digitalDataScript);
+        }
+
+        // JSON-LD Schema Script 1
+        const schemaScript1 = document.createElement('script');
+        schemaScript1.type = 'application/ld+json';
+        schemaScript1.textContent = JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://glauser.myvtex.com/#organization",
+                    "name": "Joyería Glauser",
+                    "url": "https://glauser.myvtex.com/",
+                    "sameAs": [
+                        "https://www.facebook.com/JoyeriaGlauser/",
+                        "https://www.instagram.com/joyeriaglauser/?hl=es-la"
+                    ],
+                    "logo": {
+                        "@type": "ImageObject",
+                        "@id": "https://glauser.myvtex.com/#logo",
+                        "inLanguage": "es-CO",
+                        "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
+                        "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
+                        "width": 300,
+                        "height": 102,
+                        "caption": "Joyería Glauser"
+                    },
+                    "image": { "@id": "https://glauser.myvtex.com/#logo" }
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://glauser.myvtex.com/rolex/watches/land-dweller/#webpage",
+                    "url": "https://glauser.myvtex.com/rolex/watches/land-dweller/",
+                    "name": "Relojes Rolex Land-Dweller - GLAUSER",
+                    "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
+                    "datePublished": "2025-04-01T05:23:53+00:00",
+                    "dateModified": "2025-04-01T05:23:53+00:00",
+                    "description": "Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
+                    "breadcrumb": { "@id": "https://glauser.myvtex.com/rolex/watches/land-dweller/#breadcrumb" },
+                    "inLanguage": "es-Es",
+                    "potentialAction": { "@type": "ReadAction", "target": "https://glauser.myvtex.com/rolex/watches/land-dweller/" }
+                }
+            ]
+        });
+        if (!document.querySelector('script[data-schema-org-1]')) {
+            schemaScript1.setAttribute('data-schema-org-1', 'true');
+            document.head.appendChild(schemaScript1);
+        }
+
+        // JSON-LD Schema Script 2 (Breadcrumb)
+        const schemaScript2 = document.createElement('script');
+        schemaScript2.type = 'application/ld+json';
+        schemaScript2.textContent = JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Rolex GLAUSER",
+                    "item": "https://glauser.myvtex.com/rolex/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Relojes Rolex",
+                    "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Land-Dweller"
+                }
+            ]
+        });
+        if (!document.querySelector('script[data-schema-org-2]')) {
+            schemaScript2.setAttribute('data-schema-org-2', 'true');
+            document.head.appendChild(schemaScript2);
+        }
+    }, []);
+
     return (
         <>
-            <Helmet>
-                <title>Relojes Rolex Land-Dweller - GLAUSER</title>
-                <meta
-                    name="description"
-                    content="Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
-                />
-                {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
-                                                                <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
-                                                                <div dangerouslySetInnerHTML={{ __html: '<vtex:template id="GL-Favicon" />' }} />*/}
-
-                {/* <vtex.cmc:GLMetaTags /> */}
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.myvtex.com/files/style.min.css"
-                />
-                <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css"
-                />
-                <link
-                    rel="stylesheet preload"
-                    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-                />
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/land-dweller/" />
-
-                {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/land-dweller/" />
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Relojes Rolex Land-Dweller - GLAUSER"
-                />
-                <meta
-                    property="og:description"
-                    content="Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
-                />
-                <meta
-                    property="og:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-land-dweller-m127334-0001-portrait.webp"
-                />
-
-                {/* Twitter Meta Tags */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://glauser.myvtex.com/rolex/watches/land-dweller/" />
-                <meta
-                    name="twitter:title"
-                    content="Relojes Rolex Land-Dweller - GLAUSER"
-                />
-                <meta
-                    name="twitter:description"
-                    content="Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
-                />
-                <meta
-                    name="twitter:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-land-dweller-m127334-0001-portrait.webp"
-                />
-
-                <script type="text/javascript">
-                    {`
-                    var digitalDataLayer = {
-                        environment: {
-                        environmentVersion: "V7",
-                        coBrandedVersion: "Bespoke"
-                        },
-                        page: {
-                        pageType: "family page",
-                        pageFamilyName: "land-dweller"
-                        }
-                    };
-                    `}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@graph": [
-                            {
-                                "@type": "Organization",
-                                "@id": "https://glauser.myvtex.com/#organization",
-                                "name": "Joyería Glauser",
-                                "url": "https://glauser.myvtex.com/",
-                                "sameAs": [
-                                    "https://www.facebook.com/JoyeriaGlauser/",
-                                    "https://www.instagram.com/joyeriaglauser/?hl=es-la"
-                                ],
-                                "logo": {
-                                    "@type": "ImageObject",
-                                    "@id": "https://glauser.myvtex.com/#logo",
-                                    "inLanguage": "es-CO",
-                                    "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "width": 300,
-                                    "height": 102,
-                                    "caption": "Joyería Glauser"
-                                },
-                                "image": { "@id": "https://glauser.myvtex.com/#logo" }
-                            },
-                            {
-                                "@type": "WebPage",
-                                "@id": "https://glauser.myvtex.com/rolex/watches/land-dweller/#webpage",
-                                "url": "https://glauser.myvtex.com/rolex/watches/land-dweller/",
-                                "name": "Relojes Rolex Land-Dweller - GLAUSER",
-                                "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
-                                "datePublished": "2025-04-01T05:23:53+00:00",
-                                "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra los relojes Rolex Land-Dweller en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
-                                "breadcrumb": { "@id": "https://glauser.myvtex.com/rolex/watches/land-dweller/#breadcrumb" },
-                                "inLanguage": "es-Es",
-                                "potentialAction": { "@type": "ReadAction", "target": "https://glauser.myvtex.com/rolex/watches/land-dweller/" }
-                            }
-                        ]
-                    })}
-                </script>
-
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [
-                            {
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Rolex GLAUSER",
-                                "item": "https://glauser.myvtex.com/rolex/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Relojes Rolex",
-                                "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 3,
-                                "name": "Land-Dweller"
-                            }
-                        ]
-                    })}
-                </script>
-            </Helmet>
             <div className="header-component">
                 {/*<vtex:template id="HeaderPromotion" />
                                     <vtex:template id="GLHeader" />*/ }

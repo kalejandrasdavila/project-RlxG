@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from "react-helmet-async";
-import RlxExploreMasNModels from '../../components/parts/RlxExploreMas';
+import RlxExploreMas from '../../components/parts/RlxExploreMas';
 import Nav from '../../components/parts/Nav';
 import Footer from '../../components/parts/Footer';
 import useInitScripts from '../../components/hooks/useInitScripts';
@@ -537,7 +537,7 @@ const Mantenimiento: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMasNModels />
+                <RlxExploreMas />
                 <Footer />
             </main >
         </>

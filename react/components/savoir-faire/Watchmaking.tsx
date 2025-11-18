@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from "../../components/hooks/useInitScripts";
-import RlxExploreMasNModels from "../../components/parts/RlxExploreMas";
+import RlxExploreMas from "../../components/parts/RlxExploreMas";
 import Nav from '../../components/parts/Nav';
 import Footer from '../../components/parts/Footer';
 import { useCssHandles } from 'vtex.css-handles';
@@ -27,7 +27,7 @@ const WatchMaking: React.FC = () => {
     useInitScripts();
     const handles = useCssHandles(CSS_HANDLES)
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/watchmaking/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/watchmaking/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (
@@ -518,7 +518,7 @@ const WatchMaking: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMasNModels />
+                <RlxExploreMas />
                 <Footer />
             </main>
         </>

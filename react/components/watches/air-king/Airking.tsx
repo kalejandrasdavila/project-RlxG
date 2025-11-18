@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../../components/hooks/useInitScripts';
-import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../components/parts/RlxExploreMasNModels";
 import NavM from "../../../components/parts/NavModels";
 import Footer from "../../../components/parts/Footer";
 import { useCssHandles } from 'vtex.css-handles';
@@ -211,7 +211,7 @@ const Airking: React.FC = () => {
                     </div>
                 </div>
 
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </div>
         </>

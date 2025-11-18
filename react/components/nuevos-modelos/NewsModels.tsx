@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../components/hooks/useInitScripts';
 import RlxExploreMasNModels from "../../components/parts/RlxExploreMasNModels";
@@ -25,7 +25,7 @@ const NewsModels: React.FC = () => {
     useInitScripts();
     const handles = useCssHandles(CSS_HANDLES)
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (

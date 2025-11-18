@@ -9,7 +9,7 @@ import "../../../main-style.css";
 const FilaViena: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/filarmonica-viena/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/filarmonica-viena/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (

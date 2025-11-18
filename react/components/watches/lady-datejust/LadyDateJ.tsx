@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useCssHandles } from 'vtex.css-handles';
 import "../../../main-style.css";
-import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../components/parts/RlxExploreMasNModels";
 
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../../components/hooks/useInitScripts';
@@ -485,7 +485,7 @@ const LadyDate: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </main>
         </>

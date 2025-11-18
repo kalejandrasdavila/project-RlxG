@@ -4,7 +4,7 @@ import "../../../../main-style.css";
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../../../components/hooks/useInitScripts';
 
-import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../../components/parts/RlxExploreMasNModels";
 
 import NavM from "../../../../components/parts/NavModels";
 
@@ -1002,7 +1002,7 @@ const M2265700002: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </main>
         </>

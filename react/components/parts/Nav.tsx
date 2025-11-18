@@ -15,7 +15,7 @@ const Nav: React.FC = () => {
     const [activeLink, setActiveLink] = useState<string>("");
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+        if (typeof window !== 'undefined' && window.location) {
             setActiveLink(window.location.pathname);
         }
     }, []);

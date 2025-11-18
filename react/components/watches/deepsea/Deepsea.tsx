@@ -1,164 +1,32 @@
 import React from "react";
 import useInitScripts from '../../../components/hooks/useInitScripts';
 import { useCssHandles } from 'vtex.css-handles';
+import { useWatchCollectionMeta } from '../../../components/hooks/useWatchCollectionMeta';
 import "../../../main-style.css";
-import { Helmet } from "react-helmet-async";
 import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
-
 import NavM from "../../../components/parts/NavModels";
 import Footer from "../../../components/parts/Footer";
 
+const CSS_HANDLES = [
+    'container', 'wrapper', 'content', 'section', 'title', 'subtitle',
+    'model_grid', 'model_card', 'image_container', 'description',
+    'price_section', 'button_container', 'explore_section'
+] as const;
+
 const Deepsea: React.FC = () => {
     useInitScripts();
+    const handles = useCssHandles(CSS_HANDLES);
+
+    useWatchCollectionMeta({
+        title: 'Relojes Rolex Deepsea - GLAUSER',
+        description: 'Descubra los relojes Rolex Deepsea en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.',
+        canonicalUrl: 'https://glauser.myvtex.com/rolex/watches/deepsea/',
+        ogImage: 'https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-rolex-deepsea-m136668lb-0001-portrait.webp',
+        pageFamilyName: 'deepsea'
+    });
+
     return (
         <>
-            <Helmet>
-                <title>Relojes Rolex Deepsea - GLAUSER</title>
-                <meta
-                    name="description"
-                    content="Descubra los relojes Rolex Deepsea en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
-                />
-                {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
-                                                                <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
-                                                                <div dangerouslySetInnerHTML={{ __html: '<vtex:template id="GL-Favicon" />' }} />*/}
-
-                {/* <vtex.cmc:GLMetaTags /> */}
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.myvtex.com/files/style.min.css"
-                />
-                <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css"
-                />
-                <link
-                    rel="stylesheet preload"
-                    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-                />
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/deepsea/" />
-
-                {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/deepsea/" />
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Relojes Rolex Deepsea - GLAUSER"
-                />
-                <meta
-                    property="og:description"
-                    content="Descubra los relojes Rolex Deepsea en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
-                />
-                <meta
-                    property="og:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-rolex-deepsea-m136668lb-0001-portrait.webp"
-                />
-
-                {/* Twitter Meta Tags */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://glauser.myvtex.com/rolex/watches/deepsea/" />
-                <meta
-                    name="twitter:title"
-                    content="Relojes Rolex Deepsea - GLAUSER"
-                />
-                <meta
-                    name="twitter:description"
-                    content="Descubra los relojes Rolex Deepsea en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
-                />
-                <meta
-                    name="twitter:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-rolex-deepsea-m136668lb-0001-portrait.webp"
-                />
-
-                <script type="text/javascript">
-                    {`
-                                            var digitalDataLayer = {
-                                                environment: {
-                                                environmentVersion: "V7",
-                                                coBrandedVersion: "Bespoke"
-                                                },
-                                                page: {
-                                                pageType: "family page",
-                                                pageFamilyName: "deepsea"
-                                                }
-                                            };
-                                            `}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@graph": [
-                            {
-                                "@type": "Organization",
-                                "@id": "https://glauser.myvtex.com/#organization",
-                                "name": "Joyería Glauser",
-                                "url": "https://glauser.myvtex.com/",
-                                "sameAs": [
-                                    "https://www.facebook.com/JoyeriaGlauser/",
-                                    "https://www.instagram.com/joyeriaglauser/?hl=es-la"
-                                ],
-                                "logo": {
-                                    "@type": "ImageObject",
-                                    "@id": "https://glauser.myvtex.com/#logo",
-                                    "inLanguage": "es-CO",
-                                    "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "width": 300,
-                                    "height": 102,
-                                    "caption": "Joyería Glauser"
-                                },
-                                "image": { "@id": "https://glauser.myvtex.com/#logo" }
-                            },
-                            {
-                                "@type": "WebPage",
-                                "@id": "https://glauser.myvtex.com/rolex/watches/deepsea/#webpage",
-                                "url": "https://glauser.myvtex.com/rolex/watches/deepsea/",
-                                "name": "Relojes Rolex Deepsea - GLAUSER",
-                                "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
-                                "datePublished": "2025-04-01T05:23:53+00:00",
-                                "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra los relojes Rolex Deepsea en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
-                                "breadcrumb": { "@id": "https://glauser.myvtex.com/rolex/watches/deepsea/#breadcrumb" },
-                                "inLanguage": "es-Es",
-                                "potentialAction": { "@type": "ReadAction", "target": "https://glauser.myvtex.com/rolex/watches/deepsea/" }
-                            }
-                        ]
-                    })}
-                </script>
-
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [
-                            {
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Rolex GLAUSER",
-                                "item": "https://glauser.myvtex.com/rolex/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Relojes Rolex",
-                                "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 3,
-                                "name": "Deepsea"
-                            }
-                        ]
-                    })}
-                </script>
-            </Helmet>
             <div className="header-component">
                 {/*<vtex:template id="HeaderPromotion" />
                                     <vtex:template id="GLHeader" />*/ }

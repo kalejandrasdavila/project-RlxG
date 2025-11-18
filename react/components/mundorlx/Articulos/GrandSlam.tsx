@@ -9,7 +9,7 @@ import "../../../main-style.css";
 const Grandslam: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/grand-slam-of-show-jumping/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/grand-slam-of-show-jumping/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (

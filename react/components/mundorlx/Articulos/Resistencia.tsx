@@ -10,7 +10,7 @@ import "../../../main-style.css";
 const Resistencia: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/resistencia/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/resistencia/';
     const baseUrl = 'https://glauser.myvtex.com'; // La URL base 
 
     return (

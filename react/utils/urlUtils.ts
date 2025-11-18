@@ -6,7 +6,7 @@ export const getBaseUrl = (): string => {
 
 export const getCurrentUrl = (path?: string): string => {
     const base = getBaseUrl();
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.location) {
         return window.location.href;
     }
     return path ? `${base}${path}` : base;

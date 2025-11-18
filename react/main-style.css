@@ -4126,34 +4126,44 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
 
 /* Estilos específicos para el Swiper de Explore más */
 .exploremas.swiper-container {
-    overflow: hidden;
+    overflow: visible !important;
     position: relative;
     padding: 0 50px;
     /* Espacio para los botones de navegación */
 }
 
+.exploremas.swiper-container.swiper-initialized {
+    overflow: hidden;
+}
+
 .exploremas .swiper-wrapper {
-    display: flex;
+    display: flex !important;
     align-items: stretch;
+    transform: translate3d(0px, 0, 0) !important;
 }
 
 .exploremas .swiper-slide {
     height: auto;
     display: flex;
     flex-direction: column;
+    width: auto !important;
+    flex-shrink: 0;
+    margin-right: 8px;
+    box-sizing: border-box;
 }
 
 .exploremas .swiper-slide .banner-10 {
     height: 100%;
-    display: flex;
+    width: 100%;
+    display: block;
     flex-direction: column;
 }
 
 .exploremas .swiper-slide .banner-10 img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
-    border-radius: 8px;
+    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -4169,23 +4179,37 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
     color: var(--c-brown-text);
 }
 
+/* Estilos para rlx-exploremas */
+.rlx-exploremas {
+    width: 100%;
+}
+
+.rlx-exploremas .rlx-container {
+    overflow: visible;
+}
+
+.rlx-exploremas .exploremas.swiper-container {
+    overflow: visible;
+}
+
 /* Botones de navegación para Explore más */
 .exploremas .swiper-button-prev,
 .exploremas .swiper-button-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    border: 1px solid var(--c-grey);
-    cursor: pointer;
-    z-index: 10;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 44px !important;
+    height: 44px !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 50% !important;
+    border: 1px solid var(--c-grey) !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 0 !important;
 }
 
 .exploremas .swiper-button-prev {
@@ -4205,9 +4229,10 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
 
 .exploremas .swiper-button-prev:after,
 .exploremas .swiper-button-next:after {
-    font-family: swiper-icons;
-    font-size: 18px;
-    color: var(--c-grey);
+    font-family: swiper-icons !important;
+    font-size: 18px !important;
+    color: var(--c-grey) !important;
+    font-weight: bold !important;
 }
 
 .exploremas .swiper-button-prev:hover:after,
@@ -4222,9 +4247,13 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
 
 /* Paginación para Explore más */
 .exploremas .swiper-pagination {
-    position: relative;
-    margin-top: 20px;
-    text-align: center;
+    position: relative !important;
+    margin-top: 20px !important;
+    text-align: center !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: auto !important;
 }
 
 .exploremas .swiper-pagination-bullet {
@@ -4242,6 +4271,14 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
     transform: scale(1.2);
 }
 
+/* Ancho específico de slides para Explore más */
+.exploremas .swiper-slide {
+    width: 339.5px !important;
+    min-width: 339.5px !important;
+    max-width: 339.5px !important;
+    margin-right: 8px !important;
+}
+
 /* Responsive para Explore más */
 @media (max-width: 767px) {
     .exploremas.swiper-container {
@@ -4249,7 +4286,8 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
     }
 
     .exploremas .swiper-slide .banner-10 img {
-        height: 180px;
+        height: auto;
+        min-height: 180px;
     }
 
     .exploremas .swiper-button-prev,

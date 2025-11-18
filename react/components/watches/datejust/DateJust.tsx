@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useCssHandles } from 'vtex.css-handles';
 import useInitScripts from '../../../components/hooks/useInitScripts';
 import "../../../main-style.css";
-import RlxExploreMasNModels from "../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../components/parts/RlxExploreMasNModels";
 
 import NavM from "../../../components/parts/NavModels";
 import Footer from "../../../components/parts/Footer";
@@ -1428,7 +1428,7 @@ const DateJust: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </main>
         </>

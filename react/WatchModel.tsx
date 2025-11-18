@@ -1,9 +1,93 @@
 import React from 'react'
 import { useRuntime } from 'vtex.render-runtime'
 import { useCssHandles } from 'vtex.css-handles'
+import { HelmetProvider } from 'react-helmet-async'
 
-import useInitScripts from './components/hooks/useInitScripts'
 import './main-style.css'
+
+// Error Boundary para capturar errores de renderizado
+class ModelErrorBoundary extends React.Component<
+  { children: React.ReactNode; collection: string; model: string },
+  { hasError: boolean; error: Error | null }
+> {
+  constructor(props: { children: React.ReactNode; collection: string; model: string }) {
+    super(props)
+    this.state = { hasError: false, error: null }
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error }
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error en componente de modelo:', error, errorInfo)
+    console.error('Stack trace:', error.stack)
+    console.error('Component stack:', errorInfo.componentStack)
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ padding: '20px', textAlign: 'center' }}>
+          <h1>Error al renderizar el componente</h1>
+          <p>No se pudo cargar el componente para el modelo '{this.props.model}'</p>
+          {this.state.error && (
+            <details style={{ marginTop: '10px', textAlign: 'left', maxWidth: '800px', margin: '20px auto' }}>
+              <summary style={{ cursor: 'pointer', fontWeight: 'bold' }}>Detalles del error (click para expandir)</summary>
+              <pre style={{
+                background: '#f5f5f5',
+                padding: '10px',
+                overflow: 'auto',
+                fontSize: '12px',
+                textAlign: 'left',
+                border: '1px solid #ddd',
+                borderRadius: '4px',
+                marginTop: '10px'
+              }}>
+                <strong>Error:</strong> {this.state.error.toString()}
+                {'\n\n'}
+                <strong>Stack:</strong>
+                {this.state.error.stack || 'No disponible'}
+              </pre>
+            </details>
+          )}
+          <div style={{ marginTop: '20px' }}>
+            <a
+              href={`/rolex/watches/${this.props.collection}`}
+              style={{
+                display: 'inline-block',
+                margin: '10px',
+                padding: '10px 20px',
+                backgroundColor: '#452C1E',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: '4px'
+              }}
+            >
+              ← Volver a la colección {this.props.collection}
+            </a>
+            <a
+              href="https://glauser.myvtex.com/rolex/coleccion-rolex/"
+              style={{
+                display: 'inline-block',
+                margin: '10px',
+                padding: '10px 20px',
+                backgroundColor: '#452C1E',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: '4px'
+              }}
+            >
+              ← Ver todas las colecciones
+            </a>
+          </div>
+        </div>
+      )
+    }
+
+    return this.props.children
+  }
+}
 
 const CSS_HANDLES = [
   'container',
@@ -74,73 +158,62 @@ const VALID_COLLECTIONS = [
   '1908',
 ]
 
-// Mapeo estático de modelos conocidos para cada colección
+// Mapeo estático de importaciones dinámicas para cada modelo
+// Esto es necesario para que Webpack pueda hacer code splitting correctamente
+// IMPORTANTE: Las rutas deben ser exactamente como aparecen en el filesystem
+// y Webpack debe poder resolverlas en tiempo de compilación
+const MODEL_IMPORTS: Record<string, Record<string, () => Promise<{ default: React.ComponentType }>>> = {
+  '1908': {
+    'm52506-0002': () => import('./components/watches/1908/modelos/M52506-0002'),
+    'm52506-0003': () => import('./components/watches/1908/modelos/M52506-0003'),
+    'm52508-0002': () => import('./components/watches/1908/modelos/M52508-0002'),
+    'm52508-0006': () => import('./components/watches/1908/modelos/M52508-0006'),
+    'm52508-0007': () => import('./components/watches/1908/modelos/M52508-0007'),
+    'm52508-0008': () => import('./components/watches/1908/modelos/M52508-0008'),
+    'm52509-0002': () => import('./components/watches/1908/modelos/M52509-0002'),
+  },
+  'submariner': {
+    'm124060-0001': () => import('./components/watches/submariner/modelos/M124060-0001'),
+    'm126610ln-0001': () => import('./components/watches/submariner/modelos/M126610ln-0001'),
+    'm126610lv-0002': () => import('./components/watches/submariner/modelos/M126610lv-0002'),
+    'm126613lb-0002': () => import('./components/watches/submariner/modelos/M126613lb-0002'),
+    'm126613ln-0002': () => import('./components/watches/submariner/modelos/M126613ln-0002'),
+    'm126618lb-0002': () => import('./components/watches/submariner/modelos/M126618lb-0002'),
+    'm126618ln-0002': () => import('./components/watches/submariner/modelos/M126618ln-0002'),
+    'm126619lb-0003': () => import('./components/watches/submariner/modelos/M126619lb-0003'),
+  },
+  // Agregar más colecciones y modelos según sea necesario
+}
+
+// Mapeo estático de modelos conocidos para validación
 const MODEL_MAPPING: Record<string, Record<string, string>> = {
-  submariner: {
+  '1908': {
+    'm52506-0002': 'M52506-0002',
+    'm52506-0003': 'M52506-0003',
+    'm52508-0002': 'M52508-0002',
+    'm52508-0006': 'M52508-0006',
+    'm52508-0007': 'M52508-0007',
+    'm52508-0008': 'M52508-0008',
+    'm52509-0002': 'M52509-0002',
+  },
+  'submariner': {
     'm124060-0001': 'M124060-0001',
-    'm126613lb-0002': 'M126613lb-0002',
-    'm126618ln-0002': 'M126618ln-0002',
-    'm126610lv-0002': 'M126610lv-0002',
-    'm126619lb-0003': 'M126619lb-0003',
     'm126610ln-0001': 'M126610ln-0001',
+    'm126610lv-0002': 'M126610lv-0002',
+    'm126613lb-0002': 'M126613lb-0002',
     'm126613ln-0002': 'M126613ln-0002',
     'm126618lb-0002': 'M126618lb-0002',
-  },
-  'gmt-master-ii': {
-    'm126711chnr-0002': 'M126711chnr-0002',
-    'm126729vtnr-0001': 'M126729vtnr-0001',
-    'm126715chnr-0002': 'M126715chnr-0002',
-    'm126713grnr-0001': 'M126713grnr-0001',
-    'm126710grnr-0003': 'M126710grnr-0003',
-    'm126720vtnr-0001': 'M126720vtnr-0001',
-    'm126718grnr-0001': 'M126718grnr-0001',
-    'm126710blnr-0003': 'M126710blnr-0003',
-    'm126710blnr-0002': 'M126710blnr-0002',
-    'm126710blro-0001': 'M126710blro-0001',
-    'm126710blro-0002': 'M126710blro-0002',
-    'm126710grnr-0004': 'M126710grnr-0004',
-    'm126715chnr-0001': 'M126715chnr-0001',
-    'm126718grnr-0002': 'M126718grnr-0002',
-    'm126719blro-0002': 'M126719blro-0002',
-    'm126719blro-0003': 'M126719blro-0003',
-    'm126720vtnr-0002': 'M126720vtnr-0002',
-  },
-  'yacht-master': {
-    'm226627-0001': 'M226627-0001',
-    'm268622-0002': 'M268622-0002',
-    'm126655-0002': 'M126655-0002',
-    'm126621-0002': 'M126621-0002',
-    'm126622-0001': 'M126622-0001',
-    'm226659-0002': 'M226659-0002',
-    'm126622-0002': 'M126622-0002',
-    'm268621-0003': 'M268621-0003',
-  },
-  'lady-datejust': {
-    'm279135rbr-0001': 'M279135rbr-0001',
-    'm279173-0012': 'M279173-0012',
-    'm279174-0020': 'M279174-0020',
-    'm279383rbr-0003': 'M279383rbr-0003',
-    'm279384rbr-0004': 'M279384rbr-0004',
-  },
-  deepsea: {
-    'm126067-0002': 'M126067-0002',
-    'm136660-0005': 'M136660-0005',
-    'm136668lb-0001': 'M136668lb-0001',
-  },
-  explorer: {
-    'm124270-0001': 'M124270-0001',
-    'm224270-0001': 'M224270-0001',
-    'm226570-0001': 'M226570-0001',
-    'm226570-0002': 'M226570-0002',
-  },
-  'air-king': {
-    'm126900-0001': 'M126900-0001',
+    'm126618ln-0002': 'M126618ln-0002',
+    'm126619lb-0003': 'M126619lb-0003',
   },
   // Agregar más modelos según sea necesario
 }
 
+// Ya no usamos require.context, usamos import() dinámico en MODEL_IMPORTS
+
 const WatchModel: React.FC = () => {
-  useInitScripts()
+  // No llamar useInitScripts aquí para evitar conflictos con el componente importado
+  // El componente importado ya tiene su propia llamada a useInitScripts
   const handles = useCssHandles(CSS_HANDLES)
   const { route } = useRuntime()
 
@@ -148,62 +221,92 @@ const WatchModel: React.FC = () => {
   const collection = route?.params?.collection as string
   const model = route?.params?.model as string
 
-  // console.log('WatchModel - Parámetros:', { collection, model })
-  // console.log('WatchModel - Route completa:', route)
+  console.log('WatchModel - Parámetros de ruta:', { collection, model })
+  console.log('WatchModel - Route completa:', route)
+  console.log('WatchModel - route.params:', route?.params)
 
   const [ModelComponent, setModelComponent] =
-    React.useState<React.ComponentType | null>(null)
+    React.useState<React.ComponentType<any> | null>(null)
 
   const [loading, setLoading] = React.useState(true)
   const [error, setError] = React.useState<string | null>(null)
 
   React.useEffect(() => {
-    const loadModelComponent = async () => {
-      if (!collection || !model) {
-        setError('Colección y modelo son requeridos')
-        setLoading(false)
+    const loadComponent = async () => {
+      // Normalizar la colección (asegurar que sea string y sin espacios)
+      const normalizedCollection = collection?.toString().trim() || ''
+      const normalizedModel = model?.toString().trim() || ''
 
+      console.log('Valores normalizados:', { normalizedCollection, normalizedModel })
+
+      if (!normalizedCollection || !normalizedModel) {
+        setError(`Colección y modelo son requeridos. Collection: '${normalizedCollection}', Model: '${normalizedModel}'`)
+        setLoading(false)
         return
       }
 
-      if (!VALID_COLLECTIONS.includes(collection)) {
-        setError(`Colección '${collection}' no es válida`)
+      if (!VALID_COLLECTIONS.includes(normalizedCollection)) {
+        setError(`Colección '${normalizedCollection}' no es válida. Colecciones válidas: ${VALID_COLLECTIONS.join(', ')}`)
         setLoading(false)
-
         return
       }
 
       // Verificar si el modelo existe en el mapeo
-      const collectionModels = MODEL_MAPPING[collection]
+      const collectionModels = MODEL_MAPPING[normalizedCollection]
 
-      if (!collectionModels || !collectionModels[model]) {
+      if (!collectionModels || !collectionModels[normalizedModel]) {
         setError(
-          `Modelo '${model}' no encontrado en la colección '${collection}'`
+          `Modelo '${normalizedModel}' no encontrado en la colección '${normalizedCollection}'. Modelos disponibles: ${collectionModels ? Object.keys(collectionModels).join(', ') : 'ninguno'}`
         )
         setLoading(false)
-
         return
       }
 
       try {
-        // Importar usando require dinámico
-        const componentFileName = collectionModels[model]
-        const ComponentModule = await import(
-          `./components/watches/${collection}/modelos/${componentFileName}`
-        )
+        console.log(`Cargando componente para modelo: ${normalizedModel} de colección: ${normalizedCollection}`)
 
-        setModelComponent(() => ComponentModule.default)
+        // Verificar si existe la función de importación para este modelo
+        const collectionImports = MODEL_IMPORTS[normalizedCollection]
+        if (!collectionImports || !collectionImports[normalizedModel]) {
+          throw new Error(`No se encontró la función de importación para el modelo '${normalizedModel}' en la colección '${normalizedCollection}'`)
+        }
+
+        // Cargar el componente usando import() dinámico (como en WatchCollection.tsx)
+        const module = await collectionImports[normalizedModel]()
+
+        console.log('Módulo cargado:', module)
+        console.log('ComponentModule.default:', module?.default)
+        console.log('Tipo de default:', typeof module?.default)
+
+        if (!module || !module.default) {
+          console.error('El módulo no tiene default export. Keys disponibles:', Object.keys(module || {}))
+          throw new Error(`El módulo no exporta un componente por defecto`)
+        }
+
+        const Component = module.default
+        if (typeof Component !== 'function') {
+          throw new Error(`El componente exportado no es una función válida. Tipo: ${typeof Component}`)
+        }
+
+        console.log('Componente cargado exitosamente:', Component.name || 'Componente sin nombre')
+
+        // Guardar el componente directamente (igual que WatchCollection.tsx)
+        // IMPORTANTE: No usar React.memo ni wrappers, guardar el componente directamente
+        setModelComponent(() => Component)
         setError(null)
+        setLoading(false)
       } catch (importError) {
         console.error('Error importando componente:', importError)
-        setError(`No se pudo cargar el componente para el modelo '${model}'`)
-      } finally {
+        console.error('Stack trace:', (importError as Error)?.stack)
+        const error = importError as Error
+        const errorMessage = error?.message || String(importError) || 'Error desconocido'
+        setError(`No se pudo cargar el componente para el modelo '${normalizedModel}'. ${errorMessage}`)
         setLoading(false)
       }
     }
 
-    loadModelComponent()
-  }, [collection, model])
+    loadComponent()
+  }, [collection, model, route])
 
   if (loading) {
     return (
@@ -249,11 +352,18 @@ const WatchModel: React.FC = () => {
     )
   }
 
-  // Renderizar el componente del modelo
+  // Renderizar el componente del modelo con ErrorBoundary
+  // Envolver con HelmetProvider para que react-helmet-async funcione correctamente
+  if (!ModelComponent) {
+    return null
+  }
+
   return (
-    <div className={handles.model_container}>
-      <ModelComponent />
-    </div>
+    <ModelErrorBoundary collection={collection || ''} model={model || ''}>
+      <HelmetProvider>
+        {React.createElement(ModelComponent)}
+      </HelmetProvider>
+    </ModelErrorBoundary>
   )
 }
 

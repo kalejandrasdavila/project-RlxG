@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useCssHandles } from 'vtex.css-handles';
 import "../../../../main-style.css";
-import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
-
-import { Helmet } from "react-helmet-async";
+import RlxExploreMas from "../../../../components/parts/RlxExploreMas";
 import useInitScripts from '../../../../components/hooks/useInitScripts';
-
 import NavM from "../../../../components/parts/NavModels";
-
 import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
-
-import SectionLadyDateJust from "../../../parts/SectionLadyDateJust";
+import SectionLadyDateJust from "../../../../components/parts/SectionLadyDateJust";
 import Footer from '../../../../components/parts/Footer';
-
 
 const CSS_HANDLES = [
     'container', 'wrapper', 'content', 'section', 'title', 'subtitle',
@@ -22,16 +16,253 @@ const CSS_HANDLES = [
     'pt_10', 'mb_20', 'mt_30', 'pb_15', 'ml_5', 'mr_10', 'pl_20', 'pr_15'
 ];
 
-const handles = useCssHandles(CSS_HANDLES);
-
 
 
 const M279384rbr0004: React.FC = () => {
-
     useInitScripts();
+    const handles = useCssHandles(CSS_HANDLES);
     const [modelorlx, setModelorlx] = useState("");
     const [showPrice, setShowPrice] = useState<boolean>(false);
     const togglePrice = () => setShowPrice(prev => !prev);
+
+    // Manejar meta tags y scripts con useEffect para evitar problemas de SSR
+    useEffect(() => {
+        if (typeof window === 'undefined' || typeof document === 'undefined' || !document.head) {
+            return;
+        }
+
+        // Configurar título
+        document.title = 'Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes, m279384rbr-0004 - GLAUSER';
+
+        // Función para configurar meta tags
+        const setMetaTag = (name: string, content: string, property?: string) => {
+            if (!document.head) return;
+            const selector = property ? `meta[property="${property}"]` : `meta[name="${name}"]`;
+            let meta = document.querySelector(selector) as HTMLMetaElement;
+            if (!meta) {
+                meta = document.createElement('meta');
+                if (property) {
+                    meta.setAttribute('property', property);
+                } else {
+                    meta.setAttribute('name', name);
+                }
+                if (document.head) {
+                    document.head.appendChild(meta);
+                }
+            }
+            meta.setAttribute('content', content);
+        };
+
+        // Función para agregar link tags
+        const addLinkTag = (rel: string, href: string) => {
+            if (!document.head) return;
+            const existingLink = document.querySelector(`link[rel="${rel}"][href="${href}"]`);
+            if (!existingLink) {
+                const link = document.createElement('link');
+                link.rel = rel;
+                link.href = href;
+                if (rel === 'stylesheet') {
+                    link.type = 'text/css';
+                }
+                document.head.appendChild(link);
+            }
+        };
+
+        // Función para agregar scripts
+        const addScript = (src: string, async: boolean = true) => {
+            if (!document.head) return;
+            const existingScript = document.querySelector(`script[src="${src}"]`);
+            if (!existingScript) {
+                const script = document.createElement('script');
+                script.src = src;
+                script.async = async;
+                document.head.appendChild(script);
+            }
+        };
+
+        // Meta tags básicos
+        setMetaTag('description', 'Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex');
+        setMetaTag('viewport', 'width=device-width, initial-scale=1');
+
+        // CSS Links
+        addLinkTag('stylesheet', 'https://glauser.myvtex.com/files/style.min.css');
+        addLinkTag('stylesheet', 'https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css');
+        addLinkTag('stylesheet', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+
+        // Scripts
+        addScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', true);
+        addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', true);
+        addScript('https://static.rolex.com/rlx-plaques-v2/js/plaquespage.js', true);
+
+        // Canonical
+        let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+        if (!canonical) {
+            canonical = document.createElement('link');
+            canonical.rel = 'canonical';
+            document.head.appendChild(canonical);
+        }
+        canonical.href = 'https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/';
+
+        // Open Graph Meta Tags
+        setMetaTag('', 'https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/', 'og:url');
+        setMetaTag('', 'website', 'og:type');
+        setMetaTag('', 'Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes, m279384rbr-0004 - GLAUSER', 'og:title');
+        setMetaTag('', 'Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex', 'og:description');
+        setMetaTag('', 'https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m279384rbr-0004-drp-upright-bba-with-shadow-landscape.webp', 'og:image');
+
+        // Twitter Meta Tags
+        setMetaTag('twitter:card', 'summary_large_image');
+        setMetaTag('twitter:url', 'https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/');
+        setMetaTag('twitter:title', 'Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes, m279384rbr-0004 - GLAUSER');
+        setMetaTag('twitter:description', 'Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex');
+        setMetaTag('twitter:image', 'https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m279384rbr-0004-drp-upright-bba-with-shadow-landscape.webp');
+
+        // Digital Data Layer Script
+        const digitalDataScript = document.createElement('script');
+        digitalDataScript.type = 'text/javascript';
+        digitalDataScript.textContent = `
+            window.digitalDataLayer = {
+                environment: {
+                    environmentVersion: "V7",
+                    coBrandedVersion: "Bespoke"
+                },
+                page: {
+                    pageType: "model page",
+                    pageFamilyName: "lady-datejust"
+                },
+                products: {
+                    productRMC: "m279384rbr-0004"
+                }
+            };
+        `;
+        if (!document.querySelector('script[data-digital-data-layer]')) {
+            digitalDataScript.setAttribute('data-digital-data-layer', 'true');
+            document.head.appendChild(digitalDataScript);
+        }
+
+        // JSON-LD Schema Scripts
+        const schemaScript1 = document.createElement('script');
+        schemaScript1.type = 'application/ld+json';
+        schemaScript1.textContent = JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://glauser.myvtex.com/#organization",
+                    "name": "Joyería Glauser",
+                    "url": "https://glauser.myvtex.com/",
+                    "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
+                    "logo": {
+                        "@type": "ImageObject",
+                        "@id": "https://glauser.myvtex.com/#logo",
+                        "inLanguage": "es-CO",
+                        "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
+                        "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
+                        "width": 300,
+                        "height": 102,
+                        "caption": "Joyería Glauser"
+                    },
+                    "image": { "@id": "https://glauser.myvtex.com/#logo" }
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/#webpage",
+                    "url": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/",
+                    "name": "Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes, m279384rbr-0004 - GLAUSER",
+                    "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
+                    "datePublished": "2025-04-01T05:23:53+00:00",
+                    "dateModified": "2025-04-01T05:23:53+00:00",
+                    "description": "Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex",
+                    "breadcrumb": { "@id": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/#breadcrumb" },
+                    "inLanguage": "es-Es",
+                    "potentialAction": [{ "@type": "ReadAction", "target": ["https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/"] }]
+                }
+            ]
+        });
+        if (!document.querySelector('script[data-schema-org-1]')) {
+            schemaScript1.setAttribute('data-schema-org-1', 'true');
+            document.head.appendChild(schemaScript1);
+        }
+
+        const schemaScript2 = document.createElement('script');
+        schemaScript2.type = 'application/ld+json';
+        schemaScript2.textContent = JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Lady-Datejust",
+            "image": [
+                "https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m279384rbr-0004-drp-upright-bba-with-shadow-landscape.webp"
+            ],
+            "description": "Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex",
+            "sku": "m279384rbr-0004",
+            "mpn": "279384RBR",
+            "brand": {
+                "@type": "Brand",
+                "name": "Rolex"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/",
+                "priceCurrency": "USD",
+                "price": "20050.00",
+                "priceValidUntil": "2025-04-01",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock"
+            }
+        });
+        if (!document.querySelector('script[data-schema-product]')) {
+            schemaScript2.setAttribute('data-schema-product', 'true');
+            document.head.appendChild(schemaScript2);
+        }
+
+        const schemaScript3 = document.createElement('script');
+        schemaScript3.type = 'application/ld+json';
+        schemaScript3.textContent = JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Rolex GLAUSER",
+                "item": "https://glauser.myvtex.com/rolex/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Relojes Rolex",
+                "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Lady-Datejust",
+                "item": "https://glauser.myvtex.com/rolex/watches/lady-datejust/"
+            }, {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "m279384rbr-0004"
+            }]
+        });
+        if (!document.querySelector('script[data-schema-breadcrumb]')) {
+            schemaScript3.setAttribute('data-schema-breadcrumb', 'true');
+            document.head.appendChild(schemaScript3);
+        }
+
+        // Estilos inline
+        const style = document.createElement('style');
+        style.type = 'text/css';
+        style.textContent = `
+            .precio-disponibilidad .body-20-light.text-black-lg-white {
+                display: none;
+            }
+            .pageDisplay .precio-disponibilidad .body-20-light.text-black-lg-white {
+                display: inline;
+            }
+        `;
+        if (!document.querySelector('style[data-model-styles]')) {
+            style.setAttribute('data-model-styles', 'true');
+            document.head.appendChild(style);
+        }
+    }, []);
+
     useEffect(() => {
         let pageTitle = document.title;
         let formattedTitle = pageTitle.includes("- GLAUSER")
@@ -44,209 +275,12 @@ const M279384rbr0004: React.FC = () => {
         if (elemento) {
             elemento.value = `Me interesa ${formattedTitle}`;
         } else {
-            console.error("No se encontrí el elemento con el ID 'mensajerlx'");
+            console.error("No se encontró el elemento con el ID 'mensajerlx'");
         }
     }, []);
 
     return (
         <>
-            <Helmet>
-                <title>Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes, m279384rbr-0004 - GLAUSER</title>
-                <meta
-                    name="description"
-                    content=" Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex"
-                />
-                {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
-                                                                                                        <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
-                                                                                                        <div dangerouslySetInnerHTML={{ __html: '<vtex:template id="GL-Favicon" />' }} />*/}
-
-                {/* <vtex.cmc:GLMetaTags /> */}
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.myvtex.com/files/style.min.css"
-                />
-                <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css"
-                />
-                <link
-                    rel="stylesheet preload"
-                    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-                />
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/" />
-
-                {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/" />
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes, m279384rbr-0004 - GLAUSER"
-                />
-                <meta
-                    property="og:description"
-                    content=" Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex"
-                />
-                <meta
-                    property="og:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m279384rbr-0004-drp-upright-bba-with-shadow-landscape.webp"
-                />
-
-                {/* Twitter Meta Tags */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/" />
-                <meta
-                    name="twitter:title"
-                    content="Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes, m279384rbr-0004 - GLAUSER"
-                />
-                <meta
-                    name="twitter:description"
-                    content=" Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex"
-                />
-                <meta
-                    name="twitter:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m279384rbr-0004-drp-upright-bba-with-shadow-landscape.webp"
-                />
-
-                <script type="text/javascript">
-                    {`
-                        window.digitalDataLayer = {
-                        environment: {
-                            environmentVersion: "V7",
-                            coBrandedVersion: "Bespoke"
-                        },
-                        page: {
-                            pageType: "model page",
-                            pageFamilyName: "lady-datejust"
-                        },
-                        products: {
-                            productRMC: "m279384rbr-0004"
-                        }
-                        };
-                    `}
-                </script>
-                <script type="application/ld+json">
-                    {`
-                        "@context": "https://schema.org",
-                        "@graph": [
-                            {
-                                "@type": "Organization",
-                                "@id": "https://glauser.myvtex.com/#organization",
-                                "name": "Joyería Glauser",
-                                "url": "https://glauser.myvtex.com/",
-                                "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
-                                "logo": {
-                                    "@type": "ImageObject",
-                                    "@id": "https://glauser.myvtex.com/#logo",
-                                    "inLanguage": "es-CO",
-                                    "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "width": 300,
-                                    "height": 102,
-                                    "caption": "Joyería Glauser"
-                                },
-                                "image": { "@id": "https://glauser.myvtex.com/#logo" }
-                            },
-                            {
-                                "@type": "WebPage",
-                                "@id": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/#webpage",
-                                "url": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/",
-                                "name": "Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes, m279384rbr-0004 - GLAUSER",
-                                "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
-                                "datePublished": "2025-04-01T05:23:53+00:00",
-                                "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex",
-                                "breadcrumb": { "@id": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/#breadcrumb" },
-                                "inLanguage": "es-Es",
-                                "potentialAction": [{ "@type": "ReadAction", "target": ["https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/"] }]
-                            }
-                        ]
-                    `}
-
-                </script>
-                <script type="application/ld+json">
-                    {`
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Lady-Datejust",
-                        "image": [
-                            "https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m279384rbr-0004-drp-upright-bba-with-shadow-landscape.webp"
-                        ],
-                        "description": "Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex",
-                        "sku": "m279384rbr-0004",
-                        "mpn": "279384RBR",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Rolex"
-                        },
-                        "offers": {
-                            "@type": "Offer",
-                            "url": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279384rbr-0004/",
-                            "priceCurrency": "USD",
-                            "price": "20050.00",
-                            "priceValidUntil": "2025-04-01",
-                            "itemCondition": "https://schema.org/NewCondition",
-                            "availability": "https://schema.org/InStock"
-                        }
-                    `}
-
-                </script>
-                <script type="application/ld+json">
-                    {`
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [{
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Rolex GLAUSER",
-                            "item": "https://glauser.myvtex.com/rolex/"
-                        }, {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "name": "Relojes Rolex",
-                            "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
-                        }, {
-                            "@type": "ListItem",
-                            "position": 3,
-                            "name": "Lady-Datejust",
-                            "item": "https://glauser.myvtex.com/rolex/watches/lady-datejust/"
-                        }, {
-                            "@type": "ListItem",
-                            "position": 4,
-                            "name": "m279384rbr-0004"
-                        }
-                        ]
-                    `}
-
-                </script>
-                {/* SCRIPT DE PLAQUES DE ROLEX */}
-                <script
-                    type="text/javascript"
-                    id="rlx-plaques"
-                    data-dak="23971da36d9e181945b792b3ea05a39d"
-                    src="https://static.rolex.com/rlx-plaques-v2/js/plaquespage.js"
-                ></script>
-
-                {/* ESTILOS INLINE */}
-                <style type="text/css">
-                    {`
-                        .precio-disponibilidad .body-20-light.text-black-lg-white {
-                        display: none;
-                        }
-                        .pageDisplay .precio-disponibilidad .body-20-light.text-black-lg-white {
-                        display: inline;
-                        }
-                    `}
-                </style>
-
-            </Helmet>
             <div className="header-component">
                 {/*<vtex:template id="HeaderPromotion" />
                                                                                             <vtex:template id="GLHeader" />*/ }
@@ -989,7 +1023,7 @@ const M279384rbr0004: React.FC = () => {
                 </section>
                 <WatchesForm />
                 <SectionLadyDateJust />
-                <RlxExploreMasNModels />
+                <RlxExploreMas />
                 <Footer />
             </main>
         </>

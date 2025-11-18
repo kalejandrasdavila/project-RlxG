@@ -48,4 +48,21 @@ declare module 'jest';
 declare module 'jquery';
 declare module 'node';
 
+// Webpack require.context
+interface RequireContext {
+  keys(): string[];
+  (id: string): any;
+  <T>(id: string): T;
+  resolve(id: string): string;
+  id: string;
+}
+
+interface NodeRequire {
+  context(
+    directory: string,
+    useSubdirectories: boolean,
+    regExp: RegExp
+  ): RequireContext;
+}
+
 export { }; // Mantiene el archivo como un módulo para evitar polución global si no se desea.

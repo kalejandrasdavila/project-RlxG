@@ -6,7 +6,7 @@
         "path": "/rolex"
     },
     "store.coleccion-rolex": {
-        "path": "/rolex/coleccion-rolex/"
+        "path": "/rolex/coleccion-rolex"
     },
     "store.watch-collection": {
         "path": "/rolex/watches/:collection"
@@ -15,7 +15,7 @@
         "path": "/rolex/watches/:collection/:model"
     },
     "store.nuevos-modelos": {
-        "path": "/rolex/nuevos-modelos-2025/"
+        "path": "/rolex/nuevos-modelos-2025"
     },
     "store.watchmaking": {
         "path": "/rolex/watchmaking/"

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useCssHandles } from 'vtex.css-handles';
 import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../../../components/hooks/useInitScripts';
-import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../../components/parts/RlxExploreMasNModels";
 
 import NavM from "../../../../components/parts/NavModels";
 
@@ -69,7 +69,7 @@ const M525080008: React.FC = () => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                <link rel="canonical" href="http://localhost:3000/rolex/watches/1908/m52508-0008/" />
+                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/1908/m52508-0008/" />
 
                 {/* Facebook Meta Tags */}
                 <meta property="og:url" content="https://www.glauser.com.co/rolex/watches/1908/m52508-0008/" />
@@ -247,7 +247,7 @@ const M525080008: React.FC = () => {
                     <div className="rlx-container">
                         <div className="row-grid">
                             <div className="rlx-logo">
-                                <a href="http://localhost:3000/rolex/" aria-label="Inicio" title="Inicio">
+                                <a href="https://glauser.myvtex.com/rolex/" aria-label="Inicio" title="Inicio">
                                     <picture className="placa-rolex-logo">
                                         <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" />
                                         <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/logo-plecas/Rolex-retailer-plaque-240x120_en.jpg" loading="lazy" alt="placa distribuidor oficial rolex" />
@@ -265,22 +265,22 @@ const M525080008: React.FC = () => {
                             <div className="breadcrum-column">
                                 <ul className="breadcrum-menu-list description">
                                     <li className="fixed-14 none-mobil">
-                                        <a href="http://localhost:3000/">Rolex</a>
+                                        <a href="https://glauser.myvtex.com/">Rolex</a>
                                     </li>
                                     <li className="fixed-14 none-mobil">
-                                        <a href="http://localhost:3000/rolex/coleccion-rolex/">
+                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">
                                             Relojes Rolex
                                         </a>
                                     </li>
                                     <li className="fixed-14">
-                                        <a href="http://localhost:3000/rolex/watches/1908/">
+                                        <a href="https://glauser.myvtex.com/rolex/watches/1908/">
                                             1908
                                         </a>
                                     </li>
                                     <li className="fixed-14 none-mobil">
                                         <a
                                             className="active"
-                                            href="http://localhost:3000/rolex/watches/1908/m52508-0008/">m52508-0008
+                                            href="https://glauser.myvtex.com/rolex/watches/1908/m52508-0008/">m52508-0008
                                         </a>
                                     </li>
                                 </ul>
@@ -971,7 +971,7 @@ const M525080008: React.FC = () => {
                     <div className="rlx-container-content py-90-60">
                         <div className="row-grid-fullw component-video">
                             <div className="col-6-12">
-                                <a href="http://localhost:3000/rolex/watches/1908/">
+                                <a href="https://glauser.myvtex.com/rolex/watches/1908/">
                                     <picture className="rlx-pbanner-top p-relative">
                                         <source
                                             media="(max-width: 767px)"
@@ -993,7 +993,7 @@ const M525080008: React.FC = () => {
                                     <p className="headline36 c-brown-text">Clasicismo de vanguardia</p>
                                     <a
                                         className="btn-label-icon-rlx"
-                                        href="http://localhost:3000/rolex/watches/1908/">
+                                        href="https://glauser.myvtex.com/rolex/watches/1908/">
                                         Más información
                                         <svg
                                             aria-hidden="true"
@@ -1011,7 +1011,7 @@ const M525080008: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </main>
         </>

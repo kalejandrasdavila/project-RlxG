@@ -3,7 +3,7 @@ import { useCssHandles } from 'vtex.css-handles';
 import "../../../../main-style.css";
 import useInitScripts from '../../../../components/hooks/useInitScripts';
 import { Helmet } from "react-helmet-async";
-import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../../components/parts/RlxExploreMasNModels";
 import NavM from "../../../../components/parts/NavModels";
 import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
 import Footer from '../../../../components/parts/Footer';
@@ -1027,7 +1027,7 @@ const M136668lb0001: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </main>
         </>

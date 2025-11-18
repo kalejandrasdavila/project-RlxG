@@ -8,7 +8,7 @@ import Footer from '../../parts/Footer';
 const ModOysterPerpetual2025: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/oyster-perpetual/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/oyster-perpetual/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (

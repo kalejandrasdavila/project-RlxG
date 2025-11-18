@@ -9,7 +9,7 @@ import "../../../main-style.css";
 const ModDatejust2025: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/datejust/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/nuevos-modelos-2025/datejust/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (

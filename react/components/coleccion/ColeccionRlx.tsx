@@ -113,22 +113,250 @@ const ColeccionRlx: React.FC = () => {
           </div>
         </section>
 
-        {/* Contenido principal */}
-        <section className={`${handles.c_lightbeige_bg}`}>
-          <div className={`${handles.rlx_container_content} ${handles.py_90_60}`}>
-            <div className={`${handles.row_grid_fullw} ${handles.text_introduccion} ${handles.py_90_60}`}>
-              <div className={`${handles.col_lg_2_5}`}>
-                <h1 className={`${handles.headline50} ${handles.c_brown_text} ${handles.pb_20}`}>
-                  Colección Rolex
-                </h1>
+        <section className="single-imagen-componet">
+          <div className="rlx-container-content">
+            <div className="row-grid-fullw">
+              <div className="grid-column-full">
+                <picture className="rlx-pbanner-top p-relative">
+                  <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-hub-cover-m126333-0010-portrait.webp" />
+                  <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-hub-cover-m126333-0010-landscape.webp" loading="lazy" alt="Reloj Rolex" />
+                </picture>
               </div>
-              <div className={`${handles.col_lg_8_5}`}>
-                <p className={`${handles.body_20_light}`}>
-                  <strong>
-                    Descubra la colección completa de relojes Rolex en GLAUSER,
-                  </strong>
-                  Distribuidor Oficial autorizado para vender relojes Rolex para hombre y mujer.
-                </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="c-lightbeige-bg">
+          <div className="rlx-container-content py-90-60">
+            <div className="row-grid-fullw text-introduccion pb-90-60">
+              <div className="col-lg-2-5">
+                <h1 className="headline50 c-brown-text pb-20">Relojes Rolex en GLAUSER en Colombia</h1>
+              </div>
+              <div className="col-lg-8-5">
+                <p className="body-20-light"><strong>Esta selección de modelos Rolex proviene del catálogo oficial y no representa las existencias disponibles en la joyería.</strong> Si quiere realizar una consulta sobre algún reloj en particular, no dude en ponerse en contacto con nosotros.</p>
+              </div>
+            </div>
+            <div className="row-grid-fullw component-video">
+              <div className="col-6-12">
+                <h2 className="headline36 c-brown-text pb-20">Nuevos modelos 2025</h2>
+                <a href="https://www.glauser.com.co/rolex/nuevos-modelos-2025/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-2025-the-land-dweller-m127334-0001-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-2025-the-land-dweller-m127334-0001-landscape.webp" loading="lazy" alt="Nuevos Modelos Rolex 2025" />
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div className="row-grid-fullw component-2-col pb-90-60">
+              <div className="col-lg-2-6 pb-50-0">
+                <div className="pt-10">
+                  <p className="fixed-16 c-brown-text">Nuevos modelos 2025</p>
+                  <h3 className="headline36 c-brown-text">Ampliar horizontes</h3>
+                  <a href="https://www.glauser.com.co/rolex/nuevos-modelos-2025/" className="btn-label-icon-rlx">Más información
+                    <svg height="12" width="12" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" fill="white"><path d="M11.7,7.5l-1.4,1.4l-5.7,5.7l-1.4-1.4l5.7-5.7L3.3,1.9l1.4-1.4l5.7,5.7l0,0L11.7,7.5z"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="row-grid-fullw component-2-col">
+              <div className="col-lg-2-6">
+                <h2 className="headline36 c-brown-text pb-20">Relojes clásicos</h2>
+              </div>
+            </div>
+            <div className="row-grid-fullw component-3-col-2 pb-90-60">
+              <div className="col-span-2-1 col-6-2 pb-50-0">
+                <a href="https://www.glauser.com.co/rolex/watches/land-dweller/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-land-dweller-2025-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-land-dweller-2025-landscape.webp" loading="lazy" alt="Rolex Land-Dweller" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Land-Dweller</h3>
+                </div>
+              </div>
+              <div className="col-span-2-2 col-6-6 pb-50-0">
+                <a href="https://www.glauser.com.co/rolex/watches/day-date/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-day-date-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-day-date-landscape.webp" loading="lazy" alt="Rolex Day-Date" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Day-Date</h3>
+                </div>
+              </div>
+              <div className="col-span-2-1 col-6-10">
+                <a href="https://www.glauser.com.co/rolex/watches/sky-dweller/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-sky-dweller-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-sky-dweller-landscape.webp" loading="lazy" alt="Rolex Sky-Dweller" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Sky-Dweller</h3>
+                </div>
+              </div>
+              <div className="col-span-2-2 col-6-2 pb-50-0">
+                <a href="https://www.glauser.com.co/rolex/watches/lady-datejust/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-lady-datejust-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-lady-datejust-landscape.webp" loading="lazy" alt="Rolex Lady-Datejust" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Lady-Datejust</h3>
+                </div>
+              </div>
+              <div className="col-span-2-1 col-6-6">
+                <a href="https://www.glauser.com.co/rolex/watches/datejust/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-datejust-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-datejust-landscape.webp" loading="lazy" alt="Rolex Datejust" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Datejust</h3>
+                </div>
+              </div>
+              <div className="col-span-2-2 col-6-10">
+                <a href="https://www.glauser.com.co/rolex/watches/oyster-perpetual/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-oyster-perpetual-2025-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-oyster-perpetual-2025-landscape.webp" loading="lazy" alt="Rolex Oyster Perpetual" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Oyster Perpetual</h3>
+                </div>
+              </div>
+            </div>
+            <div className="row-grid-fullw component-2-col">
+              <div className="col-lg-2-6">
+                <h2 className="headline36 c-brown-text pb-20">Relojes profesionales</h2>
+              </div>
+            </div>
+            <div className="row-grid-fullw component-3-col-2 pb-90-60">
+              <div className="col-span-2-1 col-6-2 pb-50-0">
+                <a href="https://www.glauser.com.co/rolex/watches/cosmograph-daytona/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-cosmograph-daytona-2025-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-cosmograph-daytona-2025-landscape.webp" loading="lazy" alt="Rolex Cosmograph Daytona" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Cosmograph Daytona</h3>
+                </div>
+              </div>
+              <div className="col-span-2-2 col-6-6 pb-50-0">
+                <a href="https://www.glauser.com.co/rolex/watches/submariner/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-submariner-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-submariner-landscape.webp" loading="lazy" alt="Rolex Submariner" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Submariner</h3>
+                </div>
+              </div>
+              <div className="col-span-2-1 col-6-10">
+                <a href="https://www.glauser.com.co/rolex/watches/sea-dweller/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-sea-dweller-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-sea-dweller-landscape.webp" loading="lazy" alt="Rolex Sea-Dweller" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Sea-Dweller</h3>
+                </div>
+              </div>
+              <div className="col-span-2-2 col-6-2 pb-50-0">
+                <a href="https://www.glauser.com.co/rolex/watches/deepsea/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-deepsea-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-deepsea-landscape.webp" loading="lazy" alt="Rolex Deepsea" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Deepsea</h3>
+                </div>
+              </div>
+              <div className="col-span-2-1 col-6-6 pb-50-0">
+                <a href="https://www.glauser.com.co/rolex/watches/gmt-master-ii/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-gmt-master-ii-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-gmt-master-ii-landscape.webp" loading="lazy" alt="Rolex GMT-Master II" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">GMT-Master II</h3>
+                </div>
+              </div>
+              <div className="col-span-2-2 col-6-10">
+                <a href="https://www.glauser.com.co/rolex/watches/yacht-master/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-yacht-master-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-yacht-master-landscape.webp" loading="lazy" alt="Rolex Yacht-Master" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Yacht-Master</h3>
+                </div>
+              </div>
+              <div className="col-span-2-1 col-6-2">
+                <a href="https://www.glauser.com.co/rolex/watches/explorer/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-explorer-2025-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-explorer-2025-landscape.webp" loading="lazy" alt="Rolex Explorer" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Explorer</h3>
+                </div>
+              </div>
+              <div className="col-span-2-2 col-6-6">
+                <a href="https://www.glauser.com.co/rolex/watches/air-king/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-air-king-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-air-king-landscape.webp" loading="lazy" alt="Rolex Air-king" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">Air-King</h3>
+                </div>
+              </div>
+            </div>
+            <div className="row-grid-fullw component-2-col">
+              <div className="col-lg-2-6">
+                <h2 className="headline36 c-brown-text pb-20">Perpetual</h2>
+              </div>
+            </div>
+            <div className="row-grid-fullw component-3-col-2">
+              <div className="col-span-2-1 col-6-2 pb-50-0">
+                <a href="https://www.glauser.com.co/rolex/watches/1908/">
+                  <picture className="rlx-pbanner-top p-relative">
+                    <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-1908-2025-portrait.webp" />
+                    <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/coleccion-rolex/rolex-watches-1908-2025-landscape.webp" loading="lazy" alt="Rolex 1908" />
+                  </picture>
+                </a>
+                <div className="pt-10">
+                  <p className="legend-16-light c-brown-text">Rolex</p>
+                  <h3 className="body-24-bold c-brown-text">1908</h3>
+                </div>
               </div>
             </div>
           </div>

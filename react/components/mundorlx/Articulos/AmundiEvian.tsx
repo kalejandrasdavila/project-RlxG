@@ -9,7 +9,7 @@ import "../../../main-style.css";
 const AmundiE: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/amundi-evian/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/amundi-evian/';
     const baseUrl = 'https://glauser.myvtex.com';
 
     return (

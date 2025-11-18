@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from "react-helmet-async";
 import useInitScripts from '../../components/hooks/useInitScripts';
 import Nav from '../parts/Nav';
-import RlxExploreMasNModels from '../../components/parts/RlxExploreMas';
+import RlxExploreMas from '../../components/parts/RlxExploreMas';
 import useHorario from '../../components/hooks/ContactoRlx';
 import Footer from '../../components/parts/Footer';
 import { useCssHandles } from 'vtex.css-handles';
@@ -37,48 +36,76 @@ const Contactenos: React.FC = () => {
     const { horario, isOpen, toggleHorario }: Horario = useHorario();
     const handles = useCssHandles(CSS_HANDLES)
 
+    const baseUrl = 'https://glauser.myvtex.com';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : `${baseUrl}/rolex/contactenos/`;
+
+    useEffect(() => {
+        // Solo ejecutar en el cliente
+        if (typeof window === 'undefined' || typeof document === 'undefined' || !document.head) {
+            return;
+        }
+
+        // Configurar título
+        document.title = 'Contacto GLAUSER en Colombia - Distribuidor Oficial Rolex';
+
+        // Función para configurar meta tags
+        const setMetaTag = (name: string, content: string, property?: string) => {
+            if (!document.head) return;
+            const selector = property ? `meta[property="${property}"]` : `meta[name="${name}"]`;
+            let meta = document.querySelector(selector) as HTMLMetaElement;
+            if (!meta) {
+                meta = document.createElement('meta');
+                if (property) {
+                    meta.setAttribute('property', property);
+                } else {
+                    meta.setAttribute('name', name);
+                }
+                if (document.head) {
+                    document.head.appendChild(meta);
+                }
+            }
+            meta.setAttribute('content', content);
+        };
+
+        // Meta tags básicos
+        setMetaTag('description', 'Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex. Programe una cita o envíenos un mensaje para responder a todas sus dudas sobre Rolex y los servicios ofrecidos.');
+        setMetaTag('viewport', 'width=device-width, initial-scale=1');
+
+        // Canonical
+        if (document.head) {
+            let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+            if (!canonical) {
+                canonical = document.createElement('link');
+                canonical.rel = 'canonical';
+                document.head.appendChild(canonical);
+            }
+            canonical.href = currentUrl;
+        }
+
+        // Open Graph
+        setMetaTag('', currentUrl, 'og:url');
+        setMetaTag('', 'website', 'og:type');
+        setMetaTag('', 'Contacto GLAUSER en Colombia - Distribuidor Oficial Rolex', 'og:title');
+        setMetaTag('', 'Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex. Programe una cita o envíenos un mensaje para responder a todas sus dudas sobre Rolex y los servicios ofrecidos.', 'og:description');
+        setMetaTag('', 'https://glauser.vteximg.com.br/arquivos/contacto-glauser-rolex-1200x630.jpg', 'og:image');
+
+        // Twitter
+        setMetaTag('twitter:card', 'summary_large_image');
+        setMetaTag('twitter:site', '@glauser_col');
+        setMetaTag('twitter:url', currentUrl);
+        setMetaTag('twitter:title', 'Contacto GLAUSER en Colombia - Distribuidor Oficial Rolex');
+        setMetaTag('twitter:description', 'Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex. Programe una cita o envíenos un mensaje para responder a todas sus dudas sobre Rolex y los servicios ofrecidos.');
+        setMetaTag('twitter:image', 'https://glauser.vteximg.com.br/arquivos/contacto-glauser-rolex-1200x630.jpg');
+    }, [currentUrl, baseUrl]);
+
     return (
         <>
-            <Helmet>
-                <title>Contacto GLAUSER en Colombia - Distribuidor Oficial Rolex</title>
-                <meta
-                    name="description"
-                    content="Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex. Programe una cita o envíenos un mensaje para responder a todas sus dudas sobre Rolex y los servicios ofrecidos."
-                />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.myvtex.com/files/style.min.css"
-                />
-                <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <link rel="stylesheet" href="https://glauser.myvtex.com/files/style.min.css" />
+            <link rel="stylesheet" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-                <link rel="canonical" href="https://glauser.myvtex.com/rolex/contactenos/" />
-
-                <meta property="og:url" content="https://glauser.myvtex.com/rolex/contactenos/" />
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Contacto GLAUSER en Colombia - Distribuidor Oficial Rolex"
-                />
-                <meta
-                    property="og:description"
-                    content="Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex. Programe una cita o envíenos un mensaje para responder a todas sus dudas sobre Rolex y los servicios ofrecidos."
-                />
-                <meta
-                    property="og:image"
-                    content="https://glauser.vteximg.com.br/arquivos/contacto-glauser-rolex-1200x630.jpg"
-                />
-
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@glauser_col" />
-                <meta name="twitter:title" content="Contacto GLAUSER en Colombia - Distribuidor Oficial Rolex" />
-                <meta name="twitter:description" content="Contacto GLAUSER en Colombia, su Distribuidor Oficial Rolex. Programe una cita o envíenos un mensaje para responder a todas sus dudas sobre Rolex y los servicios ofrecidos." />
-                <meta name="twitter:image" content="https://glauser.vteximg.com.br/arquivos/contacto-glauser-rolex-1200x630.jpg" />
-            </Helmet>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" async></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async></script>
             <div className={`${handles.headercomponent}`}>
                 <header className="main-header" id="main-header">
                 </header>
@@ -105,23 +132,21 @@ const Contactenos: React.FC = () => {
                             </div>
                             <Nav />
                         </div>
-
-                        <div className={`${handles.row_grid} ${handles.breadcrum_page}`} style={{ height: "40px" }}>
-                            <div className={`${handles.breadcrum_column}`}>
-                                <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
-                                    <li className={`${handles.fixed_14}`}>
-                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">
-                                            Relojes Rolex
-                                        </a>
-                                    </li>
-                                    <li className={`${handles.fixed_14} ${handles.active}`}>
-                                        <a className={`${handles.active}`} href="https://glauser.myvtex.com/rolex/contactenos/">Póngase en contacto con nosotros</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </header>
+
+                {/* Breadcrumb */}
+                <section className={`${handles.breadcrum_page}`} style={{ background: 'linear-gradient(90deg, #0b3e27, #197149)', padding: '10px 0' }}>
+                    <div className={`${handles.rlx_container}`}>
+                        <div className={`${handles.breadcrum_column}`}>
+                            <nav className={`${handles.breadcrum_menu_list}`}>
+                                <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/" className={`${handles.description} ${handles.fixed_14}`} style={{ color: '#ffffff' }}>Relojes Rolex</a>
+                                <span className={`${handles.description} ${handles.fixed_14}`} style={{ color: '#ffffff', padding: '0 8px' }}> / </span>
+                                <span className={`${handles.description} ${handles.fixed_14} ${handles.active}`} style={{ color: '#61bd93' }}>Póngase en contacto con nosotros</span>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
 
                 <section className="single-imagen-componet">
                     <div className="rlx-container-content">
@@ -376,7 +401,7 @@ const Contactenos: React.FC = () => {
                     </div>
                 </section>
 
-                <RlxExploreMasNModels />
+                <RlxExploreMas />
                 <Footer />
             </main>
         </>

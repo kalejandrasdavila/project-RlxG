@@ -9,7 +9,7 @@ import "../../../main-style.css";
 const ViajeCorazon: React.FC = () => {
     useInitScripts();
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/mundo-rolex/viaje-al-corazon-del-universo-rolex/';
     const baseUrl = 'https://glauser.myvtex.com'; // La URL base 
 
     return (

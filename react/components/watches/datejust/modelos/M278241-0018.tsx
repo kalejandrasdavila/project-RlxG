@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useCssHandles } from 'vtex.css-handles';
 import "../../../../main-style.css";
 import useInitScripts from '../../../../components/hooks/useInitScripts';
-import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../../components/parts/RlxExploreMasNModels";
 
 import NavM from "../../../../components/parts/NavModels";
 
@@ -832,7 +832,7 @@ const M2782410018: React.FC = () => {
                 </section>
                 <WatchesForm />
                 <SectionDateJust />
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </main>
         </>

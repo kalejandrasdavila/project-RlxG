@@ -4,7 +4,7 @@ import { useCssHandles } from 'vtex.css-handles';
 import "../../../../main-style.css";
 import useInitScripts from '../../../../components/hooks/useInitScripts';
 
-import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
+import RlxExploreMasModels from "../../../../components/parts/RlxExploreMasNModels";
 
 import NavM from "../../../../components/parts/NavModels";
 
@@ -972,7 +972,7 @@ const M2282350055: React.FC = () => {
                 </section>
                 <WatchesForm />
                 <SectionDayDate />
-                <RlxExploreMasNModels />
+                <RlxExploreMasModels />
                 <Footer />
             </main>
         </>

@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useCssHandles } from 'vtex.css-handles';
 import "../../../../main-style.css";
-import RlxExploreMasNModels from "../../../../components/parts/RlxExploreMasNModels";
-
-import { Helmet } from "react-helmet-async";
+import RlxExploreMas from "../../../../components/parts/RlxExploreMas";
 import useInitScripts from '../../../../components/hooks/useInitScripts';
-
+import { useWatchModelMeta } from '../../../../components/hooks/useWatchModelMeta';
 import NavM from "../../../../components/parts/NavModels";
-
 import WatchesForm from "../../../../components/parts/Rlx-watches-formulario";
-
-import SectionLadyDateJust from "../../../parts/SectionLadyDateJust";
+import SectionLadyDateJust from "../../../../components/parts/SectionLadyDateJust";
 import Footer from '../../../../components/parts/Footer';
-
 
 const CSS_HANDLES = [
     'container', 'wrapper', 'content', 'section', 'title', 'subtitle',
@@ -22,17 +17,28 @@ const CSS_HANDLES = [
     'pt_10', 'mb_20', 'mt_30', 'pb_15', 'ml_5', 'mr_10', 'pl_20', 'pr_15'
 ];
 
-const handles = useCssHandles(CSS_HANDLES);
-
-
-
 const M2791740020: React.FC = () => {
-
-
     useInitScripts();
+    const handles = useCssHandles(CSS_HANDLES);
     const [modelorlx, setModelorlx] = useState("");
     const [showPrice, setShowPrice] = useState<boolean>(false);
     const togglePrice = () => setShowPrice(prev => !prev);
+
+    useWatchModelMeta({
+        title: 'Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco, m279174-0020 - GLAUSER',
+        description: 'Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex',
+        canonicalUrl: 'https://glauser.myvtex.com/rolex/watches/lady-datejust/m279174-0020/',
+        ogImage: 'https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m279174-0020-drp-upright-bba-with-shadow-landscape.webp',
+        pageFamilyName: 'lady-datejust',
+        productRMC: 'm279174-0020',
+        sku: 'm279174-0020',
+        mpn: '279174',
+        price: '9850.00',
+        priceCurrency: 'USD',
+        productName: 'Lady-Datejust',
+        collectionName: 'Lady-Datejust'
+    });
+
     useEffect(() => {
         let pageTitle = document.title;
         let formattedTitle = pageTitle.includes("- GLAUSER")
@@ -45,209 +51,12 @@ const M2791740020: React.FC = () => {
         if (elemento) {
             elemento.value = `Me interesa ${formattedTitle}`;
         } else {
-            console.error("No se encontrí el elemento con el ID 'mensajerlx'");
+            console.error("No se encontró el elemento con el ID 'mensajerlx'");
         }
     }, []);
 
     return (
         <>
-            <Helmet>
-                <title>Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco, m279174-0020 - GLAUSER</title>
-                <meta
-                    name="description"
-                    content="Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex"
-                />
-                {/* <div dangerouslySetInnerHTML={{ __html: "<vtex:metaTags />" }} />
-                                                                                                        <div dangerouslySetInnerHTML={{ __html: '<vtex:contentPlaceHolder id="Metatags" />' }} />
-                                                                                                        <div dangerouslySetInnerHTML={{ __html: '<vtex:template id="GL-Favicon" />' }} />*/}
-
-                {/* <vtex.cmc:GLMetaTags /> */}
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.myvtex.com/files/style.min.css"
-                />
-                <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css"
-                />
-                <link
-                    rel="stylesheet preload"
-                    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-                />
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-                <link rel="canonical" href="https://glauser.myvtex.com/rolex/watches/lady-datejust/m279174-0020/" />
-
-                {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://glauser.myvtex.com/rolex/watches/lady-datejust/m279174-0020/" />
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco, m279174-0020 - GLAUSER"
-                />
-                <meta
-                    property="og:description"
-                    content="Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex"
-                />
-                <meta
-                    property="og:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m279174-0020-drp-upright-bba-with-shadow-landscape.webp"
-                />
-
-                {/* Twitter Meta Tags */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://glauser.myvtex.com/rolex/watches/lady-datejust/m279174-0020/" />
-                <meta
-                    name="twitter:title"
-                    content="Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco, m279174-0020 - GLAUSER"
-                />
-                <meta
-                    name="twitter:description"
-                    content="Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex"
-                />
-                <meta
-                    name="twitter:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m279174-0020-drp-upright-bba-with-shadow-landscape.webp"
-                />
-
-                <script type="text/javascript">
-                    {`
-                        window.digitalDataLayer = {
-                        environment: {
-                            environmentVersion: "V7",
-                            coBrandedVersion: "Bespoke"
-                        },
-                        page: {
-                            pageType: "model page",
-                            pageFamilyName: "lady-datejust"
-                        },
-                        products: {
-                            productRMC: "m279174-0020"
-                        }
-                        };
-                    `}
-                </script>
-                <script type="application/ld+json">
-                    {`
-                        "@context": "https://schema.org",
-                        "@graph": [
-                            {
-                                "@type": "Organization",
-                                "@id": "https://glauser.myvtex.com/#organization",
-                                "name": "Joyería Glauser",
-                                "url": "https://glauser.myvtex.com/",
-                                "sameAs": ["https://www.facebook.com/JoyeriaGlauser/", "https://www.instagram.com/joyeriaglauser/?hl=es-la"],
-                                "logo": {
-                                    "@type": "ImageObject",
-                                    "@id": "https://glauser.myvtex.com/#logo",
-                                    "inLanguage": "es-CO",
-                                    "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "width": 300,
-                                    "height": 102,
-                                    "caption": "Joyería Glauser"
-                                },
-                                "image": { "@id": "https://glauser.myvtex.com/#logo" }
-                            },
-                            {
-                                "@type": "WebPage",
-                                "@id": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279174-0020/#webpage",
-                                "url": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279174-0020/",
-                                "name": "Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco, m279174-0020 - GLAUSER",
-                                "isPartOf": { "@id": "https://glauser.myvtex.com/#website" },
-                                "datePublished": "2025-04-01T05:23:53+00:00",
-                                "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex",
-                                "breadcrumb": { "@id": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279174-0020/#breadcrumb" },
-                                "inLanguage": "es-Es",
-                                "potentialAction": [{ "@type": "ReadAction", "target": ["https://glauser.myvtex.com/rolex/watches/lady-datejust/m279174-0020/"] }]
-                            }
-                        ]
-                    `}
-
-                </script>
-                <script type="application/ld+json">
-                    {`
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Lady-Datejust",
-                        "image": [
-                            "https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m279174-0020-drp-upright-bba-with-shadow-landscape.webp"
-                        ],
-                        "description": "Descubra el reloj Rolex Lady-Datejust de Oyster, 28 mm, acero Oystersteel y oro blanco en GLAUSER, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex",
-                        "sku": "m279174-0020",
-                        "mpn": "279174",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Rolex"
-                        },
-                        "offers": {
-                            "@type": "Offer",
-                            "url": "https://glauser.myvtex.com/rolex/watches/lady-datejust/m279174-0020/",
-                            "priceCurrency": "USD",
-                            "price": "9850.00",
-                            "priceValidUntil": "2025-04-01",
-                            "itemCondition": "https://schema.org/NewCondition",
-                            "availability": "https://schema.org/InStock"
-                        }
-                    `}
-
-                </script>
-                <script type="application/ld+json">
-                    {`
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [{
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Rolex GLAUSER",
-                            "item": "https://glauser.myvtex.com/rolex/"
-                        }, {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "name": "Relojes Rolex",
-                            "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
-                        }, {
-                            "@type": "ListItem",
-                            "position": 3,
-                            "name": "Lady-Datejust",
-                            "item": "https://glauser.myvtex.com/rolex/watches/lady-datejust/"
-                        }, {
-                            "@type": "ListItem",
-                            "position": 4,
-                            "name": "m279174-0020"
-                        }
-                        ]
-                    `}
-
-                </script>
-                {/* SCRIPT DE PLAQUES DE ROLEX */}
-                <script
-                    type="text/javascript"
-                    id="rlx-plaques"
-                    data-dak="23971da36d9e181945b792b3ea05a39d"
-                    src="https://static.rolex.com/rlx-plaques-v2/js/plaquespage.js"
-                ></script>
-
-                {/* ESTILOS INLINE */}
-                <style type="text/css">
-                    {`
-                        .precio-disponibilidad .body-20-light.text-black-lg-white {
-                        display: none;
-                        }
-                        .pageDisplay .precio-disponibilidad .body-20-light.text-black-lg-white {
-                        display: inline;
-                        }
-                    `}
-                </style>
-
-            </Helmet>
             <div className="header-component">
                 {/*<vtex:template id="HeaderPromotion" />
                                                                                             <vtex:template id="GLHeader" />*/ }
@@ -981,7 +790,7 @@ const M2791740020: React.FC = () => {
                 </section>
                 <WatchesForm />
                 <SectionLadyDateJust />
-                <RlxExploreMasNModels />
+                <RlxExploreMas />
                 <Footer />
             </main>
         </>

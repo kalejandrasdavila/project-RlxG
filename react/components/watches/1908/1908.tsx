@@ -1,153 +1,27 @@
-﻿import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+﻿import React, { useState } from 'react';
 import useInitScripts from '../../../components/hooks/useInitScripts';
+import { useWatchCollectionMeta } from '../../../components/hooks/useWatchCollectionMeta';
 import RlxExploreMasNModels from '../../../components/parts/RlxExploreMasNModels';
 import NavM from '../../../components/parts/NavModels';
 import Footer from '../../../components/parts/Footer';
 import "../../../main-style.css";
 
-
-
 const M1908: React.FC = () => {
     useInitScripts();
 
     const [isVisible, setIsVisible] = useState<boolean>(false);
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://glauser.myvtex.com/rolex/watches/1908/';
-    const baseUrl = 'https://glauser.myvtex.com';
+    const currentUrl = (typeof window !== 'undefined' && window.location) ? window.location.href : 'https://glauser.myvtex.com/rolex/watches/1908/';
+
+    useWatchCollectionMeta({
+        title: 'Relojes Rolex 1908 - GLAUSER',
+        description: 'Descubra los relojes Rolex 1908 en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.',
+        canonicalUrl: currentUrl,
+        ogImage: 'https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-1908-push-m52506-0002-portrait.webp',
+        pageFamilyName: '1908'
+    });
 
     return (
         <>
-            <Helmet>
-                <title>Relojes Rolex 1908 - GLAUSER</title>
-                <meta
-                    name="description"
-                    content="Descubra los relojes Rolex 1908 en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
-                />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.myvtex.com/files/style.min.css"
-                />
-                <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css"
-                />
-                {/* SCRIPTS: ELIMINADOS de aquí. Deben ser manejados por useInitScripts o la configuración de VTEX IO. */}
-
-                <link rel="canonical" href={currentUrl} />
-                <meta property="og:url" content={currentUrl} />
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Relojes Rolex 1908 - GLAUSER"
-                />
-                <meta
-                    property="og:description"
-                    content="Descubra los relojes Rolex 1908 en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
-                />
-                <meta
-                    property="og:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-1908-push-m52506-0002-portrait.webp"
-                />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content={currentUrl} />
-                <meta
-                    name="twitter:title"
-                    content="Relojes Rolex 1908 - GLAUSER"
-                />
-                <meta
-                    name="twitter:description"
-                    content="Descubra los relojes Rolex 1908 en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER."
-                />
-                <meta
-                    property="twitter:image"
-                    content="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-banners/rolex-collection-banner-1908-push-m52506-0002-portrait.webp"
-                />
-                <script type="text/javascript">
-                    {`
-            var digitalDataLayer = {
-                environment: {
-                    environmentVersion: "V7",
-                    coBrandedVersion: "Bespoke"
-                },
-                page: {
-                    pageType: "family page",
-                    pageFamilyName: "1908"
-                }
-            };
-            `}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@graph": [
-                            {
-                                "@type": "Organization",
-                                "@id": `${baseUrl}/#organization`,
-                                "name": "Joyería Glauser",
-                                "url": `${baseUrl}/`,
-                                "sameAs": [
-                                    "https://www.facebook.com/JoyeriaGlauser/",
-                                    "https://www.instagram.com/joyeriaglauser/?hl=es-la"
-                                ],
-                                "logo": {
-                                    "@type": "ImageObject",
-                                    "@id": `${baseUrl}/#logo`,
-                                    "inLanguage": "es-CO",
-                                    "url": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "contentUrl": "https://glauser.vteximg.com.br/arquivos/glauser_logo.svg",
-                                    "width": 300,
-                                    "height": 102,
-                                    "caption": "Joyería Glauser"
-                                },
-                                "image": { "@id": `${baseUrl}/#logo` }
-                            },
-                            {
-                                "@type": "WebPage",
-                                "@id": `${currentUrl}#webpage`,
-                                "url": currentUrl,
-                                "name": "Relojes Rolex 1908 - GLAUSER",
-                                "isPartOf": { "@id": `${baseUrl}/#website` },
-                                "datePublished": "2025-04-01T05:23:53+00:00",
-                                "dateModified": "2025-04-01T05:23:53+00:00",
-                                "description": "Descubra los relojes Rolex 1908 en línea en GLAUSER, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y para mujer. Descubra más en GLAUSER.",
-                                "breadcrumb": { "@id": `${currentUrl}#breadcrumb` },
-                                "inLanguage": "es-Es",
-                                "potentialAction": { "@type": "ReadAction", "target": currentUrl }
-                            }
-                        ]
-                    })}
-                </script>
-
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [
-                            {
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Rolex GLAUSER",
-                                "item": "https://glauser.myvtex.com/rolex/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Relojes Rolex",
-                                "item": "https://glauser.myvtex.com/rolex/coleccion-rolex/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 3,
-                                "name": "1908"
-                            }
-                        ]
-                    })}
-                </script>
-            </Helmet>
 
             <div className="header-component">
                 <header className="main-header" id="main-header">
@@ -217,7 +91,8 @@ const M1908: React.FC = () => {
                             {/* Aquí se generarán los modelos de forma dinámica */}
                             <div className="col-span3-1 col-md-span4-1 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="http://localhost:3000/rolex/watches/1908/m52508-0006/">
+
+                                    <a href="https://glauser.myvtex.com/rolex/watches/1908/m52508-0006/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m52508-0006-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m52508-0006-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" alt="Rolex 1908 m52508-0006 reloj" />
@@ -232,7 +107,7 @@ const M1908: React.FC = () => {
                             </div>
                             <div className="col-span3-2 col-md-span4-2 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="http://localhost:3000/rolex/watches/1908/m52509-0002/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/1908/m52509-0002/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m52509-0002-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m52509-0002-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" alt="Rolex 1908 m52509-0002 reloj" />
@@ -247,7 +122,7 @@ const M1908: React.FC = () => {
                             </div>
                             <div className="col-span3-1 col-md-span4-3 c-beige-bg">
                                 <div className="pt-0-5vh text-center">
-                                    <a href="http://localhost:3000/rolex/watches/1908/m52506-0002/">
+                                    <a href="https://glauser.myvtex.com/rolex/watches/1908/m52506-0002/">
                                         <picture className="rlx-pbanner-top watch-ind p-relative">
                                             <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m52506-0002-drp-upright-bba-with-shadow-portrait.webp" />
                                             <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m52506-0002-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" alt="Rolex 1908 m52506-0002 reloj" />
@@ -267,7 +142,7 @@ const M1908: React.FC = () => {
                                 {/* Más modelos irían aquí */}
                                 <div className="col-span3-1 col-md-span4-1 c-beige-bg">
                                     <div className="pt-0-5vh text-center">
-                                        <a href="http://localhost:3000/rolex/watches/1908/m52508-0007/">
+                                        <a href="https://glauser.myvtex.com/rolex/watches/1908/m52508-0007/">
                                             <picture className="rlx-pbanner-top watch-ind p-relative">
                                                 <source media="(max-width: 767px)" srcSet="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m52508-0007-drp-upright-bba-with-shadow-portrait.webp" />
                                                 <img src="https://galileo.tsqsa.com/FTPImagenes/rolex-img/watches-models/m52508-0007-drp-upright-bba-with-shadow-landscape.webp" loading="lazy" alt="Rolex 1908 m52508-0007 reloj" />

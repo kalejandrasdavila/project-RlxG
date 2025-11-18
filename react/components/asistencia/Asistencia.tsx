@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from 'react';
 import useInitScripts from '../../components/hooks/useInitScripts';
 import Nav from '../../components/parts/Nav';
-import RlxExploreMasNModels from '../../components/parts/RlxExploreMas';
+import RlxExploreMas from '../../components/parts/RlxExploreMas';
 import Footer from '../../components/parts/Footer';
 import { useCssHandles } from 'vtex.css-handles';
 import '../../main-style.css';
@@ -33,55 +33,14 @@ const Asistencia: React.FC = () => {
 
     return (
         <>
-            <Helmet>
-                <title>Mantenimiento y reparación de los relojes Rolex en GLAUSER</title>
-                <meta
-                    name="description"
-                    content="GLAUSER se enorgullece de formar parte de la red de Distribuidores Oficiales Rolex de relojeros formados. Puede confiarnos cualquier tipo de operación de mantenimiento."
-                />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css"
-                />
-                <link rel="stylesheet preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://glauser.myvtex.com/files/style.min.css"
-                />
-                <link
-                    rel="stylesheet preload"
-                    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-                />
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            {/* Cargar estilos externos directamente */}
+            <link rel="stylesheet" href="https://glauser.myvtex.com/files/style.min.css" />
+            <link rel="stylesheet" href="https://glauser.vteximg.com.br/arquivos/style-rolex-general-glauser.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-                <link rel="canonical" href="https://glauser.myvtex.com/rolex/asistencia-rolex/" />
-
-                <meta property="og:url" content="https://glauser.myvtex.com/rolex/asistencia-rolex/" />
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Mantenimiento y reparación de los relojes Rolex en GLAUSER"
-                />
-                <meta
-                    property="og:description"
-                    content="GLAUSER se enorgullece de formar parte de la red de Distribuidores Oficiales Rolex de relojeros formados. Puede confiarnos cualquier tipo de operación de mantenimiento."
-                />
-                <meta
-                    property="og:image"
-                    content="https://glauser.vteximg.com.br/arquivos/asistencia-rolex-1200x630.jpg"
-                />
-
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@glauser_col" />
-                <meta name="twitter:title" content="Mantenimiento y reparación de los relojes Rolex en GLAUSER" />
-                <meta name="twitter:description" content="GLAUSER se enorgullece de formar parte de la red de Distribuidores Oficiales Rolex de relojeros formados. Puede confiarnos cualquier tipo de operación de mantenimiento." />
-                <meta name="twitter:image" content="https://glauser.vteximg.com.br/arquivos/asistencia-rolex-1200x630.jpg" />
-            </Helmet>
+            {/* Cargar scripts externos directamente */}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" async></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async></script>
 
             <div className={`${handles.headercomponent}`}>
                 <header className="main-header" id="main-header">
@@ -109,23 +68,21 @@ const Asistencia: React.FC = () => {
                             </div>
                             <Nav />
                         </div>
-
-                        <div className={`${handles.row_grid} ${handles.breadcrum_page}`} style={{ height: "40px" }}>
-                            <div className={`${handles.breadcrum_column}`}>
-                                <ul className={`${handles.breadcrum_menu_list} ${handles.description}`}>
-                                    <li className={`${handles.fixed_14}`}>
-                                        <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/">
-                                            Relojes Rolex
-                                        </a>
-                                    </li>
-                                    <li className={`${handles.fixed_14} ${handles.active}`}>
-                                        <a className={`${handles.active}`} href="https://glauser.myvtex.com/rolex/asistencia-rolex/">Mantenimiento</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </header>
+
+                {/* Breadcrumb */}
+                <section className={`${handles.breadcrum_page}`} style={{ background: 'linear-gradient(90deg, #0b3e27, #197149)', padding: '10px 0' }}>
+                    <div className={`${handles.rlx_container}`}>
+                        <div className={`${handles.breadcrum_column}`}>
+                            <nav className={`${handles.breadcrum_menu_list}`}>
+                                <a href="https://glauser.myvtex.com/rolex/coleccion-rolex/" className={`${handles.description} ${handles.fixed_14}`} style={{ color: '#ffffff' }}>Relojes Rolex</a>
+                                <span className={`${handles.description} ${handles.fixed_14}`} style={{ color: '#ffffff', padding: '0 8px' }}> / </span>
+                                <span className={`${handles.description} ${handles.fixed_14} ${handles.active}`} style={{ color: '#61bd93' }}>Mantenimiento</span>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
 
                 <section className="single-imagen-componet">
                     <div className="rlx-container-content">
@@ -350,7 +307,7 @@ const Asistencia: React.FC = () => {
                     </div>
                 </section>
 
-                <RlxExploreMasNModels />
+                <RlxExploreMas />
                 <Footer />
             </main>
         </>
