@@ -2345,6 +2345,8 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
 :global(.glauser-storerlx-0-x-rlx_exploremas) img {
     object-fit: cover;
     width: 100%;
+    max-width: 339.5px;
+    height: auto;
 }
 
 /* Estilos específicos para el slider de explore mas */
@@ -4126,7 +4128,7 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
 
 /* Estilos específicos para el Swiper de Explore más */
 .exploremas.swiper-container {
-    overflow: visible !important;
+    overflow: hidden;
     position: relative;
     padding: 0 50px;
     /* Espacio para los botones de navegación */
@@ -4137,30 +4139,33 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
 }
 
 .exploremas .swiper-wrapper {
-    display: flex !important;
+    display: flex;
     align-items: stretch;
-    transform: translate3d(0px, 0, 0) !important;
 }
 
 .exploremas .swiper-slide {
     height: auto;
     display: flex;
     flex-direction: column;
-    width: auto !important;
+    width: 339.5px !important;
+    min-width: 339.5px !important;
+    max-width: 339.5px !important;
     flex-shrink: 0;
-    margin-right: 8px;
+    margin-right: 8px !important;
     box-sizing: border-box;
 }
 
 .exploremas .swiper-slide .banner-10 {
-    height: 100%;
     width: 100%;
+    max-width: 339.5px;
     display: block;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .exploremas .swiper-slide .banner-10 img {
     width: 100%;
+    max-width: 339.5px;
     height: auto;
     object-fit: cover;
     display: block;
@@ -4271,13 +4276,7 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
     transform: scale(1.2);
 }
 
-/* Ancho específico de slides para Explore más */
-.exploremas .swiper-slide {
-    width: 339.5px !important;
-    min-width: 339.5px !important;
-    max-width: 339.5px !important;
-    margin-right: 8px !important;
-}
+/* Ancho específico de slides para Explore más - Ya definido arriba */
 
 /* Responsive para Explore más */
 @media (max-width: 767px) {
@@ -4285,7 +4284,15 @@ strong:global(.glauser-storerlx-0-x-legend_16_bold),
         padding: 0 20px;
     }
 
+    .exploremas .swiper-slide {
+        width: 200px !important;
+        min-width: 200px !important;
+        max-width: 200px !important;
+    }
+    
     .exploremas .swiper-slide .banner-10 img {
+        width: 100%;
+        max-width: 200px;
         height: auto;
         min-height: 180px;
     }

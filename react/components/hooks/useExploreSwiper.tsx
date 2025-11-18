@@ -34,6 +34,8 @@ const useExploreSwiper = () => {
                     speed: 600,
                     freeMode: false,
                     watchOverflow: true,
+                    allowTouchMove: true,
+                    grabCursor: true,
                 };
 
                 // Solo agregar paginación si existe el elemento
@@ -124,6 +126,16 @@ const useExploreSwiper = () => {
                 try {
                     swiperRef.current = new (window as any).Swiper(containerRef.current, swiperConfig);
                     console.log('Swiper inicializado correctamente para exploremas:', isExploreMas);
+                    
+                    // Forzar actualización después de la inicialización
+                    setTimeout(() => {
+                        if (swiperRef.current) {
+                            swiperRef.current.update();
+                            swiperRef.current.updateSlides();
+                            swiperRef.current.updateSlidesClasses();
+                            updateButtonStates();
+                        }
+                    }, 100);
                 } catch (error) {
                     console.error('Error al inicializar Swiper:', error);
                 }

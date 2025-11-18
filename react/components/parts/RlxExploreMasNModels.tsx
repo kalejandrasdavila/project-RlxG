@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import useExploreSwiper from '../hooks/useExploreSwiper';
 
 interface ExploreItem {
@@ -11,34 +11,6 @@ interface ExploreItem {
 
 const RlxExploreMasNewModels2025: React.FC = () => {
     const swiperContainerRef = useExploreSwiper();
-
-    // Asegurar que Swiper se inicialice después del montaje
-    useEffect(() => {
-        if (typeof window !== 'undefined' && swiperContainerRef.current) {
-            // Forzar actualización de Swiper si ya está inicializado
-            const checkSwiper = () => {
-                if ((window as any).Swiper && swiperContainerRef.current) {
-                    const swiperInstance = (swiperContainerRef.current as any).swiper;
-                    if (swiperInstance) {
-                        swiperInstance.update();
-                        swiperInstance.updateSlides();
-                        swiperInstance.updateSlidesClasses();
-                    }
-                }
-            };
-
-            // Intentar varias veces para asegurar que Swiper esté listo
-            const timer1 = setTimeout(checkSwiper, 1000);
-            const timer2 = setTimeout(checkSwiper, 2000);
-            const timer3 = setTimeout(checkSwiper, 3000);
-
-            return () => {
-                clearTimeout(timer1);
-                clearTimeout(timer2);
-                clearTimeout(timer3);
-            };
-        }
-    }, [swiperContainerRef]);
 
     const exploreItems: ExploreItem[] = [
         {
@@ -164,14 +136,7 @@ const RlxExploreMasNewModels2025: React.FC = () => {
                             return (
                                 <div
                                     key={index}
-                                    className="swiper-slide"
-                                    style={{
-                                        width: '339.5px',
-                                        minWidth: '339.5px',
-                                        maxWidth: '339.5px',
-                                        marginRight: '8px',
-                                        flexShrink: 0
-                                    }}>
+                                    className="swiper-slide">
                                     <a href={item.href}>
                                         <picture className="banner-10">
                                             <source media="(max-width: 767px)" srcSet={item.srcMobile} />
