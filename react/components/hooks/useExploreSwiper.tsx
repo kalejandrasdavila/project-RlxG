@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 const useExploreSwiper = () => {
     const swiperRef = useRef<any>(null);
     const containerRef = useRef<HTMLDivElement>(null);
+    const resizeTimerRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         const waitForSwiper = (callback: () => void, maxAttempts = 50, attempt = 0) => {
@@ -154,7 +155,6 @@ const useExploreSwiper = () => {
         });
 
         // Manejar redimensionamiento con debounce
-        const resizeTimerRef = useRef<NodeJS.Timeout | null>(null);
         const handleResize = () => {
             if (resizeTimerRef.current) {
                 clearTimeout(resizeTimerRef.current);

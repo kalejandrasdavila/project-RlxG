@@ -14,7 +14,11 @@
     "react": {
       "enableTypeScript": true,
       "enableESLint": false,
-      "enableSass": false
+      "enableSass": false,
+      "externals": {
+        "react": "React",
+        "react-dom": "ReactDOM"
+      }
     }
   },
   "registries": [

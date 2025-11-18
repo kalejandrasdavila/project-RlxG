@@ -11,6 +11,10 @@
             "optimization": {
                 "minimize": false,
                 "splitChunks": false
+            },
+            "externals": {
+                "react": "React",
+                "react-dom": "ReactDOM"
             }
         }
     }

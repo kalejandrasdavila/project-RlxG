@@ -24,7 +24,9 @@
     "expect": "^27.5.1",
     "babel-jest": "^27.5.1",
     "pretty-format": "^27.5.1",
-    "@octokit/rest": "^19.0.0"
+    "@octokit/rest": "^19.0.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
   },
   "intl-equalizer": {
     "referenceLocale": "en",
@@ -60,8 +62,8 @@
     "@types/jest": "^27.5.2",
     "@types/jquery": "^3.5.33",
     "@types/node": "^18.19.127",
-    "@types/react": "^17.0.52",
-    "@types/react-dom": "^17.0.18",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
     "@types/react-helmet-async": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
@@ -82,16 +84,18 @@
     "jest-environment-jsdom": "^27.5.1",
     "lint-staged": "^10.5.1",
     "prettier": "^2.2.0",
-    "react-dom": "^17.0.2",
     "ts-jest": "^27.1.5",
     "typescript": "3.9.7"
   },
   "dependencies": {
-    "react": "17.0.2",
     "react-helmet-async": "^1.0.1",
     "swiper": "^11.2.10",
     "jquery": "^3.7.1",
     "path-browserify": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "optionalDependencies": {
     "eslint-plugin-import": "^2.32.0",

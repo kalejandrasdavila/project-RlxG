@@ -228,6 +228,6 @@ export const useWatchCollectionMeta = (config: WatchCollectionMetaConfig) => {
             schemaScript2.setAttribute('data-schema-org-2', 'true');
             document.head.appendChild(schemaScript2);
         }
-    }, [config]);
+    }, [config.title, config.description, config.canonicalUrl, config.ogImage, config.pageFamilyName]);
 };
 

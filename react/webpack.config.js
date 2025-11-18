@@ -5,6 +5,14 @@ if (typeof window === 'undefined') {
 }
 
 module.exports = {
+    // Externalizar React y ReactDOM para evitar múltiples copias
+    // VTEX ya proporciona React, por lo que no debe incluirse en el bundle
+    // Usar formato de objeto con nombres globales que VTEX espera
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM'
+    },
+    
     // Configuración de resolución para bloquear workers
     resolve: {
         alias: {

@@ -358,10 +358,12 @@ const WatchModel: React.FC = () => {
     return null
   }
 
+  // Renderizar el componente directamente sin React.createElement
+  // para asegurar que use la misma instancia de React de VTEX
   return (
     <ModelErrorBoundary collection={collection || ''} model={model || ''}>
       <HelmetProvider>
-        {React.createElement(ModelComponent)}
+        <ModelComponent />
       </HelmetProvider>
     </ModelErrorBoundary>
   )
